@@ -1,3 +1,11 @@
+---
+title: "Game of Realms Is On: Win Rewards for Contributing to Gno.land"
+publication_date: 2023-01-18 3:36pm UTC
+slug: gor-launch
+tags: [gnoland,game-of-realms,launch]
+author: [christina,manfred]
+---
+
 Phase one of Game of Realms, a worldwide competition to build the best Gnolang smart contracts, **is now open**. Game of Realms is a high-stakes contest with a total prize pool of **133,700 ATOM** that will see participants compete for tiered membership to co-own the Gno.land blockchain, the next-generation smart contract platform that uses the Gnolang (Gno) programming language. A series of complex technical and non-technical tasks will challenge contributors to create innovative patterns that push the chain to new limits. If you’re interested in helping build the most intuitive smart contract platform in web3—while gaining rewards for your contribution—join today by opening a [PR here](https://github.com/gnolang/gno).
 
 The Game of Realms contest will allow participants to get a feel for the Gno.land platform while building smart contracts and applications in the ecosystem. It will take place in two stages, phase one and phase two. Phase one is about building the core infrastructure, tools, and tutorials necessary to open the gates to broader participation and will be held off-chain. Phase two, on the other hand, will take place after the successful completion of phase one and be held on-chain, where contributors will build smart contracts on the platform.

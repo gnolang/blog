@@ -1,3 +1,11 @@
+---
+title: "Gno.land Community Technical AMA #1 - Recap"
+publication_date: 2022-12-05 4:15pm UTC
+slug: tech-ama1
+tags: [gnoland,gnosh,gnot,permissionless,consensus,proof-of-contribution,dao,governance,ibc,democracy,freedom]
+authors: [manfred, jae]
+---
+
 Your questions, observations, and feedback are vital to our core development team. Not only do they give us an understanding of the types of applications and features the community would like to see but they help us formulate better ideas for developing Gno.land as we go. Before we dive into our second **Discord AMA on November 22nd @4pm UTC**, check out the community questions from our first technical AMA below answered by core Gno.land devs Jae Kwon and Manfred Touron.
 
 ### Why did you choose Golang over Rust?
