@@ -84,19 +84,20 @@ func runMain(args []string) error {
 					}
 				}
 				githubClient := initGithubClient()
-				err = fetchChangelog(githubClient, since)
+				outputFile, err := createOutputFile()
+				err = fetchChangelog(githubClient, since, outputFile)
 				if err != nil {
 					return err
 				}
-				err = fetchBacklog(githubClient, since)
+				err = fetchBacklog(githubClient, since, outputFile)
 				if err != nil {
 					return err
 				}
-				err = fetchCuration(githubClient, since)
+				err = fetchCuration(githubClient, since, outputFile)
 				if err != nil {
 					return err
 				}
-				err = fetchTips()
+				err = fetchTips(outputFile)
 				if err != nil {
 					return err
 				}
@@ -108,7 +109,7 @@ func runMain(args []string) error {
 }
 
 // TODO: Fetch changelog recent contributors, new PR merged, new issues closed ...
-func fetchChangelog(client *github.Client, since time.Time) error {
+func fetchChangelog(client *github.Client, since time.Time, outputFile *os.File) error {
 	if !opts.changelog {
 		return nil
 	}
@@ -125,7 +126,7 @@ func fetchChangelog(client *github.Client, since time.Time) error {
 }
 
 // TODO: Fetch backlog from github issues & PRS ...
-func fetchBacklog(client *github.Client, since time.Time) error {
+func fetchBacklog(client *github.Client, since time.Time, outputFile *os.File) error {
 	if !opts.backlog {
 		return nil
 	}
@@ -141,7 +142,7 @@ func fetchBacklog(client *github.Client, since time.Time) error {
 }
 
 // TODO: Fetch curation from github commits & issues & PRS in `awesome-gno` repo
-func fetchCuration(client *github.Client, since time.Time) error {
+func fetchCuration(client *github.Client, since time.Time, outputFile *os.File) error {
 	if !opts.curation {
 		return nil
 	}
@@ -149,19 +150,19 @@ func fetchCuration(client *github.Client, since time.Time) error {
 	if err != nil {
 		return err
 	}
-	_, err = json.Marshal(issues)
+	err = writeCuration(issues, outputFile)
 	if err != nil {
 		return err
 	}
 	return nil
 }
 
-func fetchTips() error {
+func fetchTips(outputFile *os.File) error {
 	if !opts.tips {
 		return nil
 	}
 	ret := twitterFetchTips()
-	err := writeTips(ret)
+	err := writeTips(ret, outputFile)
 	if err != nil {
 		return err
 	}
