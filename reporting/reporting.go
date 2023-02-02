@@ -52,7 +52,7 @@ func runMain(args []string) error {
 		globalFlags.BoolVar(&opts.backlog, "backlog", opts.backlog, "generate backlog")
 		globalFlags.BoolVar(&opts.curation, "curation", opts.curation, "generate curation")
 		globalFlags.BoolVar(&opts.tips, "tips", opts.tips, "generate tips")
-		globalFlags.StringVar(&opts.since, "since", opts.since, "since date RFC 3339 (ex: 2003-01-19T00:00:00Z)")
+		globalFlags.StringVar(&opts.since, "since", opts.since, "since date RFC 3339 (ex: 2003-01-19T00:00:00.000Z)")
 		globalFlags.StringVar(&opts.twitterToken, "twitter-token", opts.twitterToken, "twitter token")
 		globalFlags.StringVar(&opts.githubToken, "github-token", opts.githubToken, "github token")
 		globalFlags.BoolVar(&opts.help, "help", false, "show help")
@@ -117,39 +117,54 @@ func fetchChangelog(client *github.Client, since time.Time, outputFile *os.File)
 	if err != nil {
 		return err
 	}
-	err = writeChangelog(issues, outputFile)
+	pullRequests, err := githubFetchPullRequests(client, &github.PullRequestListOptions{State: "closed"}, "gnolang", "gno")
+	if err != nil {
+		return err
+	}
+	pullRequestsFiltered := filterPullRequestByTime(pullRequests, since)
+	commits, err := githubFetchCommits(client, &github.CommitsListOptions{Since: since}, "gnolang", "gno")
+	if err != nil {
+		return err
+	}
+	err = writeChangelog(issues, pullRequestsFiltered, commits, outputFile)
 	if err != nil {
 		return err
 	}
 	return nil
 }
 
-// TODO: Fetch backlog from github issues & PRS ...
 func fetchBacklog(client *github.Client, since time.Time, outputFile *os.File) error {
-	if !opts.curation {
+	if !opts.backlog {
 		return nil
 	}
 	issues, err := githubFetchIssues(client, &github.IssueListByRepoOptions{State: "open", Since: since}, "gnolang", "gno")
 	if err != nil {
 		return err
 	}
-	err = writeBacklog(issues, outputFile)
+	pullRequests, err := githubFetchPullRequests(client, &github.PullRequestListOptions{State: "open"}, "gnolang", "gno")
+	if err != nil {
+		return err
+	}
+	pullRequestsFiltered := filterPullRequestByTime(pullRequests, since)
+	if err != nil {
+		return err
+	}
+	err = writeBacklog(issues, pullRequestsFiltered, outputFile)
 	if err != nil {
 		return err
 	}
 	return nil
 }
 
-// TODO: Fetch curation from github commits & issues & PRS in `awesome-gno` repo
 func fetchCuration(client *github.Client, since time.Time, outputFile *os.File) error {
 	if !opts.curation {
 		return nil
 	}
-	issues, err := githubFetchIssues(client, &github.IssueListByRepoOptions{State: "open", Since: since}, "gnolang", "awesome-gno")
+	issues, err := githubFetchIssues(client, &github.IssueListByRepoOptions{State: "all", Since: since}, "gnolang", "awesome-gno")
 	if err != nil {
 		return err
 	}
-	pullRequests, err := githubFetchPullRequests(client, &github.PullRequestListOptions{State: "closed"}, "gnolang", "awesome-gno")
+	pullRequests, err := githubFetchPullRequests(client, &github.PullRequestListOptions{State: "all"}, "gnolang", "awesome-gno")
 	if err != nil {
 		return err
 	}

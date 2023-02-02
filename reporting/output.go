@@ -1,7 +1,6 @@
 package main
 
 import (
-	"bytes"
 	"encoding/json"
 	"fmt"
 	"github.com/fbiville/markdown-table-formatter/pkg/markdown"
@@ -9,15 +8,6 @@ import (
 	"os"
 	"strings"
 )
-
-func jsonFormat(data string) string {
-	var out bytes.Buffer
-	err := json.Indent(&out, []byte(data), "", "\t")
-	if err != nil {
-		return data
-	}
-	return out.String()
-}
 
 func createOutputFile() (*os.File, error) {
 	if _, err := os.Stat(opts.outputPath); os.IsNotExist(err) {
@@ -33,7 +23,8 @@ func createOutputFile() (*os.File, error) {
 	return outputFile, nil
 }
 
-func writeChangelog(issues []*github.Issue, outputFile *os.File) error {
+// TODO: Refacto table creation ~Don't repeat yourself
+func writeChangelog(issues []*github.Issue, pullRequests []*github.PullRequest, commits []*github.RepositoryCommit, outputFile *os.File) error {
 	var issuesTable [][]string
 	for _, issue := range issues {
 		issuesTable = append(issuesTable, []string{issue.GetTitle(), issue.GetURL(), issue.GetUser().GetLogin()})
@@ -47,6 +38,20 @@ func writeChangelog(issues []*github.Issue, outputFile *os.File) error {
 	}
 	result := fmt.Sprintf("# Changelog ⚙️\n\nThere is **%d new closed issues** in gnolang/gno since %s\n\n%s", len(issues), opts.since, markdownTable)
 
+	var pullRequestRows [][]string
+	for _, pr := range pullRequests {
+		pullRequestRows = append(pullRequestRows, []string{pr.GetTitle(), pr.GetURL(), pr.GetUser().GetLogin()})
+	}
+	pullRequestsTable, err := markdown.NewTableFormatterBuilder().
+		Build("Title", "Link to PR", "Author").
+		Format(pullRequestRows)
+	if err != nil {
+		return err
+	}
+	result += fmt.Sprintf("\n\n## New PR\nThere is **%d new closed PR** in gnolang/awesome-gno since %s\n\n%s", len(pullRequests), opts.since, pullRequestsTable)
+
+	result += fmt.Sprintf("\n\n## New commits\nThere is **%d new commits** in gnolang/awesome-gno since %s\n\n", len(commits), opts.since)
+
 	_, err = outputFile.WriteString(result)
 	if err != nil {
 		return err
@@ -54,7 +59,8 @@ func writeChangelog(issues []*github.Issue, outputFile *os.File) error {
 	return nil
 }
 
-func writeBacklog(issues []*github.Issue, outputFile *os.File) error {
+// TODO: Refacto table creation ~Don't repeat yourself
+func writeBacklog(issues []*github.Issue, pullRequests []*github.PullRequest, outputFile *os.File) error {
 	var issuesTable [][]string
 	for _, issue := range issues {
 		issuesTable = append(issuesTable, []string{issue.GetTitle(), issue.GetURL(), issue.GetUser().GetLogin()})
@@ -68,6 +74,18 @@ func writeBacklog(issues []*github.Issue, outputFile *os.File) error {
 	}
 	result := fmt.Sprintf("# Backlog 💡\n\nThere is **%d new open issues** in gnolang/gno since %s\n\n%s", len(issues), opts.since, markdownTable)
 
+	var pullRequestRows [][]string
+	for _, pr := range pullRequests {
+		pullRequestRows = append(pullRequestRows, []string{pr.GetTitle(), pr.GetURL(), pr.GetUser().GetLogin()})
+	}
+	pullRequestsTable, err := markdown.NewTableFormatterBuilder().
+		Build("Title", "Link to PR", "Author").
+		Format(pullRequestRows)
+	if err != nil {
+		return err
+	}
+	result += fmt.Sprintf("\n\n## New PR\nThere is **%d new open PR** in gnolang/gno since %s\n\n%s", len(pullRequests), opts.since, pullRequestsTable)
+
 	_, err = outputFile.WriteString(result)
 	if err != nil {
 		return err
@@ -75,6 +93,7 @@ func writeBacklog(issues []*github.Issue, outputFile *os.File) error {
 	return nil
 }
 
+// TODO: Refacto table creation ~Don't repeat yourself
 func writeCuration(issues []*github.Issue, pullRequests []*github.PullRequest, commits []*github.RepositoryCommit, outputFile *os.File) error {
 	// Format at Markdown format
 	var issuesRows [][]string
@@ -87,7 +106,7 @@ func writeCuration(issues []*github.Issue, pullRequests []*github.PullRequest, c
 	if err != nil {
 		return err
 	}
-	result := fmt.Sprintf("# Curation 📚\n\n## New issues\nThere is **%d new issues** in gnolang/awesome-gno since %s\n\n%s", len(issues), opts.since, issuesTable)
+	result := fmt.Sprintf("# Curation 📚\n\n## New issues\nThere is **%d updated issues** in gnolang/awesome-gno since %s\n\n%s", len(issues), opts.since, issuesTable)
 
 	var pullRequestRows [][]string
 	for _, pr := range pullRequests {
@@ -99,7 +118,7 @@ func writeCuration(issues []*github.Issue, pullRequests []*github.PullRequest, c
 	if err != nil {
 		return err
 	}
-	result += fmt.Sprintf("\n\n## New PR\nThere is **%d new PR** in gnolang/awesome-gno since %s\n\n%s", len(pullRequests), opts.since, pullRequestsTable)
+	result += fmt.Sprintf("\n\n## New PR\nThere is **%d updated PR** in gnolang/awesome-gno since %s\n\n%s", len(pullRequests), opts.since, pullRequestsTable)
 
 	result += fmt.Sprintf("\n\n## New commits\nThere is **%d new commits** in gnolang/awesome-gno since %s\n\n", len(commits), opts.since)
 
@@ -110,6 +129,7 @@ func writeCuration(issues []*github.Issue, pullRequests []*github.PullRequest, c
 	return nil
 }
 
+// TODO: Refacto table creation ~Don't repeat yourself
 func writeTips(data string, outputFile *os.File) error {
 	// Format at Markdown format
 	var rows [][]string
