@@ -117,6 +117,7 @@ func fetchChangelog(client *github.Client, since time.Time, outputFile *os.File)
 	if err != nil {
 		return err
 	}
+	issuesFiltered := filterIssueNotPR(issues)
 	pullRequests, err := githubFetchPullRequests(client, &github.PullRequestListOptions{State: "closed"}, "gnolang", "gno")
 	if err != nil {
 		return err
@@ -126,7 +127,7 @@ func fetchChangelog(client *github.Client, since time.Time, outputFile *os.File)
 	if err != nil {
 		return err
 	}
-	err = writeChangelog(issues, pullRequestsFiltered, commits, outputFile)
+	err = writeChangelog(issuesFiltered, pullRequestsFiltered, commits, outputFile)
 	if err != nil {
 		return err
 	}
@@ -141,6 +142,7 @@ func fetchBacklog(client *github.Client, since time.Time, outputFile *os.File) e
 	if err != nil {
 		return err
 	}
+	issuesFiltered := filterIssueNotPR(issues)
 	pullRequests, err := githubFetchPullRequests(client, &github.PullRequestListOptions{State: "open"}, "gnolang", "gno")
 	if err != nil {
 		return err
@@ -149,7 +151,7 @@ func fetchBacklog(client *github.Client, since time.Time, outputFile *os.File) e
 	if err != nil {
 		return err
 	}
-	err = writeBacklog(issues, pullRequestsFiltered, outputFile)
+	err = writeBacklog(issuesFiltered, pullRequestsFiltered, outputFile)
 	if err != nil {
 		return err
 	}
@@ -164,6 +166,7 @@ func fetchCuration(client *github.Client, since time.Time, outputFile *os.File) 
 	if err != nil {
 		return err
 	}
+	issuesFiltered := filterIssueNotPR(issues)
 	pullRequests, err := githubFetchPullRequests(client, &github.PullRequestListOptions{State: "all"}, "gnolang", "awesome-gno")
 	if err != nil {
 		return err
@@ -173,7 +176,7 @@ func fetchCuration(client *github.Client, since time.Time, outputFile *os.File) 
 	if err != nil {
 		return err
 	}
-	err = writeCuration(issues, pullRequestsFiltered, commits, outputFile)
+	err = writeCuration(issuesFiltered, pullRequestsFiltered, commits, outputFile)
 	if err != nil {
 		return err
 	}

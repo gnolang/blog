@@ -25,3 +25,8 @@ FLAGS
   -tips=true              generate tips
   -twitter-token ...      twitter token
 ```
+
+------------
+
+## Example output
+

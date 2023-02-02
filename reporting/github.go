@@ -51,3 +51,13 @@ func filterPullRequestByTime(pullRequests []*github.PullRequest, since time.Time
 	}
 	return filtered
 }
+
+func filterIssueNotPR(issues []*github.Issue) []*github.Issue {
+	var filtered []*github.Issue
+	for _, issue := range issues {
+		if issue.PullRequestLinks == nil {
+			filtered = append(filtered, issue)
+		}
+	}
+	return filtered
+}
