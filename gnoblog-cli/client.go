@@ -6,11 +6,10 @@ import (
 	"flag"
 	"fmt"
 	"os"
-	"strings"
 	"time"
 
 	"github.com/adrg/frontmatter"
-	"github.com/peterbourgon/ff/ffcli"
+	"github.com/peterbourgon/ff/v3/ffcli"
 )
 
 func main() {
@@ -25,12 +24,14 @@ func main() {
 type pushOpts struct {
 	Debug   bool
 	Publish bool
-	Remote  string
-	GnokeyOpts ...
+	// Remote  string
+	// GnokeyOpts
 }
 
 func (opts *pushOpts) applyDefaults() {
-	opts.Remote = "test3.gno.land:36657"
+	opts.Debug = false
+	opts.Publish = false
+	// opts.Remote = "test3.gno.land:36657"
 }
 
 func (opts *pushOpts) flagSet() *flag.FlagSet {
@@ -41,13 +42,14 @@ func (opts *pushOpts) flagSet() *flag.FlagSet {
 }
 
 func run(args []string) error {
-	var opts rootOpts
+	var opts pushOpts
 
 	root := &ffcli.Command{
 		ShortUsage: "blog <POST...>",
 		FlagSet:    opts.flagSet(),
 		Exec: func(ctx context.Context, args []string) error {
-			return doRoot(ctx, args, opts)
+			posts := args
+			return doPush(ctx, posts, opts)
 		},
 	}
 
@@ -68,14 +70,19 @@ type postMetadata struct {
 	Slug            string    `yaml:"slug"`
 }
 
-func doRoot(ctx context.Context, posts []string, opts rootOpts) error {
-	if len(args) < 1 {
+func doPush(ctx context.Context, posts []string, opts pushOpts) error {
+	if len(posts) < 1 {
 		return flag.ErrHelp
 	}
 
 	for _, postPath := range posts {
+		postFile, err := os.Open(postPath)
+		if err != nil {
+			return fmt.Errorf("open post %q: %w", postPath, err)
+		}
+
 		var matter postMetadata
-		rest, err := frontmatter.MustParse(strings.NewReader(input), &matter)
+		rest, err := frontmatter.MustParse(postFile, &matter)
 		if err != nil {
 			return fmt.Errorf("invalid post: %q: %w", postPath, err)
 		}

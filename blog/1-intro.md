@@ -1,6 +1,6 @@
 ---
 title: Intro to Gnoland - The Smart Contract Platform to Improve Our Understanding of the World
-publication_date: 2022-11-21 5:13pm UTC
+publication_date: 2022-11-21T17:13:00Z
 slug: intro
 tags: [gnoland,gnosh,gnot,permissionless,consensus,proof-of-contribution,dao,governance,ibc,democracy,freedom]
 authors: [christina,jae,manfred]
