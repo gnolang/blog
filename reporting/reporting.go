@@ -145,11 +145,20 @@ func fetchCuration(client *github.Client, since time.Time, outputFile *os.File) 
 	if !opts.curation {
 		return nil
 	}
-	issues, err := githubFetchIssues(client, &github.IssueListByRepoOptions{State: "all", Since: since}, "gnolang", "awesome-gno")
+	issues, err := githubFetchIssues(client, &github.IssueListByRepoOptions{State: "open", Since: since}, "gnolang", "awesome-gno")
 	if err != nil {
 		return err
 	}
-	err = writeCuration(issues, outputFile)
+	pullRequests, err := githubFetchPullRequests(client, &github.PullRequestListOptions{State: "closed"}, "gnolang", "awesome-gno")
+	if err != nil {
+		return err
+	}
+	pullRequestsFiltered := filterPullRequestByTime(pullRequests, since)
+	commits, err := githubFetchCommits(client, &github.CommitsListOptions{Since: since}, "gnolang", "awesome-gno")
+	if err != nil {
+		return err
+	}
+	err = writeCuration(issues, pullRequestsFiltered, commits, outputFile)
 	if err != nil {
 		return err
 	}

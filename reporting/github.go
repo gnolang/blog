@@ -2,6 +2,7 @@ package main
 
 import (
 	"context"
+	"time"
 
 	"github.com/google/go-github/v50/github"
 	"golang.org/x/oauth2"
@@ -39,4 +40,14 @@ func githubFetchPullRequests(client *github.Client, opts *github.PullRequestList
 	}
 
 	return pullRequests, nil
+}
+
+func filterPullRequestByTime(pullRequests []*github.PullRequest, since time.Time) []*github.PullRequest {
+	var filtered []*github.PullRequest
+	for _, pullRequest := range pullRequests {
+		if pullRequest.UpdatedAt.After(since) {
+			filtered = append(filtered, pullRequest)
+		}
+	}
+	return filtered
 }
