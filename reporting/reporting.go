@@ -2,7 +2,6 @@ package main
 
 import (
 	"context"
-	"encoding/json"
 	"flag"
 	"fmt"
 	"github.com/google/go-github/v50/github"
@@ -118,7 +117,7 @@ func fetchChangelog(client *github.Client, since time.Time, outputFile *os.File)
 	if err != nil {
 		return err
 	}
-	_, err = json.Marshal(issues)
+	err = writeChangelog(issues, outputFile)
 	if err != nil {
 		return err
 	}

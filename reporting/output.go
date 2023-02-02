@@ -33,11 +33,21 @@ func createOutputFile() (*os.File, error) {
 	return outputFile, nil
 }
 
-func writeChangelog(data string, outputFile *os.File) error {
-	if opts.format == "json" {
-		data = jsonFormat(data)
+func writeChangelog(issues []*github.Issue, outputFile *os.File) error {
+	var issuesTable [][]string
+	for _, issue := range issues {
+		issuesTable = append(issuesTable, []string{issue.GetTitle(), issue.GetURL(), issue.GetUser().GetLogin()})
 	}
-	_, err := outputFile.WriteString(data)
+
+	markdownTable, err := markdown.NewTableFormatterBuilder().
+		Build("Title", "Link to Body", "Assignee").
+		Format(issuesTable)
+	if err != nil {
+		return err
+	}
+	result := fmt.Sprintf("# Changelog\n\nThere is **%d new closed issues** in gnolang/gno since %s\n\n%s", len(issues), opts.since, markdownTable)
+
+	_, err = outputFile.WriteString(result)
 	if err != nil {
 		return err
 	}
