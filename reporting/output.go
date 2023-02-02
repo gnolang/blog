@@ -9,6 +9,9 @@ import (
 	"strings"
 )
 
+const awesomeGnoEmbedURL = "**[gnolang/awesome-Gno](https://github.com/gnolang/awesome-gno)**"
+const gnoEmbedURL = "**[gnolang/gno](https://github.com/gnolang/gno)**"
+
 func createOutputFile() (*os.File, error) {
 	if _, err := os.Stat(opts.outputPath); os.IsNotExist(err) {
 		err = os.MkdirAll(opts.outputPath, os.ModePerm)
@@ -36,7 +39,7 @@ func writeChangelog(issues []*github.Issue, pullRequests []*github.PullRequest, 
 	if err != nil {
 		return err
 	}
-	result := fmt.Sprintf("# Changelog ⚙️\n\nThere is **%d new closed issues** in gnolang/gno since %s\n\n%s", len(issues), opts.since, markdownTable)
+	result := fmt.Sprintf("# Changelog ⚙️\n\nThere is **%d new closed issues** in %s since %s\n\n%s", len(issues), gnoEmbedURL, opts.since, markdownTable)
 
 	var pullRequestRows [][]string
 	for _, pr := range pullRequests {
@@ -48,9 +51,9 @@ func writeChangelog(issues []*github.Issue, pullRequests []*github.PullRequest, 
 	if err != nil {
 		return err
 	}
-	result += fmt.Sprintf("\n\n## New PR\nThere is **%d new closed PR** in gnolang/awesome-gno since %s\n\n%s", len(pullRequests), opts.since, pullRequestsTable)
+	result += fmt.Sprintf("\n\n## New PR\nThere is **%d new closed PR** in %s since %s\n\n%s", len(pullRequests), gnoEmbedURL, opts.since, pullRequestsTable)
 
-	result += fmt.Sprintf("\n\n## New commits\nThere is **%d new commits** in gnolang/awesome-gno since %s\n\n", len(commits), opts.since)
+	result += fmt.Sprintf("\n\n## New commits\nThere is **%d new commits** in %s since %s\n\n", len(commits), gnoEmbedURL, opts.since)
 
 	_, err = outputFile.WriteString(result)
 	if err != nil {
@@ -72,7 +75,7 @@ func writeBacklog(issues []*github.Issue, pullRequests []*github.PullRequest, ou
 	if err != nil {
 		return err
 	}
-	result := fmt.Sprintf("# Backlog 💡\n\nThere is **%d new open issues** in gnolang/gno since %s\n\n%s", len(issues), opts.since, markdownTable)
+	result := fmt.Sprintf("# Backlog 💡\n\nThere is **%d new open issues** in %s since %s\n\n%s", len(issues), gnoEmbedURL, opts.since, markdownTable)
 
 	var pullRequestRows [][]string
 	for _, pr := range pullRequests {
@@ -84,7 +87,7 @@ func writeBacklog(issues []*github.Issue, pullRequests []*github.PullRequest, ou
 	if err != nil {
 		return err
 	}
-	result += fmt.Sprintf("\n\n## New PR\nThere is **%d new open PR** in gnolang/gno since %s\n\n%s", len(pullRequests), opts.since, pullRequestsTable)
+	result += fmt.Sprintf("\n\n## New PR\nThere is **%d new open PR** in %s since %s\n\n%s", len(pullRequests), gnoEmbedURL, opts.since, pullRequestsTable)
 
 	_, err = outputFile.WriteString(result)
 	if err != nil {
@@ -106,7 +109,7 @@ func writeCuration(issues []*github.Issue, pullRequests []*github.PullRequest, c
 	if err != nil {
 		return err
 	}
-	result := fmt.Sprintf("# Curation 📚\n\n## New issues\nThere is **%d updated issues** in gnolang/awesome-gno since %s\n\n%s", len(issues), opts.since, issuesTable)
+	result := fmt.Sprintf("# Curation 📚\n\n## New issues\nThere is **%d updated issues** in %s since %s\n\n%s", len(issues), awesomeGnoEmbedURL, opts.since, issuesTable)
 
 	var pullRequestRows [][]string
 	for _, pr := range pullRequests {
@@ -118,9 +121,9 @@ func writeCuration(issues []*github.Issue, pullRequests []*github.PullRequest, c
 	if err != nil {
 		return err
 	}
-	result += fmt.Sprintf("\n\n## New PR\nThere is **%d updated PR** in gnolang/awesome-gno since %s\n\n%s", len(pullRequests), opts.since, pullRequestsTable)
+	result += fmt.Sprintf("\n\n## New PR\nThere is **%d updated PR** in %s since %s\n\n%s", len(pullRequests), awesomeGnoEmbedURL, opts.since, pullRequestsTable)
 
-	result += fmt.Sprintf("\n\n## New commits\nThere is **%d new commits** in gnolang/awesome-gno since %s\n\n", len(commits), opts.since)
+	result += fmt.Sprintf("\n\n## New commits\nThere is **%d new commits** in %s since %s\n\n", len(commits), awesomeGnoEmbedURL, opts.since)
 
 	_, err = outputFile.WriteString(result)
 	if err != nil {
