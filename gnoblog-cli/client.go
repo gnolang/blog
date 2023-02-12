@@ -10,8 +10,10 @@ import (
 	"os"
 
 	"github.com/gnolang/gno/pkgs/amino"
+	abci "github.com/gnolang/gno/pkgs/bft/abci/types"
+	rpcclient "github.com/gnolang/gno/pkgs/bft/rpc/client"
 	"github.com/gnolang/gno/pkgs/crypto/keys"
-	"github.com/gnolang/gno/pkgs/crypto/keys/client"
+	keysclient "github.com/gnolang/gno/pkgs/crypto/keys/client"
 	"github.com/gnolang/gno/pkgs/sdk/vm"
 	"github.com/gnolang/gno/pkgs/std"
 	"github.com/peterbourgon/ff/v3/ffcli"
@@ -32,7 +34,7 @@ type publishOpts struct {
 	PkgPath string
 
 	// gnokey
-	client.BaseOptions
+	keysclient.BaseOptions
 	GasWanted       int64
 	GasFee          string
 	ChainID         string
@@ -46,10 +48,11 @@ func (opts *publishOpts) flagSet() *flag.FlagSet {
 	fs.Int64Var(&opts.GasWanted, "gas-wanted", 1000, "gas requested for tx")
 	fs.StringVar(&opts.GasFee, "gas-fee", "1ugnot", "gas payment fee")
 	fs.StringVar(&opts.ChainID, "chainid", "test3", "")
-	fs.StringVar(&opts.PkgPath, "pkgpath", "r/gnoland/blog", "blog realm path")
+	fs.StringVar(&opts.PkgPath, "pkgpath", "gno.land/r/gnoland/blog", "blog realm path")
 
-	// client.BaseOptions
-	fs.StringVar(&opts.Home, "home", client.DefaultBaseOptions.Home, "home directory")
+	// keysclient.BaseOptions
+	defaultHome := keysclient.DefaultBaseOptions.Home
+	fs.StringVar(&opts.Home, "home", defaultHome, "home directory")
 	fs.StringVar(&opts.Remote, "remote", "test3.gno.land:36657", "remote node URL")
 	fs.BoolVar(&opts.Quiet, "quiet", false, "for parsing output")
 	fs.BoolVar(&opts.InsecurePasswordStdin, "insecure-password-stdin", false, "WARNING! take password from stdin")
@@ -120,6 +123,14 @@ func doPublish(ctx context.Context, posts []string, opts publishOpts) error {
 
 		// fmt.Printf("%+v\n", p)
 
+		res, err := makeRequest("vm/qfuncs", []byte(opts.PkgPath), opts)
+		if err != nil {
+			return fmt.Errorf("make request: %w", err)
+		}
+		var fsigs vm.FunctionSignatures
+		amino.MustUnmarshalJSON(res.Data, &fsigs)
+		fmt.Println("fsigs", fsigs)
+
 		msg := vm.MsgCall{
 			Caller:  caller,
 			PkgPath: opts.PkgPath,
@@ -137,4 +148,21 @@ func doPublish(ctx context.Context, posts []string, opts publishOpts) error {
 	}
 
 	return nil
+}
+
+func makeRequest(qpath string, data []byte, opts publishOpts) (res *abci.ResponseQuery, err error) {
+	opts2 := rpcclient.ABCIQueryOptions{
+		// Height:
+		// Prove:
+	}
+	cli := rpcclient.NewHTTP(opts.Remote, "/websocket")
+	qres, err := cli.ABCIQueryWithOptions(qpath, data, opts2)
+	if err != nil {
+		return nil, err
+	}
+	if qres.Response.Error != nil {
+		log.Printf("Log: %s\n", qres.Response.Log)
+		return nil, qres.Response.Error
+	}
+	return &qres.Response, nil
 }
