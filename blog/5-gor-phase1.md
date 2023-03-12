@@ -15,7 +15,7 @@ Phase one of Game of Realms is about laying the foundations to onboard more peop
 There is a total prize pool of 133,700 ATOM available during the Game of Realms competition, one-third of which (44,121 ATOM) will be allocated to contributions from phase one. During phase one, which we expect to last between 1-3 months, participants will open PRs against repos from the Gnolang organization. For additional information on the competition phases and timelines, be sure to check out the following resources:
 
 - [Game of Realms blog post](https://test3.gno.land/r/gnoland/blog:p/gor-launch)
-- [Game of Realms AMA recap](https://test3.gno.land/r/gnoland/blog:p/gor-ama1**
+- [Game of Realms AMA recap](https://test3.gno.land/r/gnoland/blog:p/gor-ama1)
 
 ## Phase One: The Challenges
 
