@@ -1,6 +1,6 @@
 ---
 title: "Gno.land Community Technical AMA #1 - Recap"
-publication_date: 2022-12-05 4:15pm UTC
+publication_date: 2022-12-05T16:15:00Z
 slug: tech-ama1
 tags: [gnoland,gnosh,gnot,permissionless,consensus,proof-of-contribution,dao,governance,ibc,democracy,freedom]
 authors: [manfred, jae]
