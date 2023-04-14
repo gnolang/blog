@@ -42,18 +42,19 @@ type publishOpts struct {
 }
 
 func (opts *publishOpts) flagSet() *flag.FlagSet {
+	defaultHome := keysclient.DefaultBaseOptions.Home
+
 	fs := flag.NewFlagSet("blog publish", flag.ExitOnError)
 	fs.BoolVar(&opts.Debug, "debug", false, "verbose output")
 	fs.BoolVar(&opts.Publish, "publish", false, "publish blogpost")
 	fs.Int64Var(&opts.GasWanted, "gas-wanted", 1000, "gas requested for tx")
 	fs.StringVar(&opts.GasFee, "gas-fee", "1ugnot", "gas payment fee")
-	fs.StringVar(&opts.ChainID, "chainid", "test3", "")
+	fs.StringVar(&opts.ChainID, "chainid", "staging", "")
 	fs.StringVar(&opts.PkgPath, "pkgpath", "gno.land/r/gnoland/blog", "blog realm path")
 
 	// keysclient.BaseOptions
-	defaultHome := keysclient.DefaultBaseOptions.Home
 	fs.StringVar(&opts.Home, "home", defaultHome, "home directory")
-	fs.StringVar(&opts.Remote, "remote", "test3.gno.land:36657", "remote node URL")
+	fs.StringVar(&opts.Remote, "remote", "staging.gno.land:36657", "remote node URL")
 	fs.BoolVar(&opts.Quiet, "quiet", false, "for parsing output")
 	fs.BoolVar(&opts.InsecurePasswordStdin, "insecure-password-stdin", false, "WARNING! take password from stdin")
 	return fs
@@ -129,7 +130,7 @@ func doPublish(ctx context.Context, posts []string, opts publishOpts) error {
 		}
 		var fsigs vm.FunctionSignatures
 		amino.MustUnmarshalJSON(res.Data, &fsigs)
-		fmt.Println("fsigs", fsigs)
+		log.Println("fsigs", fsigs)
 
 		msg := vm.MsgCall{
 			Caller:  caller,
@@ -144,7 +145,7 @@ func doPublish(ctx context.Context, posts []string, opts publishOpts) error {
 			// Memo:
 		}
 
-		log.Println(string(amino.MustMarshalJSON(tx)))
+		log.Println("tx", string(amino.MustMarshalJSON(tx)))
 	}
 
 	return nil
