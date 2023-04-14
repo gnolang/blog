@@ -12,6 +12,8 @@ import (
 	"github.com/gnolang/gno/pkgs/amino"
 	abci "github.com/gnolang/gno/pkgs/bft/abci/types"
 	rpcclient "github.com/gnolang/gno/pkgs/bft/rpc/client"
+	ctypes "github.com/gnolang/gno/pkgs/bft/rpc/core/types"
+	"github.com/gnolang/gno/pkgs/commands"
 	"github.com/gnolang/gno/pkgs/crypto/keys"
 	keysclient "github.com/gnolang/gno/pkgs/crypto/keys/client"
 	"github.com/gnolang/gno/pkgs/sdk/vm"
@@ -39,6 +41,12 @@ type publishOpts struct {
 	GasFee          string
 	ChainID         string
 	KeyNameOrBech32 string
+
+	// internal
+	accountNumber  uint64
+	sequenceNumber uint64
+	pass           string
+	kb             keys.Keybase
 }
 
 func (opts *publishOpts) flagSet() *flag.FlagSet {
@@ -47,7 +55,7 @@ func (opts *publishOpts) flagSet() *flag.FlagSet {
 	fs := flag.NewFlagSet("blog publish", flag.ExitOnError)
 	fs.BoolVar(&opts.Debug, "debug", false, "verbose output")
 	fs.BoolVar(&opts.Publish, "publish", false, "publish blogpost")
-	fs.Int64Var(&opts.GasWanted, "gas-wanted", 1000, "gas requested for tx")
+	fs.Int64Var(&opts.GasWanted, "gas-wanted", 100000, "gas requested for tx")
 	fs.StringVar(&opts.GasFee, "gas-fee", "1ugnot", "gas payment fee")
 	fs.StringVar(&opts.ChainID, "chainid", "staging", "")
 	fs.StringVar(&opts.PkgPath, "pkgpath", "gno.land/r/gnoland/blog", "blog realm path")
@@ -99,6 +107,7 @@ func doPublish(ctx context.Context, posts []string, opts publishOpts) error {
 	if err != nil {
 		return err
 	}
+	opts.kb = kb
 	info, err := kb.GetByNameOrAddress(opts.KeyNameOrBech32)
 	if err != nil {
 		return err
@@ -109,6 +118,22 @@ func doPublish(ctx context.Context, posts []string, opts publishOpts) error {
 	gasFee, err := std.ParseCoin(opts.GasFee)
 	if err != nil {
 		return fmt.Errorf("parse gas fee: %w", err)
+	}
+
+	res, err := makeRequest("auth/accounts/"+caller.String(), []byte(opts.PkgPath), opts)
+	if err != nil {
+		return fmt.Errorf("make request: %w", err)
+	}
+	var qret struct{ BaseAccount std.BaseAccount }
+	amino.MustUnmarshalJSON(res.Data, &qret)
+	log.Println("qret", qret)
+	opts.accountNumber = qret.BaseAccount.AccountNumber
+	opts.sequenceNumber = qret.BaseAccount.Sequence
+
+	io := commands.NewDefaultIO()
+	opts.pass, err = io.GetPassword("Enter password.", opts.InsecurePasswordStdin)
+	if err != nil {
+		return err
 	}
 
 	for _, postPath := range posts {
@@ -142,13 +167,67 @@ func doPublish(ctx context.Context, posts []string, opts publishOpts) error {
 			Msgs:       []std.Msg{msg},
 			Fee:        std.NewFee(opts.GasWanted, gasFee),
 			Signatures: nil,
-			// Memo:
+			Memo:       "from gnoblog-cli",
 		}
 
 		log.Println("tx", string(amino.MustMarshalJSON(tx)))
+		bres, err := broadcastTx(tx, opts)
+		log.Println("res", bres, "err", err)
 	}
 
 	return nil
+}
+
+func broadcastTx(tx std.Tx, opts publishOpts) (res *ctypes.ResultBroadcastTxCommit, err error) {
+	cli := rpcclient.NewHTTP(opts.Remote, "/websocket")
+
+	signers := tx.GetSigners()
+	log.Println("signers", signers)
+	for range signers {
+		tx.Signatures = append(tx.Signatures, std.Signature{
+			PubKey:    nil,
+			Signature: nil,
+		})
+	}
+
+	err = tx.ValidateBasic()
+	if err != nil {
+		return nil, fmt.Errorf("validateBasic: %w", err)
+	}
+
+	signbz := tx.GetSignBytes(opts.ChainID, opts.accountNumber, opts.sequenceNumber)
+	log.Printf("sign bytes: %X", signbz)
+
+	sig, pub, err := opts.kb.Sign(opts.KeyNameOrBech32, opts.pass, signbz)
+	if err != nil {
+		return nil, err
+	}
+
+	addr := pub.Address()
+	found := false
+	for i := range tx.Signatures {
+		if signers[i] == addr {
+			found = true
+			tx.Signatures[i] = std.Signature{
+				PubKey:    pub,
+				Signature: sig,
+			}
+		}
+	}
+	if !found {
+		return nil, errors.New(fmt.Sprintf("addr %v (%s) not in signer set", addr, opts.KeyNameOrBech32))
+	}
+
+	bz, err := amino.Marshal(tx)
+	if err != nil {
+		return nil, err
+	}
+
+	bres, err := cli.BroadcastTxCommit(bz)
+	if err != nil {
+		return nil, err
+	}
+	return bres, nil
 }
 
 func makeRequest(qpath string, data []byte, opts publishOpts) (res *abci.ResponseQuery, err error) {
