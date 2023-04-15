@@ -14,7 +14,7 @@ You can find the live streams of the new biweekly public developer calls on [Gno
 
 
 
-[![Gno.land mini DAG](https://gnolang.github.io/blog/2023-04-15_myg-march/thumbs/mini-dag.png)])(https://gnolang.github.io/blog/2023-04-15_myg-march/mini-dag.png)
+[![Gno.land mini DAG](https://gnolang.github.io/blog/2023-04-15_myg-march/thumbs/mini-dag.png)](https://gnolang.github.io/blog/2023-04-15_myg-march/mini-dag.png)
 
 ## Gno.land Website Language
 
