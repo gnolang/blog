@@ -9,6 +9,7 @@ import (
 	"io/ioutil"
 	"log"
 	"os"
+	"strings"
 
 	"github.com/gnolang/gno/tm2/pkg/amino"
 	abci "github.com/gnolang/gno/tm2/pkg/bft/abci/types"
@@ -34,9 +35,10 @@ func main() {
 }
 
 type publishOpts struct {
-	Debug   bool
-	Publish bool
-	PkgPath string
+	Debug    bool
+	Publish  bool
+	PkgPath  string
+	EditMode bool
 
 	// gnokey
 	keysclient.BaseOptions
@@ -58,6 +60,7 @@ func (opts *publishOpts) flagSet() *flag.FlagSet {
 	fs := flag.NewFlagSet("blog publish", flag.ExitOnError)
 	fs.BoolVar(&opts.Debug, "debug", false, "verbose output")
 	fs.BoolVar(&opts.Publish, "publish", false, "publish blogpost")
+	fs.BoolVar(&opts.EditMode, "edit", false, "edit instead of add")
 	fs.Int64Var(&opts.GasWanted, "gas-wanted", 2000000, "gas requested for tx")
 	fs.StringVar(&opts.GasFee, "gas-fee", "1000000ugnot", "gas payment fee")
 	fs.StringVar(&opts.ChainID, "chainid", "staging", "")
@@ -160,11 +163,29 @@ func doPublish(ctx context.Context, posts []string, opts publishOpts) error {
 		amino.MustUnmarshalJSON(res.Data, &fsigs)
 		log.Println("fsigs", fsigs)
 
+		/*
+			   msg := vm.MsgCall{
+				Caller:  caller,
+				PkgPath: opts.PkgPath,
+				Func:    "Render",
+				Args:    []string{"p/" + p.Slug},
+			  }
+		*/
+		verb := "ModAddPost"
+		if opts.EditMode {
+			verb = "ModEditPost"
+		}
+
 		msg := vm.MsgCall{
 			Caller:  caller,
 			PkgPath: opts.PkgPath,
-			Func:    "Render",
-			Args:    []string{"p/" + p.Slug},
+			Func:    verb,
+			Args: []string{
+				p.Slug,
+				p.Title,
+				p.Body,
+				strings.Join(p.Tags, ","),
+			},
 		}
 		tx := std.Tx{
 			Msgs:       []std.Msg{msg},
@@ -180,7 +201,6 @@ func doPublish(ctx context.Context, posts []string, opts publishOpts) error {
 		}
 		data := string(bres.DeliverTx.Data)
 		println("DATA", data)
-		_ = data
 	}
 
 	return nil
@@ -236,6 +256,8 @@ func broadcastTx(tx std.Tx, opts publishOpts) (res *ctypes.ResultBroadcastTxComm
 	if err != nil {
 		return nil, err
 	}
+
+	// opts.sequenceNumber++
 
 	if bres.CheckTx.IsErr() {
 		return nil, errors.New("check transaction failed %+v\nlog %s", bres, bres.CheckTx.Log)
