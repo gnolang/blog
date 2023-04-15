@@ -142,6 +142,11 @@ func doPublish(ctx context.Context, posts []string, opts publishOpts) error {
 		return err
 	}
 
+	// FIXME: detect if post exists and automatically use ModEditPost instead of ModAddPost
+	// FIXME: detect if post needs an update before makings TXs (same content)
+	// FIXME: group Msgs in a single TX
+	// FIXME: auto-increment sequence number
+
 	for _, postPath := range posts {
 		postFile, err := os.Open(postPath)
 		if err != nil {
