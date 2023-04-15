@@ -1,4 +1,4 @@
-#!/bin/sh -xe
+#!/bin/sh -x
 
 for dir in */; do (
     cd $dir
