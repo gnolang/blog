@@ -1,8 +1,9 @@
+// Disclaimer: This version is a rough draft intended for experimentation with low-level libraries outside the monorepo.
+// The plan is to work on a clean SDK and refactor this file accordingly.
 package main
 
 import (
 	"context"
-	"errors"
 	"flag"
 	"fmt"
 	"io/ioutil"
@@ -16,6 +17,7 @@ import (
 	"github.com/gnolang/gno/tm2/pkg/commands"
 	"github.com/gnolang/gno/tm2/pkg/crypto/keys"
 	keysclient "github.com/gnolang/gno/tm2/pkg/crypto/keys/client"
+	"github.com/gnolang/gno/tm2/pkg/errors"
 	"github.com/gnolang/gno/tm2/pkg/sdk/vm"
 	"github.com/gnolang/gno/tm2/pkg/std"
 	"github.com/peterbourgon/ff/v3/ffcli"
@@ -23,7 +25,8 @@ import (
 
 func main() {
 	if err := run(os.Args[1:]); err != nil {
-		if !errors.Is(err, flag.ErrHelp) {
+		// if !errors.Is(err, flag.ErrHelp) {
+		if err != flag.ErrHelp {
 			fmt.Fprintf(os.Stderr, "error: %+v\n", err)
 		}
 		os.Exit(1)
@@ -55,8 +58,8 @@ func (opts *publishOpts) flagSet() *flag.FlagSet {
 	fs := flag.NewFlagSet("blog publish", flag.ExitOnError)
 	fs.BoolVar(&opts.Debug, "debug", false, "verbose output")
 	fs.BoolVar(&opts.Publish, "publish", false, "publish blogpost")
-	fs.Int64Var(&opts.GasWanted, "gas-wanted", 100000, "gas requested for tx")
-	fs.StringVar(&opts.GasFee, "gas-fee", "1ugnot", "gas payment fee")
+	fs.Int64Var(&opts.GasWanted, "gas-wanted", 2000000, "gas requested for tx")
+	fs.StringVar(&opts.GasFee, "gas-fee", "1000000ugnot", "gas payment fee")
 	fs.StringVar(&opts.ChainID, "chainid", "staging", "")
 	fs.StringVar(&opts.PkgPath, "pkgpath", "gno.land/r/gnoland/blog", "blog realm path")
 
@@ -172,7 +175,12 @@ func doPublish(ctx context.Context, posts []string, opts publishOpts) error {
 
 		log.Println("tx", string(amino.MustMarshalJSON(tx)))
 		bres, err := broadcastTx(tx, opts)
-		log.Println("res", bres, "err", err)
+		if err != nil {
+			return err
+		}
+		data := string(bres.DeliverTx.Data)
+		println("DATA", data)
+		_ = data
 	}
 
 	return nil
@@ -182,12 +190,14 @@ func broadcastTx(tx std.Tx, opts publishOpts) (res *ctypes.ResultBroadcastTxComm
 	cli := rpcclient.NewHTTP(opts.Remote, "/websocket")
 
 	signers := tx.GetSigners()
-	log.Println("signers", signers)
-	for range signers {
-		tx.Signatures = append(tx.Signatures, std.Signature{
-			PubKey:    nil,
-			Signature: nil,
-		})
+	if tx.Signatures == nil {
+		log.Println("signers", signers)
+		for range signers {
+			tx.Signatures = append(tx.Signatures, std.Signature{
+				PubKey:    nil,
+				Signature: nil,
+			})
+		}
 	}
 
 	err = tx.ValidateBasic()
@@ -218,15 +228,22 @@ func broadcastTx(tx std.Tx, opts publishOpts) (res *ctypes.ResultBroadcastTxComm
 		return nil, errors.New(fmt.Sprintf("addr %v (%s) not in signer set", addr, opts.KeyNameOrBech32))
 	}
 
-	bz, err := amino.Marshal(tx)
-	if err != nil {
-		return nil, err
-	}
+	log.Println("tx", string(amino.MustMarshalJSON(tx)))
+
+	bz := amino.MustMarshal(tx)
 
 	bres, err := cli.BroadcastTxCommit(bz)
 	if err != nil {
 		return nil, err
 	}
+
+	if bres.CheckTx.IsErr() {
+		return nil, errors.New("check transaction failed %+v\nlog %s", bres, bres.CheckTx.Log)
+	}
+	if bres.DeliverTx.IsErr() {
+		return nil, errors.New("deliver transaction failed %+v\nlog %s", bres, bres.DeliverTx.Log)
+	}
+	log.Println("OK, data", string(bres.DeliverTx.Data))
 	return bres, nil
 }
 
