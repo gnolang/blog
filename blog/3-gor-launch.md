@@ -1,6 +1,6 @@
 ---
 title: "Game of Realms Is On: Win Rewards for Contributing to Gno.land"
-publication_date: 2023-01-18 3:36pm UTC
+publication_date: 2023-01-18T15:36:00Z
 slug: gor-launch
 tags: [gnoland,game-of-realms,launch]
 author: [christina,manfred]
