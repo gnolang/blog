@@ -1,6 +1,6 @@
 ---
 title: "All You Need to Know About Game of Realms: Phase One"
-publication_date: 2022-03-12T14:02:00Z
+publication_date: 2023-03-12T14:02:00Z
 slug: gor-phase1
 tags: [gnoland,game-of-realms,faq]
 author: [christina,manfred]

@@ -1,6 +1,6 @@
 ---
 title: "Gno.land Community Game of Realms AMA #1 - Recap"
-publication_date: 2022-02-03T15:44:00Z
+publication_date: 2023-02-03T15:44:00Z
 slug: gor-ama1
 tags: [game-of-realms,gnoland,proof-of-contribution,dao,governance]
 authors: [manfred]

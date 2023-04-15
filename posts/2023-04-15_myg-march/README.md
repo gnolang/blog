@@ -12,7 +12,9 @@ We made progress across the board at Gno.land last month, from onboarding more d
 
 You can find the live streams of the new biweekly public developer calls on [Gno.land YouTube](https://www.youtube.com/@_gnoland/videos) as well as access the agendas on [GitHub](https://github.com/gnolang/meetings/blob/main/notes/2023_03_15_dev_call_notes.md). The main talking points this month were Gno IDE, Gno.land website language and UX, garbage collection, bug fixes, and how to bring IBC and ICS to the platform. We are working on all these issues concurrently but the order of release will be Gno.land mainnet, IBC, and then ICS (this is reflected in the DAG below).
 
-[![Gno.land mini DAG](https://raw.githubusercontent.com/gnolang/blog-assets/main/6-myg-march/thumbs/mini-dag.png)](https://raw.githubusercontent.com/gnolang/blog-assets/main/6-myg-march/mini-dag.png)
+
+
+[![Gno.land mini DAG](https://gnolang.github.io/blog/2023-04-15_myg-march/thumbs/mini-dag.png)])(https://gnolang.github.io/blog/2023-04-15_myg-march/mini-dag.png)
 
 ## Gno.land Website Language
 
@@ -24,7 +26,7 @@ Internally, our core team is working on improvements to Gno.land’s website, ma
 
 Gno.land developer experience team is working on a web-based Gno IDE for quickly building Gno realms and packages right on your browser by just visiting a web app. Gno IDE will provide much improved UX for everything around building a realm (including making the testing easier), and additional features like autocompletion in the editor. Gno IDE will contain all the features you would expect from an IDE as well as valuable APIs for devs building tools around Gno.land with the public Gno Infrastructure.
 
-[![Gno IDE](https://raw.githubusercontent.com/gnolang/blog-assets/main/6-myg-march/thumbs/gno-ide.png)](https://raw.githubusercontent.com/gnolang/blog-assets/main/6-myg-march/gno-ide.png)
+[![Gno IDE](https://gnolang.github.io/blog/2023-04-15_myg-march/thumbs/gno-ide.png)](https://gnolang.github.io/blog/2023-04-15_myg-march/gno-ide.png)
 
 Gno IDE will have multiple modes to support different use cases. The normal mode will be used during everyday developments (as you’re familiar with from other code editors). The presentation mode is for high accessibility and readability. You can use it during video calls or physical workshops while projecting your screen to an audience. The third and perhaps most interesting mode is the embedded mode. Use this mode to embed the IDE into websites and blogs. This feature is especially useful for tutorials to test out sample code, run it on the real testnets, and play with it.
 
