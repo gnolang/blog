@@ -4,7 +4,7 @@ go 1.19
 
 require (
 	github.com/adrg/frontmatter v0.2.0
-	github.com/gnolang/gno v0.0.0-20230414100309-9ab8ed7ab006
+	github.com/gnolang/gno v0.0.0-20230526150750-b1dbad56add9
 	github.com/peterbourgon/ff/v3 v3.3.0
 )
 
@@ -41,11 +41,11 @@ require (
 	go.opencensus.io v0.22.5 // indirect
 	go.uber.org/atomic v1.7.0 // indirect
 	go.uber.org/multierr v1.9.0 // indirect
-	golang.org/x/crypto v0.7.0 // indirect
+	golang.org/x/crypto v0.9.0 // indirect
 	golang.org/x/mod v0.9.0 // indirect
-	golang.org/x/net v0.8.0 // indirect
-	golang.org/x/sys v0.6.0 // indirect
-	golang.org/x/term v0.6.0 // indirect
+	golang.org/x/net v0.10.0 // indirect
+	golang.org/x/sys v0.8.0 // indirect
+	golang.org/x/term v0.8.0 // indirect
 	golang.org/x/tools v0.6.0 // indirect
 	google.golang.org/protobuf v1.27.1 // indirect
 	gopkg.in/yaml.v2 v2.4.0 // indirect
