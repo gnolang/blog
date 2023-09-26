@@ -2,7 +2,7 @@
 title: "Play Chess with Us: The Gnolang Way at GopherCon 2023"
 publication_date: 2023-09-25T13:37:00Z
 slug: chess-gc23
-tags: [gnoland, gnovm, tm2, gnochess, events]
+tags: [gnoland, gnovm, gnochess, events]
 authors: [christina]
 ---
 
