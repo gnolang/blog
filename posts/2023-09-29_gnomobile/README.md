@@ -5,8 +5,6 @@ slug: gnomobile
 tags: [gnomobile, berty, wesh network]
 authors: [jeff, remi, costin, iuri]
 ---
-# GNO Blogpost 1
-
 # GnoMobile, a Framework for Building Gno Mobile Apps
 
 *This blog post is written by Berty Technologies, an NGO that is building open and free communication solutions without any of the limitations imposed by centralized systems. Berty is a proud partner and grantee of Gno.land.*
