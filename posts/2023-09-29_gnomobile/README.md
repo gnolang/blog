@@ -21,7 +21,10 @@ Simply put, GnoMobile is a framework for developing Gno mobile applications. Thi
 
 For communication between the mobile app and the Gno code, GnoMobile uses [gRPC](https://grpc.io/), a well-supported framework that sends and receives Google Protobuf messages. Even though the core Gno code is written in Go, the app code can use React Native, Java, Swift, etc. The following system diagram shows how gRPC is used.
 
-[https://lh3.googleusercontent.com/wC2AbI9V_rvpEzt2_RnbKPjHydagdm1SFji6MZccep5jbvGZxX-EBEoyvLseR0HXr8Uiv1k9stQ67_wErAuP_TW8yixmJttsUAzVg7v3FGO5kH4MAtZ9hy1c6TJUIhOptLiYKRE00PxuiE0J6uWLtA](https://lh3.googleusercontent.com/wC2AbI9V_rvpEzt2_RnbKPjHydagdm1SFji6MZccep5jbvGZxX-EBEoyvLseR0HXr8Uiv1k9stQ67_wErAuP_TW8yixmJttsUAzVg7v3FGO5kH4MAtZ9hy1c6TJUIhOptLiYKRE00PxuiE0J6uWLtA)
+<div align="center">
+    <img style="display: block;-webkit-user-select: none;margin: auto;cursor: zoom-in;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;" src="https://github-production-user-asset-6210df.s3.amazonaws.com/109347079/267934754-e4da6fec-a586-4ebe-97cc-3b3ad7f79370.jpg" width="324" height="300" align="center">
+</div>
+.
 
 Moving from the bottom to the top, this is how the flow looks:
 
