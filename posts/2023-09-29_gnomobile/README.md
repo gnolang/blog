@@ -3,7 +3,7 @@ title: "GnoMobile, a Framework for Building Gno Mobile Apps"
 publication_date: 2023-09-29T13:37:00Z
 slug: gnomobile
 tags: [gnomobile, berty, wesh network]
-authors: [jeff, remi, costin, iuri]
+authors: [jeff, costin, remi, iuri]
 ---
 # GnoMobile, a Framework for Building Gno Mobile Apps
 
