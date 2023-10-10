@@ -1,6 +1,6 @@
 ---
 title: "The More You Gno: Gno.land Monthly Updates - 5"
-publication_date: 2023-07-11T13:37:00Z
+publication_date: 2023-10-10T13:37:00Z
 slug: monthly-dev-5
 tags: [gnoland, gnovm, tm2]
 authors: [christina]
