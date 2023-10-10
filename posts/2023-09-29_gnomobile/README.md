@@ -23,19 +23,6 @@ For communication between the mobile app and the Gno code, GnoMobile uses [gRPC]
 <div align="center">
     ![](https://github-production-user-asset-6210df.s3.amazonaws.com/109347079/267934754-e4da6fec-a586-4ebe-97cc-3b3ad7f79370.jpg)
 </div>
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
-&nbsp;
 
 Moving from the bottom to the top, this is how the flow looks:
 
