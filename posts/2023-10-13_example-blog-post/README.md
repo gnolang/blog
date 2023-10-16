@@ -1,12 +1,12 @@
 ---
-title: "Title of Example Blog Post"
+title: "Title of Blog Post"
 publication_date: 2023-10-13T13:37:00Z
 slug: example-blog-post
 tags: [blog, post, example, tag_with_whitespace]
 authors: [@leohhhn, @waymobetta]
 ---
 
-# Title of Example Blog Post
+# Title of Blog Post
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in nunc finibus, suscipit urna id, lobortis sem. Sed interdum, mi at tristique sollicitudin, risus arcu efficitur lorem, id imperdiet libero lectus non enim. Suspendisse suscipit nulla et turpis hendrerit dignissim. Sed turpis orci, consectetur id condimentum sed, semper sed metus. Fusce vel rhoncus odio. Mauris efficitur euismod tincidunt. Vivamus ut est commodo, porta dolor id, hendrerit augue. Suspendisse magna sapien, tincidunt nec sem vitae, pharetra ornare orci. In mattis nec sem ut auctor.
 
