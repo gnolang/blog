@@ -24,7 +24,7 @@ Below are topics of particular interest to us, but we’re open to all suggestio
 If you've considered the previous section and would like to contribute to the Gno Blog, here are the steps to follow:
 - Write a blog post you'd like to see included to the Gno Blog, while strictly following the [Style Guide](#gno-blog-style-guide).
 - Submit a PR using [this template](https://github.com/gnolang/blog/pull/35), while following the structure of the folders & naming, as shown in the example blog post.
-- Ping the Gno.land DevRel team, @waymobetta & @leohhhn for a review.
+- Ping the Gno.land DevRel team, [@waymobetta](https://github.com/waymobetta) and [@leohhhn](https://github.com/leohhhn) for a review.
 
 After your blog post passes the review process, it will be merged into the `main` branch and shortly after deployed on-chain.
 
