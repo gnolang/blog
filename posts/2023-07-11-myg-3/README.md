@@ -12,7 +12,7 @@ We’ve been busy since the last edition of *The More You Gno,* with the Gno.lan
 
 ## Gno by Example
 
-We recently launched [Gno by Example](https://gno-by-example.com/), our equivalent to [Solidity by Example](https://solidity-by-example.org/), where you can see tutorials and code snippets to help you learn and get more easily onboarded to Gno.land. Gno by Example is designed to be community-run with a front-end app and tutorials in markdown. There’s also a specific markdown syntax where you can embed certain file fragments to make your tutorials more structured. We’d love to build this into the ultimate resource center for Gno.land, so feel free to [contribute](https://github.com/gnolang/gno-by-example) with new tutorials and sections. Contributions here are eligible for rewards from the Game of Realms competition.
+We recently launched [Gno by Example](https://gno-by-example.com/), our equivalent to both [Solidity by Example](https://solidity-by-example.org/) and [Go by Example](https://gobyexample.com/), where you can see tutorials and code snippets to help you learn and get more easily onboarded to Gno.land. Gno by Example is designed to be community-run with a front-end app and tutorials in markdown. There’s also a specific markdown syntax where you can embed certain file fragments to make your tutorials more structured. We’d love to build this into the ultimate resource center for Gno.land, so feel free to [contribute](https://github.com/gnolang/gno-by-example) with new tutorials and sections. Contributions here are eligible for rewards from the Game of Realms competition.
 
 ## GnoVM
 
