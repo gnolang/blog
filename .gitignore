@@ -1,2 +1,5 @@
 reporting/reporting
 reporting/output
+.DS_Store
+.idea/
+posts/.DS_Store
