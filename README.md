@@ -11,6 +11,10 @@ powered by the [`p/demo/blog` library](https://github.com/gnolang/gno/tree/maste
 
 The blog posts are written in markdown format, and include a frontmatter prefix to define metadata.
 
+## Contributing a blog post
+
+See [CONTRIBUTING.md](./CONTRIBUTING.md).
+
 ## CLI ([`./gnoblog-cli`](./gnoblog-cli))
 
 _See [#1](https://github.com/gnolang/blog/issues/1)_

@@ -6,7 +6,7 @@ import (
 	"context"
 	"flag"
 	"fmt"
-	"io/ioutil"
+	"io"
 	"log"
 	"os"
 	"strings"
@@ -96,7 +96,7 @@ func run(args []string) error {
 	}
 
 	if !opts.Debug {
-		log.SetOutput(ioutil.Discard)
+		log.SetOutput(io.Discard)
 	}
 
 	if err := root.Run(context.Background()); err != nil {

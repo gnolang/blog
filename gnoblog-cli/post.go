@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"io"
+	"strings"
 	"time"
 
 	"github.com/adrg/frontmatter"
@@ -24,6 +25,18 @@ func parsePost(reader io.Reader) (*post, error) {
 		return nil, fmt.Errorf("invalid post: %w", err)
 	}
 	p.Body = string(rest)
+	p.Tags = removeWhitespace(p.Tags)
 
 	return &p, nil
+}
+
+// removeWhitespace loops over a slice of tags (strings) and truncates each tag
+// by removing whitespace
+// ie, []string{"example spaced tag"} -> []string{"examplespacedtag"}
+func removeWhitespace(tags []string) []string {
+	for index, tag := range tags {
+		tags[index] = strings.Replace(tag, " ", "", -1)
+	}
+
+	return tags
 }
