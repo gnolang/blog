@@ -75,7 +75,8 @@ To accomplish this task, we divided our work into five main stages:
 
 - We decided to build two different DAO standards, using two different approaches of modularity:
 - Aragon DAO Standard, based on the amazing work of [the Aragon team](https://aragon.org/) (using Solidity)
-- [DAODAO](https://github.com/DA0-DA0) smartcontract, using CosmWasm, that allows more modularity.
+- [DAODAO](https://github.com/DA0-DA0) smart contract, using CosmWasm, that allows more modularity.
+
 
 Here is an example, with the DAODAO contract ported into Gnolang:
 [Source](https://test3.gno.land/r/demo/foo_dao_2/dao_realm.gno)
