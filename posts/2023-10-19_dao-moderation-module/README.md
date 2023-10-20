@@ -17,7 +17,7 @@ Approximately 10 months ago, the Teritori core team decided to explore the new p
 
 ### About Teritori
 
-Teritori is a decentralized Operating System for individuals & communities that allows organizations to communicate and interact in a resilient and transparent way. Its core components include the creation of decentralized User Profile for individuals & organizations as well as a dApp Store allowing users to pick their favorite services for daily usage and developers to list their product in order to grow their user base. Finally, Teritori backbone, its P2P messenger application that will enable users to create resilient token-gated groups in a click will even allow non crypto-native users to get onboard as this feature doesn't even require a wallet connection to get started.
+Teritori is a decentralized Operating System for individuals & communities that allows organizations to communicate and interact in a resilient and transparent way. Its core components include the creation of a decentralized User Profile for individuals & organizations as well as a dApp Store allowing users to pick their favorite services for daily usage and developers to list their product in order to grow their user base. Finally, Teritori backbone, its P2P messenger application that will enable users to create resilient token-gated groups in a click will even allow non-crypto-native users to get onboard as this feature doesn't even require a wallet connection to get started.
 
 ### Teritori <> Gno.land
 
