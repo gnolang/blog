@@ -34,7 +34,8 @@ The Gno Moderation Module is a smart contract (“realm”) that enables a decen
 ### Let’s take an example:
 
 Imagine a simple social network similar to Instagram, in which all content is decentralized (using IPFS for images, videos, music etc.). For each post, users sign in via their wallet to post content, and no centralized administrator can delete this content. The freedom offered by this type of decentralized application is immense since even as developers of the application, it is impossible to delete the content. Therefore, we can consider this “space of freedom” as a “common space” unlike any application owned by a private company and hosted on centralized infrastructure.
-With this radical freedom for the user comes a great responsibility—to collectively ensure the security of this space rather than delegating the responsibility to moderators employed by a commercial enterprise. This is why we’ve created the “Gno Moderation Module.”
+With this radical freedom for the user comes a great responsibility— to collectively ensure the security of this space rather than delegating the responsibility to moderators employed by a commercial enterprise. This is why we’ve created the “Gno Moderation Module.”
+
 
 ### How does it work?
 
