@@ -79,9 +79,9 @@ To accomplish this task, we divided our work into five main stages:
 
 
 Here is an example, with the DAODAO contract ported into Gnolang:
-[Source](https://test3.gno.land/r/demo/foo_dao_2/dao_realm.gno)
+[Source](https://testnet.gno.teritori.com/r/demo/dao_realm_v6/dao_realm.gno)
 
-```
+```go
 package dao_realm
 
 import (
@@ -90,81 +90,103 @@ import (
 	"strings"
 	"time"
 
-	dao_core "gno.land/p/demo/daodao/core"
-	dao_interfaces "gno.land/p/demo/daodao/interfaces"
-	"gno.land/p/demo/daodao/proposal_single"
-	"gno.land/p/demo/daodao/voting_group"
-	"gno.land/r/demo/groups"
-	modboards "gno.land/r/demo/modboards"
-	tori "gno.land/r/demo/tori"
+	dao_core "gno.land/p/demo/daodao/core_v16"
+	dao_interfaces "gno.land/p/demo/daodao/interfaces_v16"
+	proposal_single "gno.land/p/demo/daodao/proposal_single_v16"
+	voting_group "gno.land/p/demo/daodao/voting_group_v17"
+	"gno.land/p/demo/ujson_v5"
+	"gno.land/r/demo/groups_v22"
+	modboards "gno.land/r/demo/modboards_v9"
 )
 
 var (
-	daoCore       dao_core.IDAOCore
-	registry      = dao_interfaces.NewMessagesRegistry()
+	daoCore       dao_interfaces.IDAOCore
 	mainBoardName = "dao_realm"
+	groupName     = mainBoardName + "_voting_group"
 	groupID       groups.GroupID
 )
 
 func init() {
-	groupID = groups.CreateGroup(mainBoardName)
-	groups.AddMember(groupID, "g1747t5m2f08plqjlrjk2q0qld7465hxz8gkx59c", 1, "")
-	groups.AddMember(groupID, "g108cszmcvs4r3k67k7h5zuhm4el3qhlrxzhshtv", 1, "")
-	groups.AddMember(groupID, "g14u5eaheavy0ux4dmpykg2gvxpvqvexm9cyg58a", 1, "")
-	groups.AddMember(groupID, "g1ckn395mpttp0vupgtratyufdaakgh8jgkmr3ym", 1, "")
-	// allow this DAO to edit it's members
-	registry.Register(groups.NewAddMemberHandler())
-	registry.Register(groups.NewDeleteMemberHandler())
-
-	daoCore = dao_core.NewDAOCore(dao_voting_group.NewGroupVoting(groupID), nil)
-
-	tt := dao_interfaces.Percent(100) // 1%
-	tq := dao_interfaces.Percent(100) // 1%
-	proposalMod := dao_proposal_single.NewDAOProposalSingle(daoCore, &dao_proposal_single.DAOProposalSingleOpts{
-		MaxVotingPeriod: time.Hour * 24 * 42,
-		Threshold: dao_interfaces.Threshold{ThresholdQuorum: &dao_interfaces.ThresholdQuorum{
-			Threshold: dao_interfaces.PercentageThreshold{Percent: &tt},
-			Quorum:    dao_interfaces.PercentageThreshold{Percent: &tq},
-		}},
-		Registry: registry,
-	})
-	// TODO: add a router to really support multiple proposal modules
-	registry.Register(dao_proposal_single.NewUpdateSettingsHandler(proposalMod))
-	daoCore.AddProposalModule(proposalMod)
-
-	// allow this DAO to create moderated boards
-	registry.Register(modboards.NewCreateBoardHandler())
-	registry.Register(modboards.NewDeletePostHandler())
 	modboards.CreateBoard(mainBoardName)
 
-	// allow this DAO to administrate the TORI coin
-	registry.Register(tori.NewMintToriHandler())
-	registry.Register(tori.NewBurnToriHandler())
+	votingModuleFactory := func(core dao_interfaces.IDAOCore) dao_interfaces.IVotingModule {
+		groupID = groups.CreateGroup(groupName)
+		groups.AddMember(groupID, "g1747t5m2f08plqjlrjk2q0qld7465hxz8gkx59c", 1, "")
+		groups.AddMember(groupID, "g108cszmcvs4r3k67k7h5zuhm4el3qhlrxzhshtv", 1, "")
+		groups.AddMember(groupID, "g14u5eaheavy0ux4dmpykg2gvxpvqvexm9cyg58a", 1, "")
+		groups.AddMember(groupID, "g1ckn395mpttp0vupgtratyufdaakgh8jgkmr3ym", 1, "")
+		groups.AddMember(groupID, std.GetOrigCaller().String(), 1, "")
+		return voting_group.NewVotingGroup(groupID)
+	}
+
+	proposalModulesFactories := []dao_interfaces.ProposalModuleFactory{
+		func(core dao_interfaces.IDAOCore) dao_interfaces.IProposalModule {
+			tt := proposal_single.Percent(100) // 1%
+			tq := proposal_single.Percent(100) // 1%
+			return proposal_single.NewDAOProposalSingle(core, &proposal_single.DAOProposalSingleOpts{
+				MaxVotingPeriod: time.Hour * 24 * 42,
+				Threshold: proposal_single.Threshold{ThresholdQuorum: &proposal_single.ThresholdQuorum{
+					Threshold: proposal_single.PercentageThreshold{Percent: &tt},
+					Quorum:    proposal_single.PercentageThreshold{Percent: &tq},
+				}},
+			})
+		},
+	}
+
+	messageHandlersFactories := []dao_interfaces.MessageHandlerFactory{
+		func(core dao_interfaces.IDAOCore) dao_interfaces.MessageHandler {
+			return groups.NewAddMemberHandler()
+		},
+		func(core dao_interfaces.IDAOCore) dao_interfaces.MessageHandler {
+			return groups.NewDeleteMemberHandler()
+		},
+		func(core dao_interfaces.IDAOCore) dao_interfaces.MessageHandler {
+			// TODO: add a router to support multiple proposal modules
+			propMod := core.ProposalModules()[0]
+			return proposal_single.NewUpdateSettingsHandler(propMod.Module.(*proposal_single.DAOProposalSingle))
+		},
+		func(core dao_interfaces.IDAOCore) dao_interfaces.MessageHandler {
+			return modboards.NewCreateBoardHandler()
+		},
+		func(core dao_interfaces.IDAOCore) dao_interfaces.MessageHandler {
+			return modboards.NewDeletePostHandler()
+		},
+	}
+
+	daoCore = dao_core.NewDAOCore(votingModuleFactory, proposalModulesFactories, messageHandlersFactories)
 }
 
 func Render(path string) string {
 	return "[[board](/r/demo/modboards:" + mainBoardName + ")]\n\n" + daoCore.Render(path)
 }
 
-func Propose(moduleIndex int, title string, description string, b64Messages string) {
-	mod := dao_core.GetProposalModule(daoCore, moduleIndex)
-	var messages []dao_interfaces.ExecutableMessage
-	if len(b64Messages) != 0 {
-		rawMessages := strings.Split(b64Messages, ",")
-		for _, rawMessage := range rawMessages {
-			message := registry.FromBase64String(rawMessage)
-			messages = append(messages, message)
-		}
+func VoteJSON(moduleIndex int, proposalID int, voteJSON string) {
+	module := dao_core.GetProposalModule(daoCore, moduleIndex)
+	if !module.Enabled {
+		panic("proposal module is not enabled")
 	}
-	mod.Propose(title, description, messages)
-}
-
-func Vote(moduleIndex int, proposalID int, vote dao_interfaces.Vote, rationale string) {
-	dao_core.GetProposalModule(daoCore, moduleIndex).Vote(proposalID, vote, rationale)
+	module.Module.VoteJSON(proposalID, voteJSON)
 }
 
 func Execute(moduleIndex int, proposalID int) {
-	dao_core.GetProposalModule(daoCore, moduleIndex).Execute(proposalID)
+	module := dao_core.GetProposalModule(daoCore, moduleIndex)
+	if !module.Enabled {
+		panic("proposal module is not enabled")
+	}
+	module.Module.Execute(proposalID)
+}
+
+func ProposeJSON(moduleIndex int, proposalJSON string) {
+	module := dao_core.GetProposalModule(daoCore, moduleIndex)
+	if !module.Enabled {
+		panic("proposal module is not enabled")
+	}
+	module.Module.ProposeJSON(proposalJSON)
+}
+
+func getProposalsJSON(moduleIndex int, limit int, startAfter string, reverse bool) string {
+	module := dao_core.GetProposalModule(daoCore, moduleIndex)
+	return module.Module.ProposalsJSON(limit, startAfter, reverse)
 }
 ```
 
@@ -175,11 +197,11 @@ You can find the full report of [Teritori Core’s journey here](https://github.
 ### Resources:
 
 Documentation:
-- [Gno Moderation DAO](https://github.com/gnolang/gno/blob/d81d4369d8d6b62dae0219a20e9fb3904637f869/examples/gno.land/r/demo/teritori/MODERATION_DAO.md)
+- [Gno Moderation DAO](https://github.com/TERITORI/gno/blob/teritori-unified/examples/gno.land/r/demo/teritori/MODERATION_DAO.md)
 
 Packages:
-- [https://test3.gno.land/p/demo/grc/grc4_group](https://test3.gno.land/p/demo/grc/grc4_group)
-- [https://test3.gno.land/p/demo/daodao/interfaces](https://test3.gno.land/p/demo/daodao/interfaces)
+- [https://testnet.gno.teritori.com/r/demo/groups_v22](https://testnet.gno.teritori.com/r/demo/groups_v22)
+- [https://testnet.gno.teritori.com/p/demo/daodao/interfaces_v16](https://testnet.gno.teritori.com/p/demo/daodao/interfaces_v16)
 
 Tutorial:
 - [Gno.land Social Feed Moderation on Teritori](https://teritori.gitbook.io/teritori-whitepaper/gno.land/introducing-gno.land-social-feed-v0.1#social-feed-moderation)
