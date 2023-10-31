@@ -1,7 +1,7 @@
 ---
 title: "Gno.land Funding and Grants Program - Progress So Far"
 publication_date: 2023-10-17T13:37:00Z
-slug: funding-program-q3
+slug: funding-program-23q3
 tags: [gnoland, funding, grants]
 authors: [christina, michelle]
 ---
