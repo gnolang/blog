@@ -36,22 +36,21 @@ The Gno Moderation Module is a smart contract (“realm”) that enables a decen
 Imagine a simple social network similar to Instagram, in which all content is decentralized (using IPFS for images, videos, music etc.). For each post, users sign in via their wallet to post content, and no centralized administrator can delete this content. The freedom offered by this type of decentralized application is immense since even as developers of the application, it is impossible to delete the content. Therefore, we can consider this “space of freedom” as a “common space” unlike any application owned by a private company and hosted on centralized infrastructure.
 With this radical freedom for the user comes a great responsibility— to collectively ensure the security of this space rather than delegating the responsibility to moderators employed by a commercial enterprise. This is why we’ve created the “Gno Moderation Module.”
 
-
 ### How does it work?
 
-![moderation flow v0.1](./src/moderation_flow_v0.1.png)
+[![moderation_flow v0.1](https://gnolang.github.io/blog/2023-10-19_dao-moderation-module/src/thumbs/moderation_flow_v0.1.png)](https://gnolang.github.io/blog/2023-10-19_dao-moderation-module/src/moderation_flow_v0.1.png)
 
 The Gno Moderation Module allows users to notify the moderation DAO community that they wish to report content. Through this action (permitted by the smart contract), they inform the DAO community that the content is inappropriate.
 
-![content flag](./src/content_flag.png)
+[![content flag](https://gnolang.github.io/blog/2023-10-19_dao-moderation-module/src/thumbs/content_flag.png)](https://gnolang.github.io/blog/2023-10-19_dao-moderation-module/src/content_flag.png)
 
 Once the content has been reported a certain number of times (10 times in this PoC) by users (who may or may not be members of the Moderation DAO), an on-chain proposal is automatically created.
 
-![moderation dao feed](./src/moderation_dao_feed.png)
+[![moderation dao feed](https://gnolang.github.io/blog/2023-10-19_dao-moderation-module/src/thumbs/moderation_dao_feed.png)](https://gnolang.github.io/blog/2023-10-19_dao-moderation-module/src/moderation_dao_feed.png)
 
 This on-chain proposal is then listed in the Moderation DAO tab on the Social Feed as well as on the Moderation DAO profile proposals feed so all Moderation DAO members can vote on it. A debate can take place to discuss the best choice for the content.
 
-![moderation dao vote](./src/moderation_dao_vote.png)
+[![moderation dao vote](https://gnolang.github.io/blog/2023-10-19_dao-moderation-module/src/thumbs/moderation_dao_vote.png)](https://gnolang.github.io/blog/2023-10-19_dao-moderation-module/src/moderation_dao_vote.png)
 
 Moderation DAO members have three voting options:
 - Ban the content in question
