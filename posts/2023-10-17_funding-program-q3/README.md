@@ -35,8 +35,8 @@ Flippando is a multi-level on-chain memory game currently written in Solidity an
 Zack Scholl is Gno.land’s first resident tinkerer with tons of experience in web2 development and a passion for the Go language. Through the grants program, Zack aims to translate his extensive knowledge to Gno and web3 by developing PoCs using Gno. So far, Zack has worked on a microblogging app for Gno.land and a prototype for using generative audio with smart contracts. He’s also creating documentation and tutorials to help other developers follow his lead. You’ll be hearing more from Zack over the coming weeks. Follow his [hackerspace issue 2](https://github.com/gnolang/hackerspace/issues/2) journey for more details.
 
 After a great start to the Funding and Grants Program in Q3, below is a breakdown of the percentage of funding allocated to each area of development so far:
-
-![](src/funding.png)
+            
+[![Funding](https://gnolang.github.io/blog/2023-10-17_funding-program-q3/src/thumbs/funding.png)](https://gnolang.github.io/blog/2023-10-17_funding-program-q3/src/funding.png)
 
 ##  Coming Up in Q4 and Q1 2024
 
