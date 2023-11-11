@@ -1,9 +1,9 @@
 ---
-title: Peace!
+title: "Peace!"
 publication_date: 2022-05-02T13:17:22Z
 slug: peace
-tags: [peace, cosmos, gno.land]
-authors: [jae]
+tags: [peace, cosmos, "gno.land"]
+authors: [jaekwon]
 ---
 
 # Peace!
