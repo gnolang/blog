@@ -32,7 +32,7 @@ Another major advantage of Go is that the language comes with an ecosystem of gr
 
 ### How Gnolang (Gno) Differs from Golang (Go)
 
-[![Go and Gno](https://gnolang.github.io/blog/2022-11-21_intro/thumbs/go-and-gno.png)](https://gnolang.github.io/blog/2022-11-21_intro/go-and-gno.png)
+[![Go and Gno](https://gnolang.github.io/blog/2022-11-21_intro/src/thumbs/go-and-gno.png)](https://gnolang.github.io/blog/2022-11-21_intro/src/go-and-gno.png)
 
 _Image 1: Gnolang - Like Go but specific to the blockchain_
 
@@ -42,7 +42,7 @@ Otherwise, Gno loads and uses many standard libraries that power Go, so most of 
 
 The composable nature of Go/Gno allows for type-checked interactions between contracts, making Gno.land safer and more powerful, as well as operationally cheaper and faster. Smart contracts on Gno.land will be light, simple, more focused, and easily interoperable — a network of interconnected contracts rather than siloed monoliths that limit interactions with other contracts.
 
-[![Gnolang code example](https://gnolang.github.io/blog/2022-11-21_intro/thumbs/code-example.jpg)](https://gnolang.github.io/blog/2022-11-21_intro/code-example.jpg)
+[![Gnolang code example](https://gnolang.github.io/blog/2022-11-21_intro/src/thumbs/code-example.jpg)](https://gnolang.github.io/blog/2022-11-21_intro/src/code-example.jpg)
 
 _Image 2: Code snippet from the Gno programming language_
 
