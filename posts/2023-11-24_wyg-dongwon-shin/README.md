@@ -1,6 +1,6 @@
 ---
 title: "Who You Gno – On the Record with Dongwon Shin"
-publication_date: TBD
+publication_date: 2023-11-24T00:00:00Z
 slug: wyg-dongwon-shin
 tags: [whoyougno, onbloc, community, interview]
 authors: [christina]
