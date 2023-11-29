@@ -6,8 +6,6 @@ tags: [gnoland, ecosystem, updates, gnovm, tm2]
 authors: [christina]
 ---
 
-# The More You Gno: Gno.land Monthly Updates - 6
-
 Welcome to the latest edition of The More You Gno, your regular source of updates from the Gno.land core team and contributor ecosystem. There’s a lot to cover this month, from a company engineering retreat to new core members and contributors. We’ve made progress across the board to fix important bugs and issues and provide additional features. There’s a new way to dynamically call realms, Gno.land’s tokenomics and governance are advancing, our standard library list is expanding, and our grantees are killing it with their deliverables. Without further ado, let’s dive in.
 
 ## Gno Core Team Updates - TL;DR
