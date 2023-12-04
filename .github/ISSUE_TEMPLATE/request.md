@@ -10,11 +10,11 @@ assignees: 'leohhhn', 'waymobetta'
 ### Department:
 <!--- Provide the department submitting the requesting -->
 
-### Date of Deliverable (est.):
-<!--- Provide the estimated date of deliverable -->
+### Deadline (est.):
+<!--- Provide the estimated deadline date -->
 
 ### Summary
 <!--- Provide a general summary of the issue -->
 
-### Notes
+### Body
 <!--- Provide any supporting notes including examples -->
