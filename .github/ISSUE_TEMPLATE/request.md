@@ -4,7 +4,6 @@ about: This is a request for work
 title: "[REQUEST]: "
 labels: request
 assignees: leohhhn, waymobetta
-
 ---
 
 ### Department:
