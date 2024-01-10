@@ -1,4 +1,10 @@
-# Building Gno.land – Next Generation Smart Contract System
+---
+title: "Building Gno.land – Next Generation Smart Contract System"
+publication_date: 2024-01-10T10:51:00Z
+slug: bgl-poc1
+tags: [building-gnoland,gnoland,proof-of-contribution]
+author: [christina]
+---
 
 *Disclaimer: The Building Gno.land series aims to share the core concepts of our platform, mission, and tech stack, providing a snapshot of a current state on our builder’s journey. New episodes may deprecate previous ones, but no editions will be modified at any time. We encourage you to follow along as we create the rails for a more transparent and accountable society, and we welcome feedback and contributions to the repo.*
 
@@ -50,4 +56,4 @@ PoC minimizes risks of Sybil attacks, takeovers, and alliances as the community 
 
 Through fairer rewards, restructured incentives, resistance to corruption and Sybil attacks, and a strong appreciation for all contributions, Gno.land is designed to be sustainable and fair. A censorship-resistant platform built, owned, and secured by a growing, aligned community for many generations to come.
 
-*I. What Is Proof of Contribution? is the first in a series of articles to dive deeply into the philosophy, vision, mechanics, and work involved in developing a new consensus mechanism for the next generation of smart contract systems. Look out for subsequent editions and additional Building Gno.land series, and let us know what you think! Got questions? Join the Gno.land [Discord](https://discord.com/invite/S8nKUqwkPn) or follow us on [Twitter/X](https://twitter.com/_gnoland)*
+*I. What Is Proof of Contribution? is the first in a series of articles to dive deeply into the philosophy, vision, mechanics, and work involved in developing a new consensus mechanism for the next generation of smart contract systems. Look out for subsequent editions and additional Building Gno.land series, and let us know what you think! Got questions? Join the Gno.land [Discord](https://discord.com/invite/S8nKUqwkPn) or follow us on [Twitter/X](https://twitter.com/_gnoland)*.
