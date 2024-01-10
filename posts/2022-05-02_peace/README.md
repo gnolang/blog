@@ -6,8 +6,6 @@ tags: [peace, cosmos, "gno.land"]
 authors: [jaekwon]
 ---
 
-# Peace!
-
 I've never been put in such a difficult position, of having information that I
 cannot reveal. And if you know me, you know that I like to speak my mind.  But
 I cannot say the things that I would rather say, because you get a lot of flack

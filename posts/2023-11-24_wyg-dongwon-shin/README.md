@@ -6,7 +6,6 @@ tags: [whoyougno, onbloc, community, interview]
 authors: [christina]
 ---
 
-# Who You Gno – On the Record with Dongwon Shin
 *Who You Gno is intended to shine a light on the builders, contributors, and generally brilliant humans behind the tech. We’re excited to kick off this series with Dongwon Shin, the co-founder and CEO of one of Gno.land’s longest-contributing teams, Onbloc, a South Korean-based blockchain software company that builds key infrastructure and tooling for Gno.land*
 
 Since embarking on their Gno journey in late 2021, Dongwon and his team have been among the most active gnomes embodying the values of the Gno project: hardworking, passionate, honest, and humble, to name a few. You may already be familiar with Onbloc’s projects [Adena](https://adena.app/), [Gnoscan](https://gnoscan.io/), and [Gnoswap](https://github.com/gnoswap-labs) more about this can be found in [Onbloc's Hackerspace journey](https://github.com/gnolang/hackerspace/issues/29). In this interview, we’ll get the latest updates on these projects, hear about Dongwon the person, and learn more about what motivates him to be a gnome. Check it out.

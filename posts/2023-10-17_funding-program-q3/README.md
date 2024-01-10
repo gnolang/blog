@@ -6,8 +6,6 @@ tags: [gnoland, funding, grants]
 authors: [christina, michelle]
 ---
 
-# Gno.land Funding and Grants Program - Progress So Far
-
 # Quarterly Report: Q3 2023
 
 We launched the [Gno.land Funding and Grants](https://github.com/gnolang/ecosystem-fund-grants) program in July 2023 to encourage talented and passionate developers to interact with Gno.land, help build core infrastructure and tooling, and enhance the usability of the platform. After establishing a review process to streamline the program and identify core areas that need the most work, we ran with our first cohort of grantees in Q3, awarding four grants from a total of seven submissions (to two teams and two individuals). Full details of grant submissions, scope, and funding can be found on GitHub, but here’s a summary of the program’s progress so far and what’s coming up in Q4.

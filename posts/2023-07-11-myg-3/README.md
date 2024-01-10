@@ -6,8 +6,6 @@ tags: [gnoland, gnovm, tm2]
 authors: [christina]
 ---
 
-## The More You Gno - Gno.land Monthly Updates 3
-
 We’ve been busy since the last edition of *The More You Gno,* with the Gno.land core team and ecosystem partners present at various global developer events. We’ve visited many gnomes (and gnomes-in-the-making) around the world from Berlin to Belgrade, spreading the word about Gno.land and growing our expanding community. Aside from all the networking, Gno.land is taking shape with a new iteration of our website, the Gno.land Funding and Grants Program, and a host of developer updates as always. Let’s dive in.
 
 ## Gno by Example

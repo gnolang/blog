@@ -6,8 +6,6 @@ tags: [gnoland, gnovm, tm2]
 authors: [christina]
 ---
 
-## The More You Gno 2: Gno.land Developer Updates
-
 Over the past few weeks, our core devs and ecosystem contributors have been making massive strides on Gno.land. There’s a lot to cover in the second edition of *The More You Gno*, from updates on Tendermint2 and GnoVM to stack/frames management, Gno IDE, and plenty more. We’ll also see what some of the external teams contributing to the platform have been up to, including Gno.land’s first decentralized exchange, GnoSwap, and Adena compatibility with GRC20 tokens. Check it out.
 
 ## Tendermint2

@@ -6,7 +6,6 @@ tags: [gnoland, dao, moderation, teritori]
 authors: [ferrymangmi, zxxma, michelleellen]
 ---
 
-# Gno.land Moderation DAO Module
 *This blog post is written by the Teritori team, whose focus is to allow organizations to communicate and interact in a resilient and transparent way. Teritori is a partner and grantee of Gno.land.*
 
 When it comes to the complex subject of discussion forums and decentralized social networks, numerous technical and philosophical questions arise.

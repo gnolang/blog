@@ -6,8 +6,6 @@ tags: [gnoland, gnovm, tm2]
 authors: [christina]
 ---
 
-## The More You Gno 4: Gno.land Developer Updates
-
 We’ve had more on our plates than ever over the last few weeks, with a huge team presence in Paris at EthCC and Nebular Summit in July, an opening talk at Stanford Blockchain Club in August by Gno.land’s founder Jae Kwon, and some awesome contributions from Gno.land grantees and ecosystem partners, including the first demos of Gnoswap and Teritori’s social platform and DAO deployer. We continue to make solid progress on GnoVM, an alternative VM in Rust, Tendermint2, native bindings, and much more. Check out our latest developer updates below.
 
 ## Upgrade Strategy for AVL Between GitHub and test3.gno.land
