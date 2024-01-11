@@ -28,7 +28,6 @@ zôÖma believes that web3 holds the key to unlocking the emergence of new socie
 
 ## Making Web3 More Accessible 
 
-
 Of course, as zôÖma found out, building new tools is easier said than done. Our industry faces an uphill climb when it comes to balancing the promise of the tech with a user experience that doesn’t cause tachycardia. He says that understanding that most people “don’t have the time or inclination to incorporate difficult technical concepts in their lives” has given him “crazy energy to focus on very simple technologies.” In fact, the ‘failure’ of La Suite du Monde is what gave birth to Teritori, “which today provides all the functionalities people asked us for at the time; a social network, communication systems, voting, crowd-funding, etc. We have made great progress, and it’s important to focus on products that are radically simple for the general public.”
 
 According to zôÖma, this means abstracting away the concepts that everyday people don’t need to be aware of, such as networks, dApps, and even blockchain, “and always switching from one decentralized application to another.” Unifying (not centralizing) separate tools, networks, and technologies within a single, simple interface, he believes, is the key to broader adoption. “It's a very complex challenge, in terms of security, design, etc., but it's what I'm passionate about today.” 
