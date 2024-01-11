@@ -34,7 +34,6 @@ According to zôÖma, this means abstracting away the concepts that everyday peo
 
 When it comes to Gno.land, Teritori has already delivered essential DAO tooling and standards, a Moderation DAO module to facilitate social communication and a Justice DAO module for conflict resolution. The team is now focusing on an on-chain project management tool to allow organizations and individuals to manage projects and track tasks smoothly and transparently on-chain.
 
-
 ## A Fairer, More Transparent World
 
 In 2024, Teritori enters a new phase called "Chapter II", which involves unifying all its work into a mobile and desktop application that could “trigger superb demonstrations of the potential of DAOs.” He enthuses, “I dream that we will see the emergence of a village that uses Teritori as a tool for internal discussion and co-financing. Will this be real in 2024? Who knows? But that’s where I focus all my energy!”
