@@ -43,5 +43,3 @@ He believes the internet has been a great leveler, enabling anyone with a connec
 zôÖma says that humanity is at a turning point, and we must build the necessary tools now to avoid finding ourselves in a real-life version of George Orwell’s 1984. “I aspire to participate modestly in a world that is fairer, more transparent, and where society doesn’t need a puppet in a suit to improve its living conditions or respond to local needs. Web3 is just a tool, and if it doesn't meet this real need, then for me, it will be a failure.”
 
 *Experiment with Teritori today and test its Social Feed, which now includes Twitter-like functionality for posts, Medium-style articles, Soundcloud-inspired music, and videos—all based on Gno and IPFS and totally decentralized. You can also check out Teritori’s GnoModerationModule, which allows you to moderate a social network in a decentralized way. A faucet is available on the home page at [app.teritori.com](https://app.teritori.com/feed?network=gno-teritori).*
-
-
