@@ -36,7 +36,7 @@ When it comes to Gno.land, Teritori has already delivered essential DAO tooling 
 
 ## A Fairer, More Transparent World
 
-In 2024, Teritori enters a new phase called "Chapter II", which involves unifying all its work into a mobile and desktop application that could “trigger superb demonstrations of the potential of DAOs.” He enthuses, “I dream that we will see the emergence of a village that uses Teritori as a tool for internal discussion and co-financing. Will this be real in 2024? Who knows? But that’s where I focus all my energy!”
+In 2024, Teritori enters a new phase called "Chapter II," which involves unifying all its work into a mobile and desktop application that could “trigger superb demonstrations of the potential of DAOs.” He enthuses, “I dream that we will see the emergence of a village that uses Teritori as a tool for internal discussion and co-financing. Will this be real in 2024? Who knows? But that’s where I focus all my energy!”
 
 He believes the internet has been a great leveler, enabling anyone with a connection to educate themselves on any subject; yet, the opportunity isn’t open to all, and free and open access is constantly diminishing. “I am a child of the internet. I grew up with warez, p2p, and an internet which provided me with daily resources to learn freely, everything that interested me. In some countries, it is impossible to benefit from this opportunity, and with the centralization of the internet on different key players, mass surveillance, and the censorship of certain dictators, the Internet is losing its very essence, which makes it magic. Distributed protocols can reshuffle the cards and offer tools for the public good.” 
 
