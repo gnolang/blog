@@ -8,7 +8,7 @@ authors: [christina]
 
 Antoine Breuil, ‘zôÖma,’ is the co-founder of [Teritori](https://app.teritori.com/), an active Gno.land contributor and grantee that’s building key modules and tooling for Gno. A firm believer in equal opportunities, free and decentralized access to information, and helping fellow humans, zôÖma is fascinated by human behavior and how we organize ourselves, holding an avant-garde social experiment five years ago with Teritori co-founder ‘Pop.’ "La Suite du Monde" drew people across France to a small village in the countryside to create a shared community and society—with farmland, accommodation, and tools for common use.
 
-The goal was to form an in-real-life DAO whose members shared common goals and interests—using blockchain technology with a token to pay for goods and services and vote on governance matters. While many people participated and were enthusiastic about creating a shared society, zôÖma admits the experiment was early: no one was interested in interacting with the tech. “90% of people, rural or not, found it too complicated,” he admits. “We were a bit naive, but it was fascinating nonetheless.”
+The goal was to form an in-real-life DAO whose members shared common goals and interests using blockchain technology with a token to pay for goods and services and vote on governance matters. While many people participated and were enthusiastic about creating a shared society, zôÖma admits the experiment was early- no one was interested in interacting with the tech. “90% of people, rural or not, found it too complicated,” he admits. “We were a bit naive, but it was fascinating nonetheless.”
 
 ## A Fascination for Human Behavior
 
