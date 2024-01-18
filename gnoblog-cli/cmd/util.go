@@ -2,21 +2,10 @@ package main
 
 import (
 	"fmt"
+	"github.com/adrg/frontmatter"
 	"io"
 	"strings"
-	"time"
-
-	"github.com/adrg/frontmatter"
 )
-
-type post struct {
-	Title           string    `yaml:"title"`
-	Tags            []string  `yaml:"tags"`
-	Authors         []string  `yaml:"authors"`
-	PublicationDate time.Time `yaml:"publication_date"`
-	Slug            string    `yaml:"slug"`
-	Body            string
-}
 
 func parsePost(reader io.Reader) (*post, error) {
 	var p post
@@ -34,8 +23,8 @@ func parsePost(reader io.Reader) (*post, error) {
 // by removing whitespace
 // ie, []string{"example spaced tag"} -> []string{"examplespacedtag"}
 func removeWhitespace(tags []string) []string {
-	for index, tag := range tags {
-		tags[index] = strings.Replace(tag, " ", "", -1)
+	for i, tag := range tags {
+		tags[i] = strings.Replace(tag, " ", "", -1)
 	}
 
 	return tags
