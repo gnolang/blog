@@ -17,62 +17,109 @@ import (
 	ctypes "github.com/gnolang/gno/tm2/pkg/bft/rpc/core/types"
 	"github.com/gnolang/gno/tm2/pkg/commands"
 	"github.com/gnolang/gno/tm2/pkg/crypto/keys"
-	keysclient "github.com/gnolang/gno/tm2/pkg/crypto/keys/client"
 	"github.com/gnolang/gno/tm2/pkg/errors"
 	"github.com/gnolang/gno/tm2/pkg/sdk/vm"
 	"github.com/gnolang/gno/tm2/pkg/std"
 	"github.com/peterbourgon/ff/v3/ffcli"
 )
 
+type cliCfg struct {
+	debug     bool
+	publish   bool
+	edit      bool
+	gasWanted int64
+	gasFee    string
+	chainId   string
+	blogPath  string
+
+	gnoHome               string
+	remote                string
+	quiet                 bool
+	insecurePasswordStdIn bool
+}
+
+func (cfg *cliCfg) registerFlags(fs *flag.FlagSet) {
+	fs.BoolVar(&cfg.debug, "debug", false, "verbose output")
+	fs.BoolVar(&cfg.publish, "publish", false, "publish blogpost")
+	fs.BoolVar(&cfg.edit, "edit", false, "edit mode")
+	fs.Int64Var(&cfg.gasWanted, "gas-wanted", 2000000, "gas requested for tx")
+	fs.StringVar(&cfg.gasFee, "gas-fee", "1000000ugnot", "gas payment fee")
+	fs.StringVar(&cfg.chainId, "chainid", "dev", "chain ID")
+	fs.StringVar(&cfg.blogPath, "pkgpath", "gno.land/r/gnoland/blog", "blog realm path")
+
+	// keysclient.BaseOptions
+	fs.StringVar(&cfg.gnoHome, "home", "/Users/sasurai/gnohome", "home directory")
+	fs.StringVar(&cfg.remote, "remote", "localhost:26657", "remote node URL")
+	fs.BoolVar(&cfg.quiet, "quiet", false, "for parsing output")
+	fs.BoolVar(&cfg.insecurePasswordStdIn, "insecure-password-stdin", false, "WARNING! take password from stdin")
+}
+
 func main() {
-	if err := run(os.Args[1:]); err != nil {
-		// if !errors.Is(err, flag.ErrHelp) {
-		if err != flag.ErrHelp {
-			fmt.Fprintf(os.Stderr, "error: %+v\n", err)
-		}
+	var (
+		cfg = &cliCfg{}
+		fs  = flag.NewFlagSet("root", flag.ExitOnError)
+	)
+
+	// Register the flags
+	cfg.registerFlags(fs)
+
+	// Create the command
+	cmd := &ffcli.Command{
+		ShortUsage: "[flags]",
+		LongHelp:   "Gnoblog-CLI - a tool to parse & publish Gno blog posts",
+		FlagSet:    fs,
+		Exec: func(ctx context.Context, _ []string) error {
+			return execExtract(ctx, cfg)
+		},
+	}
+
+	// Run the command
+	if err := cmd.ParseAndRun(context.Background(), os.Args[1:]); err != nil {
+		fmt.Fprintf(os.Stderr, "%+v", err)
+
 		os.Exit(1)
 	}
 }
 
-type publishOpts struct {
-	Debug    bool
-	Publish  bool
-	PkgPath  string
-	EditMode bool
+//type publishOpts struct {
+//	Debug    bool
+//	Publish  bool
+//	PkgPath  string
+//	EditMode bool
+//
+//	// gnokey
+//	keysclient.BaseOptions
+//	GasWanted       int64
+//	GasFee          string
+//	ChainID         string
+//	KeyNameOrBech32 string
+//
+//	// internal
+//	accountNumber  uint64
+//	sequenceNumber uint64
+//	pass           string
+//	kb             keys.Keybase
+//}
 
-	// gnokey
-	keysclient.BaseOptions
-	GasWanted       int64
-	GasFee          string
-	ChainID         string
-	KeyNameOrBech32 string
-
-	// internal
-	accountNumber  uint64
-	sequenceNumber uint64
-	pass           string
-	kb             keys.Keybase
-}
-
-func (opts *publishOpts) flagSet() *flag.FlagSet {
-	defaultHome := keysclient.DefaultBaseOptions.Home
-
-	fs := flag.NewFlagSet("blog publish", flag.ExitOnError)
-	fs.BoolVar(&opts.Debug, "debug", false, "verbose output")
-	fs.BoolVar(&opts.Publish, "publish", false, "publish blogpost")
-	fs.BoolVar(&opts.EditMode, "edit", false, "edit instead of add")
-	fs.Int64Var(&opts.GasWanted, "gas-wanted", 2000000, "gas requested for tx")
-	fs.StringVar(&opts.GasFee, "gas-fee", "1000000ugnot", "gas payment fee")
-	fs.StringVar(&opts.ChainID, "chainid", "staging", "")
-	fs.StringVar(&opts.PkgPath, "pkgpath", "gno.land/r/gnoland/blog", "blog realm path")
-
-	// keysclient.BaseOptions
-	fs.StringVar(&opts.Home, "home", defaultHome, "home directory")
-	fs.StringVar(&opts.Remote, "remote", "staging.gno.land:36657", "remote node URL")
-	fs.BoolVar(&opts.Quiet, "quiet", false, "for parsing output")
-	fs.BoolVar(&opts.InsecurePasswordStdin, "insecure-password-stdin", false, "WARNING! take password from stdin")
-	return fs
-}
+//func (opts *publishOpts) flagSet() *flag.FlagSet {
+//	//defaultHome := keysclient.DefaultBaseOptions.Home
+//
+//	fs := flag.NewFlagSet("blog publish", flag.ExitOnError)
+//	fs.BoolVar(&opts.Debug, "debug", false, "verbose output")
+//	fs.BoolVar(&opts.Publish, "publish", false, "publish blogpost")
+//	fs.BoolVar(&opts.EditMode, "edit", false, "edit instead of add")
+//	fs.Int64Var(&opts.GasWanted, "gas-wanted", 2000000, "gas requested for tx")
+//	fs.StringVar(&opts.GasFee, "gas-fee", "1000000ugnot", "gas payment fee")
+//	fs.StringVar(&opts.ChainID, "chainid", "dev", "")
+//	fs.StringVar(&opts.PkgPath, "pkgpath", "gno.land/r/gnoland/blog", "blog realm path")
+//
+//	// keysclient.BaseOptions
+//	fs.StringVar(&opts.Home, "home", "/Users/sasurai/gnohome", "home directory")
+//	fs.StringVar(&opts.Remote, "remote", "localhost:26657", "remote node URL")
+//	fs.BoolVar(&opts.Quiet, "quiet", false, "for parsing output")
+//	fs.BoolVar(&opts.InsecurePasswordStdin, "insecure-password-stdin", false, "WARNING! take password from stdin")
+//	return fs
+//}
 
 func run(args []string) error {
 	var opts publishOpts
@@ -106,7 +153,7 @@ func run(args []string) error {
 	return nil
 }
 
-func doPublish(ctx context.Context, posts []string, opts publishOpts) error {
+func execExtract(ctx context.Context, posts []string, cfg cliCfg) error {
 	log.Println("opts:", string(amino.MustMarshalJSON(opts)))
 
 	kb, err := keys.NewKeyBaseFromDir(opts.Home)
@@ -130,6 +177,7 @@ func doPublish(ctx context.Context, posts []string, opts publishOpts) error {
 	if err != nil {
 		return fmt.Errorf("make request: %w", err)
 	}
+
 	var qret struct{ BaseAccount std.BaseAccount }
 	amino.MustUnmarshalJSON(res.Data, &qret)
 	log.Println("qret", qret)
