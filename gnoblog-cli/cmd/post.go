@@ -42,7 +42,7 @@ func newPostCommand() *ffcli.Command {
 	return &ffcli.Command{
 		Name:       "post",
 		ShortUsage: "post <FILE OR FILES_DIR> [flags]",
-		LongHelp:   "Post one or more files. Passing a file will post that single file, while passing a directory will search for all .md files and batch post them.",
+		LongHelp:   `Post one or more files. Passing a file will post that single file, while passing in a directory will search for all .md files and batch post them.`,
 		FlagSet:    fs,
 		Exec:       cfg.execPost,
 	}
@@ -132,11 +132,13 @@ func (cfg *cliCfg) execPost(_ context.Context, args []string) error {
 		return err
 	}
 
+	// Initialize Gnoclient
 	client := gnoclient.Client{
 		Signer:    initSigner(cfg, pass),
 		RPCClient: initRPCClient(cfg),
-	}
+	}q
 
+	// Batch post request passed in
 	if fileInfo.IsDir() {
 		return cfg.batchPost(client, args[0])
 	}
