@@ -11,6 +11,7 @@ import (
 	"github.com/peterbourgon/ff/v3/ffcli"
 	"os"
 	"strings"
+	"time"
 )
 
 type cliCfg struct {
@@ -20,7 +21,6 @@ type cliCfg struct {
 	GasFee        string
 	ChainId       string
 	BlogRealmPath string
-	Multiple      string
 
 	KeyName               string
 	GnoHome               string
@@ -41,8 +41,8 @@ func newPostCommand() *ffcli.Command {
 	// Make Post command
 	return &ffcli.Command{
 		Name:       "post",
-		ShortUsage: "post [flags]",
-		LongHelp:   "Post one or more files. To post one file, simply pass it as an argument to the command. To post a batch of files, use --multiple.",
+		ShortUsage: "post <FILE OR FILES_DIR> [flags]",
+		LongHelp:   "Post one or more files. Passing a file will post that single file, while passing a directory will search for all .md files and batch post them.",
 		FlagSet:    fs,
 		Exec:       cfg.execPost,
 	}
@@ -67,7 +67,7 @@ func (cfg *cliCfg) registerFlags(fs *flag.FlagSet) {
 	)
 	fs.Int64Var(&cfg.GasWanted,
 		"gas-wanted",
-		2000000,
+		5000000,
 		"gas requested for tx",
 	)
 	fs.StringVar(&cfg.GasFee,
@@ -102,36 +102,22 @@ func (cfg *cliCfg) registerFlags(fs *flag.FlagSet) {
 		false,
 		"WARNING! take password from stdin",
 	)
-	fs.StringVar(&cfg.Multiple,
-		"multiple",
-		"",
-		"walk root dir & batch post found .md files",
-	)
 }
 
 func (cfg *cliCfg) execPost(_ context.Context, args []string) error {
-	// Check for --root-dir flag with arguments
-	if cfg.Multiple != "" && len(args) > 0 {
-		return fmt.Errorf("no arguments expected when using --multiple")
+	if len(args) > 1 {
+		return errors.New("please input only one argument")
 	}
 
-	// Check for no files provided
-	if len(args) == 0 {
-		return fmt.Errorf("no readme files provided")
+	fileInfo, err := os.Stat(args[0])
+	if err != nil {
+		return errors.New("cannot open specified path")
 	}
-
-	fmt.Println(cfg.KeyName)
-
-	// Check for multiple files without --multiple flag
-	//if len(args) > 1 {
-	//	return fmt.Errorf("use the --multiple flag to post more than 1 file")
-	//}
 
 	// Init IO for password input
 	io := commands.NewDefaultIO()
 
 	var pass string
-	var err error
 	if cfg.Quiet {
 		pass, err = io.GetPassword("", cfg.InsecurePasswordStdIn)
 	} else {
@@ -151,9 +137,8 @@ func (cfg *cliCfg) execPost(_ context.Context, args []string) error {
 		RPCClient: initRPCClient(cfg),
 	}
 
-	// Batch post request passed in
-	if cfg.Multiple != "" {
-		return cfg.batchPost()
+	if fileInfo.IsDir() {
+		return cfg.batchPost(client, args[0])
 	}
 
 	// Single post request passed in an argument
@@ -179,7 +164,10 @@ func (cfg *cliCfg) singlePost(c gnoclient.Client, postPath string) error {
 	nonce := signingAcc.GetSequence()
 	accNumber := signingAcc.GetAccountNumber()
 
-	// todo add check if post exists to call edit
+	//// todo add check if post exists to call edit
+	//exists, _, _ := c.QEval("gno.land/r/gnoland/blog", "PostExists("+post.Slug+")")
+	//fmt.Println(exists)
+
 	callCfg := gnoclient.CallCfg{
 		PkgPath:  cfg.BlogRealmPath,
 		FuncName: "ModAddPost",
@@ -187,6 +175,8 @@ func (cfg *cliCfg) singlePost(c gnoclient.Client, postPath string) error {
 			post.Slug,
 			post.Title,
 			post.Body,
+			post.PublicationDate.Format(time.RFC3339),
+			strings.Join(post.Authors, ","),
 			strings.Join(post.Tags, ","),
 		},
 		GasFee:         cfg.GasFee,
@@ -202,11 +192,58 @@ func (cfg *cliCfg) singlePost(c gnoclient.Client, postPath string) error {
 		return err
 	}
 
-	fmt.Printf("Success!")
+	fmt.Printf("Successfully posted post: %s!", post.Title)
 
 	return nil
 }
 
-func (cfg *cliCfg) batchPost() error {
+func (cfg *cliCfg) batchPost(c gnoclient.Client, dirPath string) error {
+	// todo: waiting on Multicall in gnoclient - pack multiple msgs into single tx
+
 	return errors.New("not implemented")
+	//files, err := findFilePaths(dirPath)
+	//if err != nil {
+	//	return err
+	//}
+	//
+	//for _, postPath := range files {
+	//	postFile, err := os.Open(postPath)
+	//	if err != nil {
+	//		return fmt.Errorf("cannot open file %q: %w", postPath, err)
+	//	}
+	//
+	//	post, err := parsePost(postFile)
+	//	if err != nil {
+	//		return fmt.Errorf("cannot parse post %q: %w", postPath, err)
+	//	}
+	//
+	//	signingAcc, _, err := c.QueryAccount(c.Signer.Info().GetAddress())
+	//	if err != nil {
+	//		return err
+	//	}
+	//
+	//	nonce := signingAcc.GetSequence()
+	//	accNumber := signingAcc.GetAccountNumber()
+	//
+	//	callCfg := gnoclient.CallCfg{
+	//		PkgPath:  cfg.BlogRealmPath,
+	//		FuncName: "ModAddPost",
+	//		Args: []string{
+	//			post.Slug,
+	//			post.Title,
+	//			post.Body,
+	//			post.PublicationDate.Format(time.RFC3339),
+	//			strings.Join(post.Authors, ","),
+	//			strings.Join(post.Tags, ","),
+	//		},
+	//		GasFee:         cfg.GasFee,
+	//		GasWanted:      cfg.GasWanted,
+	//		Send:           "",
+	//		AccountNumber:  accNumber,
+	//		SequenceNumber: nonce,
+	//		Memo:           "Posted from gnoblog-cli",
+	//	}
+	//
+	//}
+
 }

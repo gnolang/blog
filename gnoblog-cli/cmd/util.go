@@ -14,13 +14,14 @@ import (
 
 // known chainIDs
 const (
-	dev     = "dev"
-	test3   = "test3"
-	staging = "staging"
+	dev             = "dev"
+	test3           = "test3"
+	staging         = "staging"
+	tendermint_test = "tendermint_test"
 )
 
 var knownChainIDs = []string{
-	dev, test3, staging,
+	dev, test3, staging, tendermint_test,
 }
 
 func validateChainID(id string) error {
@@ -61,7 +62,7 @@ func parseTitle(body string) (string, error) {
 	for scanner.Scan() {
 		line := scanner.Text()
 		if strings.HasPrefix(line, "# ") {
-			return line, nil
+			return line[2:], nil
 		}
 	}
 
