@@ -6,17 +6,17 @@ import (
 	"github.com/gnolang/gno/tm2/pkg/crypto/keys"
 )
 
-func initSigner(cfg *postCfg, password string) gnoclient.SignerFromKeybase {
-	kb, _ := keys.NewKeyBaseFromDir(cfg.gnoHome)
+func initSigner(cfg *cliCfg, password string) gnoclient.SignerFromKeybase {
+	kb, _ := keys.NewKeyBaseFromDir(cfg.GnoHome)
 	return gnoclient.SignerFromKeybase{
 		Keybase:  kb,
-		Account:  cfg.keyName,
+		Account:  cfg.KeyName,
 		Password: password,
-		ChainID:  cfg.chainId,
+		ChainID:  cfg.ChainId,
 	}
 }
 
-func initRPCClient(cfg *postCfg) rpcclient.Client {
-	remote := cfg.remote // todo: validate if chainID & remote match?
+func initRPCClient(cfg *cliCfg) rpcclient.Client {
+	remote := cfg.Remote // todo: validate if chainID & remote match?
 	return rpcclient.NewHTTP(remote, "/websocket")
 }
