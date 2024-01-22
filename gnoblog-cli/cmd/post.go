@@ -42,7 +42,7 @@ func newPostCommand() *ffcli.Command {
 	return &ffcli.Command{
 		Name:       "post",
 		ShortUsage: "post <FILE OR FILES_DIR> [flags]",
-		LongHelp:   `Post one or more files. Passing a file will post that single file, while passing in a directory will search for all .md files and batch post them.`,
+		LongHelp:   `Post one or more files. Passing in a file will post that single file, while passing in a directory will search for all .md files and batch post them.`,
 		FlagSet:    fs,
 		Exec:       cfg.execPost,
 	}
@@ -75,7 +75,6 @@ func (cfg *cliCfg) registerFlags(fs *flag.FlagSet) {
 		"1000000ugnot",
 		"gas payment fee",
 	)
-
 	fs.StringVar(&cfg.ChainId,
 		"chainid",
 		"dev",
@@ -86,7 +85,6 @@ func (cfg *cliCfg) registerFlags(fs *flag.FlagSet) {
 		"gno.land/r/gnoland/blog",
 		"blog realm path",
 	)
-
 	fs.StringVar(&cfg.GnoHome,
 		"home",
 		gnoenv.HomeDir(),
@@ -106,12 +104,14 @@ func (cfg *cliCfg) registerFlags(fs *flag.FlagSet) {
 
 func (cfg *cliCfg) execPost(_ context.Context, args []string) error {
 	if len(args) > 1 {
-		return errors.New("please input only one argument")
+		fmt.Println(args)
+
+		return errInvalidNumberOfArgs
 	}
 
 	fileInfo, err := os.Stat(args[0])
 	if err != nil {
-		return errors.New("cannot open specified path")
+		return errInvalidPath
 	}
 
 	// Init IO for password input
@@ -128,15 +128,15 @@ func (cfg *cliCfg) execPost(_ context.Context, args []string) error {
 	}
 
 	// Validate chainID that was passed in
-	if err = validateChainID(cfg.ChainId); err != nil {
-		return err
-	}
+	//if err = validateChainID(cfg.ChainId); err != nil {
+	//	return err
+	//}
 
 	// Initialize Gnoclient
 	client := gnoclient.Client{
 		Signer:    initSigner(cfg, pass),
 		RPCClient: initRPCClient(cfg),
-	}q
+	}
 
 	// Batch post request passed in
 	if fileInfo.IsDir() {
@@ -166,13 +166,18 @@ func (cfg *cliCfg) singlePost(c gnoclient.Client, postPath string) error {
 	nonce := signingAcc.GetSequence()
 	accNumber := signingAcc.GetAccountNumber()
 
-	//// todo add check if post exists to call edit
-	//exists, _, _ := c.QEval("gno.land/r/gnoland/blog", "PostExists("+post.Slug+")")
-	//fmt.Println(exists)
+	// Check if post already exists
+	existsExpr := "PostExists(\"" + post.Slug + "\")"
+	exists, _, err := c.QEval("gno.land/r/gnoland/blog", existsExpr)
+
+	verb := "ModAddPost"
+	if strings.Contains(exists, "true") && cfg.Edit {
+		verb = "ModEditPost"
+	}
 
 	callCfg := gnoclient.CallCfg{
 		PkgPath:  cfg.BlogRealmPath,
-		FuncName: "ModAddPost",
+		FuncName: verb,
 		Args: []string{
 			post.Slug,
 			post.Title,
@@ -189,19 +194,24 @@ func (cfg *cliCfg) singlePost(c gnoclient.Client, postPath string) error {
 		Memo:           "Posted from gnoblog-cli",
 	}
 
+	if !cfg.Publish {
+		fmt.Println("--publish flag not set to true, exiting")
+		// todo see how to display generated data
+		return nil
+	}
+
 	_, err = c.Call(callCfg)
 	if err != nil {
 		return err
 	}
 
-	fmt.Printf("Successfully posted post: %s!", post.Title)
+	fmt.Printf("Successfully posted %s", post.Title)
 
 	return nil
 }
 
 func (cfg *cliCfg) batchPost(c gnoclient.Client, dirPath string) error {
 	// todo: waiting on Multicall in gnoclient - pack multiple msgs into single tx
-
 	return errors.New("not implemented")
 	//files, err := findFilePaths(dirPath)
 	//if err != nil {
