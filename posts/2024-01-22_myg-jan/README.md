@@ -73,7 +73,7 @@ The Berty team has been busy working on GnoSocial backend implementation. The in
 ### Dragos
 Dragos has successfully launched the Flippando game, and you can try it out on the [testnet here](https://gno.flippando.xyz/flip). If you haven’t been following the progress, Flippando is an on-chain memory game that you can play with your choice of styles, such as dice, colors, and hexagrams. Once you successfully complete a matrix, you can mint the end result as an NFT, which can later be assembled into larger, more complex NFTs to create digital artwork. You can find out more about the game, its creator, and the official roadmap on the site. We’ll also release a blog post soon from Dragos sharing his experience porting Flippando from Solidity to Gno, so stay tuned!
 ### Varmeta  
-Varmeta’s update was brief this week since the contributor sync call ran over. We look forward to hearing more about the team’s progress in developing the Unity SDK for Gno next time. You can read more about it on Varmeta’s [hackerspace issue 43 here](https://github.com/gnolang/hackerspace/issues/43).
+Varmeta’s update was brief this week since the contributor sync call ran over. We look forward to hearing more about the team’s progress in developing the Unity SDK for Gno next time. You can read more about it on Varmeta’s [hackerspace issue 43](https://github.com/gnolang/hackerspace/issues/43).
 
 
  
