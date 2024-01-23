@@ -51,7 +51,7 @@ Thanks to Petar, [PR 1417](https://github.com/gnolang/gno/pull/1417), we have im
 
 Thanks to Joon from Onbloc, we were able to add support for octals without 'o' (check out [PR 1331](https://github.com/gnolang/gno/pull/1331) for more details), and thanks to Dragos [PR 1309](https://github.com/gnolang/gno/pull/1309), we extended the GRC721 interface so that it now supports setting a token URI. These are both extremely welcomed contributions, and we appreciate our ecosystem partners.
 
-From the core team, a special shout out to Dylan for killing it fixing bugs, and getting many PRs ([#1451](https://github.com/gnolang/gno/pull/1451), [#1315](https://github.com/gnolang/gno/pull/1315), and [#1305](https://github.com/gnolang/gno/pull/1305), to name a few) merged over the last few weeks. Props also go to Marc for [PR 1177](https://github.com/gnolang/gno/pull/1177), which has just been merged, which fixes append in certain key situations. We’ve also welcomed a new security engineer, Kristov, to the team.
+From the core team, a special shout out to Dylan for killing it fixing bugs, and getting many PRs ([PR 1451](https://github.com/gnolang/gno/pull/1451), [PR 1315](https://github.com/gnolang/gno/pull/1315), and [PR 1305](https://github.com/gnolang/gno/pull/1305), to name a few) merged over the last few weeks. Props also go to Marc for [PR 1177](https://github.com/gnolang/gno/pull/1177), which has just been merged, which fixes append in certain key situations. We’ve also welcomed a new security engineer, Kristov, to the team.
 
 ## Grantee and Ecosystem Updates
 
@@ -75,7 +75,7 @@ Dragos has successfully launched the Flippando game, and you can try it out on t
 ### Varmeta  
 Varmeta’s update was brief this week since the contributor sync call ran over. We look forward to hearing more about the team’s progress in developing the Unity SDK for Gno next time. You can read more about it on Varmeta’s [hackerspace issue 43](https://github.com/gnolang/hackerspace/issues/43).
 
-
+*Do you want to contribute to Gno.land's monthly updates? If you're building on Gno.land and want to highlight your development, project, event, or idea, let us know, and we'll include your contribution. That's all for now! Keep track of our progress by following our socials [Twitter/X](https://twitter.com/_gnoland) and [Discord](https://discord.com/invite/tF2X8M6cVj) and watch out for the next edition of The More You Gno in a few weeks.* 
  
 
  
