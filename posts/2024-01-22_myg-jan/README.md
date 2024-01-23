@@ -76,12 +76,3 @@ Dragos has successfully launched the Flippando game, and you can try it out on t
 Varmeta’s update was brief this week since the contributor sync call ran over. We look forward to hearing more about the team’s progress in developing the Unity SDK for Gno next time. You can read more about it on Varmeta’s [hackerspace issue 43](https://github.com/gnolang/hackerspace/issues/43).
 
 *Do you want to contribute to Gno.land's monthly updates? If you're building on Gno.land and want to highlight your development, project, event, or idea, let us know, and we'll include your contribution. That's all for now! Keep track of our progress by following our socials [Twitter/X](https://twitter.com/_gnoland) and [Discord](https://discord.com/invite/tF2X8M6cVj) and watch out for the next edition of The More You Gno in a few weeks.* 
- 
-
- 
-
-
-
-
-
-
