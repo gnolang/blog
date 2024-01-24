@@ -1,6 +1,6 @@
 ---
 title: "The More You Gno: Gno.land Monthly Updates - 7"
-publication_date: 2024-22-01T00:00:00Z
+publication_date: 2024-01-22T00:00:00Z
 slug: monthly-dev-7
 tags: [gnoland, ecosystem, updates, gnovm, tm2]
 authors: [christina]
