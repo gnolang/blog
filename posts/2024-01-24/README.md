@@ -3,7 +3,7 @@ title: "5 Things I Learned While Porting Flippando From Solidity to Gno"
 publication_date: 2024-01-24T00:00:00Z
 slug: porting-flippando-gno
 tags: [gnoland, ecosystem, updates, flippando]
-authors: [christina]
+authors: [dragos]
 ---
 
 Last year, while visiting Seoul, South Korea, I decided, on a whim, to sign up for a hackathon called Glitch. The project I was going to present was a tiny little game, written in Solidity, called Flippando. It started as a weekend project to help me learn Solidity (I had no prior experience with this language). To my surprise, my tiny little game won the first prize on the Polygon track of the Glitch hackathon.
