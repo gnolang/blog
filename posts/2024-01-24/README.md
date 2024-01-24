@@ -68,6 +68,6 @@ When minting a solved board as an NFT, the game also mints a fungible token, FLI
 
 These larger projects, or “artworks,” can be assembled in the Flippando Playground. All minted basic NFTs are displayed here in an area from where the player can drag and drop them onto a canvas, creating a much bigger and more complex NFT. Once the canvas is fully filled and the player is satisfied with what’s in there, these new “artwork” NFTs can also be minted. This unlocks all the FLIP tokens for the NFTs used inside the artwork and sends them to their initial players. Furthermore, these complex artworks can be listed and traded in a marketplace, closing the circle of a virtual economy of goods.
 
-Start playing Flippando and share your Flips with Gno.land on [Twitter/X](https://twitter.com/_gnoland?lang=en) by tagging #gnoflip. 
+Start playing Flippando and share your Flips with Gno.land on [Twitter/X](https://x.com/_gnoland?lang=en) by tagging #gnoflip. 
 
 
