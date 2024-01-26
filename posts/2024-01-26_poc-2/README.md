@@ -1,4 +1,10 @@
-# Building Gno.land – The Next Generation of Smart Contract Systems
+---
+title: "Building Gno.land - Proof of Contribution II"
+publication_date: 2024-01-26T13:37:00Z
+slug: building-gnoland-poc-II
+tags: [gnoland, gnovm, tm2, PoC]
+authors: [christina]
+---
 
 # Proof of Contribution (PoC) 
 
@@ -24,7 +30,7 @@ PoC solves this problem, ensuring the network becomes increasingly decentralized
 
 PoC is thus slower to bootstrap than PoS and harder to achieve. You can think of PoC versus PoS as a marathon versus a sprint, whereby PoC starts slowly but then gains momentum over time, and PoS starts quickly but loses momentum over time (the graph below provides a visual representation of PoC versus PoS). 
 
-
+//image to go here
 
 The GovDAO that owns the chain has a mandate to scale (to grow and decentralize) continuously as it adds more contributors. This means it becomes progressively larger over time, achieving high decentralization efficiency way beyond the initial fast sprint of PoS chains. Once established as a proven consensus mechanism and alternative to PoS, GovDAO can benefit from by any blockchain project (through an evolution of ICS) wanting to achieve decentralization and sustainability—PoC can secure Gno.land and the web3 industry at large.
 
