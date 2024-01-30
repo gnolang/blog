@@ -1,16 +1,14 @@
 ---
 title: "Building Gno.land - Proof of Contribution II"
 publication_date: 2024-01-26T13:37:00Z
-slug: building-gnoland-poc-II
+slug: bgl-poc2
 tags: [gnoland, gnovm, tm2, PoC]
 authors: [christina]
 ---
 
-# Proof of Contribution (PoC) 
-
 ## II. Proof of Contribution vs Proof of Stake
 
-Proof of Stake (PoS) is a robust consensus mechanism that provides a more environmentally friendly and scalable alternative to Proof of Work (PoW) and powers most of the web3 industry today. As PoS pioneers, Cosmos technology secures hundreds of blockchain projects and billions of dollars of digital assets, and Ethereum (launched as a PoW chain in 2015) made the historic switch to PoS in 2022. According to [ethereum.org](https://ethereum.org/en/developers/docs/consensus-mechanisms/pos), PoS is “more secure, less energy-intensive, and better for implementing new scaling solutions compared to the previous proof-of-work architecture.” However, as we briefly discussed in [*What Is Proof of Contribution?*](link here), PoS has vulnerabilities that can corrupt the network over time.
+Proof of Stake (PoS) is a robust consensus mechanism that provides a more environmentally friendly and scalable alternative to Proof of Work (PoW) and powers most of the web3 industry today. As PoS pioneers, Cosmos technology secures hundreds of blockchain projects and billions of dollars of digital assets, and Ethereum (launched as a PoW chain in 2015) made the historic switch to PoS in 2022. According to [ethereum.org](https://ethereum.org/en/developers/docs/consensus-mechanisms/pos), PoS is “more secure, less energy-intensive, and better for implementing new scaling solutions compared to the previous proof-of-work architecture.” However, as we briefly discussed in [*What Is Proof of Contribution?*](https://test3.gno.land/r/gnoland/blog:p/bgl-poc-1), PoS has vulnerabilities that can corrupt the network over time.
 
 ### The Limitations of Proof of Stake (PoS)
 
