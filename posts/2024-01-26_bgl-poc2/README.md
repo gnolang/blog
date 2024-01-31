@@ -28,7 +28,7 @@ PoC solves this problem, ensuring the network becomes increasingly decentralized
 
 PoC is thus slower to bootstrap than PoS and harder to achieve. You can think of PoC versus PoS as a marathon versus a sprint, whereby PoC starts slowly but then gains momentum over time, and PoS starts quickly but loses momentum over time (the graph below provides a visual representation of PoC versus PoS). 
 
-[![Graph](https://gnolang.github.io/blog/2024-01-26_poc-2/src/thumbs/graph-container.png)](https://gnolang.github.io/blog/2024-01-26_poc-2/src/graph-container.png)
+[![Graph](https://gnolang.github.io/blog/2024-01-26_bgl-poc2/src/thumbs/graph-container.png)](https://gnolang.github.io/blog/2024-01-26_bgl-poc2/src/graph-container.png)
 
 The GovDAO that owns the chain has a mandate to scale (to grow and decentralize) continuously as it adds more contributors. This means it becomes progressively larger over time, achieving high decentralization efficiency way beyond the initial fast sprint of PoS chains. Once established as a proven consensus mechanism and alternative to PoS, GovDAO can benefit from by any blockchain project (through an evolution of ICS) wanting to achieve decentralization and sustainability—PoC can secure Gno.land and the web3 industry at large.
 
