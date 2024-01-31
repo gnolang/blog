@@ -14,7 +14,7 @@ You can find the live streams of the new biweekly public developer calls on [Gno
 
 
 
-[![Gno.land mini DAG](https://gnolang.github.io/blog/2023-04-15_myg-march/src/thumbs/mini-dag.png)](https://gnolang.github.io/blog/2023-04-15_myg-march/src/mini-dag.png)
+[![Gno.land mini DAG](https://gnolang.github.io/blog/2023-04-15_myg-1/src/thumbs/mini-dag.png)](https://gnolang.github.io/blog/2023-04-15_myg-1/src/mini-dag.png)
 
 ## Gno.land Website Language
 
@@ -26,7 +26,7 @@ Internally, our core team is working on improvements to Gno.land’s website, ma
 
 Gno.land developer experience team is working on a web-based Gno IDE for quickly building Gno realms and packages right on your browser by just visiting a web app. Gno IDE will provide much improved UX for everything around building a realm (including making the testing easier), and additional features like autocompletion in the editor. Gno IDE will contain all the features you would expect from an IDE as well as valuable APIs for devs building tools around Gno.land with the public Gno Infrastructure.
 
-[![Gno IDE](https://gnolang.github.io/blog/2023-04-15_myg-march/src/thumbs/gno-ide.png)](https://gnolang.github.io/blog/2023-04-15_myg-march/src/gno-ide.png)
+[![Gno IDE](https://gnolang.github.io/blog/2023-04-15_myg-1/src/thumbs/gno-ide.png)](https://gnolang.github.io/blog/2023-04-15_myg-1/src/gno-ide.png)
 
 Gno IDE will have multiple modes to support different use cases. The normal mode will be used during everyday developments (as you’re familiar with from other code editors). The presentation mode is for high accessibility and readability. You can use it during video calls or physical workshops while projecting your screen to an audience. The third and perhaps most interesting mode is the embedded mode. Use this mode to embed the IDE into websites and blogs. This feature is especially useful for tutorials to test out sample code, run it on the real testnets, and play with it.
 
