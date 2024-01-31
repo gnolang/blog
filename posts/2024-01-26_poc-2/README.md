@@ -46,6 +46,6 @@ Beyond separating voting power from net wealth, a core component of Proof of Con
 
 Unlike PoS, contributors receive rewards based on their contribution effort rather than how many tokens they stake. They are thus incentivized and recognized for the quality of their work, ideas, and alignment, driving participation and active engagement. Governance is allocated to the people most likely to care for the ecosystem’s long-term success—the contributors who have spent the most time working toward it.
 
-*II. Proof of Contribution vs Proof of Stake is the second in a series of articles to dive deeply into the philosophy, vision, mechanics, and work involved in developing a new consensus mechanism for the next generation of smart contract systems. Look out for subsequent editions and additional Building Gno.land series, and let us know what you think! Got questions? Join the Gno.land [Discord](https://discord.com/invite/S8nKUqwkPn) or follow us on [Twitter/X](https://twitter.com/_gnoland)*
+*II. Proof of Contribution vs Proof of Stake is the second in a series of articles to dive deeply into the philosophy, vision, mechanics, and work involved in developing a new consensus mechanism for the next generation of smart contract systems. Look out for subsequent editions and additional Building Gno.land series, and let us know what you think! Got questions? Join the Gno.land [Discord](https://discord.com/invite/S8nKUqwkPn) or follow us on [Twitter/X](https://x.com/_gnoland)*
 
 
