@@ -7,7 +7,6 @@ import (
 	"github.com/gnolang/gno/gno.land/pkg/gnoclient"
 	"github.com/gnolang/gno/gnovm/pkg/gnoenv"
 	"github.com/gnolang/gno/tm2/pkg/commands"
-	"github.com/gnolang/gno/tm2/pkg/errors"
 	"github.com/peterbourgon/ff/v3/ffcli"
 	"os"
 	"strings"
@@ -175,7 +174,7 @@ func (cfg *cliCfg) singlePost(c gnoclient.Client, postPath string) error {
 		verb = "ModEditPost"
 	}
 
-	callCfg := gnoclient.CallCfg{
+	msg := gnoclient.MsgCall{
 		PkgPath:  cfg.BlogRealmPath,
 		FuncName: verb,
 		Args: []string{
@@ -186,9 +185,11 @@ func (cfg *cliCfg) singlePost(c gnoclient.Client, postPath string) error {
 			strings.Join(post.Authors, ","),
 			strings.Join(post.Tags, ","),
 		},
+	}
+
+	baseTxCfg := gnoclient.BaseTxCfg{
 		GasFee:         cfg.GasFee,
 		GasWanted:      cfg.GasWanted,
-		Send:           "",
 		AccountNumber:  accNumber,
 		SequenceNumber: nonce,
 		Memo:           "Posted from gnoblog-cli",
@@ -200,7 +201,8 @@ func (cfg *cliCfg) singlePost(c gnoclient.Client, postPath string) error {
 		return nil
 	}
 
-	_, err = c.Call(callCfg)
+	fmt.Println(msg)
+	_, err = c.Call(baseTxCfg, msg)
 	if err != nil {
 		return err
 	}
@@ -211,51 +213,54 @@ func (cfg *cliCfg) singlePost(c gnoclient.Client, postPath string) error {
 }
 
 func (cfg *cliCfg) batchPost(c gnoclient.Client, dirPath string) error {
-	// todo: waiting on Multicall in gnoclient - pack multiple msgs into single tx
-	return errors.New("not implemented")
-	//files, err := findFilePaths(dirPath)
-	//if err != nil {
-	//	return err
-	//}
-	//
-	//for _, postPath := range files {
-	//	postFile, err := os.Open(postPath)
-	//	if err != nil {
-	//		return fmt.Errorf("cannot open file %q: %w", postPath, err)
-	//	}
-	//
-	//	post, err := parsePost(postFile)
-	//	if err != nil {
-	//		return fmt.Errorf("cannot parse post %q: %w", postPath, err)
-	//	}
-	//
-	//	signingAcc, _, err := c.QueryAccount(c.Signer.Info().GetAddress())
-	//	if err != nil {
-	//		return err
-	//	}
-	//
-	//	nonce := signingAcc.GetSequence()
-	//	accNumber := signingAcc.GetAccountNumber()
-	//
-	//	callCfg := gnoclient.CallCfg{
-	//		PkgPath:  cfg.BlogRealmPath,
-	//		FuncName: "ModAddPost",
-	//		Args: []string{
-	//			post.Slug,
-	//			post.Title,
-	//			post.Body,
-	//			post.PublicationDate.Format(time.RFC3339),
-	//			strings.Join(post.Authors, ","),
-	//			strings.Join(post.Tags, ","),
-	//		},
-	//		GasFee:         cfg.GasFee,
-	//		GasWanted:      cfg.GasWanted,
-	//		Send:           "",
-	//		AccountNumber:  accNumber,
-	//		SequenceNumber: nonce,
-	//		Memo:           "Posted from gnoblog-cli",
-	//	}
-	//
-	//}
+	files, err := findFilePaths(dirPath)
+	if err != nil {
+		return err
+	}
 
+	msgs := make([]gnoclient.MsgCall, 0, len(files))
+	for _, postPath := range files {
+		postFile, err := os.Open(postPath)
+		if err != nil {
+			return fmt.Errorf("cannot open file %q: %w", postPath, err)
+		}
+
+		post, err := parsePost(postFile)
+		if err != nil {
+			return fmt.Errorf("cannot parse post %q: %w", postPath, err)
+		}
+
+		callCfg := gnoclient.MsgCall{
+			PkgPath:  cfg.BlogRealmPath,
+			FuncName: "ModAddPost",
+			Args: []string{
+				post.Slug,
+				post.Title,
+				post.Body,
+				post.PublicationDate.Format(time.RFC3339),
+				strings.Join(post.Authors, ","),
+				strings.Join(post.Tags, ","),
+			},
+		}
+		msgs = append(msgs, callCfg)
+	}
+
+	signingAcc, _, err := c.QueryAccount(c.Signer.Info().GetAddress())
+	nonce := signingAcc.GetSequence()
+	accNumber := signingAcc.GetAccountNumber()
+
+	baseTxCfg := gnoclient.BaseTxCfg{
+		GasFee:         cfg.GasFee,
+		GasWanted:      cfg.GasWanted,
+		AccountNumber:  accNumber,
+		SequenceNumber: nonce,
+		Memo:           "Posted from gnoblog-cli",
+	}
+
+	_, err = c.Call(baseTxCfg, msgs...)
+	if err != nil {
+		return err
+	}
+
+	return nil
 }
