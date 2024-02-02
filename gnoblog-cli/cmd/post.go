@@ -167,7 +167,7 @@ func (cfg *cliCfg) singlePost(c gnoclient.Client, postPath string) error {
 
 	// Check if post already exists
 	existsExpr := "PostExists(\"" + post.Slug + "\")"
-	exists, _, err := c.QEval("gno.land/r/gnoland/blog", existsExpr)
+	exists, _, err := c.QEval(cfg.BlogRealmPath, existsExpr)
 
 	verb := "ModAddPost"
 	if strings.Contains(exists, "true") && cfg.Edit {
