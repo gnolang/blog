@@ -4,7 +4,7 @@ go 1.19
 
 require (
 	github.com/adrg/frontmatter v0.2.0
-	github.com/gnolang/gno v0.0.0-20240201174336-d8a6dec88255
+	github.com/gnolang/gno v0.0.0-20240202111440-37c1c31b0531
 	github.com/peterbourgon/ff/v3 v3.4.0
 )
 
