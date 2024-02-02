@@ -1,10 +1,11 @@
 ---
-title: "The More You Gno: Gno.land Monthly Updates"
 publication_date: 2023-04-15T13:37:00Z
 slug: monthly-dev-1
 tags: [gnoland, gnovm, tm2]
 authors: [christina]
 ---
+
+# The More You Gno: Gno.land Monthly Updates
 
 We made progress across the board at Gno.land last month, from onboarding more devs to receiving an influx of contributions to the Game of Realms contest. To encourage development and discourse, we set up a biweekly public developer call in addition to our biweekly Office Hours sessions. Anyone can join, ask questions, and give their suggestions on how to shape the Gno.land platform and become a contributor. Last month, we covered several pressing topics from Gno IDE and Gno.land website language, to GnoVM, IBC, and ICS. Jae also came back to the circuit in March with two IRL workshops for devs at side events during EthDenver and Game Developer Conference (GDC) in San Francisco.
 

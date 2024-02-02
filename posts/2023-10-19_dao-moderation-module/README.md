@@ -1,5 +1,4 @@
 ---
-title: "Gno.land Moderation DAO Module"
 publication_date: 2023-10-19T01:50:00Z
 slug: gnoland-moderation-dao-module
 tags: [gnoland, dao, moderation, teritori]

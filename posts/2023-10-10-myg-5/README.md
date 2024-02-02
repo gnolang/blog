@@ -1,12 +1,11 @@
 ---
-title: "The More You Gno: Gno.land Monthly Updates - 5"
 publication_date: 2023-10-10T13:37:00Z
 slug: monthly-dev-5
 tags: [gnoland, gnovm, tm2]
 authors: [christina]
 ---
 
-# The More You Gno - Gno.land Monthly Updates 5
+# The More You Gno: Gno.land Monthly Updates - 5
 
 It's been another productive month, packed with developer calls, live events, new contributors, a large team presence at the Go community's biggest event of the year, GopherCon 2023, and the launch of a PoC gaming dApp on Gno.land, GnoChess. We uncovered a bunch of bugs in the code and some issues with the GnoVM, and made further progress on the Go and Rust VMs, the banker module bug, Gnofee, and much more. Check out the updates below.
 

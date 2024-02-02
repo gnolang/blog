@@ -1,10 +1,11 @@
 ---
-title: "Announcing the Gno.land Funding and Grants Program"
 publication_date: 2023-06-27T13:37:00Z
 slug: funding-program
 tags: [gnoland, funding, grants]
 authors: [christina, michelle]
 ---
+
+# Announcing the Gno.land Funding and Grants Program
 
 If you’re interested in building in Gno.land and using the Gnolang (Gno) language to make a meaningful contribution, we’ve launched the Gno.land Funding and Grants Program to support you on your journey. If you’re a developer, tinkerer, researcher, or educator and you’re excited by the idea of creating innovative dApps, tooling, infrastructure, products, or smart contract libraries on Gno.land, now you can apply for funding.
 
