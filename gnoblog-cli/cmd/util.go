@@ -4,34 +4,12 @@ import (
 	"bufio"
 	"fmt"
 	"github.com/adrg/frontmatter"
-	"github.com/gnolang/gno/tm2/pkg/errors"
 	"io"
 	"os"
 	"path/filepath"
 	"strings"
 	"time"
 )
-
-// known chainIDs
-const (
-	dev             = "dev"
-	test3           = "test3"
-	staging         = "staging"
-	tendermint_test = "tendermint_test"
-)
-
-var knownChainIDs = []string{
-	dev, test3, staging, tendermint_test,
-}
-
-func validateChainID(id string) error {
-	for _, chainID := range knownChainIDs {
-		if id == chainID {
-			return nil
-		}
-	}
-	return errors.New("chain ID does not match any known chainIDs")
-}
 
 func parsePost(reader io.Reader) (*post, error) {
 	var p post

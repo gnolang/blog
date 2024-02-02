@@ -126,11 +126,6 @@ func (cfg *cliCfg) execPost(_ context.Context, args []string) error {
 		return err
 	}
 
-	// Validate chainID that was passed in
-	//if err = validateChainID(cfg.ChainId); err != nil {
-	//	return err
-	//}
-
 	// Initialize Gnoclient
 	client := gnoclient.Client{
 		Signer:    initSigner(cfg, pass),
