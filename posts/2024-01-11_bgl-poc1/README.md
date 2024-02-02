@@ -9,8 +9,6 @@ author: [christina]
 
 *Disclaimer: The Building Gno.land series aims to share the core concepts of our platform, mission, and tech stack, providing a snapshot of a current state on our builder’s journey. New episodes may deprecate previous ones, but no editions will be modified at any time. We encourage you to follow along as we create the rails for a more transparent and accountable society, and we welcome feedback and contributions to the repo.*
 
-# Proof of Contribution (PoC) 
-
 ## I. What Is Proof of Contribution (PoC)?
 
 Gno.land is secured by a novel consensus mechanism that makes our platform unique—Proof of Contribution (PoC). PoC prioritizes fairness and merit, rewarding the people most active on the platform and revolutionizing the concept of open-source rewards. By removing the voting power associated with being wealthy (holding tokens in Proof-of-Stake (PoS) networks or amassing mining hardware in Proof-of-Work (PoW) networks), PoC restructures the financial incentives that tend to corrupt blockchain projects in the long run and rewards contributors fairly for their work based on their expertise, commitment, and values. 
