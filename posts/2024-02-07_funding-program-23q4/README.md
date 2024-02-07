@@ -12,7 +12,7 @@ The Gno.land Funding and Grants program identifies talented and passionate devel
 
 The total amount paid out in Q4 for grants was just under $317,000, spread out over the four grants: Teritori, Berty, Onbloc, and Dragos (Flippando). This work was split over essential stress-testing, debugging, and development on Gno core, and building social, gaming, and project management dApps to extend the platform’s functionality. Each grant recipient received milestones for deliverables and tracked their progress through regular public and internal syncs, hackerspace journey updates, blog posts, documentation, and developer calls.
 
-(IMAGE HERE)
+[![Q4 Chart](https://gnolang.github.io/blog/2024-02-07_funding-program-23q4/src/thumbs/chart.png)](https://gnolang.github.io/blog/2024-02-07_funding-program-23q4/src/chart.png)
 
 ## Berty Technologies (delivery May 2024)
 
