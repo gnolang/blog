@@ -39,6 +39,7 @@ I ask Dragos if he hadn’t been a programmer, would he have perhaps become an a
 I try hard not to fall off my chair. Dragos explains that astrology plays a huge role in his life, and he consults it before making any major decision—such as moving countries or leaving jobs. “I consult it on every major decision and even daily life. So wherever I have to, I use it. When I sold one of my companies, when I decided to move abroad, when I travel, and stuff like that.” He gives the analogy of meteorology and says if he knows it’s going to rain, he’ll take an umbrella to have less friction and move around more easily. In the same way, he applies astrology to his life. This man is a Pandora’s box.
 
 What else does he do in his spare time besides traveling the world, consulting the Cosmos, and writing code for fun? Dragos likes playing pool, socializing, dining out, and dancing. “I was a tango dancer back in Romania. I had a tango school for a year.” At this point, I’m hardly surprised.   
+
 ## Dragos on Gno.land 
 I met Dragos last year in Seoul at a Gno.land event hosted with Onbloc during BUIDL Asia. That’s when he spoke to Manfred about Flippando and subsequently applied for a grant. We were still building the specs for the Grants Program at the time, and Dragos was our first grantee. Since then, he’s embarked on a whole new journey learning Gno and building the airplane as it flies, delivering Flippando last month and regularly helping the team with Gno.land core issues.
 
