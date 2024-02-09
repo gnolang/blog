@@ -28,7 +28,7 @@ PoC solves this problem, ensuring the network becomes increasingly decentralized
 
 PoC is thus slower to bootstrap than PoS and harder to achieve. You can think of PoC versus PoS as a marathon versus a sprint, whereby PoC starts slowly but then gains momentum over time, and PoS starts quickly but loses momentum over time (the graph below provides a visual representation of PoC versus PoS). 
 
-[![Graph](https://gnolang.github.io/blog/2024-01-26_poc-2/src/thumbs/graph-container.png)](https://gnolang.github.io/blog/2024-01-26_poc-2/src/graph-container.png)
+[![Graph](https://gnolang.github.io/blog/2024-01-26_bgl-poc2/src/thumbs/graph-container.png)](https://gnolang.github.io/blog/2024-01-26_bgl-poc2/src/graph-container.png)
 
 The GovDAO that owns the chain has a mandate to scale (to grow and decentralize) continuously as it adds more contributors. This means it becomes progressively larger over time, achieving high decentralization efficiency way beyond the initial fast sprint of PoS chains. Once established as a proven consensus mechanism and alternative to PoS, GovDAO can benefit from by any blockchain project (through an evolution of ICS) wanting to achieve decentralization and sustainability—PoC can secure Gno.land and the web3 industry at large.
 
@@ -46,6 +46,6 @@ Beyond separating voting power from net wealth, a core component of Proof of Con
 
 Unlike PoS, contributors receive rewards based on their contribution effort rather than how many tokens they stake. They are thus incentivized and recognized for the quality of their work, ideas, and alignment, driving participation and active engagement. Governance is allocated to the people most likely to care for the ecosystem’s long-term success—the contributors who have spent the most time working toward it.
 
-*II. Proof of Contribution vs Proof of Stake is the second in a series of articles to dive deeply into the philosophy, vision, mechanics, and work involved in developing a new consensus mechanism for the next generation of smart contract systems. Look out for subsequent editions and additional Building Gno.land series, and let us know what you think! Got questions? Join the Gno.land [Discord](https://discord.com/invite/S8nKUqwkPn) or follow us on [Twitter/X](https://x.com/_gnoland)*
+*II. Proof of Contribution vs Proof of Stake is the second in a [series of articles](/r/gnoland/blog:p/bgl-poc1) to dive deeply into the philosophy, vision, mechanics, and work involved in developing a new consensus mechanism for the next generation of smart contract systems. Look out for subsequent editions and additional Building Gno.land series, and let us know what you think! Got questions? Join the Gno.land [Discord](https://discord.com/invite/S8nKUqwkPn) or follow us on [Twitter/X](https://x.com/_gnoland)*
 
 
