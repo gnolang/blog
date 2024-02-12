@@ -19,7 +19,7 @@ func parsePost(reader io.Reader) (*post, error) {
 	}
 
 	p.Title, err = extractTitle(p.Body)
-	p.Body = removeTitle(p.Body, p.Title)
+	p.Body = removeTitle(string(rest), p.Title)
 	p.Tags = removeWhitespace(p.Tags)
 
 	if p.PublicationDate == nil {
@@ -52,7 +52,7 @@ func extractTitle(body string) (string, error) {
 	return "", fmt.Errorf("no H1 header found")
 }
 
-// removeTitle removes the first occurrence of a H1 (Title) from the body of the post
+// removeTitle removes the first occurrence of the Title from the body of the post
 func removeTitle(body, title string) string {
 	t := "# " + title + "\n"
 	return strings.Replace(body, t, "", 1)
