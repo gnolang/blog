@@ -18,15 +18,15 @@ func parsePost(reader io.Reader) (*post, error) {
 		return nil, fmt.Errorf("invalid post frontmatter: %w", err)
 	}
 
+	p.Title, err = extractTitle(p.Body)
+	p.Body = removeTitle(p.Body, p.Title)
+	p.Tags = removeWhitespace(p.Tags)
+
 	if p.PublicationDate == nil {
 		now := time.Now()
 		p.PublicationDate = &now
 	}
 
-	p.Body = string(rest)
-	p.Tags = removeWhitespace(p.Tags)
-
-	p.Title, err = parseTitle(p.Body)
 	if err != nil {
 		return nil, err
 	}
@@ -34,9 +34,10 @@ func parsePost(reader io.Reader) (*post, error) {
 	return &p, nil
 }
 
-// parseTitle extracts the first H1 from the body of the post
-func parseTitle(body string) (string, error) {
+// extractTitle extracts H1 (Title) from the body of the post
+func extractTitle(body string) (string, error) {
 	scanner := bufio.NewScanner(strings.NewReader(body))
+
 	for scanner.Scan() {
 		line := scanner.Text()
 		if strings.HasPrefix(line, "# ") {
@@ -49,6 +50,12 @@ func parseTitle(body string) (string, error) {
 	}
 
 	return "", fmt.Errorf("no H1 header found")
+}
+
+// removeTitle removes the first occurrence of a H1 (Title) from the body of the post
+func removeTitle(body, title string) string {
+	t := "# " + title + "\n"
+	return strings.Replace(body, t, "", 1)
 }
 
 // removeWhitespace loops over a slice of tags (strings) and truncates each tag
