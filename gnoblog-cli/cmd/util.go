@@ -3,12 +3,13 @@ package main
 import (
 	"bufio"
 	"fmt"
-	"github.com/adrg/frontmatter"
 	"io"
 	"os"
 	"path/filepath"
 	"strings"
 	"time"
+
+	"github.com/adrg/frontmatter"
 )
 
 func parsePost(reader io.Reader) (*post, error) {

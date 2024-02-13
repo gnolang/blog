@@ -4,13 +4,14 @@ import (
 	"context"
 	"flag"
 	"fmt"
+	"os"
+	"strings"
+	"time"
+
 	"github.com/gnolang/gno/gno.land/pkg/gnoclient"
 	"github.com/gnolang/gno/gnovm/pkg/gnoenv"
 	"github.com/gnolang/gno/tm2/pkg/commands"
 	"github.com/peterbourgon/ff/v3/ffcli"
-	"os"
-	"strings"
-	"time"
 )
 
 type cliCfg struct {
