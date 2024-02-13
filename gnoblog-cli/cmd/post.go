@@ -243,7 +243,9 @@ func (cfg *cliCfg) batchPost(c gnoclient.Client, dirPath string) error {
 
 	account := c.Signer.Info().GetAddress()
 	signingAcc, _, err := c.QueryAccount(account)
-	return fmt.Errorf("query account %q failed: %w", account, err)
+	if err != nil {
+		return fmt.Errorf("query account %q failed: %w", account, err)
+	}
 	nonce := signingAcc.GetSequence()
 	accNumber := signingAcc.GetAccountNumber()
 
