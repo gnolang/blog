@@ -4,8 +4,9 @@ import (
 	"context"
 	"flag"
 	"fmt"
-	"github.com/peterbourgon/ff/v3/ffcli"
 	"os"
+
+	"github.com/peterbourgon/ff/v3/ffcli"
 )
 
 func main() {
@@ -26,8 +27,7 @@ func main() {
 
 	// Run root command
 	if err := cmd.ParseAndRun(context.Background(), os.Args[1:]); err != nil {
-		_, _ = fmt.Fprintf(os.Stderr, "%+v", err)
-
+		_, _ = fmt.Fprintf(os.Stderr, "%+v\n", err)
 		os.Exit(1)
 	}
 }
