@@ -19,8 +19,9 @@ func parsePost(reader io.Reader) (*post, error) {
 		return nil, fmt.Errorf("invalid post frontmatter: %w", err)
 	}
 
-	p.Title, err = extractTitle(p.Body)
-	p.Body = removeTitle(string(rest), p.Title)
+	body := string(rest)
+	p.Title, err = extractTitle(body)
+	p.Body = removeTitle(body, p.Title)
 	p.Tags = removeWhitespace(p.Tags)
 
 	if p.PublicationDate == nil {
