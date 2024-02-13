@@ -1,4 +1,4 @@
-package gnoblog_cli
+package main
 
 import (
 	"context"

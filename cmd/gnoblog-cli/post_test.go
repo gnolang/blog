@@ -1,1 +1,1 @@
-package gnoblog_cli
+package main

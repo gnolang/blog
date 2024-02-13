@@ -1,4 +1,4 @@
-package gnoblog_cli
+package main
 
 import (
 	"github.com/gnolang/gno/gno.land/pkg/gnoclient"
