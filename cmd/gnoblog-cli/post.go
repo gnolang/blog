@@ -104,11 +104,10 @@ func (cfg *cliCfg) registerFlags(fs *flag.FlagSet) {
 
 func (cfg *cliCfg) execPost(_ context.Context, args []string) error {
 	if len(args) > 1 {
-		fmt.Println(args)
-
 		return errInvalidNumberOfArgs
 	}
 
+	// Stat passed in arg
 	fileInfo, err := os.Stat(args[0])
 	if err != nil {
 		return errInvalidPath
@@ -127,95 +126,36 @@ func (cfg *cliCfg) execPost(_ context.Context, args []string) error {
 		return err
 	}
 
+	// Initialize signer
+	signer, err := initSigner(cfg, pass)
+	if err != nil {
+		return err
+	}
+
 	// Initialize Gnoclient
 	client := gnoclient.Client{
-		Signer:    initSigner(cfg, pass),
+		Signer:    signer,
 		RPCClient: initRPCClient(cfg),
 	}
 
-	// Batch post request passed in
+	// Batch post request passed in with root argument
 	if fileInfo.IsDir() {
-		return cfg.batchPost(client, args[0])
+		// Find file paths
+		files, err := findFilePaths(args[0])
+		if err != nil {
+			return err
+		}
+
+		return cfg.post(client, files...)
 	}
 
 	// Single post request passed in an argument
-	return cfg.singlePost(client, args[0])
+	return cfg.post(client, args[0])
 }
 
-func (cfg *cliCfg) singlePost(c gnoclient.Client, postPath string) error {
-	postFile, err := os.Open(postPath)
-	if err != nil {
-		return fmt.Errorf("cannot open file %q: %w", postPath, err)
-	}
-
-	post, err := parsePost(postFile)
-	if err != nil {
-		return fmt.Errorf("cannot parse post %q: %w", postPath, err)
-	}
-
-	signingAcc, _, err := c.QueryAccount(c.Signer.Info().GetAddress())
-	if err != nil {
-		return err
-	}
-
-	nonce := signingAcc.GetSequence()
-	accNumber := signingAcc.GetAccountNumber()
-
-	// Check if post already exists
-	existsExpr := "PostExists(\"" + post.Slug + "\")"
-	exists, _, err := c.QEval(cfg.BlogRealmPath, existsExpr)
-
-	verb := "ModAddPost"
-	if strings.Contains(exists, "true") && cfg.Edit {
-		verb = "ModEditPost"
-	}
-
-	msg := gnoclient.MsgCall{
-		PkgPath:  cfg.BlogRealmPath,
-		FuncName: verb,
-		Args: []string{
-			post.Slug,
-			post.Title,
-			post.Body,
-			post.PublicationDate.Format(time.RFC3339),
-			strings.Join(post.Authors, ","),
-			strings.Join(post.Tags, ","),
-		},
-	}
-
-	baseTxCfg := gnoclient.BaseTxCfg{
-		GasFee:         cfg.GasFee,
-		GasWanted:      cfg.GasWanted,
-		AccountNumber:  accNumber,
-		SequenceNumber: nonce,
-		Memo:           "Posted from gnoblog-cli",
-	}
-
-	if !cfg.Publish {
-		fmt.Println("--publish flag not set to true, exiting")
-		// todo see how to display generated data
-		return nil
-	}
-
-	fmt.Println(msg)
-	_, err = c.Call(baseTxCfg, msg)
-	if err != nil {
-		return err
-	}
-
-	fmt.Printf("Successfully posted %s", post.Title)
-
-	return nil
-}
-
-func (cfg *cliCfg) batchPost(c gnoclient.Client, dirPath string) error {
-	files, err := findFilePaths(dirPath)
-	if err != nil {
-		return err
-	}
-
-	msgs := make([]gnoclient.MsgCall, 0, len(files))
-	for _, postPath := range files {
+func (cfg *cliCfg) post(c gnoclient.Client, paths ...string) error {
+	msgs := make([]gnoclient.MsgCall, 0, len(paths))
+	for _, postPath := range paths {
 		postFile, err := os.Open(postPath)
 		if err != nil {
 			return fmt.Errorf("cannot open file %q: %w", postPath, err)
