@@ -154,20 +154,36 @@ func (cfg *cliCfg) execPost(io commands.IO, args []string) error {
 
 func (cfg *cliCfg) post(c gnoclient.Client, paths ...string) error {
 	msgs := make([]gnoclient.MsgCall, 0, len(paths))
+
+	// Go through post(s)
 	for _, postPath := range paths {
+		// Open file
 		postFile, err := os.Open(postPath)
 		if err != nil {
 			return fmt.Errorf("cannot open file %q: %w", postPath, err)
 		}
 
+		// Parse post
 		post, err := parsePost(postFile)
 		if err != nil {
 			return fmt.Errorf("cannot parse post %q: %w", postPath, err)
 		}
 
+		// Define function to call on the blog realm
+		verb := "ModAddPost"
+
+		// Check if post already exists on chain
+		existsExpr := "PostExists(\"" + post.Slug + "\")"
+		exists, _, err := c.QEval(cfg.BlogRealmPath, existsExpr)
+
+		// If post exists, and user wants to edit it, use ModEditPost
+		if err != nil && strings.Contains(exists, "true") && cfg.Edit {
+			verb = "ModEditPost"
+		}
+
 		callCfg := gnoclient.MsgCall{
 			PkgPath:  cfg.BlogRealmPath,
-			FuncName: "ModAddPost",
+			FuncName: verb,
 			Args: []string{
 				post.Slug,
 				post.Title,

@@ -21,11 +21,14 @@ func parsePost(reader io.Reader) (*post, error) {
 
 	body := string(rest)
 	p.Title, err = extractTitle(body)
-
-	p.Body = removeTitle(body, p.Title)
-	p.Tags = removeWhitespace(p.Tags)
 	if err != nil {
 		return nil, err
+	}
+
+	p.Body = removeTitle(body, p.Title)
+
+	if len(p.Tags) != 0 {
+		p.Tags = removeWhitespace(p.Tags)
 	}
 
 	if p.PublicationDate == nil {
@@ -62,13 +65,15 @@ func removeTitle(body, title string) string {
 
 // removeWhitespace loops over a slice of tags (strings) and truncates each tag
 // by removing whitespace
-// ie, []string{"example spaced tag"} -> []string{"examplespacedtag"}
+// ie, []string{"example spaced tag", "correct_tag"} -> []string{"examplespacedtag", "correct_tag"}
 func removeWhitespace(tags []string) []string {
+	t := make([]string, len(tags))
+
 	for i, tag := range tags {
-		tags[i] = strings.Replace(tag, " ", "", -1)
+		t[i] = strings.Replace(tag, " ", "", -1)
 	}
 
-	return tags
+	return t
 }
 
 // findFilePaths gathers the file paths for specific file types
