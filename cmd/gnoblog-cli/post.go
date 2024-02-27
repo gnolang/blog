@@ -5,6 +5,7 @@ import (
 	"flag"
 	"fmt"
 	"github.com/gnolang/gno/tm2/pkg/commands"
+	"log/slog"
 	"os"
 	"strings"
 	"time"
@@ -109,6 +110,10 @@ func (cfg *cliCfg) execPost(io commands.IO, args []string) error {
 		return ErrInvalidNumberOfArgs
 	}
 
+	if cfg.KeyName == "" {
+		return ErrEmptyKeyName
+	}
+
 	// Stat passed in arg
 	fileInfo, err := os.Stat(args[0])
 	if err != nil {
@@ -175,9 +180,12 @@ func (cfg *cliCfg) post(c gnoclient.Client, paths ...string) error {
 		// Check if post already exists on chain
 		existsExpr := "PostExists(\"" + post.Slug + "\")"
 		exists, _, err := c.QEval(cfg.BlogRealmPath, existsExpr)
+		if err != nil {
+			slog.Error("error while checking if post exists", "error", err, "slug", post.Slug)
+		}
 
 		// If post exists, and user wants to edit it, use ModEditPost
-		if err != nil && strings.Contains(exists, "true") && cfg.Edit {
+		if strings.Contains(exists, "true") && cfg.Edit {
 			verb = "ModEditPost"
 		}
 
