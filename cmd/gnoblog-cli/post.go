@@ -106,13 +106,13 @@ func (cfg *cliCfg) registerFlags(fs *flag.FlagSet) {
 
 func (cfg *cliCfg) execPost(io commands.IO, args []string) error {
 	if len(args) > 1 {
-		return errInvalidNumberOfArgs
+		return ErrInvalidNumberOfArgs
 	}
 
 	// Stat passed in arg
 	fileInfo, err := os.Stat(args[0])
 	if err != nil {
-		return errInvalidPath
+		return fmt.Errorf("unable to stat %q: %w", args[0], err)
 	}
 
 	var pass string
@@ -181,6 +181,7 @@ func (cfg *cliCfg) post(c gnoclient.Client, paths ...string) error {
 			verb = "ModEditPost"
 		}
 
+		// Pack calls to the chain
 		callCfg := gnoclient.MsgCall{
 			PkgPath:  cfg.BlogRealmPath,
 			FuncName: verb,

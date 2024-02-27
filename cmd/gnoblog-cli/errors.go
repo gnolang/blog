@@ -3,6 +3,6 @@ package main
 import "errors"
 
 var (
-	errInvalidNumberOfArgs = errors.New("please input only one argument")
-	errInvalidPath         = errors.New("cannot open specified path")
+	ErrInvalidNumberOfArgs = errors.New("please input only one argument")
+	ErrInvalidPath         = errors.New("cannot open specified path")
 )
