@@ -4,6 +4,7 @@ import (
 	"context"
 	"flag"
 	"fmt"
+	"github.com/gnolang/gno/tm2/pkg/commands"
 	"os"
 
 	"github.com/peterbourgon/ff/v3/ffcli"
@@ -22,7 +23,7 @@ func main() {
 
 	// Add the subcommands
 	cmd.Subcommands = []*ffcli.Command{
-		newPostCommand(),
+		newPostCommand(commands.NewDefaultIO()),
 	}
 
 	// Run root command

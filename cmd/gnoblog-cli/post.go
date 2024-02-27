@@ -4,13 +4,13 @@ import (
 	"context"
 	"flag"
 	"fmt"
+	"github.com/gnolang/gno/tm2/pkg/commands"
 	"os"
 	"strings"
 	"time"
 
 	"github.com/gnolang/gno/gno.land/pkg/gnoclient"
 	"github.com/gnolang/gno/gnovm/pkg/gnoenv"
-	"github.com/gnolang/gno/tm2/pkg/commands"
 	"github.com/peterbourgon/ff/v3/ffcli"
 )
 
@@ -29,7 +29,7 @@ type cliCfg struct {
 	InsecurePasswordStdIn bool
 }
 
-func newPostCommand() *ffcli.Command {
+func newPostCommand(io commands.IO) *ffcli.Command {
 	var (
 		fs  = flag.NewFlagSet("post", flag.ExitOnError)
 		cfg = &cliCfg{}
@@ -44,7 +44,9 @@ func newPostCommand() *ffcli.Command {
 		ShortUsage: "post <FILE OR FILES_DIR> [flags]",
 		LongHelp:   `Post one or more files. Passing in a file will post that single file, while passing in a directory will search for all .md files and batch post them.`,
 		FlagSet:    fs,
-		Exec:       cfg.execPost,
+		Exec: func(_ context.Context, args []string) error {
+			return cfg.execPost(io, args)
+		},
 	}
 }
 
@@ -102,7 +104,7 @@ func (cfg *cliCfg) registerFlags(fs *flag.FlagSet) {
 	)
 }
 
-func (cfg *cliCfg) execPost(_ context.Context, args []string) error {
+func (cfg *cliCfg) execPost(io commands.IO, args []string) error {
 	if len(args) > 1 {
 		return errInvalidNumberOfArgs
 	}
@@ -112,9 +114,6 @@ func (cfg *cliCfg) execPost(_ context.Context, args []string) error {
 	if err != nil {
 		return errInvalidPath
 	}
-
-	// Init IO for password input
-	io := commands.NewDefaultIO()
 
 	var pass string
 	if cfg.Quiet {
