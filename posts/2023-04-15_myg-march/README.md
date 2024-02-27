@@ -13,8 +13,6 @@ We made progress across the board at Gno.land last month, from onboarding more d
 
 You can find the live streams of the new biweekly public developer calls on [Gno.land YouTube](https://www.youtube.com/@_gnoland/videos) as well as access the agendas on [GitHub](https://github.com/gnolang/meetings/blob/main/notes/2023_03_15_dev_call_notes.md). The main talking points this month were Gno IDE, Gno.land website language and UX, garbage collection, bug fixes, and how to bring IBC and ICS to the platform. We are working on all these issues concurrently but the order of release will be Gno.land mainnet, IBC, and then ICS (this is reflected in the DAG below).
 
-
-
 [![Gno.land mini DAG](https://gnolang.github.io/blog/2023-04-15_myg-march/src/thumbs/mini-dag.png)](https://gnolang.github.io/blog/2023-04-15_myg-march/src/mini-dag.png)
 
 ## Gno.land Website Language

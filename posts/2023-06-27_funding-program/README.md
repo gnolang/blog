@@ -9,13 +9,13 @@ authors: [christina, michelle]
 
 If you’re interested in building in Gno.land and using the Gnolang (Gno) language to make a meaningful contribution, we’ve launched the Gno.land Funding and Grants Program to support you on your journey. If you’re a developer, tinkerer, researcher, or educator and you’re excited by the idea of creating innovative dApps, tooling, infrastructure, products, or smart contract libraries on Gno.land, now you can apply for funding.
 
-**About the Gnoland Funding and Grants Program**
+## About the Gnoland Funding and Grants Program
 
 We’re building Gno.land to endure with timeless code that will serve as a reference point for many years to come. Secured by a novel consensus mechanism, Proof of Contribution, Gno.land rewards contributors fairly, addressing one of the blockchain industry’s biggest problems. The developers that are most active on the platform with the highest quality contributions will secure the most rewards. We already have a growing community of Gnomes innovating and building on Gno.land and we’re looking to add more contributors to extend the usability of the platform and its smart contract library.
 
 Our grants program will encourage further participation by allocating financial awards and contributions to individuals and teams who want to build dApps, core infrastructure, products, or features on Gno.land, incentivizing more like-minded Gnomes to test the Proof of Contribution mechanism and push the chain to new limits. The grant amount and duration will depend on the scope and ambition of the project as well as the work involved.
 
-**Types of Contributors**
+## Types of Contributors
 
 The Gno.land Funding and Grants program is divided into four different categories – tinkerer, builder, researcher, and educator – to ensure that we cater to a diverse range of people and working preferences. Here’s how we define these categories:
 
@@ -26,7 +26,7 @@ The Gno.land Funding and Grants program is divided into four different categorie
 - Researcher: You want to discover and analyze
     - Deep dive into topics linked to the Gno.land universe
 
-**What We Are Looking For**
+## What We Are Looking For
 
 To qualify for a Gno.land grant, we’re looking for motivated and passionate people who can contribute by developing dApps, core infrastructure, useful and innovative products, or features that improve the usability of the Gno.land chain, specifically:
 
@@ -50,9 +50,9 @@ To qualify for a Gno.land grant, we’re looking for motivated and passionate pe
 
 The above guidelines are by no means exhaustive and are intended to spark your imagination and give examples of the types of contributions we’re looking for in Gno.land. We’re open-minded and willing to assess all grant proposals, so if you have an idea that’s not on the list or a suggestion that you think will benefit our vibrant community, let us know. If your submission doesn’t qualify for a grant, we’ll do our best to provide you with open and honest feedback and points for improvement, as well as identify any opportunities to get involved in our ongoing incentivized Game of Realms competition.
 
-**Meet Our First Grantees - Onbloc**
+## Meet Our First Grantees
 
-**Onbloc**
+### Onbloc
 
 Onbloc is a blockchain software company building core infrastructure for Gno.land and
 
@@ -64,7 +64,7 @@ In addition to this, we want to encourage Onbloc to continue their amazing work 
 
 *Dongwon Shin, CEO, Onbloc*
 
-**Teritori**
+### Teritori
 
 Teritori is a super-dApp project allowing individuals and organizations to interact, organize, and communicate in a radically resilient and decentralized way. Based on an interoperable vision, the application is built on a multi-chain experience approach, gradually integrating Gnolang as the fundamental technical brick of the system. Currently in Beta ([available here](https://app.teritori.com/)), the app is making modular tools and dApps available to users, with a single gamified user experience. Teritori's philosophy is to offer users and developers a place that belongs to them, their territory, with an emphasis on interoperability, modularity, and customization.
 
@@ -74,7 +74,7 @@ Users can interact with a social network, NFT marketplace, DAO launcher, service
 
 *Zooma, Core Lead, Teritori*
 
-**Zack**
+### Zack
 
 Zack is the first tinkerer-in-residence at Gno.land. With a deep-rooted passion for innovation, he embraced Go early on in 2013 and ever since, has been harnessing its power to craft peer-to-peer programs and develop web2 applications. While Gno.land marks Zack's initial foray into web3 development and blockchain dApps, the Gnolang language allowed him to effortlessly apply his Golang expertise. This has enabled him to flourish within an ecosystem that revolves around decentralized systems, seamlessly transitioning his skill set to create unique decentralized solutions.
 
