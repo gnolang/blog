@@ -21,16 +21,16 @@ func parsePost(reader io.Reader) (*post, error) {
 
 	body := string(rest)
 	p.Title, err = extractTitle(body)
+
 	p.Body = removeTitle(body, p.Title)
 	p.Tags = removeWhitespace(p.Tags)
+	if err != nil {
+		return nil, err
+	}
 
 	if p.PublicationDate == nil {
 		now := time.Now()
 		p.PublicationDate = &now
-	}
-
-	if err != nil {
-		return nil, err
 	}
 
 	return &p, nil

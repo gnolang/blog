@@ -186,6 +186,7 @@ func (cfg *cliCfg) post(c gnoclient.Client, paths ...string) error {
 	if err != nil {
 		return fmt.Errorf("query account %q failed: %w", account, err)
 	}
+
 	nonce := signingAcc.GetSequence()
 	accNumber := signingAcc.GetAccountNumber()
 
