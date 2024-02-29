@@ -4,7 +4,9 @@ import (
 	"context"
 	"flag"
 	"fmt"
+	"github.com/adrg/frontmatter"
 	"github.com/gnolang/gno/tm2/pkg/commands"
+	"io"
 	"log/slog"
 	"os"
 	"strings"
@@ -185,7 +187,7 @@ func (cfg *cliCfg) post(c gnoclient.Client, paths ...string) error {
 		}
 
 		// If post exists, and user wants to edit it, use ModEditPost
-		if strings.Contains(exists, "true") && cfg.Edit {
+		if cfg.Edit && strings.Contains(exists, "true") {
 			verb = "ModEditPost"
 		}
 
@@ -228,4 +230,31 @@ func (cfg *cliCfg) post(c gnoclient.Client, paths ...string) error {
 	}
 
 	return nil
+}
+
+func parsePost(reader io.Reader) (*post, error) {
+	var p post
+	rest, err := frontmatter.MustParse(reader, &p)
+	if err != nil {
+		return nil, fmt.Errorf("invalid post frontmatter: %w", err)
+	}
+
+	body := string(rest)
+	p.Title, err = extractTitle(body)
+	if err != nil {
+		return nil, err
+	}
+
+	p.Body = removeTitle(body, p.Title)
+
+	if len(p.Tags) != 0 {
+		p.Tags = removeWhitespace(p.Tags)
+	}
+
+	if p.PublicationDate == nil {
+		now := time.Now()
+		p.PublicationDate = &now
+	}
+
+	return &p, nil
 }

@@ -3,41 +3,10 @@ package main
 import (
 	"bufio"
 	"fmt"
-	"io"
 	"os"
 	"path/filepath"
 	"strings"
-	"time"
-
-	"github.com/adrg/frontmatter"
 )
-
-func parsePost(reader io.Reader) (*post, error) {
-	var p post
-	rest, err := frontmatter.MustParse(reader, &p)
-	if err != nil {
-		return nil, fmt.Errorf("invalid post frontmatter: %w", err)
-	}
-
-	body := string(rest)
-	p.Title, err = extractTitle(body)
-	if err != nil {
-		return nil, err
-	}
-
-	p.Body = removeTitle(body, p.Title)
-
-	if len(p.Tags) != 0 {
-		p.Tags = removeWhitespace(p.Tags)
-	}
-
-	if p.PublicationDate == nil {
-		now := time.Now()
-		p.PublicationDate = &now
-	}
-
-	return &p, nil
-}
 
 // extractTitle extracts H1 (Title) from the body of the post
 func extractTitle(body string) (string, error) {
