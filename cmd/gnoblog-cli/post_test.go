@@ -7,30 +7,25 @@ import (
 )
 
 func TestInputs(t *testing.T) {
-	type cliCfg struct {
-		Publish       bool
-		Edit          bool
-		GasWanted     int64
-		GasFee        string
-		ChainId       string
-		BlogRealmPath string
-
-		KeyName               string
-		GnoHome               string
-		Remote                string
-		Quiet                 bool
-		InsecurePasswordStdIn bool
-	}
-
 	testTable := []struct {
 		name        string
+		io          mockIO
 		cfg         *cliCfg
+		args        []string
 		expectedErr error
 	}{
 		{
 			name: "No key provided",
+			io: mockIO{
+				getPassword: func() (string, error) {
+					return "pass", nil
+				},
+			},
 			cfg: &cliCfg{
 				KeyName: "",
+			},
+			args: []string{
+				"path1",
 			},
 			expectedErr: ErrEmptyKeyName,
 		},
@@ -42,11 +37,13 @@ func TestInputs(t *testing.T) {
 		t.Run(testCase.name, func(t *testing.T) {
 			t.Parallel()
 
-			ctx, cancelFn := context.WithTimeout(context.Background(), time.Second*5)
+			_, cancelFn := context.WithTimeout(context.Background(), time.Second*5)
 			defer cancelFn()
 
-			testCase.cfg
-
+			err := execPost(mockIO{}, []string{"lol"}, testCase.cfg)
+			if err != nil {
+				return
+			}
 		})
 	}
 
