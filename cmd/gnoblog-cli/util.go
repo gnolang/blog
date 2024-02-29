@@ -8,7 +8,7 @@ import (
 	"strings"
 )
 
-// extractTitle extracts H1 (Title) from the body of the post
+// extractTitle extracts H1 (Title) from the body of the Post
 func extractTitle(body string) (string, error) {
 	scanner := bufio.NewScanner(strings.NewReader(body))
 
@@ -26,7 +26,7 @@ func extractTitle(body string) (string, error) {
 	return "", fmt.Errorf("no H1 header found")
 }
 
-// removeTitle removes the first occurrence of the Title from the body of the post
+// removeTitle removes the first occurrence of the Title from the body of the Post
 func removeTitle(body, title string) string {
 	t := "# " + title + "\n"
 	return strings.Replace(body, t, "", 1)

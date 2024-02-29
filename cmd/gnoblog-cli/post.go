@@ -34,7 +34,7 @@ type cliCfg struct {
 
 func newPostCommand(io commands.IO) *ffcli.Command {
 	var (
-		fs  = flag.NewFlagSet("post", flag.ExitOnError)
+		fs  = flag.NewFlagSet("Post", flag.ExitOnError)
 		cfg = &cliCfg{}
 	)
 
@@ -48,7 +48,7 @@ func newPostCommand(io commands.IO) *ffcli.Command {
 		LongHelp:   `Post one or more files. Passing in a file will post that single file, while passing in a directory will search for all .md files and batch post them.`,
 		FlagSet:    fs,
 		Exec: func(_ context.Context, args []string) error {
-			return cfg.execPost(io, args)
+			return execPost(io, args, cfg)
 		},
 	}
 }
@@ -107,7 +107,7 @@ func (cfg *cliCfg) registerFlags(fs *flag.FlagSet) {
 	)
 }
 
-func (cfg *cliCfg) execPost(io commands.IO, args []string) error {
+func execPost(io commands.IO, args []string, cfg *cliCfg) error {
 	if len(args) > 1 {
 		return ErrInvalidNumberOfArgs
 	}
@@ -144,7 +144,7 @@ func (cfg *cliCfg) execPost(io commands.IO, args []string) error {
 		RPCClient: initRPCClient(cfg),
 	}
 
-	// Batch post request passed in with root argument
+	// Batch Post request passed in with root argument
 	if fileInfo.IsDir() {
 		// Find file paths
 		files, err := findFilePaths(args[0])
@@ -152,17 +152,17 @@ func (cfg *cliCfg) execPost(io commands.IO, args []string) error {
 			return err
 		}
 
-		return cfg.post(client, files...)
+		return post(client, cfg, files...)
 	}
 
-	// Single post request passed in an argument
-	return cfg.post(client, args[0])
+	// Single Post request passed in an argument
+	return post(client, cfg, args[0])
 }
 
-func (cfg *cliCfg) post(c gnoclient.Client, paths ...string) error {
+func post(c gnoclient.Client, cfg *cliCfg, paths ...string) error {
 	msgs := make([]gnoclient.MsgCall, 0, len(paths))
 
-	// Go through post(s)
+	// Go through Post(s)
 	for _, postPath := range paths {
 		// Open file
 		postFile, err := os.Open(postPath)
@@ -170,23 +170,23 @@ func (cfg *cliCfg) post(c gnoclient.Client, paths ...string) error {
 			return fmt.Errorf("cannot open file %q: %w", postPath, err)
 		}
 
-		// Parse post
+		// Parse Post
 		post, err := parsePost(postFile)
 		if err != nil {
-			return fmt.Errorf("cannot parse post %q: %w", postPath, err)
+			return fmt.Errorf("cannot parse Post %q: %w", postPath, err)
 		}
 
 		// Define function to call on the blog realm
 		verb := "ModAddPost"
 
-		// Check if post already exists on chain
+		// Check if Post already exists on chain
 		existsExpr := "PostExists(\"" + post.Slug + "\")"
 		exists, _, err := c.QEval(cfg.BlogRealmPath, existsExpr)
 		if err != nil {
-			slog.Error("error while checking if post exists", "error", err, "slug", post.Slug)
+			slog.Error("error while checking if Post exists", "error", err, "slug", post.Slug)
 		}
 
-		// If post exists, and user wants to edit it, use ModEditPost
+		// If Post exists, and user wants to edit it, use ModEditPost
 		if cfg.Edit && strings.Contains(exists, "true") {
 			verb = "ModEditPost"
 		}
@@ -232,11 +232,11 @@ func (cfg *cliCfg) post(c gnoclient.Client, paths ...string) error {
 	return nil
 }
 
-func parsePost(reader io.Reader) (*post, error) {
-	var p post
+func parsePost(reader io.Reader) (*Post, error) {
+	var p Post
 	rest, err := frontmatter.MustParse(reader, &p)
 	if err != nil {
-		return nil, fmt.Errorf("invalid post frontmatter: %w", err)
+		return nil, fmt.Errorf("invalid Post frontmatter: %w", err)
 	}
 
 	body := string(rest)

@@ -2,7 +2,7 @@ package main
 
 import "time"
 
-type post struct {
+type Post struct {
 	Title           string     // parsed out from body
 	Tags            []string   `yaml:"tags"`
 	Authors         []string   `yaml:"authors"`
