@@ -162,6 +162,8 @@ func execPost(io commands.IO, args []string, cfg *cliCfg) error {
 func post(c gnoclient.Client, cfg *cliCfg, paths ...string) error {
 	msgs := make([]gnoclient.MsgCall, 0, len(paths))
 
+	// Save title for printing to cli
+	var postTitle string
 	// Go through Post(s)
 	for _, postPath := range paths {
 		// Open file
@@ -205,6 +207,7 @@ func post(c gnoclient.Client, cfg *cliCfg, paths ...string) error {
 			},
 		}
 		msgs = append(msgs, callCfg)
+		postTitle = post.Title
 	}
 
 	account := c.Signer.Info().GetAddress()
@@ -227,6 +230,18 @@ func post(c gnoclient.Client, cfg *cliCfg, paths ...string) error {
 	_, err = c.Call(baseTxCfg, msgs...)
 	if err != nil {
 		return err
+	}
+
+	// Print success messages
+	action := "posted"
+	if cfg.Edit {
+		action = "edited"
+	}
+
+	if len(msgs) == 1 {
+		fmt.Printf("Successfully %s \"%s\"!\n", action, postTitle)
+	} else {
+		fmt.Printf("Successfully %s %d posts!\n", action, len(msgs))
 	}
 
 	return nil
