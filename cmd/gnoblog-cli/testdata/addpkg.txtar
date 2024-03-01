@@ -1,0 +1,18 @@
+# test for add package
+
+## start a new node
+gnoland start
+
+go run . post --key test1 --chainid tendermint_test --gas-wanted 100000000 --publish README.md
+
+-- README.md --
+---
+publication_date: 2025-01-09T00:00:00Z
+slug: txtar-post
+tags: [txtar, test, gno.land]
+authors: [gnoland]
+---
+
+# Amazing title
+
+Lorem ipsum

@@ -2,38 +2,11 @@ package main
 
 import (
 	"context"
-	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"os"
-	"path/filepath"
 	"testing"
 	"time"
 )
-
-func TestValidFlowSinglePost(t *testing.T) {
-	var (
-		cfg = &cliCfg{
-			KeyName: "dev",
-			Edit:    false,
-		}
-		io = mockIO{}
-	)
-
-	// Generate temporary dir
-	sourceDir, err := os.MkdirTemp(".", "tmp")
-	require.NoError(t, err)
-	t.Cleanup(removeDir(t, sourceDir))
-
-	// Write temp post
-	postContent := generateTestPostContent(t)
-	postPath := filepath.Join(sourceDir, "README.md")
-	err = os.WriteFile(postPath, []byte(postContent), 0644)
-	require.NoError(t, err)
-
-	// Run execPost with mock data
-	err = execPost(io, []string{postPath}, cfg)
-	assert.NoError(t, err)
-}
 
 func TestInputs(t *testing.T) {
 	testTable := []struct {
@@ -112,7 +85,6 @@ occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim 
 }
 
 func removeDir(t *testing.T, dirPath string) func() {
-
 	return func() {
 		err := os.RemoveAll(dirPath)
 		require.NoError(t, err)

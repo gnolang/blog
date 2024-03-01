@@ -188,8 +188,11 @@ func post(c gnoclient.Client, cfg *cliCfg, paths ...string) error {
 			slog.Error("error while checking if Post exists", "error", err, "slug", post.Slug)
 		}
 
-		// If Post exists, and user wants to edit it, use ModEditPost
-		if cfg.Edit && strings.Contains(exists, "true") {
+		bExists := strings.Contains(exists, "true")
+		if cfg.Edit && !bExists {
+			return fmt.Errorf("%s is not on chain yet - disable the edit flag\n", post.Title)
+		} else if cfg.Edit && bExists {
+			// If Post exists, and user wants to edit it, use ModEditPost
 			verb = "ModEditPost"
 		}
 
