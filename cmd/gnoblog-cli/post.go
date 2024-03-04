@@ -45,14 +45,13 @@ func newPostCommand(io commands.IO) *commands.Command {
 		commands.Metadata{
 			Name:       "post",
 			ShortUsage: "post <FILE OR FILES_DIR> [flags]",
-			LongHelp:   `Post one or more files. Passing in a file will post that single file, while passing in a directory will search for all .md files and batch post them.`,
+			LongHelp:   `Post one or more files. Passing in a file will post that single file, while passing in a directory will search for all README.md files and batch post them.`,
 		},
 		cfg,
 		func(_ context.Context, args []string) error {
 			return execPost(io, args, cfg)
 		},
 	)
-
 }
 
 // RegisterFlags registers flags for cliCfg
@@ -177,7 +176,8 @@ func post(c gnoclient.Client, cfg *cliCfg, paths ...string) error {
 		// Parse Post
 		post, err := parsePost(postFile)
 		if err != nil {
-			return fmt.Errorf("cannot parse Post %q: %w", postPath, err)
+			fmt.Printf("skipping post at %q, cannot parse: %v\n", postPath, err)
+			continue
 		}
 
 		// Define function to call on the blog realm
