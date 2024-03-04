@@ -191,14 +191,15 @@ func post(c gnoclient.Client, cfg *cliCfg, paths ...string) error {
 		}
 
 		bExists := strings.Contains(exists, "true")
-		if cfg.Edit && !bExists {
-			return fmt.Errorf("%s is not on chain yet - disable the edit flag\n", post.Title)
-		} else if cfg.Edit && bExists {
+		if cfg.Edit {
+			if !bExists {
+				return fmt.Errorf("%s is not on chain yet - disable the edit flag\n", post.Title)
+			}
 			// If Post exists, and user wants to edit it, use ModEditPost
 			verb = "ModEditPost"
-		} else if !cfg.Edit && bExists {
-			// if a post is already on chain and we are not editing it, just skip it
-			// otherwise, the batch transaction will fail if a single post already exists
+		} else if bExists {
+			// if a post is already on chain, and we are not editing it, just skip it
+			// otherwise, batch transactions will fail if a single MsgCall fails
 			continue
 		}
 
@@ -217,6 +218,10 @@ func post(c gnoclient.Client, cfg *cliCfg, paths ...string) error {
 		}
 		msgs = append(msgs, callCfg)
 		postTitle = post.Title
+	}
+
+	if len(msgs) == 0 {
+		return fmt.Errorf("%w, exiting", ErrNoNewOrChangedPosts)
 	}
 
 	account := c.Signer.Info().GetAddress()
