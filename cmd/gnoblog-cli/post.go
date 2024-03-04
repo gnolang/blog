@@ -110,7 +110,7 @@ func (cfg *cliCfg) RegisterFlags(fs *flag.FlagSet) {
 }
 
 func execPost(io commands.IO, args []string, cfg *cliCfg) error {
-	if len(args) > 1 {
+	if len(args) != 1 {
 		return ErrInvalidNumberOfArgs
 	}
 
