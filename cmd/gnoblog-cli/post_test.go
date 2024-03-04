@@ -45,6 +45,16 @@ func TestInputs(t *testing.T) {
 			},
 			expectedErr: ErrInvalidNumberOfArgs,
 		},
+		{
+			name: "0 args provided",
+			io: mockIO{
+				getPassword: func() (string, error) {
+					return "pass", nil
+				},
+			},
+			args:        []string{},
+			expectedErr: ErrInvalidNumberOfArgs,
+		},
 	}
 
 	for _, testCase := range testTable {
@@ -64,6 +74,7 @@ func TestInputs(t *testing.T) {
 	}
 }
 
+// Helpers
 func generateTestPostContent(t *testing.T) string {
 	t.Helper()
 
@@ -90,3 +101,5 @@ func removeDir(t *testing.T, dirPath string) func() {
 		require.NoError(t, err)
 	}
 }
+
+// todo add integration tests once a good way for it is available.
