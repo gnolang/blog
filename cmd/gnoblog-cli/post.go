@@ -196,6 +196,10 @@ func post(c gnoclient.Client, cfg *cliCfg, paths ...string) error {
 		} else if cfg.Edit && bExists {
 			// If Post exists, and user wants to edit it, use ModEditPost
 			verb = "ModEditPost"
+		} else if !cfg.Edit && bExists {
+			// if a post is already on chain and we are not editing it, just skip it
+			// otherwise, the batch transaction will fail if a single post already exists
+			continue
 		}
 
 		// Pack calls to the chain
