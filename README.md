@@ -15,7 +15,7 @@ The blog posts are written in markdown format, and include a frontmatter prefix 
 
 See [CONTRIBUTING.md](./CONTRIBUTING.md).
 
-## CLI ([`./gnoblog-cli`](cmd/gnoblog-cli))
+## CLI ([`./gnoblog-cli`](./cmd/gnoblog-cli))
 
 _See [#1](https://github.com/gnolang/blog/issues/1)_
 
