@@ -1,12 +1,11 @@
 ---
-title: "The More You Gno: Gno.land Monthly Updates - 2"
 publication_date: 2023-05-26T13:37:00Z
 slug: monthly-dev-2
 tags: [gnoland, gnovm, tm2]
 authors: [christina]
 ---
 
-## The More You Gno 2: Gno.land Developer Updates
+# The More You Gno: Gno.land Monthly Updates - 2
 
 Over the past few weeks, our core devs and ecosystem contributors have been making massive strides on Gno.land. There’s a lot to cover in the second edition of *The More You Gno*, from updates on Tendermint2 and GnoVM to stack/frames management, Gno IDE, and plenty more. We’ll also see what some of the external teams contributing to the platform have been up to, including Gno.land’s first decentralized exchange, GnoSwap, and Adena compatibility with GRC20 tokens. Check it out.
 

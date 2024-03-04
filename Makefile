@@ -1,5 +1,5 @@
 install:
-	go install ./gnoblog-cli
+	go install ./cmd/gnoblog-cli
 
 test:
 	go test -v ./...

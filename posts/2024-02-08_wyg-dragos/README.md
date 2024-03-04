@@ -1,10 +1,11 @@
 ---
-title: "Who You Gno – On the Record with Dragos Roua"
 publication_date: 2024-02-08T00:00:00Z
 slug: wyg-dragos
 tags: [whoyougno, flippando, community, interview]
 authors: [christina]
 ---
+
+# Who You Gno – On the Record with Dragos Roua
 
 Dragos Roua is a humble man. If you had the chance to read his article, [*5 Things I Learned While Porting Flippando From Solidity to Gno*](https://test3.gno.land/r/gnoland/blog:p/porting-flippando-gno), you’d have seen him refer to Flippando as his “tiny little game” and describe his “surprise,” over it winning the Polygon track of the Glitch hackathon, two subsequent hackathons in South Korea, and piquing the interest of the Gno.land team to offer him a grant. If ever there were an inverse of “the empty vessel makes the loudest sound,” Dragos would be it.
 

@@ -1,10 +1,11 @@
 ---
-title: "Gno.land Funding and Grants Program - Quarterly Report: Q4 2023"
 publication_date: 2024-02-07T13:37:00Z
 slug: funding-program-23q4
 tags: [gnoland, funding, grants]
 authors: [christina, michelle]
 ---
+
+# Gno.land Funding and Grants Program - Quarterly Report: Q4 2023
 
 The Gno.land Funding and Grants program identifies talented and passionate developers, researchers, and tinkerers to interact with Gno.land, enhance the platform's usability, and help build the core infrastructure and tooling needed for mainnet. After a strong start in Q3 2023 from our grantees, we awarded four additional grants in Q4. Let’s take a look at their progress and what’s coming up in Q1 2024.
 

@@ -1,10 +1,11 @@
 ---
-title: "Who You Gno – On the Record with Antoine Breuil"
 publication_date: 2024-01-11T00:00:00Z
 slug: wyg-zooma
 tags: [whoyougno, teritori, community, interview]
 authors: [christina]
 ---
+
+# Who You Gno – On the Record with Antoine Breuil
 
 Antoine Breuil, ‘zôÖma,’ is the co-founder of [Teritori](https://app.teritori.com/), an active Gno.land contributor and grantee that’s building key modules and tooling for Gno. A firm believer in equal opportunities, free and decentralized access to information, and helping fellow humans, zôÖma is fascinated by human behavior and how we organize ourselves, holding an avant-garde social experiment five years ago with Teritori co-founder ‘Pop.’ "La Suite du Monde" drew people across France to a small village in the countryside to create a shared community and society—with farmland, accommodation, and tools for common use.
 

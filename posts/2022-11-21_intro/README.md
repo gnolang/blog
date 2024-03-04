@@ -1,10 +1,11 @@
 ---
-title: Intro to Gnoland - The Smart Contract Platform to Improve Our Understanding of the World
 publication_date: 2022-11-21T17:13:00Z
 slug: intro
 tags: [gnoland,gnosh,gnot,permissionless,consensus,proof-of-contribution,dao,governance,ibc,democracy,freedom]
 authors: [christina,jae,manfred]
 ---
+
+# Intro to Gnoland - The Smart Contract Platform to Improve Our Understanding of the World
 
 _Welcome to Gno.land. This is the official site to learn about the Gnolang (Gno) programming language and the Gno.land smart contract platform, as well as understand the motivations behind Gno and our core values and mission. We’re starting a series of blog posts and holding regular community calls and AMAs so that you can stay up to date with upcoming developments and dive deeper into the Gno World Order. Stay tuned._
 

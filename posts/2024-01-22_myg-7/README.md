@@ -1,10 +1,12 @@
 ---
-title: "The More You Gno: Gno.land Monthly Updates - 7"
 publication_date: 2024-01-22T00:00:00Z
 slug: monthly-dev-7
 tags: [gnoland, ecosystem, updates, gnovm, tm2]
 authors: [christina]
 ---
+
+# The More You Gno: Gno.land Monthly Updates - 7
+
 Welcome to the latest edition of *The More You Gno*, your regular source of updates from the Gno.land core team and contributor ecosystem. After a well-deserved rest during the holiday break, we’re kicking off 2024 with renewed energy and plenty of exciting initiatives, including a new staging testnet (the Portal Loop), the official Gno.land documentation page, several merged PRs (including native bindings!), and many updates across the board. Dive in to find out what we’re working on and what our ecosystem partners and grantees have been up to.
 
 ## Gno Core Team Updates TL;DR

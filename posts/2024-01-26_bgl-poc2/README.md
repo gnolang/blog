@@ -1,10 +1,13 @@
 ---
-title: "Building Gno.land - Proof of Contribution II"
 publication_date: 2024-01-26T13:37:00Z
 slug: bgl-poc2
 tags: [gnoland, gnovm, tm2, PoC]
 authors: [christina]
 ---
+
+# Building Gno.land - Proof of Contribution II
+
+*Disclaimer: The Building Gno.land series aims to share the core concepts of our platform, mission, and tech stack, providing a snapshot of a current state on our builder’s journey. New episodes may deprecate previous ones, but no editions will be modified at any time. We encourage you to follow along as we create the rails for a more transparent and accountable society, and we welcome feedback and contributions to the repo.*
 
 ## II. Proof of Contribution vs Proof of Stake
 

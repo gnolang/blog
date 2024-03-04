@@ -1,10 +1,11 @@
 ---
-title: "The More You Gno: Gno.land Monthly Updates"
 publication_date: 2023-04-15T13:37:00Z
 slug: monthly-dev-1
 tags: [gnoland, gnovm, tm2]
 authors: [christina]
 ---
+
+# The More You Gno: Gno.land Monthly Updates
 
 We made progress across the board at Gno.land last month, from onboarding more devs to receiving an influx of contributions to the Game of Realms contest. To encourage development and discourse, we set up a biweekly public developer call in addition to our biweekly Office Hours sessions. Anyone can join, ask questions, and give their suggestions on how to shape the Gno.land platform and become a contributor. Last month, we covered several pressing topics from Gno IDE and Gno.land website language, to GnoVM, IBC, and ICS. Jae also came back to the circuit in March with two IRL workshops for devs at side events during EthDenver and Game Developer Conference (GDC) in San Francisco.
 
@@ -12,9 +13,7 @@ We made progress across the board at Gno.land last month, from onboarding more d
 
 You can find the live streams of the new biweekly public developer calls on [Gno.land YouTube](https://www.youtube.com/@_gnoland/videos) as well as access the agendas on [GitHub](https://github.com/gnolang/meetings/blob/main/notes/2023_03_15_dev_call_notes.md). The main talking points this month were Gno IDE, Gno.land website language and UX, garbage collection, bug fixes, and how to bring IBC and ICS to the platform. We are working on all these issues concurrently but the order of release will be Gno.land mainnet, IBC, and then ICS (this is reflected in the DAG below).
 
-
-
-[![Gno.land mini DAG](https://gnolang.github.io/blog/2023-04-15_myg-1/src/thumbs/mini-dag.png)](https://gnolang.github.io/blog/2023-04-15_myg-1/src/mini-dag.png)
+[![Gno.land mini DAG](https://gnolang.github.io/blog/2023-04-15_myg-march/src/thumbs/mini-dag.png)](https://gnolang.github.io/blog/2023-04-15_myg-march/src/mini-dag.png)
 
 ## Gno.land Website Language
 
@@ -26,7 +25,7 @@ Internally, our core team is working on improvements to Gno.land’s website, ma
 
 Gno.land developer experience team is working on a web-based Gno IDE for quickly building Gno realms and packages right on your browser by just visiting a web app. Gno IDE will provide much improved UX for everything around building a realm (including making the testing easier), and additional features like autocompletion in the editor. Gno IDE will contain all the features you would expect from an IDE as well as valuable APIs for devs building tools around Gno.land with the public Gno Infrastructure.
 
-[![Gno IDE](https://gnolang.github.io/blog/2023-04-15_myg-1/src/thumbs/gno-ide.png)](https://gnolang.github.io/blog/2023-04-15_myg-1/src/gno-ide.png)
+[![Gno IDE](https://gnolang.github.io/blog/2023-04-15_myg-march/src/thumbs/gno-ide.png)](https://gnolang.github.io/blog/2023-04-15_myg-march/src/gno-ide.png)
 
 Gno IDE will have multiple modes to support different use cases. The normal mode will be used during everyday developments (as you’re familiar with from other code editors). The presentation mode is for high accessibility and readability. You can use it during video calls or physical workshops while projecting your screen to an audience. The third and perhaps most interesting mode is the embedded mode. Use this mode to embed the IDE into websites and blogs. This feature is especially useful for tutorials to test out sample code, run it on the real testnets, and play with it.
 

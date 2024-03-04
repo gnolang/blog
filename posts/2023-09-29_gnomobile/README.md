@@ -1,10 +1,11 @@
 ---
-title: "GnoMobile, a Framework for Building Gno Mobile Apps"
 publication_date: 2023-09-29T13:37:00Z
 slug: gnomobile
 tags: [gnomobile, berty, wesh network]
 authors: [jeff, costin, remi, iuri]
 ---
+
+# GnoMobile, a Framework for Building Gno Mobile Apps
 
 *This blog post is written by Berty Technologies, an NGO that is building open and free communication solutions without any of the limitations imposed by centralized systems. Berty is a proud partner and grantee of Gno.land.*
 
