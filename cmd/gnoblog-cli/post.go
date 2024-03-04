@@ -14,7 +14,6 @@ import (
 
 	"github.com/gnolang/gno/gno.land/pkg/gnoclient"
 	"github.com/gnolang/gno/gnovm/pkg/gnoenv"
-	"github.com/peterbourgon/ff/v3/ffcli"
 )
 
 type cliCfg struct {
@@ -32,29 +31,32 @@ type cliCfg struct {
 	InsecurePasswordStdIn bool
 }
 
-func newPostCommand(io commands.IO) *ffcli.Command {
+func newPostCommand(io commands.IO) *commands.Command {
 	var (
 		fs  = flag.NewFlagSet("Post", flag.ExitOnError)
 		cfg = &cliCfg{}
 	)
 
 	// Register flagset
-	cfg.registerFlags(fs)
+	cfg.RegisterFlags(fs)
 
 	// Make Post command
-	return &ffcli.Command{
-		Name:       "post",
-		ShortUsage: "post <FILE OR FILES_DIR> [flags]",
-		LongHelp:   `Post one or more files. Passing in a file will post that single file, while passing in a directory will search for all .md files and batch post them.`,
-		FlagSet:    fs,
-		Exec: func(_ context.Context, args []string) error {
+	return commands.NewCommand(
+		commands.Metadata{
+			Name:       "post",
+			ShortUsage: "post <FILE OR FILES_DIR> [flags]",
+			LongHelp:   `Post one or more files. Passing in a file will post that single file, while passing in a directory will search for all .md files and batch post them.`,
+		},
+		cfg,
+		func(_ context.Context, args []string) error {
 			return execPost(io, args, cfg)
 		},
-	}
+	)
+
 }
 
-// Register flags
-func (cfg *cliCfg) registerFlags(fs *flag.FlagSet) {
+// RegisterFlags registers flags for cliCfg
+func (cfg *cliCfg) RegisterFlags(fs *flag.FlagSet) {
 	fs.StringVar(&cfg.KeyName,
 		"key",
 		"",

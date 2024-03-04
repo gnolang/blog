@@ -2,33 +2,30 @@ package main
 
 import (
 	"context"
-	"flag"
-	"fmt"
 	"github.com/gnolang/gno/tm2/pkg/commands"
 	"os"
-
-	"github.com/peterbourgon/ff/v3/ffcli"
 )
 
 func main() {
-	// Create the root command
-	cmd := &ffcli.Command{
-		ShortUsage: "<subcommand> [flags] [<arg>...]",
-		LongHelp:   "The CLI for easy use of the r/blog realm",
-		FlagSet:    nil,
-		Exec: func(_ context.Context, _ []string) error {
-			return flag.ErrHelp
+	io := commands.NewDefaultIO()
+	cmd := newRootCmd(io)
+
+	cmd.Execute(context.Background(), os.Args[1:])
+}
+
+func newRootCmd(io commands.IO) *commands.Command {
+	cmd := commands.NewCommand(
+		commands.Metadata{
+			ShortUsage: "<subcommand> [flags] [<arg>...]",
+			LongHelp:   "The CLI for easy use of the r/blog realm",
 		},
-	}
+		commands.NewEmptyConfig(),
+		commands.HelpExec,
+	)
 
-	// Add the subcommands
-	cmd.Subcommands = []*ffcli.Command{
-		newPostCommand(commands.NewDefaultIO()),
-	}
+	cmd.AddSubCommands(
+		newPostCommand(io),
+	)
 
-	// Run root command
-	if err := cmd.ParseAndRun(context.Background(), os.Args[1:]); err != nil {
-		_, _ = fmt.Fprintf(os.Stderr, "%+v\n", err)
-		os.Exit(1)
-	}
+	return cmd
 }
