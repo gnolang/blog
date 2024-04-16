@@ -4,7 +4,7 @@ slug: gno-tokyo
 tags: [meetup, tokyo, community]
 authors: [leohhhn]
 ---
-
+    
 # Intro to Gno Recap - Tokyo 2024
 
 [![Banner](https://gnolang.github.io/blog/2024-04-15_gno-tokyo/src/thumbs/banner.png)](https://gnolang.github.io/blog/2024-04-15_gno-tokyo/src/banner.png)
@@ -28,8 +28,8 @@ features in open source blockchain systems.
 [![leon-poc](https://gnolang.github.io/blog/2024-04-15_gno-tokyo/src/thumbs/leon-poc.png)](https://gnolang.github.io/blog/2024-04-15_gno-tokyo/src/leon-poc.png)
 #### @leohhhn with the PoC explanation slide in Japanese
 
-Leon mentioned some of the major projects in the Gno.land ecosystem - 
-Gnoswap, Gnoscan, Adena, Gnosocial, and others.
+Leon mentioned some of the major projects in the Gno.land ecosystem - Gnoswap,
+Gnoscan, Adena, Gnosocial, and others.
 
 Following this, attendees were introduced to the Gno.land 
 [**Grants & Fund program**](https://github.com/gnolang/ecosystem-fund-grants),
