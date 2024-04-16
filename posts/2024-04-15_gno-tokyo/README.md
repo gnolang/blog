@@ -42,9 +42,24 @@ Finally, attendees were given insight into the status of the project:
 end of Q2
 - The Gno team is aiming to launch Mainnet by the end of 2024
 
+![screens](src/screens.jpg)
+#### Intro to Gno banner on venue screens
+![merch](src/merch.jpg)
+#### Gno.land keychains & stickers
+
 After the presentation, attendees enjoyed networking with their peers along with
 light snacks and drinks. 
 
+![networking](src/networking.png)
+#### Gno.land keychains & stickers
+
 A total of 19 people attended the meetup. Attendees had a variety of different 
-backgrounds: business, fintech, development, trading. 
+backgrounds: business, fintech, development, trading.
+
+As Gno.land continues its Road to Mainnet, we are happy to invite you to other
+Gno.land events & meetups this year. Check out the
+[Upcoming events](https://gno.land/events) page to learn more.
+
+
+
 
