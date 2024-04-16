@@ -11,19 +11,40 @@ authors: [leohhhn]
 ![banner](src/banner.png)
 
 A Gno.land meetup, "Intro to Gno", was held in Tokyo, Japan on the 11th of 
-April 2024.
+April 2024. Attendees joined the meetup in one of Tokyo's largest centers, 
+Shinjuku City. The meetup was aimed at a local audience, with the slides being
+in Japanese. 
 
-The meetup gave a short introduction into what Gno.land is, what its philosophy
-behind its fully open-source design is, and how Proof of Contribution will push
-innovation in the space forward.
+The meetup focused on explaining Gno.land's major features:
+- Fully open-source smart-contracting
+- Custom smart contracting language for the future
+- Proof of Contribution
 
-The meetup was held in one of Tokyo's largest centers - Shinjuku City. Shinjuku's 
-vibrant corners are home to the venue used for the meetup, Crypto Lounge GOX. 
+![points](src/three-points.png)
+#### Brief overview of gno.land in Japanese
 
+Leon covered these three topics separately, discussing the importance of such 
+features in open source blockchain systems.
 
+![leon-poc](src/leon-poc.png)
+#### @leohhhn with the PoC explanation slide in Japanese
 
+Leon mentioned some of the major projects in the Gno.land ecosystem - 
+Gnoswap, Gnoscan, Adena, Gnosocial, and others.
 
-The meetup had 19 attendees,  
+Following this, attendees were introduced to the Gno.land 
+[**Grants & Fund program**](https://github.com/gnolang/ecosystem-fund-grants),
+as well as a the **Game of Realms** program, presenting different ways builders 
+are incentivized to build in the ecosystem at this stage.
 
+Finally, attendees were given insight into the status of the project:
+- Testnet 4, the final testnet before Gno.land Mainnet is scheduled to launch
+end of Q2
+- The Gno team is aiming to launch Mainnet by the end of 2024
 
+After the presentation, attendees enjoyed networking with their peers along with
+light snacks and drinks. 
+
+A total of 19 people attended the meetup. Attendees had a variety of different 
+backgrounds: business, fintech, development, trading. 
 
