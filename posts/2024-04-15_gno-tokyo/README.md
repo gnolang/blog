@@ -63,7 +63,10 @@ Gno.land Grants Program.
 
 We connected with attendees to learn more about their projects and interests to
 get a better understanding of community, and get a sense of their takeways on
-Gno.land. 
+Gno.land. It was the case that Proof of Contribution was the most complex topic
+to understand, as many attendees wondered about the fine details of the mechanism,
+such as tokenomics and it's similarities and differences to other consensus
+mechanisms.
 
 [![networking](https://gnolang.github.io/blog/2024-04-15_gno-tokyo/src/thumbs/networking.png)](https://gnolang.github.io/blog/2024-04-15_gno-tokyo/src/networking.png)
 #### Networking
