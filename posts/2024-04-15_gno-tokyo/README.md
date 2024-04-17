@@ -17,7 +17,7 @@ initiative to host regional, in-person opportunities for people around the world
 to get to know Gno.land.
 
 With this regional focus in mind, we hosted in March a 
-[local event in Korea](https://medium.com/onbloc/go-to-gno-recap-intro-to-the-gno-stack-with-memeland-284a43d7f620) with
+[local meetup in Korea](https://medium.com/onbloc/go-to-gno-recap-intro-to-the-gno-stack-with-memeland-284a43d7f620) with
 OnBloc, and introduced Gno.land to Go developer communities in Seoul.
 
 ## Introduction to Gno.land
@@ -25,20 +25,28 @@ Gno.land Developer Relations Engineer, Leon Hudak, introduced attendees to the
 project, and explained Gno.land's main features that make it unique:
 
 - The fully open-source smart-contracting platform
-- The custom smart contracting language of the future (Gno)
+- The custom smart-contracting language of the future (Gno)
 - The new, under-development consensus protocol, Proof of Contribution
 
 [![points](https://gnolang.github.io/blog/2024-04-15_gno-tokyo/src/thumbs/three-points.png)](https://gnolang.github.io/blog/2024-04-15_gno-tokyo/src/three-points.png)
 #### Brief overview of gno.land in Japanese
 
-Gno.land's DevRel Engineer, Leon, covered these three topics separately, discussing the importance of such 
-features in open-source blockchain systems.
+Gno.land's DevRel Engineer, Leon, covered these three topics separately,
+discussing the importance of such features in open-source blockchain systems.
 
 [![leon-poc](https://gnolang.github.io/blog/2024-04-15_gno-tokyo/src/thumbs/leon-poc.png)](https://gnolang.github.io/blog/2024-04-15_gno-tokyo/src/leon-poc.png)
 #### @leohhhn with the PoC explanation slide in Japanese
-The Gno.land ecosystem was also introduced: Leon mentioned some of the major 
-projects in the Gno.land ecosystem - Gnoswap, Gnoscan, Adena, Gnosocial, and
-more.
+
+Leon delved into the details of Proof of Contribution, and how it connects to the 
+fundamental idea of open-source, provable, on-chain development. Leon also
+covered how contributions will be scored, how contributions connect to chain
+validation, and how anyone can become a contributor to Gno.land.
+
+## Our ecosystem of contributors
+We spotlighted the projects and contributors building on Gno.land, and explained 
+how they are directly supporting the growth of the ecosystem from the Adena Wallet,
+to the blockchain explorer Gnoscan, to the first gaming app, Flippando, and an 
+experiment at building a social app and network on Gno.land.
 
 Following this, attendees were introduced to the Gno.land 
 [**Grants & Fund program**](https://github.com/gnolang/ecosystem-fund-grants),
