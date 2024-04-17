@@ -37,7 +37,7 @@ as well as a the **Game of Realms** program, presenting different ways builders
 are incentivized to build in the ecosystem at this stage.
 
 Finally, attendees were given insight into the status of the project:
-- Testnet 4, the final testnet before Gno.land Mainnet is scheduled to launch
+- Test4, the final testnet before Gno.land Mainnet is scheduled to launch
 end of Q2
 - The Gno.land team is aiming to launch Mainnet by the end of 2024
 
