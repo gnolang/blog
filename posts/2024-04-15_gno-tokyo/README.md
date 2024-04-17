@@ -9,10 +9,18 @@ authors: [leohhhn]
 
 [![Banner](https://gnolang.github.io/blog/2024-04-15_gno-tokyo/src/thumbs/banner.png)](https://gnolang.github.io/blog/2024-04-15_gno-tokyo/src/banner.png)
 
-A Gno.land meetup, "Intro to Gno", was held in Tokyo, Japan on the 11th of 
-April 2024. Attendees joined the meetup in one of Tokyo's largest centers, 
-Shinjuku City. The meetup was aimed at a local audience, with the slides being
-in Japanese. 
+Last week, we hosted the first ever Gno.land meetup in Tokyo, Japan with the
+event taking place at [Crypto Lounge GOX](https://cryptoloungegox.com/) 
+located in one of the city's most central points, Shinjuku City. We had 20+
+attendees from a variety of backgrounds from Web3, to developers, to traditional 
+business and fintech. The meetup, presented in Japanese, is part of our ongoing 
+initiative to host regional, in-person opportunities for people around the world
+to get to know Gno.land.
+
+With this regional focus in mind, we hosted in March a 
+[local event in Korea](https://medium.com/onbloc/go-to-gno-recap-intro-to-the-gno-stack-with-memeland-284a43d7f620) with
+Onbloc, and introduced Go developer communities in Seoul to Gno.land.
+
 
 The meetup focused on explaining Gno.land's major features:
 - Fully open-source smart-contracting
