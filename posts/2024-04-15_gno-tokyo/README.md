@@ -58,7 +58,7 @@ backgrounds: business, fintech, development, trading.
 As Gno.land continues its Road to Mainnet, we are happy to invite you to other
 Gno.land events & meetups this year. Join us at future Gno.land events by visiting
 our [Upcoming Events](https://gno.land/events) page and follow us on
-[X](https://x.com/_gnoland) to stay up to date.
+[X](https://twitter.com/_gnoland) to stay up to date.
 
 
 
