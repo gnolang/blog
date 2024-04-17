@@ -7,7 +7,7 @@ authors: [leohhhn]
     
 # Intro to Gno Recap - Tokyo 2024
 
-![Banner](src/banner.png)
+[![Banner](https://gnolang.github.io/blog/2024-04-15_gno-tokyo/src/thumbs/banner.png)](https://gnolang.github.io/blog/2024-04-15_gno-tokyo/src/banner.png)
 
 A Gno.land meetup, "Intro to Gno", was held in Tokyo, Japan on the 11th of 
 April 2024. Attendees joined the meetup in one of Tokyo's largest centers, 
@@ -19,13 +19,13 @@ The meetup focused on explaining Gno.land's major features:
 - Custom smart contracting language for the future
 - Proof of Contribution
 
-![points](src/three-points.png)
+[![points](https://gnolang.github.io/blog/2024-04-15_gno-tokyo/src/thumbs/three-points.png)](https://gnolang.github.io/blog/2024-04-15_gno-tokyo/src/three-points.png)
 #### Brief overview of gno.land in Japanese
 
 Leon covered these three topics separately, discussing the importance of such 
 features in open-source blockchain systems.
 
-![leon-poc](src/leon-poc.png)
+[![leon-poc](https://gnolang.github.io/blog/2024-04-15_gno-tokyo/src/thumbs/leon-poc.png)](https://gnolang.github.io/blog/2024-04-15_gno-tokyo/src/leon-poc.png)
 #### @leohhhn with the PoC explanation slide in Japanese
 The Gno.land ecosystem was also introduced: Leon mentioned some of the major 
 projects in the Gno.land ecosystem - Gnoswap, Gnoscan, Adena, Gnosocial, and
@@ -41,15 +41,15 @@ Finally, attendees were given insight into the status of the project:
 end of Q2
 - The Gno.land team is aiming to launch Mainnet by the end of 2024
 
-![screens](src/screens.jpg)
+[![screens](https://gnolang.github.io/blog/2024-04-15_gno-tokyo/src/thumbs/screens.jpg)](https://gnolang.github.io/blog/2024-04-15_gno-tokyo/src/screens.jpg)
 #### Intro to Gno banner on venue screens
-![merch](src/merch.jpg)
+[![merch](https://gnolang.github.io/blog/2024-04-15_gno-tokyo/src/thumbs/merch.jpg)](https://gnolang.github.io/blog/2024-04-15_gno-tokyo/src/merch.jpg)
 #### Gno.land keychains & stickers
 
 After the presentation, attendees enjoyed networking with their peers along with
 light snacks and drinks.
 
-![networking](src/networking.png)
+[![networking](https://gnolang.github.io/blog/2024-04-15_gno-tokyo/src/thumbs/networking.png)](https://gnolang.github.io/blog/2024-04-15_gno-tokyo/src/networking.png)
 #### Networking
 
 A total of 19 people attended the meetup. Attendees had a variety of different 
