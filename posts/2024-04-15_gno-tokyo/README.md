@@ -23,13 +23,13 @@ The meetup focused on explaining Gno.land's major features:
 #### Brief overview of gno.land in Japanese
 
 Leon covered these three topics separately, discussing the importance of such 
-features in open source blockchain systems.
+features in open-source blockchain systems.
 
 [![leon-poc](https://gnolang.github.io/blog/2024-04-15_gno-tokyo/src/thumbs/leon-poc.png)](https://gnolang.github.io/blog/2024-04-15_gno-tokyo/src/leon-poc.png)
 #### @leohhhn with the PoC explanation slide in Japanese
-
-Leon mentioned some of the major projects in the Gno.land ecosystem - Gnoswap,
-Gnoscan, Adena, Gnosocial, and others.
+The Gno.land ecosystem was also introduced: Leon mentioned some of the major 
+projects in the Gno.land ecosystem - Gnoswap, Gnoscan, Adena, Gnosocial, and
+more.
 
 Following this, attendees were introduced to the Gno.land 
 [**Grants & Fund program**](https://github.com/gnolang/ecosystem-fund-grants),
@@ -39,7 +39,7 @@ are incentivized to build in the ecosystem at this stage.
 Finally, attendees were given insight into the status of the project:
 - Testnet 4, the final testnet before Gno.land Mainnet is scheduled to launch
 end of Q2
-- The Gno team is aiming to launch Mainnet by the end of 2024
+- The Gno.land team is aiming to launch Mainnet by the end of 2024
 
 [![screens](https://gnolang.github.io/blog/2024-04-15_gno-tokyo/src/thumbs/screens.jpg)](https://gnolang.github.io/blog/2024-04-15_gno-tokyo/src/screens.jpg)
 #### Intro to Gno banner on venue screens
@@ -56,8 +56,9 @@ A total of 19 people attended the meetup. Attendees had a variety of different
 backgrounds: business, fintech, development, trading.
 
 As Gno.land continues its Road to Mainnet, we are happy to invite you to other
-Gno.land events & meetups this year. Check out the
-[Upcoming events](https://gno.land/events) page to learn more.
+Gno.land events & meetups this year. Join us at future Gno.land events by visiting
+our [Upcoming Events](https://gno.land/events) page and follow us on
+[X](https://x.com/_gnoland) to stay up to date.
 
 
 
