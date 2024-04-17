@@ -22,7 +22,7 @@ The meetup focused on explaining Gno.land's major features:
 [![points](https://gnolang.github.io/blog/2024-04-15_gno-tokyo/src/thumbs/three-points.png)](https://gnolang.github.io/blog/2024-04-15_gno-tokyo/src/three-points.png)
 #### Brief overview of gno.land in Japanese
 
-Leon covered these three topics separately, discussing the importance of such 
+Gno.land's DevRel Engineer, Leon, covered these three topics separately, discussing the importance of such 
 features in open-source blockchain systems.
 
 [![leon-poc](https://gnolang.github.io/blog/2024-04-15_gno-tokyo/src/thumbs/leon-poc.png)](https://gnolang.github.io/blog/2024-04-15_gno-tokyo/src/leon-poc.png)
