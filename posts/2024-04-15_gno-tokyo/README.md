@@ -11,8 +11,8 @@ authors: [leohhhn]
 Last week, we hosted the first ever Gno.land meetup in Tokyo, Japan with the
 event taking place at [Crypto Lounge GOX](https://cryptoloungegox.com/) 
 located in one of the city's most central points, Shinjuku City. We had 20+
-attendees from a variety of backgrounds from Web3, to developers, to traditional 
-business and fintech. The meetup, presented in Japanese, is part of our ongoing 
+attendees from a variety of backgrounds ranging from Web3, to developers, traditional 
+business, and fintech. The meetup, presented in Japanese, is part of our ongoing 
 initiative to host regional, in-person opportunities for people around the world
 to get to know Gno.land.
 
@@ -31,13 +31,13 @@ project, and explained Gno.land's main features that make it unique:
 [![points](https://gnolang.github.io/blog/2024-04-15_gno-tokyo/src/thumbs/three-points.png)](https://gnolang.github.io/blog/2024-04-15_gno-tokyo/src/three-points.png)
 #### Brief overview of gno.land in Japanese
 
-Gno.land's DevRel Engineer, Leon, covered these three topics separately,
-discussing the importance of such features in open-source blockchain systems.
+These three topics were covered separately, discussing the importance of such
+features in open-source blockchain systems.
 
 [![leon-poc](https://gnolang.github.io/blog/2024-04-15_gno-tokyo/src/thumbs/leon-poc.png)](https://gnolang.github.io/blog/2024-04-15_gno-tokyo/src/leon-poc.png)
 #### @leohhhn with the PoC explanation slide in Japanese
 
-Leon delved into the details of Proof of Contribution, and how it connects to the 
+Leon also delved into the details of Proof of Contribution, and how it connects to the 
 fundamental idea of open-source, provable, on-chain development. Leon also
 covered how contributions will be scored, how contributions connect to chain
 validation, and how anyone can become a contributor to Gno.land.
