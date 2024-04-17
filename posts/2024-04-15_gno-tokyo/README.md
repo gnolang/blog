@@ -39,7 +39,7 @@ features in open-source blockchain systems.
 
 Leon also delved into the details of Proof of Contribution, and how it connects to the 
 fundamental idea of open-source, provable, on-chain development. Leon also
-covered how contributions will be scored, how contributions connect to chain
+covered how contributions will be analyzed, how contributions connect to chain
 validation, and how anyone can become a contributor to Gno.land.
 
 ## Our ecosystem of contributors
