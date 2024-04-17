@@ -6,7 +6,6 @@ authors: [leohhhn]
 ---
     
 # Intro to Gno Recap - Tokyo 2024
-
 [![Banner](https://gnolang.github.io/blog/2024-04-15_gno-tokyo/src/thumbs/banner.png)](https://gnolang.github.io/blog/2024-04-15_gno-tokyo/src/banner.png)
 
 Last week, we hosted the first ever Gno.land meetup in Tokyo, Japan with the
@@ -19,13 +18,15 @@ to get to know Gno.land.
 
 With this regional focus in mind, we hosted in March a 
 [local event in Korea](https://medium.com/onbloc/go-to-gno-recap-intro-to-the-gno-stack-with-memeland-284a43d7f620) with
-Onbloc, and introduced Go developer communities in Seoul to Gno.land.
+OnBloc, and introduced Gno.land to Go developer communities in Seoul.
 
+## Introduction to Gno.land
+Gno.land Developer Relations Engineer, Leon Hudak, introduced attendees to the 
+project, and explained Gno.land's main features that make it unique:
 
-The meetup focused on explaining Gno.land's major features:
-- Fully open-source smart-contracting
-- Custom smart contracting language for the future
-- Proof of Contribution
+- The fully open-source smart-contracting platform
+- The custom smart contracting language of the future (Gno)
+- The new, under-development consensus protocol, Proof of Contribution
 
 [![points](https://gnolang.github.io/blog/2024-04-15_gno-tokyo/src/thumbs/three-points.png)](https://gnolang.github.io/blog/2024-04-15_gno-tokyo/src/three-points.png)
 #### Brief overview of gno.land in Japanese
@@ -44,24 +45,28 @@ Following this, attendees were introduced to the Gno.land
 as well as a the **Game of Realms** program, presenting different ways builders 
 are incentivized to build in the ecosystem at this stage.
 
-Finally, attendees were given insight into the status of the project:
-- Test4, the final testnet before Gno.land Mainnet is scheduled to launch
-end of Q2
-- The Gno.land team is aiming to launch Mainnet by the end of 2024
+## What is the future of Gno.land?
+
+Finally, we gave attendees an overview of the progress on Gno.land, from its
+beginnings to where we currently sit in regard to Mainnet. We explained the 
+progress made over the past year of building, and how Test4, an advanced 
+experimental testnet prior to launch is important as it allows us to provide
+developers with a permanent, versioned, stable testnet for Gno.land. Test4 is 
+planned to be the last testnet before Mainnet launch.
+
+We shared with attendees how they can get involved now, joining Discord, 
+following the project on Twitter, contributing on GitHub and researching our 
+Gno.land Grants Program.
 
 [![screens](https://gnolang.github.io/blog/2024-04-15_gno-tokyo/src/thumbs/screens.jpg)](https://gnolang.github.io/blog/2024-04-15_gno-tokyo/src/screens.jpg)
 #### Intro to Gno banner on venue screens
-[![merch](https://gnolang.github.io/blog/2024-04-15_gno-tokyo/src/thumbs/merch.jpg)](https://gnolang.github.io/blog/2024-04-15_gno-tokyo/src/merch.jpg)
-#### Gno.land keychains & stickers
 
-After the presentation, attendees enjoyed networking with their peers along with
-light snacks and drinks.
+We connected with attendees to learn more about their projects and interests to
+get a better understanding of community, and get a sense of their takeways on
+Gno.land. 
 
 [![networking](https://gnolang.github.io/blog/2024-04-15_gno-tokyo/src/thumbs/networking.png)](https://gnolang.github.io/blog/2024-04-15_gno-tokyo/src/networking.png)
 #### Networking
-
-A total of 19 people attended the meetup. Attendees had a variety of different 
-backgrounds: business, fintech, development, trading.
 
 As Gno.land continues its Road to Mainnet, we are happy to invite you to other
 Gno.land events & meetups this year. Join us at future Gno.land events by visiting
