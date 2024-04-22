@@ -7,7 +7,8 @@ authors: [leohhhn, michelleelen]
 
 # Tokyo Meetup Recap: Getting to Gno Gno.land
 
-![banner]()
+![banner](https://raw.githubusercontent.com/gnolang/blog/78a2880153efb1b181cec99890f78fdcc2aca6d2/posts/2024-04-15_gno-tokyo/src/thumbs/Banner.png)
+
 This year, we're going global, connecting with various local communities in 
 person to introduce them to Gno.land and the community of Gnomes working on the
 project. Last week, we hosted the first-ever Gno.land community meetup in Tokyo, 
@@ -33,7 +34,7 @@ three main topics:
 ・The future of Gno.land: what's coming up this year and ideas for the future.
 
 ## Introduction to Gno.land
-![presentation]()
+![presentation](https://raw.githubusercontent.com/gnolang/blog/78a2880153efb1b181cec99890f78fdcc2aca6d2/posts/2024-04-15_gno-tokyo/src/thumbs/leon-poc.png)
 
 Leon Hudak, Gno.land's Developer Relations Engineer, was the on-site Gnome
 representative and kicked things off by introducing attendees to the project's 
@@ -54,7 +55,7 @@ development: many projects and businesses rely on open-source technology created
 by developers who often volunteer their skills and time without receiving anything
 in return for their efforts. Proof of Contribution ensures that these contributors 
 are rewarded fairly for their work, creating a sustainable ecosystem where 
-open-source can thrive and developers feel valued for their efforts. With this ,
+open-source can thrive and developers feel valued for their efforts. With this,
 Gno.land strives to create a fairer distribution of benefits in the tech community.
 
 ## Our Ecosystem of Gnome Contributors
