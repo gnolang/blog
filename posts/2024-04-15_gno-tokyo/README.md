@@ -7,7 +7,7 @@ authors: [leohhhn, michelleelen]
 
 # Tokyo Meetup Recap: Getting to Gno Gno.land
 
-![banner](https://raw.githubusercontent.com/gnolang/blog/49ccfd6f9c6c23ab6e3cabf4c106705b74b09313/posts/2024-04-15_gno-tokyo/src/banner.png)
+![banner](https://raw.githubusercontent.com/gnolang/blog/e338a91f47f18a62847cf68c35e450e293a50ce3/posts/2024-04-15_gno-tokyo/src/thumbs/banner.png)
 
 This year, we're going global, connecting with various local communities in 
 person to introduce them to Gno.land and the community of Gnomes working on the
@@ -35,7 +35,9 @@ main topics:
 - The future of Gno.land: what's coming up this year and ideas for the future
 
 ## Introduction to Gno.land
-![presentation](https://raw.githubusercontent.com/gnolang/blog/49ccfd6f9c6c23ab6e3cabf4c106705b74b09313/posts/2024-04-15_gno-tokyo/src/leon-poc.png)
+<p align="center">
+![presentation](https://raw.githubusercontent.com/gnolang/blog/e338a91f47f18a62847cf68c35e450e293a50ce3/posts/2024-04-15_gno-tokyo/src/thumbs/leon-poc.png)
+</p>
 
 Leon Hudak, Gno.land's Developer Relations Engineer, was the on-site Gnome
 representative and kicked things off by introducing attendees to the project's 
@@ -58,12 +60,12 @@ of Contribution comes into play. We explained the idea of open source contributi
 being analyzed, and integrated on-chain for validation, and the different architecture
 types that can be used to achieve this.
 
-Our Ecosystem of Gnome Contributors
+## Our Ecosystem of Gnome Contributors
 
 We spotlighted the diverse projects and contributors bolstering the Gno.land 
 ecosystem, ranging from the Adena Wallet and blockchain explorer Gnoscan to 
 innovative applications like Flippando. Additionally, we introduced attendees 
-to the Gno.land[  Grants & Fund program](https://github.com/gnolang/ecosystem-fund-grants)
+to the Gno.land [Grants & Fund program](https://github.com/gnolang/ecosystem-fund-grants)
 and the Game of Realms initiative, demonstrating various avenues for builders to
 engage and contribute to the ecosystem's growth.
 
