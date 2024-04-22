@@ -81,7 +81,7 @@ mechanisms.
 ![merch](https://github.com/gnolang/blog/assets/117160070/654038f3-143d-45de-91c5-7f0643389ab8)
 (Tokyo edition swag)
 
-As Gno.land advances on its Road to Mainnet, and we going to host more local
-meetups, and you'll want to stay updated on upcoming Gno.land events by visiting 
+As Gno.land advances on its Road to Mainnet, we will be hosting more local
+meetups, so you'll want to stay updated on upcoming Gno.land events by visiting 
 our [Upcoming Events](https://gno.land/events) page and following us on 
 [Twitter](https://twitter.com/_gnoland).
