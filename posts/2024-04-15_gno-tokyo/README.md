@@ -39,9 +39,9 @@ Leon Hudak, Gno.land's Developer Relations Engineer, was the on-site Gnome
 representative and kicked things off by introducing attendees to the project's 
 unique features:
 
-・Fully Open-Source Smart-Contracting Platform: Highlighting Gno.land's commitment to transparency and accessibility. 
+・Fully Open-Source Smart-Contracting Platform: Highlighting Gno.land's commitment to transparency and accessibility,
 
-・Custom Smart-Contracting Language (Gno): Showcasing the innovative language tailored for future blockchain development. 
+・Custom Smart-Contracting Language (Gno): Showcasing the innovative language tailored for future blockchain development, 
 
 ・New Consensus Protocol, Proof of Contribution: Exploring the cutting-edge protocol under development, emphasizing its role in supporting open-source, and on-chain development.
 
@@ -54,8 +54,8 @@ development: many projects and businesses rely on open-source technology created
 by developers who often volunteer their skills and time without receiving anything
 in return for their efforts. Proof of Contribution ensures that these contributors 
 are rewarded fairly for their work, creating a sustainable ecosystem where 
-open-source can thrive and developers feel valued for their efforts. Gno.land 
-aims to create a fairer distribution of benefits in the tech community.
+open-source can thrive and developers feel valued for their efforts. With this ,
+Gno.land strives to create a fairer distribution of benefits in the tech community.
 
 ## Our Ecosystem of Gnome Contributors
 We spotlighted the diverse projects and contributors bolstering the Gno.land 
