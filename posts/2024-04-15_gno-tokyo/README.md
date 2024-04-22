@@ -55,10 +55,10 @@ problems in both open-source development and blockchain ecosystems.
 Specifically, Gno.land is addressing a large issue in regard to open-source
 development: many projects and businesses rely on open-source technology created 
 by developers who often volunteer their skills and time without receiving anything
-in return for their efforts. Proof of Contribution ensures that these contributors 
-are rewarded fairly for their work, creating a sustainable ecosystem where 
-open-source can thrive and developers feel valued for their efforts. With this,
-Gno.land strives to create a fairer distribution of benefits in the tech community.
+in return for their efforts. Proof of Contribution is aimed at tackling this
+issue by being a foundation for a system which empowers contributors and rewards 
+them fairly for their work, allowing them to thrive in a sustainable ecosystem of
+value creation.
 
 ## Our Ecosystem of Gnome Contributors
 We spotlighted the diverse projects and contributors bolstering the Gno.land 
