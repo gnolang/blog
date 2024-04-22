@@ -6,8 +6,7 @@ authors: [leohhhn, michelleelen]
 ---
 
 # Tokyo Meetup Recap: Getting to Gno Gno.land
-
-![banner](https://raw.githubusercontent.com/gnolang/blog/e338a91f47f18a62847cf68c35e450e293a50ce3/posts/2024-04-15_gno-tokyo/src/thumbs/banner.png)
+// insert banner
 
 This year, we're going global, connecting with various local communities in 
 person to introduce them to Gno.land and the community of Gnomes working on the
@@ -17,7 +16,7 @@ of Shinjuku City, the event drew over 20 attendees from diverse backgrounds span
 Web3, development, traditional business, and fintech. This meetup marked the second
 in a series of in-person community events we're planning for this year, a followup 
 to our recent local meetup in Korea with OnBloc
-([Go to Gno](https://medium.com/onbloc/go-to-gno-recap-intro-to-the-gno-stack-with-memeland-284a43d7f620)),
+[Go to Gno](https://medium.com/onbloc/go-to-gno-recap-intro-to-the-gno-stack-with-memeland-284a43d7f620),
 which focused on introducing Gno.land to Go developers in Seoul.
 
 These regional meetups are intentionally designed to be small and intimate, 
@@ -27,27 +26,20 @@ range from introducing Gno.land and its unique concepts to guiding developers on
 how to kick start their journey with Gno. For this event in Tokyo, we covered 
 three main topics:
 
-1. What is Gno.land: an introduction to the Gno language and the platform 
-2. How the Gno.land ecosystem is developing:
-   3. an overview of our contributors and applications 
-   4. how people can get involved, stay connected, and join the Gnome community
-5. The future of Gno.land: what's coming up this year and ideas for the future
+#### What is Gno.land: an introduction to the Gno language and the platform,
+#### How the Gno.land ecosystem is developing: an overview of our contributors and applications, and how people can get involved, stay connected, and join the Gnome community,
+#### The future of Gno.land: what's coming up this year and ideas for the future.
 
 ## Introduction to Gno.land
-
 ![presentation](https://raw.githubusercontent.com/gnolang/blog/e338a91f47f18a62847cf68c35e450e293a50ce3/posts/2024-04-15_gno-tokyo/src/thumbs/leon-poc.png)
 
 Leon Hudak, Gno.land's Developer Relations Engineer, was the on-site Gnome
 representative and kicked things off by introducing attendees to the project's 
 unique features:
 
-- Fully Open-Source Smart-Contracting Platform: Highlighting Gno.land's commitment
-to transparency and accessibility.
-- Custom Smart-Contracting Language (Gno): Showcasing the innovative language
-tailored for future blockchain development.
-- New Consensus Protocol, Proof of Contribution: Exploring the cutting-edge 
-protocol under development, emphasizing its role in supporting open-source, and 
-on-chain development.
+#### Fully Open-Source Smart-Contracting Platform: Highlighting Gno.land's commitment to transparency and accessibility. 
+#### Custom Smart-Contracting Language (Gno): Showcasing the innovative language tailored for future blockchain development. 
+#### New Consensus Protocol, Proof of Contribution: Exploring the cutting-edge protocol under development, emphasizing its role in supporting open-source, and on-chain development.
 
 After introducing the high-level facets of Gno.land, the presentation
 detailed the specifics of each one, and how it is being designed to address 
