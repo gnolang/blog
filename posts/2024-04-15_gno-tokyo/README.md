@@ -7,7 +7,9 @@ authors: [leohhhn, michelleelen]
 
 # Tokyo Meetup Recap: Getting to Gno Gno.land
 
-![banner](https://raw.githubusercontent.com/gnolang/blog/78a2880153efb1b181cec99890f78fdcc2aca6d2/posts/2024-04-15_gno-tokyo/src/thumbs/Banner.png)
+
+[![banner](https://gnolang.github.io/blog/2024-04-15_gno-tokyo/src/thumbs/Banner.png)](https://gnolang.github.io/blog/2024-04-15_gno-tokyo/src/Banner.png)
+
 
 This year, we're going global, connecting with various local communities in 
 person to introduce them to Gno.land and the community of Gnomes working on the
@@ -34,7 +36,7 @@ three main topics:
 ・The future of Gno.land: what's coming up this year and ideas for the future.
 
 ## Introduction to Gno.land
-![presentation](https://raw.githubusercontent.com/gnolang/blog/78a2880153efb1b181cec99890f78fdcc2aca6d2/posts/2024-04-15_gno-tokyo/src/thumbs/leon-poc.png)
+[![leon-presentation](https://gnolang.github.io/blog/2024-04-15_gno-tokyo/src/thumbs/leon-poc.png)](https://gnolang.github.io/blog/2024-04-15_gno-tokyo/src/leon-poc.png)
 
 Leon Hudak, Gno.land's Developer Relations Engineer, was the on-site Gnome
 representative and kicked things off by introducing attendees to the project's 
@@ -82,8 +84,7 @@ architecture, as well as its comparative analysis with other popular consensus
 mechanisms.
 
 ## Gnomes Go Global
-![merch](https://github.com/gnolang/blog/assets/117160070/654038f3-143d-45de-91c5-7f0643389ab8)
-(Tokyo edition swag)
+[![leon-presentation](https://gnolang.github.io/blog/2024-04-15_gno-tokyo/src/thumbs/merch.jpg)](https://gnolang.github.io/blog/2024-04-15_gno-tokyo/src/merch.jpg)
 
 As Gno.land advances on its Road to Mainnet, we will be hosting more local
 meetups, so you'll want to stay updated on upcoming Gno.land events by visiting 
