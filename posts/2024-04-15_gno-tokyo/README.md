@@ -47,12 +47,15 @@ unique features:
 
 After introducing the high-level facets of Gno.land, the presentation
 detailed the specifics of each one, and how it is being designed to address 
-problems in both open-source development and blockchain ecosystems. For example,
-the open source development culture brings immense value to the field of engineering, 
-and closed source projects are often using it for their businesses. This is the
-part where Proof of Contribution comes into play. We explained the idea of open 
-source contributions being analyzed and how they will provide the basis for 
-chain validation.
+problems in both open-source development and blockchain ecosystems. 
+
+Specifically, Gno.land is addressing a large issue in regard to open-source
+development: many projects and businesses rely on open-source technology created 
+by developers who often volunteer their skills and time without receiving anything
+in return for their efforts. Proof of Contribution ensures that these contributors 
+are rewarded fairly for their work, creating a sustainable ecosystem where 
+open-source can thrive and developers feel valued for their efforts. Gno.land 
+aims to create a fairer distribution of benefits in the tech community.
 
 ## Our Ecosystem of Gnome Contributors
 We spotlighted the diverse projects and contributors bolstering the Gno.land 
