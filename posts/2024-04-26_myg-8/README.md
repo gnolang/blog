@@ -77,7 +77,7 @@ We've also done a ton of other work to make everyone's lives easier.
 ### Dragos
 
 - Flippando
-    - Public faucet set up at https://faucet.flippando.xyz
+    - Public faucet set up
     - Fixed and slightly improved the multi-chain dashboard at https://flippando.xyz
 - Zentasktic, an on-chain project management application 
     - There is the Zentasktic core first complete implementation. A package containing an unopinionated implementation of the Assess-Decide-Do workflow. 
