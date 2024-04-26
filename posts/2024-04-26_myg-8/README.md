@@ -31,7 +31,7 @@ The entire milestone can be seen [here](https://github.com/gnolang/gno/milestone
 
 Portal Loop is an always-up-to-date staging testnet that allows for using the latest version of Gno, Gno.land, and TM2. It can run the latest code from the master branch on the Gno monorepo, while preserving most/all the previous the transaction data. 
 
-Find out more about Portal Loop in the [documentation](https://docs.gno.land/concepts/portal-loop/).
+Find out more about the Portal Loop in the [documentation](https://docs.gno.land/concepts/portal-loop/).
 
 We've also enabled the [gno.land faucet](https://gno.land/faucet) to receive testnet funds for Portal Loop.
 
