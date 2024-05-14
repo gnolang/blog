@@ -10,16 +10,16 @@ authors: [ajnavarro]
 
 In this article, we'll discuss how we achieved a tenfold increase in the processing speed of the tx-indexer by applying four key concepts related to our use of key/value storage:
 
-・ [Key/Value Stores: How We Improved the Performance of Our tx-indexer by 10x](#keyvalue-stores-how-we-improved-the-performance-of-our-tx-indexer-by-10x)
-  ・ [Understanding Key/Value Store Variability](#understanding-keyvalue-store-variability)
-  ・ [The Importance of Efficient Data Encoding](#the-importance-of-efficient-data-encoding)
-  ・ [Implementing Secondary Indexes on a Key/Value Store](#implementing-secondary-indexes-on-a-keyvalue-store)
-  ・ [The Role of Batch Inserts in Enhancing Performance](#the-role-of-batch-inserts-in-enhancing-performance)
-    ・ [Data consistency](#data-consistency)
-    ・ [Speed](#speed)
-      ・ [Old](#old)
-      ・ [New](#new)
-  ・ [Conclusion](#conclusion)
+・ [Key/Value Stores: How We Improved the Performance of Our tx-indexer by 10x](#keyvalue-stores-how-we-improved-the-performance-of-our-tx-indexer-by-10x)  
+  ・ [Understanding Key/Value Store Variability](#understanding-keyvalue-store-variability)  
+  ・ [The Importance of Efficient Data Encoding](#the-importance-of-efficient-data-encoding)  
+  ・ [Implementing Secondary Indexes on a Key/Value Store](#implementing-secondary-indexes-on-a-keyvalue-store)  
+  ・ [The Role of Batch Inserts in Enhancing Performance](#the-role-of-batch-inserts-in-enhancing-performance)  
+    ・ [Data consistency](#data-consistency)  
+    ・ [Speed](#speed)  
+      ・ [Old](#old)  
+      ・ [New](#new)  
+  ・ [Conclusion](#conclusion)  
 
 The Transaction Indexer ([tx-indexer](https://github.com/gnolang/tx-indexer)) is the primary tool Gno.land uses to index its networks. It is in charge of keeping up with block production, fetching new data, indexing it, and serving it to users while providing filtering and subscription capabilities. The tx-indexer creates versatility and ease of use when using on-chain data, which is one of the key aspects of a fully functioning decentralized application.
 
@@ -53,7 +53,7 @@ Secondary indexes are specialized key groups that directly reference the primary
 
 To fetch transactions by hash, we created a secondary index that points to the primary index:
 
-`/index/txh/[HASH] -> /data/txs/[uint64]42[uint32]3`
+`/index/txh/[HASH] -> /data/txs/[uint64]42[uint32]3`  
 
 Although our secondary indexes do not require ordered iteration, this capability remains available, allowing us to apply additional filters as necessary. For instance, we could index transactions by year:
 
@@ -61,8 +61,8 @@ Although our secondary indexes do not require ordered iteration, this capability
 
 This format allows us to iterate through transactions within a specific year, from the start to the end of 2023, for example:
 
-・ from: `/index/txYear/[uint16]2023[uint64]0[uint32]0`
-・ to: `/index/txYear/[uint16]2023[uint64]MAX_UINT64[uint32]MAX_UINT32`
+・ from: `/index/txYear/[uint16]2023[uint64]0[uint32]0`  
+・ to: `/index/txYear/[uint16]2023[uint64]MAX_UINT64[uint32]MAX_UINT32`  
 
 ## The Role of Batch Inserts in Enhancing Performance
 
