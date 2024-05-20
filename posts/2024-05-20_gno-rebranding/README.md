@@ -1,11 +1,11 @@
 ---
 publication_date: 2024-05-20T18:47:00Z
-slug: gno-rebranding
-tags: [gnome, brand-update, new-logo, ]
-authors: [jaekwon]
+slug: the-gnome
+tags: [gnome, brand-update, new-logo]
+authors: [gno.land]
 ---
 
-# Introducing our new Gno.land logo: The Gnome
+# Introducing our new Gno.land logo: the gnome
 
 We are excited to introduce our new Gno.land logo, a significant shift that 
 reflects the true spirit of our project.
