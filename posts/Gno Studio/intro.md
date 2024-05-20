@@ -1,3 +1,7 @@
+
+![image](https://github.com/gnolang/blog/assets/117160070/c01b2fb0-c264-479b-9b9d-b3f71c2d2b69)
+
+
 # Introducing Gno Studio, the Premier Builder Suite for Gno.land
 Exceptional developer experience is integral to the Gno ecosystem, shaping the special programming language, Gno, and guiding the features of Gno.land. The technology stack is designed to offer developers an unparalleled platform for crafting next-generation dApps via realms (smart contracts).
 
