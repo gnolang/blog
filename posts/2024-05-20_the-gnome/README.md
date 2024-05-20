@@ -7,6 +7,8 @@ authors: [gno.land]
 
 # Introducing our new Gno.land logo: the gnome
 
+[![banner](https://gnolang.github.io/blog/2024-05-20_the-gnome/src/thumbs/banner.png)](https://gnolang.github.io/blog/2024-05-20_the-gnome/src/banner.png)
+
 We are excited to introduce our new Gno.land logo, a significant shift that 
 reflects the true spirit of our project.
 
