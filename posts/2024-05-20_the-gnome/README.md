@@ -1,5 +1,5 @@
 ---
-publication_date: 2024-05-20T21:33:00Z
+publication_date: 2024-05-21T12:33:00Z
 slug: the-gnome
 tags: [gnome, brand-update, new-logo]
 authors: [gno.land]
