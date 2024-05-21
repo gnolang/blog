@@ -54,7 +54,7 @@ were corrupted by this newfound prosperity, which greatly offended the Gnomes.
 (Wikipedia on Gnomes).
 
 By combining Swiss folklore and the original description by Paracelsus, we can 
-describe gnomes in the following manner:
+describe gnomes in the following manner:  
 ・At first, gnomes create timeless value for humanity.  
 ・Humanity becomes corrupted through greed and abuses these timeless values.  
 ・Finally, the gnomes take remedial action.  
