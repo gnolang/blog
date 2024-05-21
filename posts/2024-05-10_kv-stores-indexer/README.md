@@ -1,5 +1,4 @@
 ---
-title: "Key/Value Stores: How We Improved the Performance of Our tx-indexer by 10x"
 publication_date: 2024-05-10T13:37:00Z
 slug: kv-stores-indexer
 tags: [blog, post, tx-indexer, dev]
