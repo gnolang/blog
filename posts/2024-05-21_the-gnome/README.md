@@ -55,9 +55,9 @@ were corrupted by this newfound prosperity, which greatly offended the Gnomes.
 
 By combining Swiss folklore and the original description by Paracelsus, we can 
 describe gnomes in the following manner:
-1. At first, gnomes create timeless value for humanity.
-2. Humanity becomes corrupted through greed and abuses these timeless values.
-3. Finally, the gnomes take remedial action.
+・At first, gnomes create timeless value for humanity.  
+・Humanity becomes corrupted through greed and abuses these timeless values.  
+・Finally, the gnomes take remedial action.  
 
 Whether the timeless value is that of an element such as gold, or that of a
 protocol such as crypto(currencies), gnomes are hardworking alchemists who wish
@@ -69,12 +69,12 @@ promises at best, and the loss of life savings and the death of the wellbeing
 of entire communities at worse (thus far).
 
 Our field of crypto needs more gnomes to create timeless software and protocols
-for humanity. Such technology should be:
-1. intuitive (easy to use and understand)
-2. expressive (for societal infrastructure; finance, social, knowledge)
-3. finalized (completed)
-4. secure (unhackable)
-5. scalable (affordable)
+for humanity. Such technology should be:  
+・intuitive (easy to use and understand)  
+・expressive (for societal infrastructure; finance, social, knowledge)  
+・finalized (completed)  
+・secure (unhackable)  
+・scalable (affordable)  
 
 These are timeless values we strive to bring to the world through gno.land. In
 addition, gnomes are not afraid to take a stance against greed and evil. Some
