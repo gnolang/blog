@@ -1,7 +1,7 @@
 ---
 publication_date: 2024-05-27T13:37:00Z
 slug: gno-studio-intro
-tags: [gno-studio, dev, devx, connect, gno.land]
+tags: [gnoland, gnostudio, web3, blockchain, smart-contracts]
 authors: [gno-studio]
 ---
 
