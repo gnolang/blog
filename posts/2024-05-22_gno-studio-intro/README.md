@@ -1,7 +1,7 @@
 ---
 publication_date: 2024-05-27T13:37:00Z
 slug: gno-studio-intro
-tags: [gno-studio, dev, devx, gno.land]
+tags: [gno-studio, dev, devx, connect, gno.land]
 authors: [gno-studio]
 ---
 
@@ -74,18 +74,19 @@ the results of your function calls and revisit their results through a historica
 
 Let’s dive into a hands-on example with a simple polling realm. First, click 
 [here](https://gno.studio/connect/view/gno.land/r/gnostudio/gnoyourdate?network=test3#Vote) to access the ‘gnoyourdate’ poll. Once you’ve ensured that Adena 
-wallet is connected, here’s what to do next:
+wallet is connected, here’s what to do next:  
 
-1. Select when you first heard about Gno.land - Ensure your chosen option is marked as `True (Yes)` and all others as `False (No)` to validate your vote:
-   2. This month
-   3. This year
-   4. One or two years ago
-   5. Since inception
-2. After making your selection, hit the ‘Call’ button to execute the transaction 
-via your [Adena wallet](https://www.adena.app/). If you need help getting set up, you can visit 
-the [Adena docs](https://docs.adena.app/user-guide/sign-in).
-3. You’re ready to share your vote! Click ‘Copy result link’ and post it on X, 
-tagging [@_gnostudio](https://twitter.com/_gnostudio) and using the hashtag #gnoyourdate.
+1. Select when you first heard about Gno.land:   
+   - This month  
+   - This year  
+   - One or two years ago  
+   - Since inception  
+   - _Ensure your chosen option is marked as 'True (Yes)' and all others as 'False (No)' to validate your vote._  
+2. After making your selection, hit the ‘Call’ button to execute the transaction
+via your [Adena wallet](https://www.adena.app/). If you need help getting set up,
+you can visit the [Adena docs](https://docs.adena.app/user-guide/sign-in).  
+3. You’re ready to share your vote! Click ‘Copy result link’ and post it on X,
+tagging [@_gnostudio](https://twitter.com/_gnostudio) and using the hashtag #gnoyourdate.  
 
 ## Share Your Feedback on Connect
 
