@@ -72,3 +72,24 @@ func findFilePaths(startPath string) ([]string, error) {
 
 	return filePaths, nil
 }
+
+// askForConfirmation asks the user if they're sure that they want to post to a specific chain
+func askForConfirmation(chainID string, keyName string) bool {
+	reader := bufio.NewReader(os.Stdin)
+	for {
+		fmt.Printf("Are you sure you want to post to chain with id `%s` with key `%s`? (y/n):", chainID, keyName)
+		input, err := reader.ReadString('\n')
+		if err != nil {
+			fmt.Println("Error reading input:", err)
+			continue
+		}
+		input = strings.TrimSpace(strings.ToLower(input))
+		if input == "y" {
+			return true
+		} else if input == "n" {
+			return false
+		} else {
+			fmt.Println("Please enter 'y' or 'n'.")
+		}
+	}
+}

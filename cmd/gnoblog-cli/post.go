@@ -29,6 +29,7 @@ type cliCfg struct {
 	Remote                string
 	Quiet                 bool
 	InsecurePasswordStdIn bool
+	ConfirmInput          bool
 }
 
 func newPostCommand(io commands.IO) *commands.Command {
@@ -106,6 +107,11 @@ func (cfg *cliCfg) RegisterFlags(fs *flag.FlagSet) {
 		false,
 		"WARNING! take password from stdin",
 	)
+	fs.BoolVar(&cfg.ConfirmInput,
+		"confirm-input",
+		false,
+		"ask user to confirm input",
+	)
 }
 
 func execPost(io commands.IO, args []string, cfg *cliCfg) error {
@@ -115,6 +121,12 @@ func execPost(io commands.IO, args []string, cfg *cliCfg) error {
 
 	if cfg.KeyName == "" {
 		return ErrEmptyKeyName
+	}
+
+	// Ask user for confirming the ChainID
+	if cfg.ConfirmInput && !askForConfirmation(cfg.ChainId, cfg.KeyName) {
+		fmt.Println("operation canceled by the user, exiting")
+		return nil
 	}
 
 	// Stat passed in arg
