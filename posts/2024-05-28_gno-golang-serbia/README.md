@@ -33,7 +33,7 @@ used in contexts outside the Gno.land blockchain, which will open up the
 ecosystem to completely new use-cases, inviting even more tweb2 developers to 
 join our mission.
 - Gnoweb Enhancements:
-  - [gnoweb](link) serves as one of the main tools to explore the Gno.land 
+  - [gnoweb](https://docs.gno.land/getting-started/local-setup/browsing-gnoland#2-browsing-gnoland) serves as one of the main tools to explore the Gno.land 
 ecosystem. The team discussed changes to the UI as well as improving gnoweb’s 
 functionalities such as the rendering of realm state & source code, and possible
 approaches to add more ways to interact with on-chain apps.
@@ -60,6 +60,8 @@ Gno - an interpreted version of Go. This was the first time we presented the
 concept of Gno to Serbia’s Golang community, showcasing its potential to support
 dynamic application development. It was an opportunity to identify areas of 
 improvement and feedback from the user community.
+
+[![banner](https://gnolang.github.io/blog/2024-05-28_gno-golang-serbia/src/thumbs/meetup.png)](https://gnolang.github.io/blog/2024-05-28_gno-golang-serbia/src/meetup.png)
 
 [Dylan Boltz](https://github.com/deelawn), a Senior Golang Engineer from the core
 team, led the presentation, demonstrating how the VM and Gno can be leveraged to 
@@ -103,5 +105,12 @@ The feedback highlighted the need for us to clearly outline the problems Gno.lan
 - approach and better engage with new contributors.
 
 ## Conclusion
-The meetup was just one of several activities the team organized in Belgrade. In addition to the extensive technical sessions and workshops, we had the opportunity to experience and learn a bit about the local culture and Serbia, visiting the Nikola Tesla Museum, sightseeing, and experiencing traditional Serbian music.
-These in-person engineering retreats are some of the most important moments in outlining priorities, troubleshooting the technology together, and brainstorming ways to generally enhance and optimize the Gno.land blockchain and builder experience. 
+The meetup was just one of several activities the team organized in Belgrade. 
+In addition to the extensive technical sessions and workshops, we had the 
+opportunity to experience and learn a bit about the local culture and Serbia,
+visiting the Nikola Tesla Museum, sightseeing, and experiencing traditional 
+Serbian music.
+These in-person engineering retreats are some of the most important moments in
+outlining priorities, troubleshooting the technology together, and brainstorming
+ways to generally enhance and optimize the Gno.land blockchain and builder 
+experience. 
