@@ -1,5 +1,5 @@
 ---
-publication_date: 2024-05-27T13:37:00Z
+publication_date: 2024-05-14T13:37:00Z
 slug: gno-studio-intro
 tags: [gnoland, gnostudio, web3, blockchain, smart-contracts]
 authors: [gno-studio]
@@ -7,7 +7,7 @@ authors: [gno-studio]
 
 # Introducing Gno Studio, the Premier Builder Suite for Gno.land
 
-[![introduction-banner](https://gnolang.github.io/blog/gno-studio-intro/src/thumbs/introducing-gnostudio.png)](https://gnolang.github.io/blog/gno-studio-intro/src/introducing-gnostudio.png)
+[![introduction-banner](https://gnolang.github.io/blog/2024-05-14_gno-studio-intro/src/thumbs/introducing-gnostudio.png)](https://gnolang.github.io/blog/2024-05-14_gno-studio-intro/src/introducing-gnostudio.png)
 
 Exceptional developer experience is integral to the Gno ecosystem, shaping the 
 special programming language, Gno, and guiding the features of Gno.land. The
@@ -42,7 +42,7 @@ second application in the Gno Studio suite.**
 
 ## Your Gateway to Experience the Power of Realms
 
-[![beta-launch-banner](https://gnolang.github.io/blog/gno-studio-intro/src/thumbs/beta-launch.png)](https://gnolang.github.io/blog/gno-studio-intro/src/beta-launch.png)
+[![beta-launch-banner](https://gnolang.github.io/blog/2024-05-14_gno-studio-intro/src/thumbs/beta-launch.png)](https://gnolang.github.io/blog/2024-05-14_gno-studio-intro/src/beta-launch.png)
 
 Gno Studio Connect is a tool that simplifies access and interaction with realm 
 functions. Whether you’re exploring realms like the Gno.land [blog](https://gno.land/r/gnoland/blog), 
@@ -70,7 +70,7 @@ the results of your function calls and revisit their results through a historica
 
 ## Get Started with Connect: Vote in a Simple Poll
 
-[![vote-gnoyourdate](https://gnolang.github.io/blog/gno-studio-intro/src/thumbs/vote-gnoyourdate.png)](https://gnolang.github.io/blog/gno-studio-intro/src/vote-gnoyourdate.png)
+[![vote-gnoyourdate](https://gnolang.github.io/blog/2024-05-14_gno-studio-intro/src/thumbs/vote-gnoyourdate.png)](https://gnolang.github.io/blog/2024-05-14_gno-studio-intro/src/vote-gnoyourdate.png)
 
 Let’s dive into a hands-on example with a simple polling realm. First, click 
 [here](https://gno.studio/connect/view/gno.land/r/gnostudio/gnoyourdate?network=test3#Vote) to access the ‘gnoyourdate’ poll. Once you’ve ensured that Adena 
