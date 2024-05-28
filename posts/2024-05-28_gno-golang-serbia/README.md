@@ -30,7 +30,7 @@ the validator set via a realm (r/sys/vals), and more. Currently, the
 different perspective on Gno - a fully functional Go interpreter with automatic 
 state persistence. The team aims to modularize the GnoVM so that it can be
 used in contexts outside the Gno.land blockchain, which will open up the
-ecosystem to completely new use-cases, inviting even more tweb2 developers to 
+ecosystem to completely new use-cases, inviting even more web2 developers to 
 join our mission.
 - Gnoweb Enhancements:
   - [gnoweb](https://docs.gno.land/getting-started/local-setup/browsing-gnoland#2-browsing-gnoland) serves as one of the main tools to explore the Gno.land 
@@ -46,7 +46,7 @@ its surrounding infrastructure.
 - GnoVM & Gno.land Development:
   - The team took the opportunity to deal with priority PRs during the retreat, 
 such as the [Gno Type Check PR](https://github.com/gnolang/gno/pull/1426) by
-@itsmaxwell, which will add full type checking to the VM. The team has also
+[@itzmaxwell](https://github.com/ltzmaxwell), which will add full type checking to the VM. The team has also
 added GoReleaser to the monorepo in preparation for the upcoming Test4 milestone,
 and the first 
 [nightly Gno build](https://github.com/gnolang/gno/releases/tag/v0.1.0-nightly.20240523) was released.
@@ -61,7 +61,7 @@ concept of Gno to Serbia’s Golang community, showcasing its potential to suppo
 dynamic application development. It was an opportunity to identify areas of 
 improvement and feedback from the user community.
 
-[![banner](https://gnolang.github.io/blog/2024-05-28_gno-golang-serbia/src/thumbs/meetup.png)](https://gnolang.github.io/blog/2024-05-28_gno-golang-serbia/src/meetup.png)
+[![meetup](https://gnolang.github.io/blog/2024-05-28_gno-golang-serbia/src/thumbs/meetup.png)](https://gnolang.github.io/blog/2024-05-28_gno-golang-serbia/src/meetup.png)
 
 [Dylan Boltz](https://github.com/deelawn), a Senior Golang Engineer from the core
 team, led the presentation, demonstrating how the VM and Gno can be leveraged to 
@@ -90,7 +90,8 @@ to storage and state.
 up in more cities around the globe to connect with gnomes, and spread the word 
 about Gno.land. With a few gnomes based in Belgrade, it’s important to keep 
 cultivating and building the Gno.land community locally. If you’re based in 
-Serbia, you can find our regional based channel on Discord (TOBEADDED).
+Serbia, you can find our regional based channel on the Official Gno.land [Discord 
+Server](https://discord.gg/4XXyy5wS36).
 
 ### The Feedback Loop
 After the presentation, we gathered feedback from the attendees to assess the 
