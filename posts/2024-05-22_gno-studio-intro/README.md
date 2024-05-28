@@ -76,12 +76,12 @@ Let’s dive into a hands-on example with a simple polling realm. First, click
 [here](https://gno.studio/connect/view/gno.land/r/gnostudio/gnoyourdate?network=test3#Vote) to access the ‘gnoyourdate’ poll. Once you’ve ensured that Adena 
 wallet is connected, here’s what to do next:  
 
-1. Select when you first heard about Gno.land:   
+1. Select when you first heard about Gno.land:  
+   _Ensure your chosen option is marked as 'True (Yes)' and all others as 'False (No)' to validate your vote._
    - This month  
    - This year  
    - One or two years ago  
-   - Since inception  
-   - _Ensure your chosen option is marked as 'True (Yes)' and all others as 'False (No)' to validate your vote._  
+   - Since inception
 2. After making your selection, hit the ‘Call’ button to execute the transaction
 via your [Adena wallet](https://www.adena.app/). If you need help getting set up,
 you can visit the [Adena docs](https://docs.adena.app/user-guide/sign-in).  
