@@ -140,9 +140,15 @@ func execPost(io commands.IO, args []string, cfg *cliCfg) error {
 	}
 
 	// Initialize Gnoclient
+
+	rpc, err := initRPCClient(cfg)
+	if err != nil {
+		return err
+	}
+
 	client := gnoclient.Client{
 		Signer:    signer,
-		RPCClient: initRPCClient(cfg),
+		RPCClient: rpc,
 	}
 
 	// Batch Post request passed in with root argument

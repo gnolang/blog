@@ -20,7 +20,12 @@ func initSigner(cfg *cliCfg, password string) (gnoclient.SignerFromKeybase, erro
 	}, nil
 }
 
-func initRPCClient(cfg *cliCfg) rpcclient.Client {
+func initRPCClient(cfg *cliCfg) (rpcclient.Client, error) {
 	remote := cfg.Remote // todo: validate if chainID & remote match?
-	return rpcclient.NewHTTP(remote, "/websocket")
+	client, err := rpcclient.NewHTTPClient(remote)
+	if err != nil {
+		return nil, err
+	}
+
+	return client, nil
 }
