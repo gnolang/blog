@@ -1,5 +1,5 @@
 ---
-publication_date: 2024-05-25T00:00:00Z
+publication_date: 2024-05-30T00:00:00Z
 slug: test4-explained
 tags: [gnoland, test4, testnet, poc, proof-of-contribution, tm2]
 authors: [Kouteki]
