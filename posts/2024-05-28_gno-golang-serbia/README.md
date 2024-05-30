@@ -1,5 +1,5 @@
 ---
-publication_date: 2024-05-21T12:33:00Z
+publication_date: 2024-05-28T12:34:56Z
 slug: gnomes-in-serbia
 tags: [gnome, gnolocal, retreat, meetup, golang]
 authors: [leohhhn, michelleellen]
