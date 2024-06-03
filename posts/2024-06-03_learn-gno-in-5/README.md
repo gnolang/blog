@@ -129,6 +129,7 @@ the counter value to a string. Furthermore, a valid `Render()` function must
 take in a string parameter, which in our case is not used.
 
 ### Testing in Gno
+
 We can test our counter app exactly the same way we would in Go. First, create a
 `counter_test.gno` file:
 
