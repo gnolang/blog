@@ -76,7 +76,7 @@ gno mod init gno.land/r/<your_username>/counter
 ```
 
 This will initiate a `gno.mod` file with an appropriate path for your app. 
-Read more about Gno package paths[here](https://docs.gno.land/concepts/namespaces).
+Read more about Gno package paths [here](https://docs.gno.land/concepts/namespaces).
 
 Following this, you can create a `counter.gno` file which will be the place for your
 Gno code. If you already know Go, Gno code will come to you very naturally.
@@ -101,7 +101,7 @@ This is where Gno starts to differ from Go - variables declared in the global
 scope get auto-persisted. What does this mean?
 
 **Gno is a transaction-based language** - this means that each call to a Gno app
-happens within a transactional context, ensuring atomicity, & consistency. Because
+happens within a transactional context, ensuring atomicity and consistency. Because
 of this, developers can focus on the business logic of their apps instead of
 having to deal with the intricacies of application state management and persistence.
 
@@ -114,8 +114,8 @@ func Increment() {
 }
 ```
 
-Finally, we can define a `Render()` function - a Gno-specific concept allowing callers
-to view the aforementioned persisted state of the app.
+Finally, we can define a `Render()` function - a Gno-specific concept allowing 
+callers to view the aforementioned persisted state of the app.
 
 ```go
 func Render(_ string) string {
@@ -123,9 +123,9 @@ func Render(_ string) string {
 }
 ```
 
-The `Render()` function is meant to return a correctly-formatted Markdown string.
+The `Render()` function is meant to return a correctly formatted Markdown string.
 We need to import `strconv`, which is part of the Gno standard library, to convert
-the counter value to a string. Furthermore, a valid `Render()` function must
+the `counter` value to a string. Furthermore, a valid `Render()` function must
 take in a string parameter, which in our case is not used.
 
 ### Testing in Gno
@@ -184,6 +184,7 @@ depending on the development stage of their app. Let's discuss how to set up a
 local development environment for Gno.
 
 ### Running a local dev environment
+
 The fastest and most convenient way to run a local development environment for
 Gno is by using `gnodev`. It is a binary containing multiple tools that make up
 everything you need to write Gno apps:
@@ -260,6 +261,7 @@ To check if you've successfully added the keypair, run `gnokey list`:
 ```
 
 ### Interacting with your Gno app
+
 Apart from testing locally, we can manually call our app's `Render()` and
 `Increment()` functions using the `gnokey maketx call` command to check if
 it's working correctly:
@@ -347,6 +349,7 @@ browsing for this link: [`gno.land/p/demo/blog`](https://gno.land/p/demo/blog).
 Below are some commonly used packages.
 
 ### Package `avl`
+
 Deployed under `gno.land/p/demo/avl`, the AVL package provides a tree structure
 for storing data. Currently, the AVL package is used to replace the functionality
 of the native `map` in Gno, as maps are not fully deterministic and thus do not
@@ -381,6 +384,7 @@ func Get(key string) int {
 ```
 
 ### Package `seqid`
+
 Deployed under `gno.land/p/demo/seqid`, the `seqid` package provides a simple
 way to have sequential IDs in Gno. Its encoding scheme is based on the `cford32`
 package. From [`seqid.gno`](https://gno.land/p/demo/seqid/seqid.gno):
@@ -404,6 +408,7 @@ You can view more package (and realm) examples
 [here](https://github.com/gnolang/gno/tree/master/examples).
 
 ## Blockchain-specific functionality
+
 Gno is designed to follow the syntax of Go. There are very few exceptions in how
 Gno differs from Go syntactically, which is why this section will outline the
 major differences and added features. For a full list of Go-Gno compatability,
@@ -419,10 +424,10 @@ of native currency sent along the call, etc. This context is fundamental for
 Gno app development and can be accessed through functions found in the special
 `std` package.
 
-Below you can find a "Learn X in Y"-styled report. Since Gno is designed to
-be as close as possible to Go syntax, we will not cover all bits and pieces
-of its syntax, but only the most prominent ones, and the ones that are specific
-to the language.
+Below you can find a ["Learn X in Y"-styled](https://learnxinyminutes.com/) 
+report. Since Gno is designed to be as close as possible to Go syntax, we will 
+not cover all bits and pieces of its syntax, but only the most prominent ones, 
+and the ones that are specific to the language.
 
 ```go
 // Single line comment
@@ -508,11 +513,11 @@ func main() {
 
   // Coin & Coins - native Gno struct defining currency
   // Make a new coin instance, of 100 coins of denomination lxy
-  var lxyCoin std.Coin = std.Coin{"100", "lxy"}
+  var lxyCoin std.Coin = std.NewCoin("100", "lxy")
   // Make a different coin instance, of 100 coins of denomination lyx
-  var lyxCoin std.Coin = std.Coin{"100", "lyx"}
+  var lyxCoin std.Coin = std.NewCoin("100", "lyx")
   // Make a set of coins
-  var coinSet std.Coins = std.Coins{lxyCoin}
+  var coinSet std.Coins = std.NewCoins(lxyCoin)
   // Check amount of specific coin in set
   coinSet.AmountOf("lxy") // 100
   // AmountOf will return 0 if coin does not exist in set
