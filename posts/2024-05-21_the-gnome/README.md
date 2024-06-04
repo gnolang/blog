@@ -70,11 +70,11 @@ of entire communities at worse (thus far).
 
 Our field of crypto needs more gnomes to create timeless software and protocols
 for humanity. Such technology should be:  
-1. intuitive (easy to use and understand)  
-2. expressive (for societal infrastructure; finance, social, knowledge)  
-3. finalized (completed)  
-4. secure (unhackable)  
-5. scalable (affordable)  
+・intuitive (easy to use and understand)  
+・expressive (for societal infrastructure; finance, social, knowledge)  
+・finalized (completed)  
+・secure (unhackable)  
+・scalable (affordable)  
 
 These are timeless values we strive to bring to the world through gno.land. In
 addition, gnomes are not afraid to take a stance against greed and evil. Some
@@ -86,8 +86,6 @@ Gnomes are thus an ideal representation of the builders behind gno.land. That’
 why the logo had to change. We hope you like the new logo, an iconic depiction 
 of the gnome with cap; and hope that the gnomic spirit can help guide us to build
 a better honest world for all of us.
-
-CHANGES AND EDITS
 
 _- the gnomes of gno.land_
 
