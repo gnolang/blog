@@ -32,7 +32,7 @@ we think of earth-dwelling figures often found in lush blue-green gardens,
 guarding or simply enjoying the land they are in.
 
 Nobody knows for sure the origin of these gnomes, but the earliest known
-reference to it comes from Paracelsus as _gnomus_, a Swiss Christian theologian 
+reference to it comes from Paracelsus as _gnomus_, a Swiss Christian theologian, 
 philosopher and alchemist of the Renaissance. He also called them _pygmies_ in 
 his _“A book on Nymphs, Sylphs, Pygmies, and Salamanders, and on Other Spirits”_
 published in 1566, a study on myth creatures as they relate to Christianity.
