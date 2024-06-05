@@ -70,14 +70,14 @@ so easy to become blinded by greed, resulting in stalled innovation, broken
 promises, sometimes the loss of life savings, and the demise of entire web3 
 communities.
 
-Our field of crypto needs more gnomes to create timeless software and protocols
-for humanity. Such technology should be:  
+The blockchain world needs more gnomes to create timeless software and protocols
+for the benefit of humanity. Such technology should be:
 
-1. intuitive (easy to use and understand)  
-2. expressive (for societal infrastructure; finance, social, knowledge)  
-3. finalized (completed)  
-4. secure (unhackable)  
-5. scalable (affordable)  
+1. intuitive (easy to use and understand)
+2. expressive (for societal infrastructure, finance, social, knowledge)
+3. finalized (completed)
+4. secure (unhackable)
+5. scalable (affordable)
 
 This is what we seek to bring to the world through gno.land.
 
