@@ -17,7 +17,9 @@ jobs:
         run: sudo apt-get update && sudo apt-get install -y graphicsmagick
 
       - name: Run thumbnail generation script
-        run: make thumbs
+        run: |
+          cd posts
+          make thumbs
 
       - name: Commit and push changes
         run: |
