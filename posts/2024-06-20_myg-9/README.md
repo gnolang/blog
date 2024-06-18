@@ -31,7 +31,7 @@ Recent [supernova](https://github.com/gnolang/supernova) tests showed that we ha
 
 ## New DevOps team member
 
-Please welcome [Sergio Matone](https://www.linkedin.com/in/sergio-matone/)! A DevOps with a strong Go background, he'll be a key player in improving and managing the Gno.land infrastructure.
+Please welcome Sergio Matone! A DevOps with a strong Go background, he'll be a key player in improving and managing the Gno.land infrastructure.
 
 ## Belgrade Retreat
 
