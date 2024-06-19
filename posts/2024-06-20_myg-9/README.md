@@ -232,6 +232,11 @@ A [realm](https://github.com/iam-agf/Gnowledge) to simulate a Stackoverflow styl
 **Antonio**
 * https://github.com/iam-agf/Shiken 
 
+## Contributors
+- **Antonio**
+  - GNOWLEDGE: A realm to simulate a Stackoverflow styled. Sharing to get some feedback. You can check it out via https://github.com/iam-agf/Gnowledge-website
+  - [Shiken Project repositories](https://github.com/iam-agf?tab=repositories&q=shiken&type=source&language=&sort=)
+
 # New Content
 
 - [Key/Value Stores: How We Improved the Performance of Our tx-indexer by 10x](https://gno.land/r/gnoland/blog:p/kv-stores-indexer)
