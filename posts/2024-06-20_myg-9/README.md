@@ -5,7 +5,7 @@ tags: [gnoland, ecosystem, updates, gnovm, tm2, test4, gnostudio, connect]
 authors: [Kouteki]
 ---
 
-# The More You Gno 9: Connect, Faucet Hub, New Test4 Launch Date and More
+# The More You Gno 9: Realm to Realm Interaction, Faucet Hub, New Test4 Launch Date and More
 
 This edition brings several major pieces of news; Gno Studio Connect beta, and Faucet Hub. We're moving up the Test4 launch by 2 weeks, so we could get to mainnet faster. We'll also be seeing each other at GopherCons EU and US, so make sure to stop by and say hi! Oh, and our [new gnome logo is live](https://gno.land/r/gnoland/blog:p/the-gnome)!
 
@@ -13,9 +13,9 @@ We're also covering all the major and minor code improvements; if you want to di
 
 # Gno Core Updates
 
-## Gno Studio Connect is Here!
+## Introducing Gno Studio Connect
 
-Last month [we talked](https://medium.com/@gnostudio/introducing-gno-studio-the-premier-builder-suite-for-gno-land-d1b4d82b46de) about the need for a premier builder suite for Gno.land. As Gno.land expands into a universe of realms, we saw the need for a set of tools; tools empowing the community to create and use succint and composable realms on Gno.land. Last year we launched [Gno Playground](https://play.gno.land/). Now we're adding another tool to the toolbox - [Gno Studio Connect](https://gno.studio/connect). It's still in beta, so please go and break it; you can even use the **feedback** feature within Connect to send us your feedback.
+Last month [we talked](https://medium.com/@gnostudio/introducing-gno-studio-the-premier-builder-suite-for-gno-land-d1b4d82b46de) about the need for a premier builder suite for Gno.land. As Gno.land expands into a universe of realms, we saw the need for a set of tools; tools empowing the community to create and use succint and composable realms on Gno.land. Last year we launched [Gno Playground](https://play.gno.land/). Now we're adding another tool to the toolbox - [Gno Studio Connect](https://gno.studio/connect). Currently in beta, Connect allows seamless access to realms, making it simple to explore, interact, and engage with Gno.land's smart contracts through function calls. Try out your first realm interaction via Connect by taking our [gnoyourdate](https://gno.studio/connect/view/gno.land/r/gnostudio/gnoyourdate?network=test3#Vote) poll. 
 
 ## Faucet Hub is Live
 
@@ -23,7 +23,7 @@ With the [Faucet Hub](https://faucet.gno.land) you can now easily and effortless
 
 ## Test4 Launch Scheduled for July 15
 
-After announcing the tentative Test4 launch for the end of July/early August, we realized we're working faster than anticipated. That's why **we're moving the official Test4 launch to July 15, 2024**!
+After announcing the tentative [Test4](https://gno.land/r/gnoland/blog:p/test4-explained) launch for the end of July/early August, we realized we're working faster than anticipated. That's why **we're moving the official Test4 launch to July 15, 2024**!
 
 ## 550 TPS
 
@@ -252,4 +252,6 @@ A [realm](https://github.com/iam-agf/Gnowledge) to simulate a Stackoverflow styl
 - **GopherCon US** / Chicago / July 7th - 10th
 - **Nebular Summit** / Brussels / July 12th/13th
 
-If you plan to attend any of these events, find us at our booth or on the hallway track, and let's talk!
+## Discord Developer Office Hours
+
+Every week on Thursday at 2:30 pm CEST, we host office hours on [Discord](https://discord.com/invite/d24CT5b9cd?event=1252310282450112595) to answer questions, discuss updates, and catch up with the community. We'd love to see you there!
