@@ -77,7 +77,7 @@ func findFilePaths(startPath string) ([]string, error) {
 func askForConfirmation(chainID string, keyName string) bool {
 	reader := bufio.NewReader(os.Stdin)
 	for {
-		fmt.Printf("Are you sure you want to post to chain with id `%s` with key `%s`? (y/n):", chainID, keyName)
+		fmt.Printf("Are you sure you want interact with chain with id `%s` with key `%s`? (y/n):", chainID, keyName)
 		input, err := reader.ReadString('\n')
 		if err != nil {
 			fmt.Println("Error reading input:", err)
