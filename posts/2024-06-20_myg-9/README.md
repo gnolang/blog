@@ -223,14 +223,7 @@ Status: Merged
 ## Student Contributor Program
 
 **Mustapha**
-* Made a V0 Auction dapp ([PR#2265](https://github.com/gnolang/gno/pull/2265)) 
-
-**Antonio**
-- GNOWLEDGE
-A [realm](https://github.com/iam-agf/Gnowledge) to simulate a Stackoverflow styled. Sharing to get some feedback. You can interact with it via https://github.com/iam-agf/Gnowledge-website .
-
-**Antonio**
-* https://github.com/iam-agf/Shiken 
+* Made a V0 Auction dapp ([PR#2265](https://github.com/gnolang/gno/pull/2265))
 
 ## Contributors
 - **Antonio**
