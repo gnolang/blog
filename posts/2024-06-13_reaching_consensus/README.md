@@ -11,7 +11,7 @@ Every once in a while, an effort comes along for the Gno core engineering team t
 
 Over the course of the next following sections, you’ll discover on a practical level what the Tendermint consensus engine is all about, how it works, and how we ended up implementing it for the purposes of [Gno.land](http://gno.land/), and the wider blockchain and open-source community.
 
-If you want to jump straight to the source code, you can find the GitHub repository [here](https://github.com/gnolang/libtm).
+If you want to jump straight to the source code, you can find the standalone library in the gno monorepo [here](https://github.com/gnolang/gno/tree/master/tm2/pkg/libtm).
 
 It is worth noting that we will  primarily be discussing the use of  the Tendermint consensus engine from an angle of a distributed system, that doesn’t necessarily have anything to do with blockchains. 
 
@@ -234,7 +234,7 @@ The combination of these states and transitions, governed by timers and supermaj
 
 ## Taming asynchronous beasts with Golang
 
-When we started working on [libtm](https://github.com/gnolang/libtm), we had a few goals in mind:
+When we started working on [libtm](https://github.com/gnolang/gno/tree/master/tm2/pkg/libtm), we had a few goals in mind:
 - create a consensus engine library that is easy to use, safe and performant, pluggable into systems we already have (the Gno blockchain, based on a fork of Tendermint Core)
 - implement abstractions that allow the library to be also used outside the blockchain context, while also being modular enough to be used by existing blockchain projects
 - maintain the principles of open-source software
@@ -470,6 +470,6 @@ We plan on expanding our testing suite even further, with more sophisticated clu
 
 Our exploration of the Tendermint consensus engine has highlighted the meticulous design and robust functionality that make it a cornerstone of blockchain systems. The Tendermint consensus engine’s ability to maintain liveness and ensure fault tolerance through its well-defined states—*Propose*, *Prevote*, and *Precommit* — exemplifies the intricate balance needed in distributed systems, where validators can navigate the complexities of reaching consensus even in the face of network delays and potential Byzantine faults.
 
-The implementation of Tendermint within the Gno blockchain, and the broader application potential of the [libtm library](https://github.com/gnolang/libtm), underscore the versatility and adaptability of this consensus mechanism. Our approach to developing `libtm` emphasized modularity and flexibility, ensuring it could be utilized both within and beyond blockchain contexts. By decoupling the library from specific networking protocols, signing mechanisms, and validator set management, we aimed to create a tool that is both easy to integrate and capable of supporting diverse use cases. It not only facilitates smooth blockchain operation but also opens up new possibilities for innovation in distributed systems. 
+The implementation of Tendermint within the Gno blockchain, and the broader application potential of the [libtm library](https://github.com/gnolang/gno/tree/master/tm2/pkg/libtm), underscore the versatility and adaptability of this consensus mechanism. Our approach to developing `libtm` emphasized modularity and flexibility, ensuring it could be utilized both within and beyond blockchain contexts. By decoupling the library from specific networking protocols, signing mechanisms, and validator set management, we aimed to create a tool that is both easy to integrate and capable of supporting diverse use cases. It not only facilitates smooth blockchain operation but also opens up new possibilities for innovation in distributed systems. 
 
 We look forward to the ongoing improvement of Tendermint, and its continued impact on the blockchain and open-source communities.
