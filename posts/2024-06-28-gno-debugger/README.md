@@ -17,7 +17,7 @@ In this article, we introduce the new Gno debugger feature and show how it can b
 > On average, you spend about eight to ten times debugging as you do writing code.
 > Anonymous
 
-Having a good debugger is important. But the Gno language is almost Go, and gnoland itself is entirely written in Go. Could I just use the existing Go tools, i.e.  the [delve] debugger, to take control and debug my gno programs?
+Having a good debugger is important. But the Gno language is almost Go, and gno.land itself is entirely written in Go. Could I just use the existing Go tools, i.e.  the [delve] debugger, to take control and debug my Gno programs?
 
 You cannot debug your *gno* program this way because doing so would entail debugging the Gno virtual machine rather than your own program. The relevant state information would be opaque and would need to be reversed and reconstructed from internal Gno virtual machine data structures.
 
