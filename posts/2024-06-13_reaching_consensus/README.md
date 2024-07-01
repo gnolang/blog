@@ -38,6 +38,7 @@ The consensus engine represents the internal, most critical process of the conse
 [![machine](https://gnolang.github.io/blog/2024-06-13_reaching_consensus/src/thumbs/machine.png)](https://gnolang.github.io/blog/2024-06-13_reaching_consensus/src/machine.png)
 
 ### Terminology
+
 Consensus algorithms like Tendermint work on a round-based model, meaning consensus is attempted to be reached on a given value within a round, for a given height. If consensus is not reached on `round X` of `height Y`, then a new consensus round is started for `round X+1`, `height Y`. This round changing occurs until consensus is reached for the given height (in the context of blockchains, the height is the block number). We will discuss later on what the conditions are for increasing the consensus round number.
 
 We call this tuple denoting the current consensus height and round `(h, r)` a ***view***.
