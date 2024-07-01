@@ -19,7 +19,7 @@ In this article, we introduce the new Gno debugger feature and show how it can b
 
 Having a good debugger is important. But the Gno language is almost Go, and gno.land itself is entirely written in Go. Could I just use the existing Go tools, i.e.  the [delve] debugger, to take control and debug my Gno programs?
 
-You cannot debug your *gno* program this way because doing so would entail debugging the Gno virtual machine rather than your own program. The relevant state information would be opaque and would need to be reversed and reconstructed from internal Gno virtual machine data structures.
+You cannot debug your *Gno* program this way because doing so would entail debugging the Gno virtual machine rather than your own program. The relevant state information would be opaque and would need to be reversed and reconstructed from internal Gno virtual machine data structures.
 
 The Gno debugger addresses this issue by displaying the state of the Gno program memory symbolically. It allows for control of program execution at the source code level, regardless of the virtual machine implementation.
 
