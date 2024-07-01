@@ -35,7 +35,7 @@ cd gno
 go install ./gnovm/cmd/gno
 ```
 
-We are now ready to play with gno programs. Let's consider a simple classical example as a target program, the computation of [Fibonacci numbers]:
+We are now ready to play with Gno programs. Let's consider a simple classic example as a target program, the computation of [Fibonacci numbers]:
 
 ```go=
 // fib.gno
