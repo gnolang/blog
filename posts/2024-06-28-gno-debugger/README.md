@@ -27,7 +27,7 @@ The Gno debugger addresses this issue by displaying the state of the Gno program
 
 The Gno debugger is fully integrated in the [gno](https://docs.gno.land/gno-tooling/cli/gno-tooling-gno) single binary, which is the tool required to build, test and run gno programs locally.
 
-There is no need to install a specific tool. You just have to install gno itself by:
+There is no need to install a specific tool. You just have to install the `gno` tool itself with:
 
 ```shell=
 git clone https://github.com/gnolang/gno
