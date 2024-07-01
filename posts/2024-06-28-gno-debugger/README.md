@@ -3,7 +3,7 @@ title: "Debugging Gno Programs"
 publication_date: 2024-06-28T13:37:00Z
 slug: gno-debugger-blog-post
 tags: [blog, post, tutorial, gno, debugger]
-authors: [@mvertes]
+authors: [mvertes]
 ---
 # Debugging Gno Programs
  
