@@ -1,5 +1,5 @@
 ---
-publication_date: 2024-06-13T00:00:00Z
+publication_date: 2024-07-01T00:00:00Z
 slug: reaching-consensus
 tags: [gnoland, test4, consensus, tm2, libtm]
 authors: [zivkovicmilos, petar-dambovaliev]
