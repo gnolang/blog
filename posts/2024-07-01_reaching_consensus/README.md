@@ -132,7 +132,7 @@ proposer does not actually construct anything new, but simply relays a proposal 
 round), but not agreed upon fully (committed).
 
 [![paper-1](https://gnolang.github.io/blog/2024-07-01_reaching_consensus/src/thumbs/paper-1.png)](https://gnolang.github.io/blog/2024-07-01_reaching_consensus/src/paper-1.png)
-*Source: The latest gossip on BFT consensus, page 6*
+<div align="center">Source: The latest gossip on BFT consensus, page 6</div>
 
 As outlined in *Algorithm 1*, the initialization step takes place before the beginning of the actual consensus process (
 state machine). `StartRound` is meant to kick off the Tendermint state machine.
@@ -144,7 +144,7 @@ For non-proposers of the view, they simply initiate the `propose` state timer, t
 further if no valid proposal comes in from the proposer of the view.
 
 [![paper-2](https://gnolang.github.io/blog/2024-07-01_reaching_consensus/src/thumbs/paper-2.png)](https://gnolang.github.io/blog/2024-07-01_reaching_consensus/src/paper-2.png)
-*Source: The latest gossip on BFT consensus, page 6*
+<div align="center">Source: The latest gossip on BFT consensus, page 6</div>
 
 Once non-proposers receive a proposal from the proposer of the current view, they validate it using an external
 function, denoted here as valid(...). The proposal is accepted in 2 situations:
@@ -172,7 +172,7 @@ In either case, after the node broadcasts a `PREVOTE` message, it transitions in
 Non-proposers for the view start a `propose` state timer.
 
 [![paper-3](https://gnolang.github.io/blog/2024-07-01_reaching_consensus/src/thumbs/paper-3.png)](https://gnolang.github.io/blog/2024-07-01_reaching_consensus/src/paper-3.png)
-*Source: The latest gossip on BFT consensus, page 6*
+<div align="center">Source: The latest gossip on BFT consensus, page 6</div>
 
 This timer is meant to go off after a fixed interval of time, in order to prevent the node from being stuck in a state
 where it’s still waiting on a proposal.
@@ -200,7 +200,7 @@ proposal ID. In other words, the supermajority of the validator set’s voting p
 with an attached proposal ID (of the proposal accepted in the *propose* state!).
 
 [![paper-4](https://gnolang.github.io/blog/2024-07-01_reaching_consensus/src/thumbs/paper-4.png)](https://gnolang.github.io/blog/2024-07-01_reaching_consensus/src/paper-4.png)
-*Source: The latest gossip on BFT consensus, page 6*
+<div align="center">Source: The latest gossip on BFT consensus, page 6</div>
 
 As soon as these conditions are met, the participants broadcast a `PRECOMMIT` message, with the attached proposal ID (
 same one as with the `PREVOTE` messages, and derived from the proposal accepted in the *propose* state). After
@@ -225,7 +225,7 @@ If we go back through the conditions for the initial Tendermint engine state tra
 strong requirement for “locked” values.
 
 [![paper-5](https://gnolang.github.io/blog/2024-07-01_reaching_consensus/src/thumbs/paper-5.png)](https://gnolang.github.io/blog/2024-07-01_reaching_consensus/src/paper-5.png)
-*Source: The latest gossip on BFT consensus, page 6*
+<div align="center">Source: The latest gossip on BFT consensus, page 6</div>
 
 These checks essentially enforce that if there was a proposal in some previous round, that reached a supermajority, it
 needs to be *proposed again* in a future round.
@@ -236,7 +236,7 @@ There is a situation in which the validators move over to the *precommit* state,
 valid `PREVOTE` messages (with a valid proposal ID):
 
 [![paper-6](https://gnolang.github.io/blog/2024-07-01_reaching_consensus/src/thumbs/paper-6.png)](https://gnolang.github.io/blog/2024-07-01_reaching_consensus/src/paper-6.png)
-*Source: The latest gossip on BFT consensus, page 6*
+<div align="center">Source: The latest gossip on BFT consensus, page 6</div>
 
 In case a validator receives `2F+1` `PREVOTE` messages with a `nil` proposal ID, they simply broadcast a `PRECOMMIT`
 message with a `nil` ID value (indicating failure), and move over to the *precommit* state.
@@ -250,13 +250,13 @@ All validators start a *prevote* state timer the moment they receive a supermajo
 message (either with a valid or with a `nil` proposal ID).
 
 [![paper-7](https://gnolang.github.io/blog/2024-07-01_reaching_consensus/src/thumbs/paper-7.png)](https://gnolang.github.io/blog/2024-07-01_reaching_consensus/src/paper-7.png)
-*Source: The latest gossip on BFT consensus, page 6*
+<div align="center">Source: The latest gossip on BFT consensus, page 6</div>
 
 When the timer asynchronously ticks off, the node broadcasts the `PRECOMMIT` message with a `nil` ID value, indicating
 failure to reach a supermajority on a proposal. After the broadcast, it moves to the *precommit* state.
 
 [![paper-8](https://gnolang.github.io/blog/2024-07-01_reaching_consensus/src/thumbs/paper-8.png)](https://gnolang.github.io/blog/2024-07-01_reaching_consensus/src/paper-8.png)
-*Source: The latest gossip on BFT consensus, page 6*
+<div align="center">Source: The latest gossip on BFT consensus, page 6</div>
 
 ### III Precommit
 
@@ -266,7 +266,7 @@ Much like the *prevote* state, *precommit* consists of the validators waiting fo
 specific type — in this case the `PRECOMMIT` message, with a valid proposal ID.
 
 [![paper-9](https://gnolang.github.io/blog/2024-07-01_reaching_consensus/src/thumbs/paper-9.png)](https://gnolang.github.io/blog/2024-07-01_reaching_consensus/src/paper-9.png)
-*Source: The latest gossip on BFT consensus, page 6*
+<div align="center">Source: The latest gossip on BFT consensus, page 6</div>
 
 After the validators exchange `2F+1` valid `PRECOMMIT` messages (with a valid proposal ID), they commit the proposal to
 their local storage, increase the height and move over to begin the consensus process anew
@@ -283,14 +283,14 @@ Much like with the *prevote* state, the moment validators receive a supermajorit
 message (either with a valid or with a `nil` proposal ID) they initiate a *precommit* state timer.
 
 [![paper-10](https://gnolang.github.io/blog/2024-07-01_reaching_consensus/src/thumbs/paper-10.png)](https://gnolang.github.io/blog/2024-07-01_reaching_consensus/src/paper-10.png)
-*Source: The latest gossip on BFT consensus, page 6*
+<div align="center">Source: The latest gossip on BFT consensus, page 6</div>
 
 When the timer asynchronously ticks off, the node begins the consensus process anew with an increased round number (goes
 back to the *propose* state). Since the *precommit* state is the last one in the chain, the only next step left for the
 engine is to go back to the beginning.
 
 [![paper-11](https://gnolang.github.io/blog/2024-07-01_reaching_consensus/src/thumbs/paper-11.png)](https://gnolang.github.io/blog/2024-07-01_reaching_consensus/src/paper-11.png)
-*Source: The latest gossip on BFT consensus, page 6*
+<div align="center">Source: The latest gossip on BFT consensus, page 6</div>
 
 ### IV Round jumps
 
@@ -298,7 +298,7 @@ There is a special scenario within the Tendermint consensus engine that bypasses
 consensus states in order to start a new consensus round.
 
 [![paper-12](https://gnolang.github.io/blog/2024-07-01_reaching_consensus/src/thumbs/paper-12.png)](https://gnolang.github.io/blog/2024-07-01_reaching_consensus/src/paper-12.png)
-*Source: The latest gossip on BFT consensus, page 6*
+<div align="center">Source: The latest gossip on BFT consensus, page 6</div>
 
 In this scenario, if at any point in time the validator receives `F+1` (called a *faulty majority*) of *any* message
 type, for a **future** round (round higher than in the current view), the validator performs a round jump to the given
@@ -403,27 +403,28 @@ Luckily, we ended up utilizing the full power of Go generics for this use-case:
 // msgType is the combined message type interface,
 // for easy reference and type safety
 type msgType interface {
-types.ProposalMessage | types.PrevoteMessage | types.PrecommitMessage
+	types.ProposalMessage | types.PrevoteMessage | types.PrecommitMessage
 }
 
 type (
-// collection are the actual received messages.
-// Maps a unique identifier -> their message (of a specific type) to avoid duplicates.
-// Identifiers are derived from <sender ID, height, round>.
-// Each validator in the consensus needs to send at most 1 message of every type
-// (minus the PROPOSAL, which is only sent by the proposer),
-// so the message system needs to keep track of only 1 message per type, per validator, per view
-collection[T msgType] map[string]*T
+	// collection are the actual received messages.
+	// Maps a unique identifier -> their message (of a specific type) to avoid duplicates.
+	// Identifiers are derived from <sender ID, height, round>.
+	// Each validator in the consensus needs to send at most 1 message of every type
+	// (minus the PROPOSAL, which is only sent by the proposer),
+	// so the message system needs to keep track of only 1 message per type, per validator, per view
+	collection[T msgType] map[string]*T
 )
 
 // Collector is a single message type collector
 type Collector[T msgType] struct {
-collection    collection[T] // the message storage
-subscriptions subscriptions[T] // the active message subscriptions
+	collection    collection[T]    // the message storage
+	subscriptions subscriptions[T] // the active message subscriptions
 
-collectionMux    sync.RWMutex
-subscriptionsMux sync.RWMutex
+	collectionMux    sync.RWMutex
+	subscriptionsMux sync.RWMutex
 }
+
 ```
 
 The `libtm` library keeps a `Collector` for each message type, and that acts as a message log. Additionally, the message
@@ -440,46 +441,47 @@ Tendermint consensus states all share the following structure:
 ```go
 // runX runs the X Tendermint consensus engine state
 func (t *Tendermint) runX(ctx context.Context) {
-var (
-round = t.state.getRound()
+	var (
+		round = t.state.getRound()
 
-expiredCh = make(chan struct{}, 1)
-timeoutCtx, cancelTimeoutFn = context.WithCancel(ctx)
-timeoutPrevote = t.timeouts[prevote].CalculateTimeout(round)
-)
+		expiredCh                   = make(chan struct{}, 1)
+		timeoutCtx, cancelTimeoutFn = context.WithCancel(ctx)
+		timeoutPrevote              = t.timeouts[prevote].CalculateTimeout(round)
+	)
 
-// Defer the timeout timer cancellation (if running)
-defer cancelTimeoutFn()
+	// Defer the timeout timer cancellation (if running)
+	defer cancelTimeoutFn()
 
-// Subscribe to all messages of a specific type
-// (=current height; unique; >= current round)
-ch, unsubscribeFn := t.store.subscribeToX()
-defer unsubscribeFn()
+	// Subscribe to all messages of a specific type
+	// (=current height; unique; >= current round)
+	ch, unsubscribeFn := t.store.subscribeToX()
+	defer unsubscribeFn()
 
-for {
-select {
-case <-ctx.Done():
-// Outer consensus context cancelled
-return
-case <-expiredCh:
-// State timer triggered,
-// execute stateX teardown before returning
+	for {
+		select {
+		case <-ctx.Done():
+			// Outer consensus context cancelled
+			return
+		case <-expiredCh:
+			// State timer triggered,
+			// execute stateX teardown before returning
 
-// ...
+			// ...
 
-return
-case getMessagesFn := <-ch:
-// New valid message appeared in message log, parse it
-// ...
+			return
+		case getMessagesFn := <-ch:
+			// New valid message appeared in message log, parse it
+			// ...
 
-// Check if conditions are satisfied for starting the state timer
-// ...
+			// Check if conditions are satisfied for starting the state timer
+			// ...
 
-// Check if conditions are satisfied for a state transition
-// ...
+			// Check if conditions are satisfied for a state transition
+			// ...
+		}
+	}
 }
-}
-}
+
 ```
 
 The pattern is clear:
@@ -493,23 +495,23 @@ Keeping this in mind, we can develop the main run loop:
 ```go
 // runStates runs the consensus states, depending on the current step
 func (t *Tendermint) runStates(ctx context.Context) *FinalizedProposal {
-for {
-currentStep := t.state.step.get()
+	for {
+		currentStep := t.state.step.get()
 
-select {
-case <-ctx.Done():
-return nil
-default:
-switch currentStep {
-case propose:
-t.runPropose(ctx)
-case prevote:
-t.runPrevote(ctx)
-case precommit:
-return t.runPrecommit(ctx)
-}
-}
-}
+		select {
+		case <-ctx.Done():
+			return nil
+		default:
+			switch currentStep {
+			case propose:
+				t.runPropose(ctx)
+			case prevote:
+				t.runPrevote(ctx)
+			case precommit:
+				return t.runPrecommit(ctx)
+			}
+		}
+	}
 }
 ```
 
@@ -523,17 +525,17 @@ proposal that was sent out.
 ```go
 // ...
 func (t *Tendermint) runPropose(ctx context.Context) {
-// ...
+	// ...
 
-// Check if the current process is the proposer for this view
-if t.verifier.IsProposer(t.node.ID(), height, round) {
-// Start the round by constructing and broadcasting a proposal
-t.startRound(height, round)
+	// Check if the current process is the proposer for this view
+	if t.verifier.IsProposer(t.node.ID(), height, round) {
+		// Start the round by constructing and broadcasting a proposal
+		t.startRound(height, round)
 
-return
-}
+		return
+	}
 
-// ...
+	// ...
 }
 // ...
 ```
@@ -556,51 +558,51 @@ Go routines:
 // returning only when a proposal has been finalized (consensus reached), or
 // the context has been cancelled
 func (t *Tendermint) RunSequence(ctx context.Context, h uint64) *FinalizedProposal {
-// Initialize the state before starting the sequence
-t.state.setHeight(h)
+	// Initialize the state before starting the sequence
+	t.state.setHeight(h)
 
-// Grab the process view
-view := &types.View{
-Height: h,
-Round:  t.state.getRound(),
-}
+	// Grab the process view
+	view := &types.View{
+		Height: h,
+		Round:  t.state.getRound(),
+	}
 
-// Drop all old messages
-t.store.dropMessages(view)
+	// Drop all old messages
+	t.store.dropMessages(view)
 
-for {
-// set up the round context
-ctxRound, cancelRound := context.WithCancel(ctx)
-teardown := func () {
-cancelRound()
-t.wg.Wait()
-}
+	for {
+		// set up the round context
+		ctxRound, cancelRound := context.WithCancel(ctx)
+		teardown := func() {
+			cancelRound()
+			t.wg.Wait()
+		}
 
-select {
-case proposal := <-t.finalizeProposal(ctxRound):
-teardown()
+		select {
+		case proposal := <-t.finalizeProposal(ctxRound):
+			teardown()
 
-// Check if the proposal has been finalized
-if proposal != nil {
-return proposal
-}
+			// Check if the proposal has been finalized
+			if proposal != nil {
+				return proposal
+			}
 
-// 65: Function OnTimeoutPrecommit(height, round) :
-// 66: 	if height = hP ∧ round = roundP then
-// 67: 		StartRound(roundP + 1)
-t.state.increaseRound()
-t.state.step.set(propose)
-case recvRound := <-t.watchForRoundJumps(ctxRound):
-teardown()
+			// 65: Function OnTimeoutPrecommit(height, round) :
+			// 66: 	if height = hP ∧ round = roundP then
+			// 67: 		StartRound(roundP + 1)
+			t.state.increaseRound()
+			t.state.step.set(propose)
+		case recvRound := <-t.watchForRoundJumps(ctxRound):
+			teardown()
 
-t.state.setRound(recvRound)
-t.state.step.set(propose)
-case <-ctx.Done():
-teardown()
+			t.state.setRound(recvRound)
+			t.state.step.set(propose)
+		case <-ctx.Done():
+			teardown()
 
-return nil
-}
-}
+			return nil
+		}
+	}
 }
 ```
 
