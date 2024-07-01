@@ -345,6 +345,7 @@ The pattern is clear:
 - monitor the outer context, and the asynchronous timer context for stopping
 
 Keeping this in mind, we can develop the main run loop:
+
 ```go
 // runStates runs the consensus states, depending on the current step
 func (t *Tendermint) runStates(ctx context.Context) *FinalizedProposal {
