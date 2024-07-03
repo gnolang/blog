@@ -1,7 +1,7 @@
 ---
 publication_date: 2024-07-03T13:37:00Z
 slug: discover-gno-gc24
-tags: [ gnoland, test4, consensus, tm2, libtm ]
+tags: [ gnoland, gophercon, gno, challenge-series, go ]
 authors: [ leohhhn, deelawn, thehowl ]
 ---
 
