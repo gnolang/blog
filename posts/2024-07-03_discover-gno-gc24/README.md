@@ -56,7 +56,7 @@ each with a one-year subscription to 2600 Magazine and $100 in Google Cloud
 Platform credits. Plus, everyone who completes a challenge is eligible for 
 random prizes like vintage 2600 Magazine issues and security and programming 
 books, to be awarded to those present at the prize ceremony on Wednesday. The 
-full list of prizes can be found on the [website](https://gophercon.challengeseries.org/).
+full list of prizes can be found on the Challenge Series website..
 
 ## Ready to Take on the Challenge?
 
@@ -70,7 +70,7 @@ experience with Gno by visiting the [Challenge Series website](https://gophercon
 If you'd like to learn more about Gno & gno.land, join us at GopherCon US for an
 in-depth talk and workshop on developing apps with Gno. Find the details below.
 
-### Workshop on 'Building a Decentralized App on gno.land'
+### Workshop: 'Building a Decentralized App on gno.land'
 - Time & date: Monday, July 8th, 10:00 am - 12:00 pm
 - Who: Dylan Boltz, Software Engineer at gno.land
 - Where: Marina City, Marriott Marquis
