@@ -36,10 +36,10 @@ decentralized applications with a minimal learning curve.
 
 You will be able to find the Gno challenges among the full catalogue on the 
 [Challenge Series website](https://gophercon.challengeseries.org/). There you
-will also find a guide that the engineers at gno.land have put together to help
-you get started, covering essential concepts and environment setup. This guide 
-will provide you with the tools and knowledge you need to effectively participate
-in solving Gno challenges.
+will also find [a guide](https://gophercon.challengeseries.org/gno) that the
+engineers at gno.land have put together to help you get started, covering 
+essential concepts and environment setup. This guide will provide you with the
+tools and knowledge you need to effectively participate in solving Gno challenges.
 
 To participate, you'll have to form a team. You can join up with a team or look 
 for teammates by reaching out on the #gophercon-cs channel in the 
