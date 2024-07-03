@@ -11,7 +11,7 @@ If you're attending GopherCon US this year, you may have heard about the
 [Challenge Series](https://www.gophercon.com/agenda/session/1281366) happening 
 during the conference. In addition to a the core set of challenges focused on 
 software engineering and cybersecurity provided by the Challenge Series organizers,
-the engineers at gno.land have brewed up a series of challenges that will introduce
+the engineers at gno.land have brewed up a set of challenges that will introduce
 you to blockchains and smart contracts, while still feeling right at home by 
 creating your solutions as Go and Gno programs!
 
@@ -56,7 +56,7 @@ each with a one-year subscription to 2600 Magazine and $100 in Google Cloud
 Platform credits. Plus, everyone who completes a challenge is eligible for 
 random prizes like vintage 2600 Magazine issues and security and programming 
 books, to be awarded to those present at the prize ceremony on Wednesday. The 
-full list of prizes can be found on the Challenge Series website..
+full list of prizes can be found on the [Challenge Series Prizes page](https://gophercon.challengeseries.org/prizes).
 
 ## Ready to Take on the Challenge?
 
