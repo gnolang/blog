@@ -35,7 +35,7 @@ Our plan is to keep evolving the GovDAO mechanism, with the goal of setting up a
 
 Test4 is the first permanent and stable testnet for Gno.land, designed to avoid breaking changes. To help developers use it to build and test dApps, we've added Test4 to the [Faucet Hub](https://faucet.gno.land/); you're able to obtain test tokens and experiment without real consequences.
 
-We've also collaborated with Onbloc to update [Adena(https://www.adena.app/)], which now supports Test4 out of the box. Onbloc has also provided [GnoScan](https://gnoscan.io/), a transaction explorer to aid in smart contract development and troubleshooting.
+We've also collaborated with Onbloc to update [Adena](https://www.adena.app/), which now supports Test4 out of the box. Onbloc has also provided [GnoScan](https://gnoscan.io/), a transaction explorer to aid in smart contract development and troubleshooting.
 
 ### Namespaces
 
@@ -43,6 +43,6 @@ Namespaces provide users with the exclusive capability to publish contracts unde
 
 ## What's Next?
 
-We've launched Test4 a few weeks ahead of the schedule - we'll be heads down the next few weeks fixing bugs and patching things. There's still a lot of work left before we get to a mainnet release candidate. That's where you come in: play around with Test4, break it, and open issues on [GitHub](https://github.com/gnolang/gno) to let us know what needs to be fixed.
+We've launched Test4 a few weeks ahead of the schedule - we'll be heads down the next few weeks fixing bugs and patching thingsS. There's still a lot of work left before we get to a mainnet release candidate. That's where you come in: play around with Test4, break it, and open issues on [GitHub](https://github.com/gnolang/gno) to let us know what needs to be fixed.
 
 Only together we'll be able to build gno.land the right way. So let's get started, gnomies!
