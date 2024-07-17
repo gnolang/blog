@@ -39,7 +39,7 @@ We've also collaborated with Onbloc to update [Adena](https://www.adena.app/), w
 
 ### Namespaces
 
-Namespaces provide users with the exclusive capability to publish contracts under their designated namespaces, similar to GitHub's user and organization model. Or simply put, you'll be able to claim a username and use it as your on-chain identity. Learn more about it in the [gnoland docs](https://docs.gno.land/concepts/namespaces/).
+Namespaces provide users with the exclusive capability to publish contracts under their designated namespaces, similar to GitHub's user and organization model. Or simply put, you'll be able to claim a username and use it as your on-chain identity. Learn more about it in the [gno.land docs](https://docs.gno.land/concepts/namespaces/).
 
 ## What's Next?
 
