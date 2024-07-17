@@ -43,6 +43,6 @@ Namespaces provide users with the exclusive capability to publish contracts unde
 
 ## What's Next?
 
-We've launched Test4 a few weeks ahead of the schedule - we'll be heads down the next few weeks fixing bugs and patching thingsS. There's still a lot of work left before we get to a mainnet release candidate. That's where you come in: play around with Test4, break it, and open issues on [GitHub](https://github.com/gnolang/gno) to let us know what needs to be fixed.
+We've launched Test4 a few weeks ahead of the schedule - we'll be heads down the next few weeks fixing bugs and patching things. There's still a lot of work left before we get to a mainnet release candidate. That's where you come in: play around with Test4, break it, and open issues on [GitHub](https://github.com/gnolang/gno) to let us know what needs to be fixed.
 
 Only together we'll be able to build gno.land the right way. So let's get started, gnomies!
