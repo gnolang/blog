@@ -92,7 +92,7 @@ dbg>
 
 If you have already used a debugger before, like [gdb] or [lldb] for C/C++ programs, or [delve] for Go programs, the Gno debugger should look familiar; the commands are similar in their syntax and usage.
 
-Those commands can be classified in the following categories:
+The commands can be classified in the following categories:
 - managing breakpoints: `break`, `breakpoints`, `clear`,
 - controlling execution: `step`, `stepi`, `continue`,
 - browse code, data and stack: `list`, `print`, `stack`,
