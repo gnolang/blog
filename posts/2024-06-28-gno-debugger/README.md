@@ -7,7 +7,7 @@ authors: [mvertes]
 ---
 # Debugging Gno Programs
  
-In this article, we introduce the new Gno debugger feature and show how it can be used to better understand Gno programs and help fixing bugs.
+In this article, we introduce the new Gno debugger feature and show how it can be used to better understand Gno programs and help to fix bugs.
 
 ## Motivation for a Gno debugger
 
