@@ -90,7 +90,7 @@ Type help followed by a command for full documentation.
 dbg>
 ```
 
-If you have already used a debugger before, like [gdb] of [lldb] for C/C++ programs, or [delve] for Go programs, the Gno debugger should look familiar: the commands are similar in their syntax and their use.
+If you have already used a debugger before, like [gdb] or [lldb] for C/C++ programs, or [delve] for Go programs, the Gno debugger should look familiar; the commands are similar in their syntax and usage.
 
 Those commands can be classified in the following categories:
 - managing breakpoints: `break`, `breakpoints`, `clear`,
