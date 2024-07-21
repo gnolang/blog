@@ -12,7 +12,8 @@ In this article, we introduce the new Gno debugger feature and show how it can b
 ## Motivation for a Gno debugger
 
 > Debugging is twice as hard as writing code.
-> Brian Kerninghan, "The Elements of Programming Style"
+>
+> -- <cite>Brian Kerninghan, "The Elements of Programming Style"</cite>
 
 > On average, you spend about eight to ten times debugging as you do writing code.
 >
