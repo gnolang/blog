@@ -202,7 +202,7 @@ var a struct {
     b []string
 }
 ```
-For security reasons, `print` command will only evaluate expressions with no side effects on the virtual machine state. For example it is not possible to perform an arithmetic operation like `print a + 2`, or to call a function like `printf f(6)`.
+For security reasons, the `print` command will only evaluate expressions with no side effects on the virtual machine state. For example, it is not possible to perform an arithmetic operation like `print a + 2`, or to call a function like `printf f(6)`.
 
 ## Conclusion
 
