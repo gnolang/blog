@@ -58,7 +58,7 @@ To execute this program, we run the command `gno run ./fib.gno`. To activate the
 
 ## Quick tour of the debugger
 
-When you start a program under debug, you are greeted by a prompt allowing you to interact through the terminal:
+When you start a program in debug mode, you are greeted by a prompt allowing you to interact with it via the terminal:
 ```shell=
 $ gno run -debug ./fib.gno
 Welcome to the GnoVM debugger. type 'help' for list of commands.
