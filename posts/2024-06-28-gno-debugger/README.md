@@ -31,7 +31,7 @@ The Gno debugger is fully integrated in the [gno](https://docs.gno.land/gno-tool
 
 There is no need to install a specific tool. You just have to install the `gno` tool itself with:
 
-```shell=
+```shell
 git clone https://github.com/gnolang/gno
 cd gno
 go install ./gnovm/cmd/gno
@@ -39,7 +39,7 @@ go install ./gnovm/cmd/gno
 
 We are now ready to play with Gno programs. Let's consider a simple classic example as a target program, the computation of [Fibonacci numbers]:
 
-```go=
+```go
 // fib.gno
 package main
 
@@ -61,7 +61,7 @@ To execute this program, we run the command `gno run ./fib.gno`. To activate the
 ## Quick tour of the debugger
 
 When you start a program in debug mode, you are greeted by a prompt allowing you to interact with it via the terminal:
-```shell=
+```shell
 $ gno run -debug ./fib.gno
 Welcome to the GnoVM debugger. type 'help' for list of commands.
 dbg>
@@ -159,7 +159,7 @@ dbg>
 We see a call stack of depth 4, with call frames (local function contexts) numbered from 0 to 3, 0 being the current call level (the deepest). This information is crucial especially when debugging recursive functions like `fib`. We know that the caller and its caller were both `fib`.
 
 We want now to examine the value of the local parameter `n`, for each call level:
-```shell!
+```shell
 dbg> print n
 (0 int)
 dbg> up
@@ -199,7 +199,7 @@ We see that the local value `n` is 0 at current frame 0, 2 at frame 1 and 4 at f
 With the stack navigation commands `up` and `down` the debugger is able to display the value of local function variables and parameters for the whole call chain.
 
 In this example, the `n` variable is simply an integer, but the `print` command is also able to handle more complex expressions to uncover the content of arbitrary maps, struct, arrays, etc using the same syntax as Go. For example, `print a.b[n]` will print as expected, with `a` being a value of type:
-```go=
+```go
 var a struct {
     b []string
 }
