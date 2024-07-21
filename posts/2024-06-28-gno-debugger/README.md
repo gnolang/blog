@@ -15,7 +15,8 @@ In this article, we introduce the new Gno debugger feature and show how it can b
 > Brian Kerninghan, "The Elements of Programming Style"
 
 > On average, you spend about eight to ten times debugging as you do writing code.
-> Anonymous
+>
+> -- <cite>Anonymous</cite>
 
 Having a good debugger is important. But the Gno language is almost Go, and gno.land itself is entirely written in Go. Could I just use the existing Go tools, i.e.  the [delve] debugger, to take control and debug my Gno programs?
 
