@@ -21,7 +21,7 @@ With 7 validator nodes running and 3 more about to be added via on-chain governa
 
 - [https://test4.gno.land](https://test4.gno.land/) -> gnoweb live
 - [https://rpc.test4.gno.land](https://rpc.test4.gno.land/) -> RPC live
-- [https://indexer.test4.gno.land](https://indexer.test4.gno.land/) -> TX indexer available
+- https://indexer.test4.gno.land/ -> TX indexer available
 - [https://faucet.gno.land](https://faucet.gno.land/) -> test4 faucet added
 - Merged in [Gno type check](https://github.com/gnolang/gno/pull/1426) support, resolving the long-standing issue with Gnolang's type checking on a VM level, making it more stable for development.
 - Added support for [transpiling gno standard libraries](https://github.com/gnolang/gno/pull/1695), as part of a bigger effort to stabilize the GnoVM with native binding support (which was added a while back). The Gno transpiler now uses Gno's standard libraries instead of native Go's. This also eliminates the need for things like `stdshim` and an std whitelist.
