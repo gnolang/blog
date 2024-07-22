@@ -196,7 +196,7 @@ dbg>
 ```
 We see that the local value `n` is 0 at current frame 0, 2 at frame 1 and 4 at frame 2, which corresponds to the nested calls of `fib` expressed at line 9.
 
-With the stack navigation commands `up` and `down` the debugger is able to display the value of local function variables and parameters for the whole call chain.
+The `up` and `down` stack navigation commands enable the debugger to display the value of local function variables and parameters for the whole call chain.
 
 In this example, the `n` variable is simply an integer, but the `print` command is also able to handle more complex expressions to uncover the content of arbitrary maps, struct, arrays, etc using the same syntax as Go. For example, `print a.b[n]` will print as expected, with `a` being a value of type:
 ```go
