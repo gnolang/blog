@@ -156,7 +156,7 @@ dbg> stack
 	at main/./fib.gno:13:2
 dbg>
 ```
-We see a call stack of depth 4, with call frames (local function contexts) numbered from 0 to 3, 0 being the current call level (the deepest). This information is crucial especially when debugging recursive functions like `fib`. We know that the caller and its caller were both `fib`.
+We see a call stack of depth 4, with call frames (local function contexts) numbered from 0 to 3, 0 being the current call level (the deepest). This information is crucial, especially when debugging recursive functions like `fib`. We know that the caller and its caller were both `fib`.
 
 We want now to examine the value of the local parameter `n`, for each call level:
 ```shell
