@@ -140,7 +140,7 @@ dbg> c
 dbg>
 ```
 
-Note that we have used the short alias of commands: `b` for `break` and `c` for `continue`. We could also just provide the target line number instead of the full location including the file name, because the stay in the same source file.
+Note that we have used the short alias of commands: `b` for `break` and `c` for `continue`. We only need to specify the line number when setting the break point here, due to it being in the same file. Setting break points in other files requires specifying the full file path and line number.
 
 We can now examine the caller stack which indicates the successive nested function calls up to the current location:
 
