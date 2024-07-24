@@ -29,7 +29,7 @@ With 7 validator nodes running and 3 more about to be added via on-chain governa
 - [Embraced JSON output](https://github.com/gnolang/gno/pull/2393) as standard for configuration and secrets fetching. DevOps engineers can rejoice, it's now super easy to read and parse node values.
 - Published [v1 of the validator documentation](https://github.com/gnolang/gno/pull/2285) ahead of the test4 launch. Having easy to understand orchestration docs is critical to easily onboarding node operators and validators. We will continue to improve upon the documentation, and have more use-cases and examples for orchestration.
 - [Improved the performance](https://github.com/gnolang/gno/pull/2140) of `for` loops and `if` statements. The performance almost doubled for these super-common Gno statements.
-- [Migrated](https://github.com/gnolang/gno/pull/2424) the `libtm` (Tendermint consensus engine) implementation to the monorepo. You can check it out [here](https://github.com/gnolang/gno/tree/master/tm2/pkg/libtm). We plan to adopt this engine implementation in TM2, shortly after the test4 launch. Blog post is coming soon as well on the official Gno blog
+- [Migrated](https://github.com/gnolang/gno/pull/2424) the `libtm` (Tendermint consensus engine) implementation to the monorepo. You can check it out [here](https://github.com/gnolang/gno/tree/master/tm2/pkg/libtm). We plan to adopt this engine implementation in TM2, shortly after the test4 launch. The blog post is coming soon on the official Gno blog.
 
 # Events and Meetups
 
