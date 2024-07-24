@@ -41,7 +41,7 @@ We sponsored and attended GopherCon US - full recap [here](https://gno.land/r/gn
 
 ### Nebular Summit
 
-We had a great time in Brusseles at the Nebular Summit. Manfred was on the agenda with a lightning talk, and the core team held a workshop. Catch a part of the event atmosphere [in this video](https://x.com/_gnoland/status/1812867888501477470).
+We had a great time in Brussels at the Nebular Summit. Manfred was on the agenda with a lightning talk, and the core team held a workshop. Catch a part of the event atmosphere [in this video](https://x.com/_gnoland/status/1812867888501477470).
 
 ## Upcoming events
 
