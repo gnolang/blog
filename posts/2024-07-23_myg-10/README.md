@@ -22,7 +22,7 @@ With 7 validator nodes running and 3 more about to be added via on-chain governa
 - Gnoweb live
 - RPC live
 - TX indexer available
-- Test4 faucet added to the [Faucet Hub]](https://faucet.gno.land/)
+- Test4 faucet added to the [Faucet Hub](https://faucet.gno.land/)
 - Merged in [Gno type check](https://github.com/gnolang/gno/pull/1426) support, resolving the long-standing issue with Gnolang's type checking on a VM level, making it more stable for development.
 - Added support for [transpiling gno standard libraries](https://github.com/gnolang/gno/pull/1695), as part of a bigger effort to stabilize the GnoVM with native binding support (which was added a while back). The Gno transpiler now uses Gno's standard libraries instead of Go's. This also eliminates the need for things like `stdshim` and an std whitelist.
 - [Continued to improve upon v1 of the GOVDAO implementation](https://github.com/gnolang/gno/pull/2379), with additional improvements coming later this week ahead of test4. We want to launch with a minimal govdao implementation for test4, which will be centralized in the beginning. We will use the govdao mechanism for managing on-chain validator sets.
