@@ -242,8 +242,12 @@ func post(c gnoclient.Client, cfg *cliCfg, paths ...string) error {
 		return fmt.Errorf("%w, exiting", ErrNoNewOrChangedPosts)
 	}
 
-	account := c.Signer.Info().GetAddress()
-	signingAcc, _, err := c.QueryAccount(account)
+	account, err := c.Signer.Info()
+	if err != nil {
+		return fmt.Errorf("getting signer info failed: %w", err)
+	}
+
+	signingAcc, _, err := c.QueryAccount(account.GetAddress())
 	if err != nil {
 		return fmt.Errorf("query account %q failed: %w", account, err)
 	}
