@@ -7,7 +7,7 @@ authors: [deelawn]
 
 # GopherCon US: gno.land's Challenge Series Contributions
 
-gno.land is pleased to have been granted the opportunity to provide a series of challenges for the Challenge Series at the 2024 Gophercon in Chicago. We enjoyed writing them and hope the participants had a good time and found it interesting to learn about gno.land and blockchains in general.
+gno.land is pleased to have been granted the opportunity to provide a series of challenges for the Challenge Series at the 2024 GopherCon in Chicago. We enjoyed writing them and hope the participants had a good time and found it interesting to learn about gno.land and blockchains in general.
 
 This blog post will outline each of the challenges and explain how to solve each. Each section include the challenge prompt, clues provided, solution, and explanation.
 
