@@ -52,7 +52,9 @@ func Enter(password string) {
 
 #### Solution
 
-The solution here is to simply call the `Enter` function.
+The solution here is to simply call the `Enter` function with the "1337" password.
+Discovering the source code is easily achieved by inspecting the realm's source code
+from the gnoweb interface.
 
 ```sh
 gnokey maketx call \
