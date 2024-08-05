@@ -97,9 +97,9 @@ If you have already used a debugger before, like [gdb] or [lldb] for C/C++ progr
 The commands can be classified in the following categories:
 - managing breakpoints: `break`, `breakpoints`, `clear`,
 - controlling execution: `step`, `stepi`, `continue`,
-- browse code, data and stack: `list`, `print`, `stack`,
-- navigate the stack: `up`, `down`,
-- quit the debugger: `detach`, `exit`.
+- browsing code, data and stack: `list`, `print`, `stack`,
+- navigating the stack: `up`, `down`,
+- quitting the debugger: `detach`, `exit`.
 
 ## Controlling and exploring the program state
 
