@@ -919,4 +919,4 @@ func main() {
 
 ## Final Words
 
-We enjoyed coming up with these challenges and were happy to contribute to the Gophercon Challenge Series -- from coming up with the challenges, theming them, locking down certain gno.land features, and setting up infrastructure -- a lot of work went into this. We hope all participants were able to learn a bit more about gno.land and had fun doing it. Hopefully we'll be back next year 😁
+We enjoyed coming up with these challenges and were happy to contribute to the GopherCon Challenge Series -- from coming up with the challenges, theming them, locking down certain gno.land features, and setting up infrastructure -- a lot of work went into this. We hope all participants were able to learn a bit more about gno.land and had fun doing it. Hopefully we'll be back next year 😁
