@@ -1,5 +1,4 @@
 ---
-title: "Debugging Gno Programs"
 publication_date: 2024-08-06T13:37:00Z
 slug: gno-debugger
 tags: [blog, post, tutorial, gno, debugger]
