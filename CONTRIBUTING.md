@@ -1,9 +1,9 @@
 # Contributing to the Gno Blog
 
-Thank you for considering a contribution to the Gno Blog. We appreciate all and every open-source contribution to the Gno.land project, as everything we do revolves around open-source. 
-Below, you will find guidelines on how to submit a blog post to the Gno Blog.
+Thank you for considering a contribution to the gno.land blog. We appreciate all and every open-source contribution to the gno.land project, as everything we do revolves around open-source. 
+Below, you will find guidelines on how to submit a blog post to the gno.land blog.
 
-If you are unsure about something, please don’t hesitate to reach out for help by opening an issue here, on Discord, or directly to the Gno.land DevRel team.
+If you are unsure about something, please don’t hesitate to reach out for help by opening an issue here, on Discord, or directly to the gno.land DevRel team.
 Likewise, if you have an idea on how to improve this guide, go for it as well.
 
 ### What we are looking for
@@ -12,23 +12,21 @@ We’re seeking contributions that will bring value to our growing community of 
 Below are topics of particular interest to us, but we’re open to all suggestions, so if you have an idea that’s not on the list, but you believe will make great reading, feel free to submit your story.
 
 - Web3 news and developments and how they impact our community (e.g. legislation, industry trends, technical advances)
-- Gno ecosystem news (e.g. interesting new realms/apps, newly-added core functionality, etc.)
 - Technical deep dives (e.g. language comparisons, pros and cons, examining the core stack)
-- Tutorials and how-to guides
-- Useful intros about basic concepts in Gno.land (e.g. package/realm distinction)
+- Useful intros about basic concepts in gno.land (e.g. package/realm distinction)
 - General content that helps explain reasoning or thought processes (e.g. writing the entire stack in Go vs implementing components in Rust)
 - Op-ed pieces and alternative views (e.g. building effective governance, decentralizing social media, the importance of censorship-resistant tools)
 
 ### Contribution process
 
-If you've considered the previous section and would like to contribute to the Gno Blog, here are the steps to follow:
+If you've considered the previous section and would like to contribute to the gno.land blog, here are the steps to follow:
 - Write a blog post you'd like to see included to the Gno Blog, while strictly following the [Style Guide](#gno-blog-style-guide).
 - Submit a PR using [this template](https://github.com/gnolang/blog/pull/35), while following the structure of the folders & naming, as shown in the example blog post.
-- Ping the Gno.land DevRel team, [@waymobetta](https://github.com/waymobetta) and [@leohhhn](https://github.com/leohhhn) for a review.
+- Ping the gno.land DevRel team, [@leohhhn](https://github.com/leohhhn) and [@michelleellen](https://github.com/michelleellen) for a review.
 
 After your blog post passes the review process, it will be merged into the `main` branch and shortly after deployed on-chain.
 
-## Gno Blog Style Guide
+## Gno.land Blog Style Guide
 
 This style guide offers rules and preferences for contributing to the Gno Blog.
 Below are some rules to follow when writing a blog post.
@@ -50,4 +48,4 @@ Below are some rules to follow when writing a blog post.
 #### Tags
 Tags, or [hashtags](https://en.wikipedia.org/wiki/Hashtag), should be lowercase and without spaces; eg, #foobar NOT #FooBar.
 
-If you're unsure of how to style or format something, take a look at the [example blog post PR](https://github.com/gnolang/blog/pull/35) or review the other [blog posts in this repo](posts) for inspiration; as a last resort, message [@waymobetta](https://github.com/waymobetta) or [@leohhhn](https://github.com/leohhhn) for help within your PR or issue thread. 
+If you're unsure of how to style or format something, take a look at the [example blog post PR](https://github.com/gnolang/blog/pull/35) or review the other [blog posts in this repo](posts) for inspiration; as a last resort, message [@leohhhn](https://github.com/leohhhn) or [@michelleellen](https://github.com/michelleellen) for help within your PR or issue thread. 
