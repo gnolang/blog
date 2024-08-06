@@ -1,10 +1,10 @@
 ---
-title: "Debugging Gno Programs"
-publication_date: 2024-06-28T13:37:00Z
+publication_date: 2024-08-06T13:37:00Z
 slug: gno-debugger
 tags: [blog, post, tutorial, gno, debugger]
 authors: [mvertes]
 ---
+
 # Debugging Gno Programs
  
 In this article, we introduce the new Gno debugger feature and show how it can be used to better understand Gno programs and help to fix bugs.
