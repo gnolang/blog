@@ -1,7 +1,7 @@
 ---
 publication_date: 2024-08-12T00:00:00Z
 slug: gc-us24
-tags: [gnoland, gophercon, updates, conferences]
+tags: []
 authors: [VT-Cosmos]
 ---
 
