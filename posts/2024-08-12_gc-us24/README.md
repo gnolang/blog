@@ -36,7 +36,7 @@ GnoVM were a focal point, particularly its stack based AST architecture, its
 auto persistence, as well as its determinism and other features. The presentation
 also shared valuable lessons learned from GnoVM's development and implementation,
 offering insights into best practices and challenges overcome in the future work. 
-Be sure to make some time to watch the recording!
+Be sure to make some time to watch [the recording](https://youtu.be/betUkghf_jo)!
 
 ### Gno workshop
 
@@ -45,24 +45,24 @@ guided by our expert engineer Dylan Boltz who hosted a workshop on Community
 Day: The Building a decentralized app on Gno.land. The workshop provided practical 
 insights and step-by-step guidance, empowering attendees to start building their
 own applications. If you missed our workshop or want to revisit the session, you 
-can find a recorded version of the workshop here.
+can find a recorded version of the workshop [here](https://www.youtube.com/watch?v=lwL2VyjaV-A).
 
 ### The gno.land Booth
 One of the most rewarding feelings about attending these kinds of conferences
 is watching our booth quickly become a hub of activity, drawing a steady stream 
 of visitors intrigued by our project. We engaged with developers from various 
 backgrounds, answering a myriad of questions about Gno, gno.land, our company, 
-and the company’s open employment opportunities. Having all of this direct human 
-interaction was not only informative but also deeply insightful, providing us 
-with valuable feedback and ideas. For more information, check out our landing 
-page.
+and the company’s [open employment opportunities](https://jobs.lever.co/allinbits).
+Having all of this direct human interaction was not only informative but also
+deeply insightful, providing us with valuable feedback and ideas. For more 
+information, check out our [landing page](https://gno.land/gophercon24).
 
 ### The Gno Raffle
 
 One of the major attractions at our booth, amongst the “gnome” beanie hat as 
 well as the T-shirts, was the raffle for a high-end mechanical keyboard. The 
 raffle participants had a direct opportunity to interact with gno.land by 
-following the raffle instructions, leading them to use Gno Playground to import
+following the raffle instructions, leading them to use [Gno Playground](https://play.gno.land/) to import
 and deploy a smart contract raffle realm from their own laptop. The excitement 
 was palpable as attendees eagerly gathered for the drawing. The raffle not only 
 drew crowds, but also sparked numerous engaging conversations that led to Go 
@@ -71,7 +71,7 @@ engineers giving Gno a try.
 ### The Challenge Series
 
 This year we had the privilege to participate in a collaborative partnership
-with the CodePro team to build the challenge series. This collaboration was an
+with the CodePro team to build the [challenge series](https://gophercon.challengeseries.org/). This collaboration was an
 opportunity for participants to learn how to interact with blockchain and 
 discover how realms (smart contracts) can be utilized for stateful applications
 without relying on explicitly managing a file system or database. This was an 
@@ -92,10 +92,12 @@ developers. We extend our heartfelt thanks to everyone who visited our booth,
 participated in the raffle, attended Jae Kwon's presentation on Gno, and joined 
 our workshop.
 
-We invite you to stay connected with us on our Discord, and our blog where we 
-will be sharing more insights and updates on Test4, our current testnet, as
+We invite you to stay connected with us on our [Discord](https://discord.gg/43HC5NZzHe),
+and our [blog](https://gno.land/r/gnoland/blog) where we 
+will be sharing more insights and updates on 
+[Test4](https://gno.land/r/gnoland/blog:p/test4-live), our current testnet, as
 well as the progress towards our launch.
 
-Thank you, GopherCon US 2024, for an incredible experience. We can't wait to 
-see what the next event holds!
+Thank you, [GopherCon US 2024](https://x.com/gophercon), for an incredible experience. 
+We can't wait to see what the next event holds!
 
