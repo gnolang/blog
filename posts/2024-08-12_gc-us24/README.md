@@ -7,7 +7,6 @@ authors: [VT-Cosmos]
 
 # gno.land at GopherCon US 2024
 
-
 GopherCon US is one of the largest events for the Go programming community.
 This year, in the vibrant city of Chicago, we had the honor of being the Diamond
 Sponsor at GopherCon US 2024. From July 7th to July 10th, we were surrounded by 
@@ -26,7 +25,7 @@ developers.
 Jae Kwon, the founder of gno.land, gave a talk on “**Gno: Lessons in Building a
 Go Interpreter in Go.**”
 
-Jae’s  talk provided an in-depth overview of why this technology is gaining 
+Jae’s talk provided an in-depth overview of why this technology is gaining 
 traction in the development community. The discussion began with the key reasons
 to use Gno, and its seamless interoperability which allows for effortless 
 integration. Detailed comparisons were made between Gno and other prominent
@@ -36,7 +35,7 @@ GnoVM were a focal point, particularly its stack based AST architecture, its
 auto persistence, as well as its determinism and other features. The presentation
 also shared valuable lessons learned from GnoVM's development and implementation,
 offering insights into best practices and challenges overcome in the future work. 
-Be sure to make some time to watch [the recording](https://youtu.be/betUkghf_jo)!
+Be sure to make some time to watch [the recording](https://www.youtube.com/watch?v=betUkghf_jo)!
 
 ### Gno workshop
 
