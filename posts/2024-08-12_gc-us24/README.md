@@ -75,9 +75,7 @@ opportunity for participants to learn how to interact with blockchain and
 discover how realms (smart contracts) can be utilized for stateful applications
 without relying on explicitly managing a file system or database. This was an 
 opportunity to showcase gno.land’s features, like using a deployed contract as
-both an API and as an import for other contracts. For deeper insight take a look 
-at the recent blog written by Dylan Bolz on the collaboration with challenge 
-series.
+both an API and as an import for other contracts.
 
 ## Conclusion
 
