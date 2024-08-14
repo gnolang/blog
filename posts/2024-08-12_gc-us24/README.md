@@ -41,7 +41,7 @@ Be sure to make some time to watch [the recording](https://www.youtube.com/watch
 
 Participants had the opportunity to dive deep into the development process, 
 guided by our expert engineer **[Dylan Boltz](https://github.com/deelawn)** who hosted a workshop on Community 
-Day: **The Building a decentralized app on Gno.land**. The workshop provided practical 
+Day: **Building a decentralized app on Gno.land**. The workshop provided practical 
 insights and step-by-step guidance, empowering attendees to start building their
 own applications. If you missed our workshop or want to revisit the session, you 
 can find a recorded version of the workshop [here](https://www.youtube.com/watch?v=lwL2VyjaV-A).
