@@ -18,7 +18,7 @@ nearly one thousand Go enthusiasts from around the world. Our team was thrilled
 to be part of this gathering, contributing to the vibrant ecosystem of Go
 developers.
 
-## Highlights of our collaboration
+## Highlights of Our Collaboration
 
 ### Jae’s Talk
 
@@ -37,7 +37,7 @@ also shared valuable lessons learned from GnoVM's development and implementation
 offering insights into best practices and challenges overcome in the future work. 
 Be sure to make some time to watch [the recording](https://www.youtube.com/watch?v=betUkghf_jo)!
 
-### Gno workshop
+### Gno Workshop
 
 Participants had the opportunity to dive deep into the development process, 
 guided by our expert engineer **[Dylan Boltz](https://github.com/deelawn)** who hosted a workshop on Community 
