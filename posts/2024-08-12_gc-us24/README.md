@@ -1,7 +1,7 @@
 ---
 publication_date: 2024-08-12T00:00:00Z
 slug: gc-us24
-tags: []
+tags: [techconference, events, outreach, GoDevelopers, GoToGno, gophers]
 authors: [VT-Cosmos]
 ---
 
@@ -53,8 +53,8 @@ of visitors intrigued by our project. We engaged with developers from various
 backgrounds, answering a myriad of questions about Gno, gno.land, our company, 
 and the company’s [open employment opportunities](https://jobs.lever.co/allinbits).
 Having all of this direct human interaction was not only informative but also
-deeply insightful, providing us with valuable feedback and ideas. For more 
-information, check out our [website](https://docs.gno.land/).
+deeply insightful, providing us with valuable feedback and ideas. For more
+information, check out our [website](https://gno.land/).
 
 ### The Gno Raffle
 
