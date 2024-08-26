@@ -5,7 +5,7 @@ _Disclaimer: This repo is highly experimental and subject to breaking changes._
 Tools and content to manage blogposts on the [`r/gnoland/blog` realm](https://github.com/gnolang/gno/tree/master/examples/gno.land/r/gnoland/blog),
 powered by the [`p/demo/blog` library](https://github.com/gnolang/gno/tree/master/examples/gno.land/p/demo/blog).
 
-(Current) live version: https://test3.gno.land/r/gnoland/blog.
+(Current) live version: [https://gno.land/r/gnoland/blog](https://gno.land/r/gnoland/blog).
 
 ## Posts ([`./posts`](./posts))
 
