@@ -1,5 +1,5 @@
 ---
-publication_date: 2024-07-29T00:00:00Z
+publication_date: 2024-08-26T13:37:00Z
 slug: gc24-challenge-series
 tags: [gnoland, gophercon, gc24, challenge-series]
 authors: [deelawn]
