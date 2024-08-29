@@ -11,7 +11,7 @@ gno.land is pleased to have been granted the opportunity to provide a series of 
 
 This blog post will outline each of the challenges and explain how to solve each. Each section include the challenge prompt, clues provided, solution, and explanation.
 
-## gno Hidden Temple Basics
+## Gno Hidden Temple Basics
 
 The first challenge is meant to serve as an introduction to making a function call to a gno.land realm. The second challenge, while a bit more challenging is meant to help participants become a bit more familiar with how key generation works.
 
@@ -374,7 +374,7 @@ gnokey maketx call \
 	robot
 ```
 
-## gno to the Limit
+## Gno to the Limit
 
 These challenges are made to exemplify how pushing values to their limits, namely integers and slices, will behave the same in gno as they do in gno -- integers will overflow and the arrays underlying slices will be expanded.
 
