@@ -27,7 +27,7 @@ What's gnobro, you say? Simply put, it's a terminal based realm browser you can 
 - We've added back [coverage support (CodeCov) for txtar tests](https://github.com/gnolang/gno/pull/2377), which make up a majority of our integration testing suite. The txtar tests for the `gnovm` package added an additional 5% coverage. We are currently assessing other packages that suffer from bad txtar coverage.
 - We've added [support for more robust stack traces for Gno-code panics](https://github.com/gnolang/gno/pull/2145), providing a much better UX for the developer. You no longer need to dig through a 5k line log output to figure out what panicked in your Gno code; you'll see the exception stack trace instead.
 - [Variable config command help output is drastically improved](https://github.com/gnolang/gno/pull/2399). In the past you'd need to know exactly what the configuration looks like before modifying or viewing the values. Now these values are conveniently present in the command help output.
-- Last, but not least: let's welcome our new R&D Go Engineer, Antoine. He'll help us scale core components for gno and beyond!
+- Last, but not least: let's welcome our new R&D Go Engineer, [Antoine](https://github.com/aeddi). He'll help us scale core components for gno and beyond!
 
 # Events and Meetups
 
