@@ -33,7 +33,7 @@ What's gnobro, you say? Simply put, it's a terminal based realm browser you can 
 
 ## Past events
 
-### BUIDL With Cosmos / Web3 Summit
+### BUIDL With Cosmos / Web3 Summit, Germany
 
 We've had a couple of cool talks in Berlin: [An Introduction to gno.land](https://www.youtube.com/watch?v=hTGeG0z09NU) by Leon Hudak and [Building the Interchain of Ecosystems](https://youtu.be/nhpqaQxcIUY) by Tobias Schwartz.
 
