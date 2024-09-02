@@ -5,7 +5,7 @@ tags: [gnoland, ecosystem, updates, gnovm, gnobro]
 authors: [Kouteki]
 ---
 
-# The More You Gno 11: Introducing gnobro
+# The More You Gno 11: Introducing `gnobro`
 
 As we're gearing up toward the mainnet launch, we haven't forgotten to give some love to minor features that makes everyone's lives easier. This time the spotlight's on **gnobro**.
 
