@@ -13,7 +13,7 @@ As we're gearing up toward the mainnet launch, we haven't forgotten to give some
 
 ## gnobro is Live
 
-What's gnobro, you say? Simply put, it's a terminal based realm browser you can use to explore realms and improve the development experience on 'gnodev'. [See it in action](https://www.php8.ltd/HostLocMJJ/https://github.com/gnolang/gno/pull/2608).
+What's gnobro, you say? Simply put, it's a terminal based realm browser you can use to explore realms and improve the development experience on 'gnodev'. [See it in action](https://github.com/gnolang/gno/pull/2608).
 
 ## Changelog
 
