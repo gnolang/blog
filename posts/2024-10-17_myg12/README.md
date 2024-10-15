@@ -1,5 +1,5 @@
 ---
-publication_date: 2024-10-15T00:00:00Z
+publication_date: 2024-10-17T00:00:00Z
 slug: monthly-dev-12
 tags: [gnoland, ecosystem, updates, gnovm]
 authors: [Kouteki]
@@ -20,6 +20,14 @@ Here's how our bounty program works. We've [labelled issues in our repo](https:/
 Bounties are sorted by t-shirt sizes, ranging from $500 to $32,000 USD.
 
 Find out more [here](https://gno.land/contribute).
+
+## Introducing Gnoverse
+
+One of the gno.land tenets is censorship resistance. For that, we need greater decentralization. That's why we're opening [Gnoverse](https://github.com/gnoverse), a new GitHub organization dedicated to community-driven projects, as well as other minot projects not critical to the gno.land infrastructure.
+
+Contributors will be able to experiment with Gno related ideas and projects, collaborating without interference and oversight from the core engineering team.
+
+We've migrated a dozen repos from [Gnolang](https://github.com/gnolang) to [Gnoverse](https://github.com/gnoverse). Whether you're a developer, designer, or just passionate about Gno, your input is invaluable. Feel free to submit pull requests, suggest ideas, or simply join the conversation.
 
 # Gno Core Updates
 
