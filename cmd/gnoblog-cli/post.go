@@ -152,7 +152,6 @@ func execPost(io commands.IO, args []string, cfg *cliCfg) error {
 	}
 
 	// Initialize Gnoclient
-
 	rpc, err := initRPCClient(cfg)
 	if err != nil {
 		return err
