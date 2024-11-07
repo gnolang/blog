@@ -2,8 +2,9 @@ package main
 
 import (
 	"context"
-	"github.com/gnolang/gno/tm2/pkg/commands"
 	"os"
+
+	"github.com/gnolang/gno/tm2/pkg/commands"
 )
 
 func main() {
