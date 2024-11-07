@@ -4,16 +4,17 @@ import (
 	"context"
 	"flag"
 	"fmt"
-	"github.com/adrg/frontmatter"
-	"github.com/gnolang/gno/tm2/pkg/commands"
 	"io"
 	"log/slog"
 	"os"
 	"strings"
 	"time"
 
+	"github.com/adrg/frontmatter"
 	"github.com/gnolang/gno/gno.land/pkg/gnoclient"
+	"github.com/gnolang/gno/gno.land/pkg/sdk/vm"
 	"github.com/gnolang/gno/gnovm/pkg/gnoenv"
+	"github.com/gnolang/gno/tm2/pkg/commands"
 )
 
 type cliCfg struct {
@@ -178,7 +179,32 @@ func execPost(io commands.IO, args []string, cfg *cliCfg) error {
 }
 
 func post(c gnoclient.Client, cfg *cliCfg, paths ...string) error {
-	msgs := make([]gnoclient.MsgCall, 0, len(paths))
+	msgs := make([]vm.MsgCall, 0, len(paths))
+
+	// Get account info
+	account, err := c.Signer.Info()
+	if err != nil {
+		return fmt.Errorf("getting signer info failed: %w", err)
+	}
+
+	address := account.GetAddress()
+
+	signingAcc, _, err := c.QueryAccount(address)
+	if err != nil {
+		return fmt.Errorf("query account %q failed: %w", account, err)
+	}
+
+	nonce := signingAcc.GetSequence()
+	accNumber := signingAcc.GetAccountNumber()
+
+	// Set up base config
+	baseTxCfg := gnoclient.BaseTxCfg{
+		GasFee:         cfg.GasFee,
+		GasWanted:      cfg.GasWanted,
+		AccountNumber:  accNumber,
+		SequenceNumber: nonce,
+		Memo:           "Posted from gnoblog-cli",
+	}
 
 	// Save title for printing to cli
 	var postTitle string
@@ -220,10 +246,11 @@ func post(c gnoclient.Client, cfg *cliCfg, paths ...string) error {
 			continue
 		}
 
-		// Pack calls to the chain
-		callCfg := gnoclient.MsgCall{
-			PkgPath:  cfg.BlogRealmPath,
-			FuncName: verb,
+		callMsg := vm.MsgCall{
+			Caller:  address,
+			Send:    nil,
+			PkgPath: cfg.BlogRealmPath,
+			Func:    verb,
 			Args: []string{
 				post.Slug,
 				post.Title,
@@ -233,33 +260,13 @@ func post(c gnoclient.Client, cfg *cliCfg, paths ...string) error {
 				strings.Join(post.Tags, ","),
 			},
 		}
-		msgs = append(msgs, callCfg)
+
+		msgs = append(msgs, callMsg)
 		postTitle = post.Title
 	}
 
 	if len(msgs) == 0 {
 		return fmt.Errorf("%w, exiting", ErrNoNewOrChangedPosts)
-	}
-
-	account, err := c.Signer.Info()
-	if err != nil {
-		return fmt.Errorf("getting signer info failed: %w", err)
-	}
-
-	signingAcc, _, err := c.QueryAccount(account.GetAddress())
-	if err != nil {
-		return fmt.Errorf("query account %q failed: %w", account, err)
-	}
-
-	nonce := signingAcc.GetSequence()
-	accNumber := signingAcc.GetAccountNumber()
-
-	baseTxCfg := gnoclient.BaseTxCfg{
-		GasFee:         cfg.GasFee,
-		GasWanted:      cfg.GasWanted,
-		AccountNumber:  accNumber,
-		SequenceNumber: nonce,
-		Memo:           "Posted from gnoblog-cli",
 	}
 
 	_, err = c.Call(baseTxCfg, msgs...)
