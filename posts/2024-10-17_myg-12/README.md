@@ -29,11 +29,11 @@ Contributors will be able to experiment with Gno related ideas and projects, col
 
 We've migrated a dozen repos from [Gnolang](https://github.com/gnolang) to [Gnoverse](https://github.com/gnoverse). Whether you're a developer, designer, or just passionate about Gno, your input is invaluable. Feel free to submit pull requests, suggest ideas, or simply join the conversation.
 
-# Gno Core Updates
+## Gno Core Updates
 
 The engineering team got together in Turin, Italy, to work through the details of the upcoming main.gno.land launch. We are almost ready to talk about this publicly, but you can hear some spoilers on the [video snippets](https://x.com/_gnoland/status/1844779439160213861) we caught.
 
-## Changelog
+### Changelog
 
 - [Fixed repo-level benchmark workflows](https://github.com/gnolang/gno/pull/2716), for easier performance regression monitoring. Viewable [here](https://gnolang.github.io/benchmarks/). This allows us to identify how individual PRs affect performance.
 - vel benchmark workflows, for easier performance regression monitoring. Viewable here.
@@ -43,20 +43,14 @@ Impact: We can now track on individual PRs if there is a performance regression,
 - [Value declaration loop fix](https://github.com/gnolang/gno/pull/2074).
 - [Support `len` and `cap` on an array pointer](https://github.com/gnolang/gno/pull/2709) .
 
-# Events and Meetups
+## Events and Meetups
 
-## Past events
+### Past events
 
-### gno.land Contributor Tech Discussions
+#### gno.land Contributor Tech Discussions
 
 We've revamped the contributor calls to showcase the cool stuff being built on our platform, and have technical discussions on the challenges we face. The [1st video is out](https://www.youtube.com/watch?v=4YUOTt5bDJc), and new ones will be published every two weeks.
 
-### Go Meetup - Turin, Italy
+#### Go Meetup - Turin, Italy
 
 During our engineering retreat in Turin, we took the opportunity to connect with the local Go community and hold a gno.land workshop. Our very own Morgan Bazalgette walked the attendees through the gno.land project, followed by a live coding session where Morgan built a simple messaging board. See the video [here](https://youtu.be/b3zRbVcJxyE).
-
-## Upcoming events
-
-### Devcon 2024 - Bangkok, Thailand
-
-This year's Devcon is slated for November 12-14 in Bangkok. Several team members and contributors will be there, and we're looking forward to hanging out and talking shop. If your schedule is tight, don't hesitate to reach out and arrange a meeting!
