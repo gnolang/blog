@@ -7,7 +7,7 @@ authors: [Kouteki]
 
 # The More You Gno 13: Test5, gnoverse and more
 
-This edition of The More You Gno is packed with updates and highlights. Test5 testnet was launched; a new community space called gnoverse is now available. The mainnet launch milestone is up and the development is speeding up. It's an exciting time to be a part of the gno.land project.
+This edition of "The More You Gno" is packed with updates and highlights. Test5 testnet was launched; a new community space called gnoverse is now available. The mainnet launch milestone is up and the development is speeding up. It's an exciting time to be a part of the gno.land project.
 
 ## Test5 is live
 
