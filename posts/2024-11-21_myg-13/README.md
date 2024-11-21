@@ -7,13 +7,13 @@ authors: [Kouteki]
 
 # The More You Gno 13: Test5, gnoverse and more
 
-This edition of "The More You Gno" is packed with updates and highlights. Test5 testnet was launched; a new community space called gnoverse is now available. The mainnet launch milestone is up and the development is speeding up. It's an exciting time to be a part of the gno.land project.
+This edition of "The More You Gno" is packed with updates and highlights. Test5 testnet was launched; a new community space called `gnoverse` is now available. The mainnet launch milestone is up and the development is speeding up. It's an exciting time to be a part of the gno.land project.
 
 ## Test5 is live
 
-On November 13 we launched Test5, a new iteration of the multinode testnet. The validator set has been expanded from 7 to 17 nodes, plus a number of non-validator nodes. It also boasts GovDAO v2 that expands the on-chain voting capabilities, and a number of fixes and quality of live improvements for the developers. 
+On November 13 we launched Test5, a new iteration of the multinode testnet. The validator set has been expanded from 7 to 17 nodes, plus a number of non-validator nodes. It also boasts GovDAO v2 that expands the on-chain voting capabilities, and a number of fixes and quality of life improvements for the developers. 
 
-Test5 is already available on Adena and Faucet Hub, so feel free to give it a try.
+Test5 is already available on Adena and the Faucet Hub, so feel free to give it a try.
 
 ## Introducing gnoverse
 
