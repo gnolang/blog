@@ -11,7 +11,7 @@ This edition of "The More You Gno" is packed with updates and highlights. Test5 
 
 ## Test5 is live
 
-On November 13 we launched Test5, a new iteration of the multinode testnet. The validator set has been expanded from 7 to 17 nodes, plus a number of non-validator nodes. It also boasts GovDAO v2 that expands the on-chain voting capabilities, and a number of fixes and quality of life improvements for the developers. 
+On November 13 we launched [Test5](https://test5.gno.land/), a new iteration of the multinode testnet. The validator set has been expanded from 7 to 17 nodes, plus a number of non-validator nodes. It also boasts GovDAO v2 that expands the on-chain voting capabilities, and a number of fixes and quality of life improvements for the developers. 
 
 Test5 is already available on Adena and the Faucet Hub, so feel free to give it a try.
 
