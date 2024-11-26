@@ -52,18 +52,18 @@ Most blockchain incentive schemes focus primarily on rewarding validators for se
 - Blockchains allow us to create effective economic models for building the internet which are fair to the participants involved in making it.
   - We should pay creators making great content.
   - We should pay moderators who keep communities focused and true to their spirit.
-  - We should pay those contributing to collecting and creative colletive silos of knowledge like wikis, and verifying its information and accuracy.
-  - We should pay software developers, as they create the applications and infrastructure
+  - We should pay those contributing to collecting and creative collective silos of knowledge like wikis, and verifying its information and accuracy.
+  - We should pay software developers, as they create the applications and infrastructure.
   - We should pay auditors, who verify the security of smart contracts and packages.
-  - Finally, we should pay validators, as they phisically host the blockchain and make it possible.
+  - Finally, we should pay validators, as they physically host the blockchain and make it possible.
   - The internet can no longer afford to only pay the companies who are making content hosting possible; we need to recognize the hours of work that go into collecting, creating, organizing and distributing information.
 - The governance of the chain cannot be tied to how much capital each participant has.
   - It should instead work to make its government aligned on common goals and a general philosophy of advancing the state of the project.
-  - Its government has to be directly responsible for hosting the chain, ensuring that all the way down to the validators control is never given up to a non-aligned "third party".
+  - Its government has to be directly responsible for hosting the chain, ensuring that all the way down to the validator control is never given up to a non-aligned "third party".
 - The chain can and will have economic activity and present itself as a good place to build businesses; but the focus of the chain will go towards its applications rather than merely "decentralizing finance".
 - The chain should still welcome "investors"; but not as a main focus. Investors can shine in creating interactions with other ecosystems, and creating ways to exchange tokens, making it easier to buy GNOT and increasing demand. But the true value of the platform is created by those who develop and create on top of it.
 - Contribution-driven governance.
-    - The core of the chain should be composed of the most experienced members of the chain who have helped it shape into what it is.
+    - The core of the chain should consist of its most experienced members who have shaped it into what it is.
     - The governance also picks the validators of the chain, who will be chosen on alignment and technical capability rather than the capital they can stake.
 
 ## The Technical Problem
@@ -79,7 +79,7 @@ The technical innovation brought by Gno makes solving the above problems possibl
   - The development which is possible is very basic, similar to "interconnected spreadsheets".
   - Monolithic blockchains create limitations which de-facto limit the growth of the chain, only allowing for the entire system a very limited amount of computation in each block.
 - What Solidity misses:
-  - Solidity is a Domain Specific Language, further increasing the cost of adoption by new users, especially those who are still curious and uncommmitted to working on a blockchain.
+  - Solidity is a Domain Specific Language, further increasing the cost of adoption by new users, especially those who are still curious and uncommitted to working on a blockchain.
   - Financially focused. Solidity contains many native constructs pertaining specifically to smart contracts; like the global `ether`, the type `address`, the globals `msg`, `tx` and `block`. On the other hand, its design lacks simple ways to represent and handle floats, dates and times, and misses other general-purpose features programmers expect from most programming languages.
   - Hidden control flow: [fallback functions](https://docs.soliditylang.org/en/latest/contracts.html#fallback-function) create hidden control flow when sending tokens, causing problems like [re-entrancy attacks](https://docs.soliditylang.org/en/latest/security-considerations.html#reentrancy).
 - Why Gno solves it:
