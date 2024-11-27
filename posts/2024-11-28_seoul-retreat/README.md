@@ -8,10 +8,10 @@ authors: [michelleellen]
 # Gnomes spotted in Seoul: Our onsite collaboration with Onbloc
 
 gno.land’s core engineering team has just concluded an intense and productive 
-two-week coding sprint with our core contributor, Onbloc. Hosted in Onbloc's 
-offices in the heart of Seoul, this onsite collaboration has marked one of our
-most successful development cycles yet, setting new records for pull requests 
-merged and advancing key priorities for our upcoming mainnet launch.
+two-week coding sprint with our core contributor, [Onbloc](https://onbloc.xyz).
+Hosted in Onbloc's offices in the heart of Seoul, this onsite collaboration has 
+marked one of our most successful development cycles yet, setting new records for 
+pull requests merged and advancing key priorities for our upcoming mainnet launch.
 
 To provide greater transparency into our progress, we’ve been updating the Seoul
 triage board on GitHub, which showcases the scope and depth of the work achieved 
