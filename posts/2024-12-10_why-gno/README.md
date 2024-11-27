@@ -17,21 +17,21 @@ We need a social platform that can be a common ground for a plurality of contras
 
 - The current centralized social networking platforms are plagued with problems for users, content creators, and businesses:
     - Users are hostages to the owners of the platform. Due to the network effect, it's very hard to move away from an established platform, or to create a "schism", granting users the possibility of true choice and requiring the platform to align with the interests of the users.
-	- Content creators frequently need to adhere to unwritten "community guidelines" to preserve monetization or, worse, to avoid shadowbans that hide their content from their followers. These shadowbans are often attributed to the "algorithm", making them difficult to challenge. Since the behavior of these algorithms is highly opaque, it becomes challenging to prove instances of discrimination, bias, or censorship when such actions occur.
+	- Content creators frequently need to adhere to unwritten "community guidelines" to preserve monetization or, worse, to avoid shadowbans that hide their content from their followers. These shadowbans are often attributed to the "algorithm", making them difficult to challenge: since the behavior of these algorithms is highly opaque, it's touch to prove instances of discrimination, bias, or censorship when they occur.
     - Centralized, unforkable platforms can have agendas, and their agendas be controlled by powerful entities. Users have little choice to "take their business elsewhere", as for many users the platforms themselves become an important medium for their business, or simply a way to connect to the people they care about. As it's been seen time and time again, control can be instrumentalized to track and profile people, sell them products they don't need or misinform them to vote for candidates that don't align with their best interests.
     - The data of the users is a commercial tool which can be used for advertising and improving massive AI models. In turn, the AI revolution promises to make the internet an unlivable hellscape of bots talking to each other who spread political propaganda and regurgitate incorrect information. We need platforms that are resilient to bots and spam and where real people can communicate and promote genuine content.
 - What gno.land wants to achieve:
   - Forkability. Blockchains are distributed databases, which themselves can be constructed as merkle trees - allowing to check out different points in time, and to cheaply allow forking of content, similarly to how git allows branching.
       - gno.land, like all blockchains, is forkable, but even within gno.land we can make all states, including those of social platforms, forkable, too.
       - We see forking as a feature that should not only be a possibility for the most expert of users, but a common solution for everyone; it should be allowed even on the contracts themselves.
-      - It's not an option of last resort; forking in software is something that happens continuously.  The tools we use, such as git, allow us to build forks that feed back work into the upstream. Similarly, constructing common knowledge and information databases can also happen in a model that accepts schisms and different ideas on how to achieve the objective.
+      - It's not an option of last resort; forking in software is something that happens continuously. The tools we use, such as git, allow us to build forks that feed back work into the upstream. Similarly, constructing common knowledge and information databases can also happen in a model that accepts schisms and different ideas on how to achieve the objective.
   - Decentralization of hosting and governance, but centralization of the communication platform. Thanks to the nature of blockchains, we can create social platforms which are hosted by many different validators, all with the same exact state. The governance can be apart from the validators, and be guided by different principles and incentives.
       - With the Fediverse, we share avoiding single points of failure and centralization of governance into a single entity (person or company).
       - As opposed to the Fediverse, gno.land platforms can be more reliable and be centralized in terms of discovering and interacting with other users.
   - Funding by the users. Align the platforms we use with the users' interests, rather than the advertisers'.
       - This happens practically by ensuring the transaction fees, or revenue models build on top of them, can adequately fund both the hosting and the governance/moderation.
   - Freedom of speech. Guarantee a baseline of moderation to remove outright harmful and illegal content, and hand off moderation to the choices of smaller communities, algorithms and moderating systems built on top.
-    - The chain should incentivize thoughtful content creation, moderation, and active participation in the community; but not block out content, so that the platform can be truly "neutral".
+    - The chain should incentivize thoughtful content creation, moderation, and active participation in the community; but not block out content, so that the platform can be truly neutral.
       - There can and should be algorithms that show users interesting content while blocking out what they don't want to see. But users need to be able to choose between different algorithms and understand what each one is targeting; rather than solely signing up for the one that maximises "engagement" or "screen-time".
 - Why gno.land can achieve it:
   - By solving the incentive problem, we ensure that the chain can continue to work with a specific vision while being hard to subvert. The governance aims to expand the blockchain's potential and usages in real applications, rather than the capital of its investors.
@@ -51,7 +51,7 @@ Most blockchain incentive schemes focus primarily on rewarding validators for se
 - Blockchains allow us to create effective economic models for building the internet which are fair to the participants involved in making it.
   - We should pay creators making great content.
   - We should pay moderators who keep communities focused and true to their spirit.
-  - We should pay those contributing to collecting and creative collective silos of knowledge like wikis, and verifying its information and accuracy.
+  - We should pay those contributing to collective silos of knowledge like wikis, and verifying its information and accuracy.
   - We should pay software developers, as they create the applications and infrastructure.
   - We should pay auditors, who verify the security of smart contracts and packages.
   - Finally, we should pay validators, as they physically host the blockchain and make it possible.
