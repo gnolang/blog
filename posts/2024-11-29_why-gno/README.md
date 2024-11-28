@@ -1,5 +1,5 @@
 ---
-publication_date: 2024-12-10T00:00:00Z
+publication_date: 2024-11-29T00:00:00Z
 slug: why-gno
 tags: [gnoland, gno]
 authors: [thehowl, moul]
