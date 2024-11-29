@@ -14,8 +14,6 @@ this onsite collaboration stands as one of our most successful development cycle
 yet, setting new records for pull requests merged and advancing critical priorities
 for our upcoming mainnet launch.
 
-[![office](src/thumbs/office.jpg)](src/office.jpg)
-
 [![office](https://gnolang.github.io/blog/2024-11-28_seoul-retreat/src/thumbs/office.jpg)](https://gnolang.github.io/blog/2024-11-28_seoul-retreat/src/office.jpg)
 
 ## Starting with a Bang: test5 and engineering developments
