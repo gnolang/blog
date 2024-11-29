@@ -5,54 +5,28 @@ tags: [gnoland, ecosystem, meetup, retreat, seoul]
 authors: [michelleellen]
 ---
 
-# Gnomes spotted in Seoul: Our onsite collaboration with Onbloc
+# Gnomes spotted in Seoul: Onbloc x Core Engineering Collaboration 
 
-gno.land’s core engineering team has just concluded an intense and productive 
-two-week coding sprint with our core contributor, [Onbloc](https://onbloc.xyz).
-Hosted in Onbloc's offices in the heart of Seoul, this onsite collaboration has 
-marked one of our most successful development cycles yet, setting new records for 
-pull requests merged and advancing key priorities for our upcoming mainnet launch.
+gno.land’s core engineering team has just wrapped up an intense and highly productive two-week coding sprint with our core contributor, [Onbloc](https://onbloc.xyz/). Hosted in Onbloc's offices in the heart of Seoul, this onsite collaboration stands as one of our most successful development cycles yet, setting new records for pull requests merged and advancing critical priorities for our upcoming mainnet launch.
 
-To provide greater transparency into our progress, we’ve been updating the Seoul
-triage board on GitHub, which showcases the scope and depth of the work achieved 
-during this cycle. The onsite collaboration kicked off with the launch of test5,
-the first contributor-initiated testnet in the project’s history, and set the 
-momentum for a productive two-weeks.
+## Starting with a Bang: test5 and engineering developments
 
-In addition to the coding sprint, Onbloc and our engineering team hosted an 
-informal meetup to connect with Seoul’s strong developer community. The event
-drew over 15 developers, eager to learn more about gno.land’s vision and how 
-they can contribute. Attendees had the unique opportunity to hear directly from 
-the core team about the technical innovations we’re building and their potential
-to address some of the most pressing societal challenges in the current digital 
-landscape. Topics and questions discussed during the meetup included:
+The collaboration kicked off with the launch of test5, the first contributor-initiated testnet in gno.land’s history. This milestone set the tone for two weeks of unparalleled productivity. During this time, the teams focused on benchmarking and gas cost estimation, aiming to optimize transaction efficiency for both users and developers.
 
-- Why gno.land’s architecture is unique and how it enables innovative smart 
-contracts and decentralized applications. 
-- Opportunities for developers to contribute to gno.land, from protocol-level 
-engineering to building on the platform.
-- Decentralized governance challenges and how gno.land plans to tackle them.
-- Use cases for the Gno language and its ability to simplify complex programming 
-tasks in decentralized systems.
-- Technical insights into the recent testnet launch and what’s next as we prepare
-for the mainnet.
+A significant priority was advancing Gnoweb, gno.land’s universal realm browser. The team outlined a development [roadmap](https://github.com/gnolang/gno/issues/3191) for iterative feature releases, ensuring adaptability and a user-centric experience throughout the process. Key features include:
+- UI/UX Redesign: Establishing Gnoweb as an independent, neutral realm reader.
+- Code Refactoring: Enhancing security and maintainability.
+- Design Overhaul: Supporting extended Markdown syntax with a new design system.
+- Navigation Improvements: Simplifying user navigation and introducing a query system for direct linking to specific Gnoweb content or commands.
 
-The two weeks spent in Seoul have not only accelerated our engineering milestones
-but have also strengthened the bonds within our contributor network and community.
-The enthusiasm from local developers and the collaboration with Onbloc highlights
-the growing global momentum behind gno.land. gno.land aims to transcend regional 
-and language barriers by providing opportunities to developer communities across 
-the globe to contribute and get involved in our shared philosophy.
+Finally, the team collaborated closely with Onbloc’s DevOps experts to streamline and automate the genesis creation and validation process for future testnets and the eventual mainnet launch.
 
-While the primary focus of the collaboration was focused on engineering, it also 
-became a celebration of cultural exchange. Our gracious hosts at Onbloc made the 
-experience extend beyond the office and GitHub, introducing the team to the rich 
-culture of South Korea. From lively conversations over authentic Korean BBQ to 
-spirited evenings of karaoke, and reflective visits to historical landmarks, 
-the time in Seoul was enriching culturally, while underscoring the importance 
-of team and community building.
+## Strengthening Regional Community Connections
 
-As we look toward the mainnet launch, we hope to excite others about joining and
-contributing to gno.land. It starts in the digital realm (no pun intended) and
-expands to the human-centric focus of what we are building. We look forward to 
-meeting more gnomes in-person in 2025.
+Beyond the engineering milestones, this sprint fortified relationships within our contributor network and the broader community. Together with Onbloc, we hosted an informal meetup to engage with the Korean developer community and met with Cosmostation, a longstanding South Korea-based Cosmos contributor. Over 15 developers attended the event, eager to learn about gno.land’s vision and explore how they could contribute. The enthusiasm from local developers and the collaboration with Onbloc highlight the growing global momentum behind gno.land. To further support regional growth, we are prioritizing multilingual content, starting with Korean. In collaboration with Onbloc, we created Korean video content for the community - coming soon! 
+
+## A Celebration of Culture and Collaboration
+
+While the primary focus was engineering, the experience in Seoul transcended the technical realm. Thanks to our gracious hosts at Onbloc, the sprint became a celebration of cultural exchange. From lively discussions over authentic Korean BBQ to spirited karaoke nights and reflective visits to historical landmarks, our time in Seoul enriched our understanding of South Korean culture while underscoring the importance of team and community building.
+
+As we approach the mainnet launch, we’re excited to welcome others to join and contribute to gno.land. It begins in the digital realm (no pun intended) but extends into meaningful human connections across the globe.
