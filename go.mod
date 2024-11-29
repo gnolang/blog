@@ -6,7 +6,7 @@ toolchain go1.23.3
 
 require (
 	github.com/adrg/frontmatter v0.2.0
-	github.com/gnolang/gno v0.2.0
+	github.com/gnolang/gno v0.0.0-20241126103326-95450fff471d
 	github.com/stretchr/testify v1.9.0
 )
 
