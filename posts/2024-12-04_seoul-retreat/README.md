@@ -1,5 +1,5 @@
 ---
-publication_date: 2024-11-28T00:00:00Z
+publication_date: 2024-12-04T00:00:00Z
 slug: seoul-retreat
 tags: [gnoland, ecosystem, meetup, retreat, seoul]
 authors: [michelleellen]
