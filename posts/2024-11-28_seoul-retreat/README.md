@@ -18,12 +18,9 @@ for our upcoming mainnet launch.
 
 ## Starting with a Bang: test5 and engineering developments
 
-The collaboration kicked off with the launch of test5. This milestone set the
-tone for two weeks of unparalleled productivity. During this time, the teams 
-focused on benchmarking and gas cost estimation, aiming to optimize transaction
-efficiency for both users and developers.
+The collaboration kicked off with the launch of test5. This milestone set the tone for two weeks of unparalleled productivity. During this sprint, the teams identified areas of collaboration like a feedback workshop on Gnoscan, Gnoswap, and Adena Wallet, and topics such as gas, realm upgradeability, gnoweb, tx-indexer, infrastructure, and ABCI queries. The benchmarking and gas cost estimations is a priority as the team aims to optimize transaction efficiency for both users and developers as we work our way towards mainnet. Realm development will advance significantly in the next few months, highlighting the need to enhance an existing realm's functionality and capabilities without creating a new one. To address this, a realm upgradeable pattern example is necessary to illustrate possible solutions to this challenge. This feature is particularly important for applications like Gnoswap, and was a key focus during the recent two-week sprint.
 
-A significant priority was advancing `gnoweb`, gno.land’s universal web frontend. 
+Another topic is the advancement of `gnoweb`, gno.land’s universal web frontend. 
 The team outlined a development [roadmap](https://github.com/gnolang/gno/issues/3191) 
 for iterative feature releases, ensuring adaptability and a user-centric experience 
 throughout the process. Key features include:
