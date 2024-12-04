@@ -12,7 +12,7 @@ productive two-week coding sprint with our core contributor,
 [Onbloc](https://onbloc.xyz/). Hosted in Onbloc's offices in the heart of Seoul,
 this onsite collaboration stands as one of our most successful development cycles
 yet, setting new records for pull requests merged and advancing critical priorities
-for our upcoming mainnet launch.
+for our upcoming mainnet launch, especially with the GnoVM. 
 
 [![office](https://gnolang.github.io/blog/2024-11-28_seoul-retreat/src/thumbs/office.jpg)](https://gnolang.github.io/blog/2024-11-28_seoul-retreat/src/office.jpg)
 
