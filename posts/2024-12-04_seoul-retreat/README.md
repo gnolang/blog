@@ -14,7 +14,7 @@ this onsite collaboration stands as one of our most successful development cycle
 yet, setting new records for pull requests merged and advancing critical priorities
 for our upcoming mainnet launch, especially with the GnoVM. 
 
-[![office](https://gnolang.github.io/blog/2024-11-28_seoul-retreat/src/thumbs/office.jpg)](https://gnolang.github.io/blog/2024-11-28_seoul-retreat/src/office.jpg)
+[![office](https://gnolang.github.io/blog/2024-12-04_seoul-retreat/src/thumbs/office.jpg)](https://gnolang.github.io/blog/2024-12-04_seoul-retreat/src/office.jpg)
 
 ## Starting with a Bang: test5 and engineering developments
 
@@ -48,7 +48,7 @@ To further support regional growth, we are prioritizing multilingual content,
 starting with Korean. In collaboration with Onbloc, we created Korean video 
 content for the community - coming soon! 
 
-[![office](https://gnolang.github.io/blog/2024-11-28_seoul-retreat/src/thumbs/meetup.jpg)](https://gnolang.github.io/blog/2024-11-28_seoul-retreat/src/meetup.jpg)
+[![office](https://gnolang.github.io/blog/2024-12-04_seoul-retreat/src/thumbs/meetup.jpg)](https://gnolang.github.io/blog/2024-12-04_seoul-retreat/src/meetup.jpg)
 
 ## A Celebration of Culture and Collaboration
 
