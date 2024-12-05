@@ -43,7 +43,7 @@ While the full codebase needs a thorough review, we've identified several areas 
     As a blockchain designed for deterministic execution, ensuring that the GnoVM executes contracts consistently across all nodes is crucial. Our goal is to eliminate non-deterministic components from Go, such as using AVL trees instead of Go maps. However, we may still have lingering issues that could lead to non-deterministic behavior. A prime example is the module within `gnovm/pkg/gnolang/values_string.go`, which should be carefully reviewed for any such issues.  
     **Why this matters**: Non-determinism can lead to chain halts or splits, which could be exploited by attackers.
 2. **Other GnoVM Challenges**  
-    Gno.land contributor Morgan has detailed some additional areas of concern of the Virtual Machine here: https://github.com/gnolang/gno/issues/2886#issuecomment-2400274812 
+    gno.land contributor [@thehowl](https://github.com/thehowl) has detailed some additional areas of concern of the Virtual Machine here: https://github.com/gnolang/gno/issues/2886#issuecomment-2400274812 
 3. **Security in Realms (Smart Contracts)**  
     Developers deploy smart contracts, called "Realms," to the chain. Malicious Realms could attempt to inject harmful content that could affect other users of the chain, particularly in the `Render` function or supporting tools like **Gnoweb**, which displays Realms to end users.  
     **Potential risk**: Cross-site scripting (XSS) and other injection attacks.
