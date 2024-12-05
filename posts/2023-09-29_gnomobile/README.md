@@ -1,10 +1,11 @@
 ---
-title: "GnoMobile, a Framework for Building Gno Mobile Apps"
 publication_date: 2023-09-29T13:37:00Z
 slug: gnomobile
 tags: [gnomobile, berty, wesh network]
 authors: [jeff, costin, remi, iuri]
 ---
+
+# GnoMobile, a Framework for Building Gno Mobile Apps
 
 *This blog post is written by Berty Technologies, an NGO that is building open and free communication solutions without any of the limitations imposed by centralized systems. Berty is a proud partner and grantee of Gno.land.*
 
@@ -21,9 +22,8 @@ Simply put, GnoMobile is a framework for developing Gno mobile applications. Thi
 For communication between the mobile app and the Gno code, GnoMobile uses [gRPC](https://grpc.io/), a well-supported framework that sends and receives Google Protobuf messages. Even though the core Gno code is written in Go, the app code can use React Native, Java, Swift, etc. The following system diagram shows how gRPC is used.
 
 <div align="center">
-    <img style="display: block;-webkit-user-select: none;margin: auto;cursor: zoom-in;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;" src="https://github-production-user-asset-6210df.s3.amazonaws.com/109347079/267934754-e4da6fec-a586-4ebe-97cc-3b3ad7f79370.jpg" width="324" height="300" align="center">
+    ![](https://github-production-user-asset-6210df.s3.amazonaws.com/109347079/267934754-e4da6fec-a586-4ebe-97cc-3b3ad7f79370.jpg)
 </div>
-.
 
 Moving from the bottom to the top, this is how the flow looks:
 
@@ -70,7 +70,7 @@ If you want to add a new message to a blockchain, you need to actually interact 
 Gno nodes run on GnoVMs (gnovm), and for the moment, these are only available on desktops. We believe it is possible to make them available on mobile as well, but we need to find clever ways to overcome the constraints of mobile devices (like putting the apps in the background (iOS), addressing network bandwidth limitations, and so on).
 
 1. Developing a **decentralized push notification service** for *both* mobile and desktop apps. Getting notifications is now a standard (and very important) functionality of centralized apps. Technically, this happens via a central server. Naturally, having a centralized server is not possible for a p2p app, but there are other ways to implement notifications, and we are considering including them in the GnoMobile framework.
-2. Making it possible for decentralized apps to **interact with the blockchain even if the network connection is poor or virtually unavailable**. Through the **[Wesh Network** protocol](https://wesh.network/), we are opening up the possibility of using alternative transport mediums to exchange messages between peers in an asynchronous but reliable manner in off-grid environments. Enabling reliable, secure, and censorship-resistant communication is our main cause at Berty Technologies. We want to open the door for p2p users to send messages and interact even in extreme situations or adverse scenarios, and Wesh Network is built specifically for this purpose. It is only natural to make it easier for developers to use it through the GnoMobile framework.
+2. Making it possible for decentralized apps to **interact with the blockchain even if the network connection is poor or virtually unavailable**. Through the [**Wesh Network** protocol](https://wesh.network/), we are opening up the possibility of using alternative transport mediums to exchange messages between peers in an asynchronous but reliable manner in off-grid environments. Enabling reliable, secure, and censorship-resistant communication is our main cause at Berty Technologies. We want to open the door for p2p users to send messages and interact even in extreme situations or adverse scenarios, and Wesh Network is built specifically for this purpose. It is only natural to make it easier for developers to use it through the GnoMobile framework.
 3. Advancing **edge networking for enhanced blockchain resilience**. Edge networking refers to bringing functionality like computing power or storage closer to the user so that they don't need to travel through the whole Internet to interact with a server. The same edge concept can be applied to bring the necessary services to interact with the blockchain closer to each p2p user. For example, hosting a copy of the blockchain so a user can sync it or even execute smart contracts. Having these fundamental services closer to the p2p users is especially important in the case of mobile apps. We want to offer developers the possibility of taking advantage of the edge networking benefits by allowing them to use, for instance, network address redirections or special HTTP headers in the configuration of their applications.
 
 In all honesty, it’s hard not to get excited about all the different possibilities that lie ahead for GnoMobile, but we’re keeping our focus on shipping V1 for now and collecting feedback from the community. After that, well, we hope you’ll stick around to see what happens next!

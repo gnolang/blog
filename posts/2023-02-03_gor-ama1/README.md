@@ -1,10 +1,11 @@
 ---
-title: "Gno.land Community Game of Realms AMA #1 - Recap"
 publication_date: 2023-02-03T15:44:00Z
 slug: gor-ama1
 tags: [game-of-realms,gnoland,proof-of-contribution,dao,governance]
 authors: [manfred]
 ---
+
+# Gno.land Community Game of Realms AMA #1 - Recap
 
 With Game of Realms officially in phase one, core dev Manfred Touron jumped on Discord to answer Gno.land community questions about the ongoing high-stakes competition. From starting and end dates to participation requirements and a description of tasks, look for your answer below. If you have further questions or want to join our community, come and find us on the []Gno.land Discord](https://discord.com/channels/957002220384182312/1065646963825066044). The core team will be hosting regular “office hours” sessions soon so you can discuss your ideas with them directly.
 
