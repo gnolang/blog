@@ -1,5 +1,5 @@
 ---
-publication_date: 2024-12-06T00:00:00Z
+publication_date: 2024-12-05T00:00:00Z
 slug: audit-proposal-request
 tags: [gnoland, gnovm, security, audit]
 authors: [kristovatlas]
