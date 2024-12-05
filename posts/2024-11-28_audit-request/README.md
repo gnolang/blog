@@ -1,6 +1,5 @@
 ---
-title: "Call for Security Auditors - gno.land Audit"
-publication_date: 2024-11-28T00:00:00Z
+publication_date: 2024-12-06T00:00:00Z
 slug: audit-proposal-request
 tags: [gnoland, gnovm, security, audit]
 authors: [kristovatlas]
@@ -57,10 +56,10 @@ While the full codebase needs a thorough review, we've identified several areas 
 
 We're looking for proposals that include the following line items:
 
-* **Cost of auditing the entire "gno" repository** -- covering all directories and files in scope.
-* **Cost of auditing the Gno Virtual Machine (gnovm)** -- focused on the **gnovm** subdirectory.
-* **Cost of auditing the other components** -- covering the **gno.land** and **tm2** subdirectories.
-* **Fuzzing efforts** -- auditors are encouraged to include fuzzing as part of their code review process, though it should be listed as a separate line item.
+- **Cost of auditing the entire "gno" repository** -- covering all directories and files in scope.
+- **Cost of auditing the Gno Virtual Machine (gnovm)** -- focused on the **gnovm** subdirectory.
+- **Cost of auditing the other components** -- covering the **gno.land** and **tm2** subdirectories.
+- **Fuzzing efforts** -- auditors are encouraged to include fuzzing as part of their code review process, though it should be listed as a separate line item.
 
 Please include the timelines for auditing and your current availability beginning December 23rd. 
 
@@ -69,7 +68,6 @@ We expect the audit to consume at least 4 engineer weeks and conclude by the end
 
 Please send your proposals via email to **security [at] tendermint [dot] com**. We are happy to meet with potential auditing teams to further discuss the details and answer any questions.
 
----
 
 ## Conclusion
 
