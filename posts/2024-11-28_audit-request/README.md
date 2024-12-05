@@ -8,7 +8,7 @@ authors: [kristovatlas]
 
 # Call for Security Auditors - gno.land Audit
 
-In the gno.land ecosystem, security is one of our top priorities as we continue to develop our blockchain focused on smart contracts and decentralized applications. As we move closer to the mainnet launch, we're calling on experienced security auditors to help us ensure the robustness and security of our codebase.
+In the gno.land ecosystem, security is one of our top priorities as we continue to develop our blockchain focused on smart contracts and decentralized applications. As we move closer to the beta launch, we're calling on experienced security auditors to help us ensure the robustness and security of our codebase.
 We are now accepting proposals for the auditing of the gno repository on GitHub. This is a significant and complex task, so we are looking for qualified firms or individuals with experience auditing blockchain systems, virtual machines, and distributed systems.
 You can find the full gno.land repository here:
 
