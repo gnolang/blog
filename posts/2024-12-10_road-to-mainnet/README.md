@@ -34,13 +34,13 @@ thoroughly tested, the infrastructure for rewards distribution and development
 will activate, accelerating the growth of Gno's ecosystem for both builders and 
 users.
 
-***Here’s a look back at what we’ve accomplished so far:***
+Here’s a look back at what we’ve accomplished so far:
 
 #### 2021: The beginning
 
 gno.land’s journey began in 2021, carried out by Jae Kwon, who laid the 
 groundwork to develop the Gno Virtual Machine (GnoVM), and bootstrap a simple
-Tendermint node capable of executing Gno code.****
+Tendermint node capable of executing Gno code.
 
 gno.land’s most revolutionary component, the GnoVM, is a virtual machine capable 
 of deterministically running a subset of Go code, where smart contracts are
@@ -228,7 +228,7 @@ experiment on gno.land. We have published a
 [Launch Milestone](https://github.com/gnolang/gno/milestone/7) to track progress
 and explore the specific initiatives we plan to address up until launch.
 
-### **Key components of the network at Genesis include:**
+**Key components of the network at Genesis include:**
 
 - **GnoVM** : For the Beta Launch, the GnoVM is anticipated to be in a relatively
 stable and nearly feature-complete state. Bugs are an expected part of this 
@@ -279,7 +279,7 @@ and deploy applications in [gnoverse](https://github.com/gnoverse), a community-
 GitHub space, ensuring **gno.land** becomes a productive ground to encourage
 future innovation.
 
-#### Mainnet Launch (UPCOMING)
+### Mainnet Launch (UPCOMING)
 
 While our Beta Launch will introduce the core features of the gno.land network,
 the **Mainnet Launch** will focus on expanding **gno.land**’s interoperability 
@@ -287,8 +287,8 @@ with other chains. By providing a fully-featured, interoperable blockchain,
 **gno.land** will allow builders to integrate their products and services with 
 the gno.land network, therefore scaling the ecosystem.
 
-### Here are some key features of the Mainnet Launch:
-
+**Here are some key features of the Mainnet Launch:**
+s
 - **Interoperability with IBC and ICS:** **gno.land** will integrate Inter-Blockchain
 Communication (IBC) and Interchain security (ICS), allowing seamless interaction 
 between **gno.land** and other IBC and ICS compatible chains. During this 
