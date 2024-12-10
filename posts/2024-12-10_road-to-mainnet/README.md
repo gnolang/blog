@@ -5,7 +5,7 @@ tags: [gnoland]
 authors: [gnoland-team]
 ---
 
-# gno.land: The Road to Mainnet & Beyond
+# The Road to Mainnet & Beyond
 
 **Gno the Difference**
 
@@ -27,7 +27,7 @@ decentralized ecosystem that prioritizes transparency, forkability, and governan
 Let’s take a closer look at the progress, key milestones, and what’s in store 
 for the future of gno.land.
 
-### Milestones Overview
+## Milestones Overview
 
 The priority is to establish a secure and stable network. Once operational and 
 thoroughly tested, the infrastructure for rewards distribution and development 
@@ -36,7 +36,7 @@ users.
 
 Here’s a look back at what we’ve accomplished so far:
 
-#### 2021: The beginning
+### 2021: The Beginning
 
 gno.land’s journey began in 2021, carried out by Jae Kwon, who laid the 
 groundwork to develop the Gno Virtual Machine (GnoVM), and bootstrap a simple
@@ -57,7 +57,7 @@ was implemented. The first commits for the
 were introduced, and a functional chain executable was developed, enabling the 
 addition of new packages and the ability to call functions within them.
 
-**2022: The First Testnets**
+### 2022: The First Testnets
 
 The full scope of the project only became evident in 2022, following the 
 implementation of the foundational functionality. It was during that 
@@ -86,7 +86,7 @@ increase its safety for use on-chain.
 
 [End-of-year status](https://github.com/gnolang/gno/tree/cabc1ad9a36319f68fed2bc888018bfcbff228a7)
 
-#### 2023: The Growth
+### 2023: The Growth
 
 In 2023, the Gno team grew to twelve engineers, many of whom continue to form the 
 Gno core development team today. Around the same time, gno.land began seeing its
@@ -120,7 +120,7 @@ a space to experiment Gno programs and realms directly from the web.
 
 [End-of-year status](https://github.com/gnolang/gno/tree/c3a4993335f8881989eb49e4efea6a3c1310061d)
 
-#### 2024: The Refinement
+### 2024: The Refinement
 
 2024 saw the Gno core team coming together, prioritizing the creation of a stable
 chain to launch as soon as possible. Throughout the year, the team focused on 
@@ -172,7 +172,7 @@ well as kick-starting development of a mobile `gnokey` application.
 
 ***The road ahead starts with the preparation of the gno.land’s Beta Launch. Here is how the path forward looks like:***
 
-### Beta Launch (UPCOMING)
+## Beta Launch (UPCOMING)
 
 We’re excited to announce that as 2024 comes to a close, we are gearing up for 
 **Beta Launch**, anticipated in early 2025. Here’s what you can expect 
@@ -279,7 +279,7 @@ and deploy applications in [gnoverse](https://github.com/gnoverse), a community-
 GitHub space, ensuring **gno.land** becomes a productive ground to encourage
 future innovation.
 
-### Mainnet Launch (UPCOMING)
+## Mainnet Launch (UPCOMING)
 
 While our Beta Launch will introduce the core features of the gno.land network,
 the **Mainnet Launch** will focus on expanding **gno.land**’s interoperability 
@@ -313,7 +313,7 @@ to build their own decentralized social media platforms using a customizable
 framework. Forkability and DAO-driven governance will enable scalable, user-driven
 communities.
 
-### Conclusion
+## Conclusion
 
 With more than three years in the making, gno.land is now closer than ever to
 launching. The **Beta Launch,** while representing an important step in gno.land’s
@@ -331,7 +331,7 @@ gno.land and upcoming milestones. Please add questions ahead of time to this
 [form](https://docs.google.com/forms/d/1DN8YneJ2-qvzsdnGsk_ZVA4CnBthUop3tgwXCodlF3M/edit) 
 so we can make sure to address them.
 
-### Call to Contribute
+## Call to Contribute
 
 gno.land puts at the center of its identity the contributors that are helping to
 create and shape the project. Contributing to gno.land’s development today means 
