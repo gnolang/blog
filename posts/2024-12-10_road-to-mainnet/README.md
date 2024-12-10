@@ -2,7 +2,7 @@
 publication_date: 2024-12-10T00:00:00Z
 slug: road-to-mainnet
 tags: [gnoland]
-authors: [gnoland-team]
+authors: [adrianakalpa, leohhhn, michelleellen, thehowl, salmad3]
 ---
 
 # The Road to Mainnet & Beyond
@@ -34,7 +34,7 @@ thoroughly tested, the infrastructure for rewards distribution and development
 will activate, accelerating the growth of Gno's ecosystem for both builders and 
 users.
 
-Here’s a look back at what we’ve accomplished so far:
+Here’s a look back at what we’ve accomplished so far.
 
 ### 2021: The Beginning
 
@@ -170,7 +170,8 @@ consistent, and clearing out the standard libraries.
 - Improving the behavior of integration tools, like `gnoclient` and `gnokey`, as 
 well as kick-starting development of a mobile `gnokey` application.
 
-***The road ahead starts with the preparation of the gno.land’s Beta Launch. Here is how the path forward looks like:***
+**The road ahead starts with the preparation of the gno.land’s Beta Launch. 
+Here is how the path forward looks like.**
 
 ## Beta Launch (UPCOMING)
 
