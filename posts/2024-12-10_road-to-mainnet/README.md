@@ -2,7 +2,7 @@
 publication_date: 2024-12-10T00:00:00Z
 slug: road-to-mainnet
 tags: [gnoland]
-authors: [adrianakalpa, leohhhn, michelleellen, thehowl, salmad3]
+authors: [adrianakalpa, michelleellen, thehowl, salmad3, Kouteki, leohhhn]
 ---
 
 # The Road to Mainnet & Beyond
