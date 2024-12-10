@@ -97,7 +97,7 @@ experience. These include utilities such as `gno doc`, `gno repl`, `gno lint`,
 alongside `gnodev`, which is the foundational tool for building realms on gno.land
 today.
 
-- [Gnochess](https://github.com/gnoverse/gnochess) was a first experiment to 
+- [GnoChess](https://github.com/gnoverse/gnochess) was a first experiment to 
 program complex Gno smart contracts, capable of running the backend of a chess 
 server. The Gopher community had the opportunity to experience GnoChess for the 
 first time at GopherCon 2023, where gno.land highlighted Gno’s unique features 
