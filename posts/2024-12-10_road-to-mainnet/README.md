@@ -36,7 +36,7 @@ users.
 
 ***Here’s a look back at what we’ve accomplished so far:***
 
-**2021: The beginning**
+#### 2021: The beginning
 
 gno.land’s journey began in 2021, carried out by Jae Kwon, who laid the 
 groundwork to develop the Gno Virtual Machine (GnoVM), and bootstrap a simple
@@ -86,7 +86,7 @@ increase its safety for use on-chain.
 
 [End-of-year status](https://github.com/gnolang/gno/tree/cabc1ad9a36319f68fed2bc888018bfcbff228a7)
 
-**2023: The Growth**
+#### 2023: The Growth
 
 In 2023, the Gno team grew to twelve engineers, many of whom continue to form the 
 Gno core development team today. Around the same time, gno.land began seeing its
@@ -120,7 +120,7 @@ a space to experiment Gno programs and realms directly from the web.
 
 [End-of-year status](https://github.com/gnolang/gno/tree/c3a4993335f8881989eb49e4efea6a3c1310061d)
 
-**2024: The Refinement**
+#### 2024: The Refinement
 
 2024 saw the Gno core team coming together, prioritizing the creation of a stable
 chain to launch as soon as possible. Throughout the year, the team focused on 
@@ -257,7 +257,7 @@ feature for smart contracts.
 test, run, deploy, and share Gno code, inspired by the Go playground. It offers
 a simple and interactive way to experiment with Gno without the need for a local 
 development environment.
-- [**Gno Studio](https://gno.studio/):** A powerful unified development platform 
+- [**Gno Studio**](https://gno.studio/): A powerful unified development platform 
 designed to drive dApp development on gno.land. This product suite will include 
 a full-featured IDE, workspace management, production-grade capabilities, and 
 integrated tools to support efficient development workflows. It will eventually 
@@ -273,13 +273,13 @@ educational platform.
 - [**docs.gno.land**](https://docs.gno.land/): The official gno.land documentation,
 covering basic concepts, getting started tutorials, developer guides, references, and more.
 - [**gno/examples**](https://github.com/gnolang/gno/tree/master/examples): 
-Ready-to-use example smart contracts and libraries written in Gno
+Ready-to-use example smart contracts and libraries written in Gno.
 - **Community Spaces:** Builders will have access to expanded tooling to build
 and deploy applications in [gnoverse](https://github.com/gnoverse), a community-led
 GitHub space, ensuring **gno.land** becomes a productive ground to encourage
 future innovation.
 
-**Mainnet Launch (UPCOMING)**
+#### Mainnet Launch (UPCOMING)
 
 While our Beta Launch will introduce the core features of the gno.land network,
 the **Mainnet Launch** will focus on expanding **gno.land**’s interoperability 
