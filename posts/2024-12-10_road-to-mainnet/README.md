@@ -207,13 +207,13 @@ will play a crucial role in shaping the platform’s future growth and developme
 able to use it to pay for gas fees. Token holders will be able to view their
 balances, with expected support from Ledger, Adena, and,potentially, other 
 community wallets. This will allow users to deploy and interact with realms on
-gno.land. **Please note that, initially, there will be no staking. Instead, the 
-voting power is determined by a member’s reputation.**
+gno.land. **Please note that the current chain design does not involve any staking.
+Instead, the voting power is determined by a member’s reputation.**
 6. Builders will have the opportunity to build and test dApps, thereby actively
 contributing to the platform’s growth. **Although the GNOT token is not going to
 be transferable, it will still be possible to mint, burn and transfer both 
-*coins*** (a native kind of token, accessible using the Banker module)
-**and tokens implemented in code**, i.e. *GRC20 tokens*, similar to 
+*coins*** (a native kind of token, accessible through smart contracts using the 
+banker module) **and tokens implemented in code**, i.e. *GRC20 tokens*, similar to 
 their ERC counterparts.
 
 Builders should be aware that during gno.land’s Beta network state, the core team
