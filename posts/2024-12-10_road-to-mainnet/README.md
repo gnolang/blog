@@ -313,6 +313,17 @@ to build their own decentralized social media platforms using a customizable
 framework. Forkability and DAO-driven governance will enable scalable, user-driven
 communities.
 
+## Call to Contribute
+
+gno.land puts at the center of its identity the contributors that are helping to
+create and shape the project. Contributing to gno.land’s development today means 
+you have the opportunity to make a notable impact at such a critical stage in the
+project’s roadmap.
+
+For now, we are looking for the earliest adopters; those curious to explore a 
+new way to build smart contracts and eager to be a part of the next generation of
+blockchain programming. Join us and [become a contributor today](https://gno.land/contribute)!
+
 ## Conclusion
 
 With more than three years in the making, gno.land is now closer than ever to
@@ -330,14 +341,3 @@ December 13th at 5:30 pm CET, for the community to join and learn more about
 gno.land and upcoming milestones. Please add questions ahead of time to this 
 [form](https://docs.google.com/forms/d/1DN8YneJ2-qvzsdnGsk_ZVA4CnBthUop3tgwXCodlF3M/edit) 
 so we can make sure to address them.
-
-## Call to Contribute
-
-gno.land puts at the center of its identity the contributors that are helping to
-create and shape the project. Contributing to gno.land’s development today means 
-you have the opportunity to make a notable impact at such a critical stage in the
-project’s roadmap.
-
-For now, we are looking for the earliest adopters; those curious to explore a 
-new way to build smart contracts and eager to be a part of the next generation of
-blockchain programming. Join us and [become a contributor today](https://gno.land/contribute)!
