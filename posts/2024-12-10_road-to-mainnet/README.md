@@ -105,7 +105,7 @@ and its potential to transform the decentralized application landscape.
 - [Test3](https://github.com/gnolang/gno/releases/tag/chain%2Ftest3.0), launched
 at the end of 2022 and continued in 2023, enabled builders to experiment with
 running full nodes and developing indexers. It provided
-having a persisting history of state.
+a persistent history of state for everyone.
 - Many API decisions, like `std.PrevRealm()`, were discussed and implemented.
 - The [License](https://github.com/gnolang/gno?tab=License-1-ov-file) for gno.land
 was established as the *Gno Network Public License*, a fork of the GNU Afferro 
