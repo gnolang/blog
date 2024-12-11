@@ -237,7 +237,7 @@ phase; caution is advised to navigate potential issues.
 - **Tendermint2**: Tendermint2 will mark a significant leap in consensus 
 performance and scalability. Key improvements include faster block finality, 
 more robust validator management, and greater resilience to node failures.
-- **GovDAO Formation:** GovDAO, gno.land’s decentralized governance system, will 
+- **GovDAO Formation:** gno.land’s decentralized governance system will 
 be live at Genesis. Composed of the most active contributors, GovDAO will take 
 on responsibility for governing gno.land on-chain, handling decisions like 
 protocol upgrades, parameter changes, and other critical decisions to ensure 
