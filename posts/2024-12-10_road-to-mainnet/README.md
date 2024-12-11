@@ -61,7 +61,7 @@ addition of new packages and the ability to call functions within them.
 
 The full scope of the project only became evident in 2022, following the 
 implementation of the initial functionality. During this period,
-time when the Gno project started to have more and more contributors, and 
+the Gno project experienced a significant increase in contributors, 
 consequently a much larger influx of new features, bug fixes and developments on
 many more fronts other than just the VM. During this time, the Gno core team 
 grew to three full-time engineers, with hiring underway to add more.
