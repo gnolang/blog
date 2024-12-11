@@ -64,7 +64,7 @@ implementation of the initial functionality. During this period,
 the Gno project experienced a significant increase in contributors, 
 resulting in a surge of new features, bug fixes, and developments
 across multiple areas beyond just the VM. The Gno core team 
-grew to three full-time engineers, with hiring underway to add more.
+grew to three full-time engineers, with additional hiring efforts underway.
 
 - Three testnets were launched (test1, test2 and test3), each with significant 
 improvements in usability and ease of access for newcomers, and more example realms.
