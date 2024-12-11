@@ -7,7 +7,7 @@ authors: [adrianakalpa, michelleellen, thehowl, salmad3, Kouteki, leohhhn]
 
 # The Road to Mainnet & Beyond
 
-**Gno the Difference**
+### Gno the Difference
 
 gno.land is evolving as a cutting-edge decentralized operating system, setting a
 new standard for building and governing diverse applications. At its core, it 
