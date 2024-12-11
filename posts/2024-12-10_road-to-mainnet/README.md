@@ -39,7 +39,7 @@ Here’s a look back at what we’ve accomplished so far.
 ### 2021: The Beginning
 
 gno.land’s journey began in 2021, carried out by Jae Kwon, who laid the 
-groundwork to develop the Gno Virtual Machine (GnoVM), and bootstrap a simple
+groundwork to develop Gno's most revolutionary component, the Gno Virtual Machine (GnoVM), and bootstrap a simple
 Tendermint node capable of executing Gno code.
 
 The GnoVM is a virtual machine capable 
