@@ -103,7 +103,7 @@ server. The Gopher community had the opportunity to experience GnoChess for the
 first time at GopherCon 2023, where gno.land highlighted Gno’s unique features 
 and its potential to transform the decentralized application landscape.
 - [Test3](https://github.com/gnolang/gno/releases/tag/chain%2Ftest3.0), launched
-at the end of 2022, was continued in 2023, allowing builders to experiment with
+at the end of 2022 and continued in 2023, enabled builders to experiment with
 running full nodes and building indexers. It gave everyone the possibility of 
 having a persisting history of state.
 - Many API decisions, like `std.PrevRealm()`, were discussed and implemented.
