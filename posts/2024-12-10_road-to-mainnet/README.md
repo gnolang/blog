@@ -42,7 +42,7 @@ gno.land’s journey began in 2021, carried out by Jae Kwon, who laid the
 groundwork to develop the Gno Virtual Machine (GnoVM), and bootstrap a simple
 Tendermint node capable of executing Gno code.
 
-gno.land’s most revolutionary component, the GnoVM, is a virtual machine capable 
+The GnoVM is a virtual machine capable 
 of deterministically running a subset of Go code, where smart contracts are
 composed together by simply “importing” them, much like working with any standard
 Go package. The initial work was focused on creating the first iteration of the 
