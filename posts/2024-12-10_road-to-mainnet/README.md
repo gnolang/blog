@@ -122,7 +122,7 @@ a space to experiment Gno programs and realms directly from the web.
 
 ### 2024: The Refinement
 
-2024 saw the Gno core team coming together, prioritizing the creation of a stable
+2024 prioritized the creation of a stable
 chain to launch as soon as possible. Throughout the year, the team focused on 
 delivering great stability on gno.land and being able to fix the most critical 
 issues which stand in the way of launching the first stable network.
