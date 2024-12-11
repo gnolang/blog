@@ -337,8 +337,8 @@ ability for builders to integrate their products and services with gno.land,
 onboarding tools for different user segments, enhanced support for builders and 
 much more.
 
-We will host a Q&A on [Discord](https://discord.com/invite/gnoland), Friday, 
-December 13th at 5:30 pm CET, for the community to join and learn more about 
+We will host a Q&A on [Discord](https://discord.com/invite/gnoland), Tuesday, 
+December 17th at 6:30 pm CET/ 9:30 PST, for the community to join and learn more about 
 gno.land and upcoming milestones. Please add questions ahead of time to this 
 [form](https://docs.google.com/forms/d/1DN8YneJ2-qvzsdnGsk_ZVA4CnBthUop3tgwXCodlF3M/edit) 
-so we can make sure to address them.
+so we can make sure to address them. 
