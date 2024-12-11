@@ -289,7 +289,7 @@ with other chains. By providing a fully-featured, interoperable blockchain,
 the gno.land network, therefore scaling the ecosystem.
 
 **Here are some key features of the Mainnet Launch:**
-s
+
 - **Interoperability with IBC and ICS:** **gno.land** will integrate Inter-Blockchain
 Communication (IBC) and Interchain security (ICS), allowing seamless interaction 
 between **gno.land** and other IBC and ICS compatible chains. During this 
