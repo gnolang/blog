@@ -63,7 +63,7 @@ The full scope of the project only became evident in 2022, following the
 implementation of the initial functionality. During this period,
 the Gno project experienced a significant increase in contributors, 
 resulting in a surge of new features, bug fixes, and developments
-many more fronts other than just the VM. During this time, the Gno core team 
+across multiple areas beyond just the VM. The Gno core team 
 grew to three full-time engineers, with hiring underway to add more.
 
 - Three testnets were launched (test1, test2 and test3), each with significant 
