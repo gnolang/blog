@@ -155,7 +155,7 @@ nodes, as well as [5 governance proposals](https://test4.gno.land/r/gov/dao/v2),
 
 Later in 2024, [Test5](https://test5.gno.land/) was released. Main key elements 
 that Test5 enabled include: expanding the current validator set, which now consists
-of 17 validators, pushing on more GnoVM fixes, releasing GovDAO v2 and overall 
+to 17 validators, pushing additional GnoVM fixes, releasing GovDAO v2, and overall
 improving the quality-of-life for builders. View testnet’s current activity and 
 deployed realms on [Gnoscan](https://gnoscan.io).
 
