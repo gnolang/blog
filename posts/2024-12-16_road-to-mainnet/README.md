@@ -1,5 +1,5 @@
 ---
-publication_date: 2024-12-10T00:00:00Z
+publication_date: 2024-12-16T00:00:00Z
 slug: road-to-mainnet
 tags: [gnoland]
 authors: [adrianakalpa, michelleellen, thehowl, salmad3, Kouteki, leohhhn]
@@ -328,7 +328,7 @@ blockchain programming. Join us and [become a contributor today](https://gno.lan
 ## Conclusion
 
 With more than three years in the making, gno.land is now closer than ever to
-launching. The **Beta Launch,** while representing an important step in gno.land’s
+launching. The **Beta Launch**, while representing an important step in gno.land’s
 journey, should be seen as only the beginning.
 
 Future milestones are envisioned to bring improved performance, 
