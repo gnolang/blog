@@ -1,7 +1,7 @@
 ---
 publication_date: 2024-12-16T00:00:00Z
 slug: road-to-mainnet
-tags: [gnoland]
+tags: [gnoland, gnovm, betalaunch, blockchain, golang]
 authors: [adrianakalpa, michelleellen, thehowl, salmad3, Kouteki, leohhhn]
 ---
 
