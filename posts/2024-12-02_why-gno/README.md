@@ -5,9 +5,18 @@ tags: [gnoland, gno]
 authors: [thehowl, moul]
 ---
 
-# Why Gno?
+# Why do we need Gno and gno.land?
 
-gno.land is a decentralized operating system that enables human-centric social platforms, powered by Gno, a composable programming language designed to build them. In this blog post, we outline the problems that gno.land addresses, and what solutions we are building to solve them. While this summary is non-exhaustive and reflects the evolving focus of the project, it offers an overview of our key objectives and ongoing initiatives.
+gno.land is a decentralized operating system to create decentralized platforms.
+It is powered by Gno, a deterministic implementation of the Go programming
+language, as a powerful tool to build composable packages and smart contracts on
+a blockchain. Although gno.land can support a variety of applications and
+implementations, among our core use-cases, we intend gno.land to be used as a
+base for human-centric and transparent social platforms. In this blog post, we
+outline the problems that gno.land addresses, and what solutions we are building
+to solve them. While this summary is non-exhaustive and reflects the evolving
+focus of the project, it offers an overview of our key objectives and ongoing
+initiatives.
 
 ## The Social Problem
 
@@ -17,7 +26,7 @@ We need a social platform that can be a common ground for a plurality of contras
 
 - The current centralized social networking platforms are plagued with problems for users, content creators, and businesses:
 	- Users are often constrained by the centralized ownership and control of platforms. Due to the network effect, it's very hard to move away from an established platform, or to create a "schism", granting users the possibility of true choice and requiring the platform to align with the interests of the users.
-	- Content creators frequently need to adhere to unwritten "community guidelines" to preserve monetization or, worse, to avoid shadowbans that hide their content from their followers. Shadowbans are often attributed to opaque “algorithms”, making it difficult to challenge decisions or prove instances of discrimination, bias, or censorship..
+	- Content creators frequently need to adhere to unwritten "community guidelines" to preserve monetization or, worse, to avoid shadowbans that hide their content from their followers. Shadowbans are often attributed to opaque “algorithms”, making it difficult to challenge decisions or prove instances of discrimination, bias, or censorship.
 	- Centralized, un-forkable platforms can have agendas, and their agendas are controlled by powerful entities. Users have little choice to "take their business elsewhere", as for many users the platforms themselves become an important medium for their business, or simply a way to connect to the people they care about. As it's been seen time and time again, control can be instrumentalized to track and profile people, sell them products they don't need or misinform them to vote for candidates that don't align with their best interests.
 	- The data of the users is a commercial tool which can be used for advertising and improving massive AI models. In turn, the AI revolution promises to make the internet an unlivable hellscape of bots talking to each other who spread political propaganda and regurgitate incorrect information. Platforms must be resilient to bots and spam, fostering authentic communication and genuine content production among real users.
 - What gno.land wants to achieve:
@@ -74,9 +83,9 @@ Most blockchain incentive schemes focus primarily on rewarding validators for se
 The technical innovation brought by Gno makes solving the above problems possible.
 
 - We're at the Assembly age of web3.
-		- Developing software is costly:
-			- It's expensive to build basic things, both in terms of expertise in development, but also auditing and finding people that truly understand and can take advantage of the technology.
-			- Many ecosystems employ domain-specific languages or restrictions on top of others (ie. WASM), which still require specific training.
+	- Developing software is costly:
+		- It's expensive to build basic things, both in terms of expertise in development, but also auditing and finding people that truly understand and can take advantage of the technology.
+		- Many ecosystems employ domain-specific languages or restrictions on top of others (ie. WASM), which still requires specific training.
 	- The development which is possible is very basic, similar to "interconnected spreadsheets".
 	- Monolithic blockchains create limitations which de-facto limit the growth of the chain, only allowing for the entire system a very limited amount of computation in each block.
 - What Solidity misses:
@@ -85,19 +94,21 @@ The technical innovation brought by Gno makes solving the above problems possibl
 	- Hidden control flow: [fallback functions](https://docs.soliditylang.org/en/latest/contracts.html#fallback-function) create hidden control flow when sending tokens, causing problems like [re-entrancy attacks](https://docs.soliditylang.org/en/latest/security-considerations.html#reentrancy).
 - How Gno solves it:
 	- Composability:
-			- Interfaces and closures allow to plug different code and data structures into each other.
-			- Realms can be composed by re-using functionality of other realms or existing functionality published as packages.
-			- IBC enables the blockchains using Gno to communicate with one another seamlessly, and build on the work happening elsewhere.
+		- Interfaces and closures allow to plug different code and data structures into each other.
+		- Realms can be composed by re-using functionality of other realms or existing functionality published as packages.
+		- IBC enables the blockchains using Gno to communicate with one another seamlessly, and build on the work happening elsewhere.
 	- Low cost of adoption: Gno is a subset of Go with some different standard libraries. Learning Gno has a lower adoption barrier, as it is based on the widely-used Go programming language, familiar to approximately [two million developers worldwide](https://research.swtch.com/gophercount).
 	- Low cost of building: quicker and simpler to write dApps (simple language, good already-audited p/ libraries); quicker and cheaper to audit them (all the source code is to be published on-chain).
 	- App-focused: we are interested in social platforms, video game servers, and ways to share knowledge in a decentralized manner. We see dApps as systems that can make the web decentralized again and create a truly open internet for the time to come. DeFi is great - and an obvious use case for blockchains - Gno expands on what DeFi can do and enable many more apps, and ways to communicate with others.
 	- Clear control flow: similarly to Go, there are no implicit getters, setters, and no method overloading; clear is better than clever.
 	- Open source by default: all code on gno.land is published directly as source code, and published under the terms of the [Gno Network General Public License](https://gno.land/license) (on top of any license that the author may decide to use). The on-chain code can be perpetually inspected, modified and improved; becoming what we call "timeless code".
 - What does Gno enable?
-		- Re-usable "core" contracts, like user management, groups, permissions.
-		- Open Web: all data is public and clonable by others; as well as the tools to organize it and present it.
-		- Coordination (civil services without government backing), Wikipedia, platforms that cannot be subverted or sold.
+	- Re-usable "core" contracts, like user management, groups, permissions.
+	- Open Web: all data is public and clonable by others; as well as the tools to organize it and present it.
+	- Coordination (civil services without government backing), Wikipedia, platforms that cannot be subverted or sold.
 - gno.land can be a GitHub for a wider ecosystem.
 	- Our hope is to show with gno.land a much better way to develop decentralized applications.
 	- Through IBC+ICS, other blockchains can look to connect with the gno.land chain and re-use its foundational code; as well as interact with its contracts.
 	- gno.land, in the philosophy of [Cosmos](https://cosmos.network/), is not a monolithic, one-size-fits-all blockchain. The implementation of the programming language itself is not meant to be definitive, but rather to be a reference for creating other better, faster implementations that suit other use cases.
+
+Learn more about the vision and mission driving gno.land's development by watching our [video](https://youtu.be/e6wqwmfv4co).
