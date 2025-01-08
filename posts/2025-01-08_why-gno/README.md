@@ -111,4 +111,4 @@ The technical innovation brought by Gno makes solving the above problems possibl
 	- Through IBC+ICS, other blockchains can look to connect with the gno.land chain and re-use its foundational code; as well as interact with its contracts.
 	- gno.land, in the philosophy of [Cosmos](https://cosmos.network/), is not a monolithic, one-size-fits-all blockchain. The implementation of the programming language itself is not meant to be definitive, but rather to be a reference for creating other better, faster implementations that suit other use cases.
 
-Learn more about the vision and mission driving gno.land's development by watching our [video](https://youtu.be/e6wqwmfv4co).
+Learn more about the vision and mission driving gno.land's development by watching our [video](https://youtu.be/M920PO3yrHk).
