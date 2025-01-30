@@ -37,6 +37,4 @@ If you’re building gno.land DevOps tools, dashboards and material for the comm
 
 ### Join the Gno DevOps Community
 
-gnops.io is a community-driven initiative aimed at building the future of DevOps in gno.land. Whether you are a developer, network operator, or validator, your contributions today help establish the standards, and best practices that new builders will follow. 
-
-Check out [gnops.io](https://gnops.io/) today and become part of the Gno DevOps community!
+gnops.io is a community-driven initiative aimed at building the future of DevOps in gno.land. Your contributions today help establish the standards, and best practices that new builders will follow, visit [gnops.io](https://gnops.io/) today and become part of the Gno DevOps community!
