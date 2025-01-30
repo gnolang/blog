@@ -33,7 +33,7 @@ As gnops.io evolves, we encourage the DevOps community to contribute content tha
 - Scaling and performance tuning strategies for validators and infrastructure providers
 - Case studies and war stories about DevOps challenges in blockchain
 
-If you’re building gno.land DevOps tools, dashboards and material for the community with the relevant documentation, add them to gnops.io. In the next phase of gnops.io, we’ll be rewarding high quality documentation, content and tooling submissions that advance the overall security, infrastructure, and operations of gno.land. 
+If you’re building gno.land DevOps tools, dashboards and material for the community with the relevant documentation, add them to gnops.io. In the next phase of gnops.io, we’ll be rewarding high quality documentation, content and tooling submissions that advance the overall security, infrastructure, and operations for developing on gno.land. 
 
 ### Join the Gno DevOps Community
 
