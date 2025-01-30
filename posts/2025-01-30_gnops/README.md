@@ -7,7 +7,7 @@ authors: [michelleellen]
 
 # Introducing gnops.io: The DevOps Hub for gno.land
 
-We’ve launched the first phase of [gnops.io](http://gnops.io/), a dedicated DevOps resource hub for gno.land developers. The intent behind gnops is to provide valuable resources written by us and the broader community to empower a strong and security minded DevOps culture and team within the ecosystem. By building a comprehensive knowledge base, the content is designed to support both newcomers and experienced developers in managing secure and resilient DevOps environments.
+We’ve launched the first phase of [gnops.io](http://gnops.io/), a dedicated DevOps resource hub for gno.land developers. The intent behind gnops is to provide valuable resources written by us and the broader community to empower a strong and security-minded DevOps culture and team within the ecosystem. By building a comprehensive knowledge base, the content is designed to support both newcomers and experienced developers in managing secure and resilient DevOps environments.
 
 ### What is gnops.io?
 
