@@ -1,7 +1,7 @@
 ---
 publication_date: 2025-02-06T00:00:00Z
 slug: fosdem-2025
-tags: [gnoland, gno]
+tags: [gnoland, gno, fosdem, open-source, oss]
 authors: [michelleellen]
 ---
 
