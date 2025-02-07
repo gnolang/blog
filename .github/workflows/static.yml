@@ -23,14 +23,20 @@ concurrency:
 jobs:
   # Build job
   build:
-    # Specify runner +  build & upload the static files as an artifact
-    runs-on: ubuntu-latest
-    steps:
-      - name: Upload static files as artifact
-        id: deployment
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: ./posts
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+      runs-on: ubuntu-latest
+      steps:
+        - name: Checkout
+          uses: actions/checkout@v3
+        - name: Setup Pages
+          uses: actions/configure-pages@v3
+        - name: Upload artifact
+          uses: actions/upload-pages-artifact@v1
+          with:
+            # Upload entire repository
+            path: './posts'
 
   # Deployment job
   deploy:
