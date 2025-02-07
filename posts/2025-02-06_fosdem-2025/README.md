@@ -7,7 +7,7 @@ authors: [michelleellen]
 
 # FOSDEM 2025: Gnomes Spotted
 
-[![moul](https://gnolang.github.io/blog/2025-02-06_fosdem-2025/src/thumbs/moul.jpg)](https://gnolang.github.io/blog/https://gnolang.github.io/blog/2025-02-06_fosdem-2025/src/moul.jpg)
+[![moul](https://gnolang.github.io/blog/2025-02-06_fosdem-2025/src/thumbs/moul.jpg)](https://gnolang.github.io/blog/2025-02-06_fosdem-2025/src/moul.jpg)
 
 This past weekend, members of the gno.land team traveled to Brussels for FOSDEM
 2025, one of the world’s largest and most influential open-source gatherings. 
