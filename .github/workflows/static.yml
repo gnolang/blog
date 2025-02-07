@@ -6,7 +6,8 @@ on:
   push:
     branches: ["main"]
   pull_request:
-    paths: "posts/*"
+    paths:
+      - '**/*.md'  # Example: Only trigger on markdown file changes
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
