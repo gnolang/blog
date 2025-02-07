@@ -30,7 +30,7 @@ jobs:
         id: deployment
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./posts'
+          path: ./posts
 
   # Deployment job
   deploy:
