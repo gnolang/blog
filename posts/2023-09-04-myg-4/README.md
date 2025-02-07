@@ -15,7 +15,7 @@ One ongoing discussion is about an incompatibility bug that affects many things 
 
 In [issue 970](https://github.com/gnolang/gno/issues/970), you can find details of five different proposed solutions to implement this upgrade strategy, from resetting the whole blockchain (which would mean losing on-chain content and debugging information) to implementing a migration feature specifically for testnets that allows developers to rename packages and patch their contracts before publishing them. There are pros and cons to each proposal, and we continue to work together to find the best way forward.
 
-## Encoding JSON and the Discussion Around Reflection
+## Encoding JSON sand the Discussion Around Reflection
 
 Some contributors have highlighted the need for native JSON encoding, and we are discussing how best to approach it. See [issue 808](https://github.com/gnolang/gno/issues/808) for further details. One idea is to copy the code from encoding JSON in the standard library Go and take it over to Gno, but we would need to have reflection to do that. So, the important question here is whether we want to have reflection and, if so, what it should look like. We could emulate Go’s reflection package with some added elements, like being able to inspect the realm state, but we would need to be extremely careful about how we do this.
 
