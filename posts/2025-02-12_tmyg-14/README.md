@@ -40,3 +40,6 @@ Onbloc is a Seoul-based company that's an active contributor on the gno.land pro
 We traveled to Brussels for FOSDEM 2025, one of the world’s largest and most influential open-source gatherings. This year marked FOSDEM’s 25th anniversary, drawing over 5,000 developers, engineers, and enthusiasts from across the globe.
 
 Attending FOSDEM was inspiring, a powerful reminder of what can be achieved when people collaborate in a free, transparent, and open way. The depth of knowledge shared, the engaging discussions, and the sheer diversity of topics, from robotics and simulations to the Go ecosystem, highlight the incredible breadth of open-source innovation, and what’s possible when people build together. It went beyond code, FOSDEM was a first-hand experience to witness the global community driven by a shared ethos.
+Check out the recap blog post [here](/r/gnoland/blog:p/fosdem-2025).
+
+Apart from this, our DevRel Engineer, [Leon Hudak](https://github.com/leohhhn) gave a talk named "Building dApps in gno.land" to students of Epitech University in Paris. Check out the presentation slides [here](https://github.com/gnolang/workshops/blob/main/presentations/2025-02-05--epitech--leon/building-dapps.pdf).
