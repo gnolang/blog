@@ -25,7 +25,7 @@ There are several key components that we need to complete before we launch the m
 
 It is a collection of effective essentials, explainers & best practices for DevOps in gno.land. Security, resilience & automation are key. Over time, it’ll expand into a repository of tools for monitoring, automation & security. Its goal is to accelerate blockchain development by improving collaboration & security. gnops.io helps optimize workflows, mitigate risks & support high availability. Whether you run a chain or validate, it’s your go-to DevOps resource.
 
-Want to contribute? gnops.io is community-driven! Share automation scripts, CI/CD guides, security audits & more. Future updates will reward top contributions.
+Want to contribute? gnops.io is community-driven! Share automation scripts, CI/CD guides, security audits & more. Future updates will reward top contributions. Check out the [Gnops GitHub repo](https://github.com/gnoverse/gnops) for more information.
 
 ## Onbloc Spotlight
 
@@ -35,11 +35,13 @@ Onbloc is a Seoul-based company that's an active contributor on the gno.land pro
 
 ## Events and Meetups
 
-### Past Events
+### FOSDEM 2025
 
 We traveled to Brussels for FOSDEM 2025, one of the world’s largest and most influential open-source gatherings. This year marked FOSDEM’s 25th anniversary, drawing over 5,000 developers, engineers, and enthusiasts from across the globe.
 
 Attending FOSDEM was inspiring, a powerful reminder of what can be achieved when people collaborate in a free, transparent, and open way. The depth of knowledge shared, the engaging discussions, and the sheer diversity of topics, from robotics and simulations to the Go ecosystem, highlight the incredible breadth of open-source innovation, and what’s possible when people build together. It went beyond code, FOSDEM was a first-hand experience to witness the global community driven by a shared ethos.
-Check out the recap blog post [here](/r/gnoland/blog:p/fosdem-2025).
+Check out the recap blog post [here](https://gno.land/r/gnoland/blog:p/fosdem-2025).
 
-Apart from this, our DevRel Engineer, [Leon Hudak](https://github.com/leohhhn) gave a talk named "Building dApps in gno.land" to students of Epitech University in Paris. Check out the presentation slides [here](https://github.com/gnolang/workshops/blob/main/presentations/2025-02-05--epitech--leon/building-dapps.pdf).
+### Epitech Career Day
+
+Last year, we had a strong Epitech University SCP cohort that we onboarded to gno.land, and as a follow up were invited to their annual student career day. This week, we hosted a talk titled "[Building dApps in gno.land](https://github.com/gnolang/workshops/blob/main/presentations/2025-02-05--epitech--leon/building-dapps.pdf)" to an audience of 40 students.
