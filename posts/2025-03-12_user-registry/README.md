@@ -1,7 +1,7 @@
 ---
 publication_date: 2025-03-12T00:00:00Z
 slug: user-registry
-tags: [gnoland, usernames, dapps]
+tags: [gnoland, usernames, namespaces, dapps]
 authors: [leohhhn]
 ---
 
