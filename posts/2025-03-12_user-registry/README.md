@@ -36,7 +36,6 @@ Let's dive into what each part of the system does.
 
 ### r/sys/users
 
-
 This is a system realm that defines the core logic of the user registry. It is
 not upgradeable and serves as the foundational layer that includes key data 
 structures, storage variables, and functions for managing usernames.
