@@ -101,13 +101,8 @@ The deployment permission system ensures that only the rightful owner of a
 namespace can deploy Gno packages under it.
 
 This check is performed at the GnoVM Keeper level, which communicates with 
-`r/sys/names` realm before allowing a deployment. The initial set of deployment 
-permissions is established in the genesis block, with an ownership-dropping 
+`r/sys/names` realm before allowing a deployment to a certain package patch.
+This functionality is enabled in the genesis block, with an ownership-dropping 
 mechanism ensuring no single entity retains control over the system.
 
-The GnoVM Keeper, a core part of the gno.land chain, communicates with this realm
-upon an AddPkg transaction to ask if a specific address has permission to deploy to
-the desired namespace.
-
-This functionality is enabled in the genesis block, via a ownership dropping 
-fuse mechanism.
+Check out the source code [here](/r/sys/names$source&file=verifier.gno).
