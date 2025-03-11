@@ -79,13 +79,13 @@ name following a specific pattern - starts with three letters, ends with three
 numbers, and is not longer than 20 characters. The registration costs 1 GNOT
 and the fee is modifiable via a GovDAO proposal.
 
-
 This is the user-facing realm where users interact with the registry. It 
 provides an interface for registering usernames while enforcing certain constraints:
 
 - Usernames must start with three letters.
 - They must end with three numbers.
 - The total length must not exceed 20 characters.
+- Only `_` is allowed as a special character.
 - The registration fee is 1 GNOT (modifiable via GovDAO proposals).
 
 This realm communicates with `r/sys/users` to ensure new registrations follow the 
