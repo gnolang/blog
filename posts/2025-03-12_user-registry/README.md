@@ -13,8 +13,8 @@ register custom names linked to their Gno addresses and claim matching namespace
 for their Gno package deployments.
 
 While the username registration system existed as far back as April 2022 ([`r/demo/users`](https://github.com/gnolang/gno/commit/914f267dd31c0382a472b5fcf98fcfc53129a32d))
-the namespace permission deployment went into effect with Test4 for the first time
-in July 2024.
+the namespace permission deployment system went into effect with Test4 for the 
+first time in July 2024.
 
 With changes to the Gno language, chain infrastructure, as well as the addition
 of governance and other new functionality, the user registry was due for a major
