@@ -30,16 +30,18 @@ the Portal Loop network.
 Here's how to register in a few steps:
 - Create a Gno address with `gnokey` or a third-party wallet such as Adena
 - Fetch Portal Loop GNOT from the [Faucet Hub](https://faucet.gno.land)
-- Visit the [User Registry realm](/r/gnoland/users/v1)
-- If you're using `gnokey`, click on Register to get a pre-built `gnokey` command 
-  - Make sure to also set `-send "1000000ugnot"` to pay for the registration fee  
+- Visit the [User Registry realm](/r/gnoland/users/v1) 
 - If you're using Adena, you can use [GnoStudio Connect](https://gno.studio/connect/view/gno.land/r/gnoland/users/v1?network=portal-loop#Register)
 to send a transaction via the web. 
   - Under advanced options, make sure to set the "send" amount to `1000000ugnot` 
   to pay for the registration fee.
+- If you're using `gnokey`, click on "Register" to get a pre-built `gnokey` command
+  - Make sure to also set `-send "1000000ugnot"` to pay for the registration fee
 - Enter your desired username which follows the naming rules outlined in the 
 User Registry realm.
 - Call the function and see your name show up in the "Latest registrations" section!
+
+> Make sure to specify exact amount of GNOT for the registration fee (1 GNOT).
 
 ## System Architecture
 
@@ -109,8 +111,6 @@ provides an interface for registering usernames while enforcing certain constrai
 - The total length must not exceed 20 characters.
 - Only `_` is allowed as a special character.
 - The registration fee is 1 GNOT (modifiable via GovDAO proposals).
-
-> Make sure to specify exact amount of GNOT for the registration fee.
 
 This realm communicates with `r/sys/users` to ensure new registrations follow the 
 system-wide rules and that only valid usernames are stored. Future versions 
