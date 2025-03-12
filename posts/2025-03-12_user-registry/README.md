@@ -41,7 +41,7 @@ to send a transaction via the web.
 User Registry realm.
 - Call the function and see your name show up in the "Latest registrations" section!
 
-> Make sure to specify exact amount of GNOT for the registration fee (1 GNOT).
+> Make sure to specify the exact amount of GNOT for the registration fee (1 GNOT).
 
 ## System Architecture
 
