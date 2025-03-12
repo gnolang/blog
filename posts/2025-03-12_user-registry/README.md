@@ -5,7 +5,7 @@ tags: [gnoland, usernames, namespaces, dapps]
 authors: [leohhhn]
 ---
 
-# The gno.land User Registry refactor
+# The New gno.land User Registry System
 
 The user registration system has been around since the early days of gno.land, 
 serving as one of the foundational components of the chain. It allows users to 
@@ -43,7 +43,11 @@ User Registry realm.
 
 ## System Architecture
 
-The revamped user registration system, paired with the namespace system, enables
+For developers that are looking to use the new User Registry system in their 
+realms, below is an outline of the main components of the system including a 
+practical example found under `r/docs`. 
+
+The new user registration system, paired with the namespace system, enables
 custom usernames and namespace permission checking upon package deployment. It
 consists of three key realms:
 
