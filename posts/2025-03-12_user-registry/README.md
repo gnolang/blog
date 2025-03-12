@@ -5,12 +5,12 @@ tags: [gnoland, usernames, namespaces, dapps]
 authors: [leohhhn]
 ---
 
-# The Revamped gno.land User Registry
+# The gno.land User Registry refactor
 
 The user registration system has been around since the early days of gno.land, 
 serving as one of the foundational components of the chain. It allows users to 
-register custom names for their addresses and claim matching namespaces where 
-they can deploy Gno packages.
+register custom names linked to their Gno addresses and claim matching namespaces 
+for their Gno package deployments.
 
 While the username registration system existed as far back as April 2022 ([`r/demo/users`](https://github.com/gnolang/gno/commit/914f267dd31c0382a472b5fcf98fcfc53129a32d))
 the namespace permission deployment went into effect with Test4 for the first time
@@ -21,6 +21,25 @@ of governance and other new functionality, the user registry was due for a major
 refactor. This new version introduces a set of realms that integrate directly 
 with the core of the gno.land blockchain, providing similar but more flexible
 functionality and upgradeability through GovDAO proposals.
+
+## Register your gno.land username now!
+
+We invite you to register your gno.land username with the new User Registry on
+the Portal Loop network.
+
+Here's how to register in a few steps:
+- Create a Gno address with `gnokey` or a third-party wallet such as Adena
+- Fetch Portal Loop GNOT from the [Faucet Hub](https://faucet.gno.land)
+- Visit the [User Registry realm](/r/gnoland/users/v1)
+- If you're using `gnokey`, click on Register to get a pre-built `gnokey` command 
+  - Make sure to also set `-send "1000000ugnot"` to pay for the registration fee  
+- If you're using Adena, you can use [GnoStudio Connect](https://gno.studio/connect/view/gno.land/r/gnoland/users/v1?network=portal-loop#Register)
+to send a transaction via the web. 
+  - Under advanced options, make sure to set the "send" amount to `1000000ugnot` 
+  to pay for the registration fee.
+- Enter your desired username which follows the naming rules outlined in the 
+User Registry realm.
+- Call the function and see your name show up in the "Latest registrations" section!
 
 ## System Architecture
 
@@ -86,6 +105,8 @@ provides an interface for registering usernames while enforcing certain constrai
 - The total length must not exceed 20 characters.
 - Only `_` is allowed as a special character.
 - The registration fee is 1 GNOT (modifiable via GovDAO proposals).
+
+> Make sure to specify exact amount of GNOT for the registration fee.
 
 This realm communicates with `r/sys/users` to ensure new registrations follow the 
 system-wide rules and that only valid usernames are stored. Future versions 
