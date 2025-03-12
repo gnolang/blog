@@ -5,7 +5,7 @@ tags: [gnoland, usernames, namespaces, dapps]
 authors: [leohhhn]
 ---
 
-# The New gno.land User Registry System
+# Introducing the New gno.land User Registry
 
 The user registration system has been around since the early days of gno.land, 
 serving as one of the foundational components of the chain. It allows users to 
