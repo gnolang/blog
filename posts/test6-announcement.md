@@ -1,6 +1,6 @@
 # Announcing Test6: The Latest gno.land Testnet
 
-The newest gno.land testnet, Test6, is now live! This major milestone brings us closer to the anticipated beta mainnet launch. Test6 introduces essential features and infrastructure improvements designed to enhance network stability, and introduce critical pieces like governance, a token locking mechanism, the user registry realm, and the valoper realm ahead of the beta mainnet rollout.
+The newest gno.land testnet, Test6, is now live! This major milestone brings us closer to the anticipated beta mainnet launch. Test6 introduces essential features and infrastructure improvements designed to enhance network stability, and introduce critical pieces like governance, a token locking mechanism, the user registry realm, and the new validator operator (valoper) realm ahead of the beta mainnet rollout.
 
 **Key Enhancements in Test6**
 
@@ -12,7 +12,7 @@ The newest gno.land testnet, Test6, is now live! This major milestone brings us 
 
 ## GovDAO V3: Advancing gno.land’s Governance Model
 
-The beta mainnet GovDAO will launch with a small group of Tier 1 (T1) members, tasked with governance oversight and advancing the progressive decentralization of governance over the next seven years. The goal is to expand to a 70-member T1 body, with T2 and T3 groups increasing decentralization over time.
+The beta mainnet GovDAO will launch with a small group of Tier 1 (T1) members, tasked with governance oversight and advancing the progressive decentralization of governance over the next seven years. The goal is to expand to atleast a 70-member T1 body, with T2 and T3 groups increasing decentralization over time.
 
 GovDAO V3 overhauls gno.land’s previous governance iterations to support the finalized governance [specifications](https://gist.github.com/jaekwon/918ad325c4c8f7fb5d6e022e33cb7eb3) by implementing:
 
@@ -20,11 +20,11 @@ GovDAO V3 overhauls gno.land’s previous governance iterations to support the f
 - Voting power assignments based on tier membership.
 - Modular governance logic, ensuring adaptability and structured decentralization.
 
-[GovDAO V3](https://github.com/gnolang/gno/pull/3389) (TODO: Add Test6 link) consists of several key components that ensure a structured and decentralized governance system to manage gno.land. The GovDAO Proxy realm serves as the upgrade mechanism, enabling governance-led upgrades through proposals. The GovDAO Memberstore acts as a registry for GovDAO members to manage member data and tier assignments today and in future GovDAO versions. Lastly, the GovDAO V3 implementation realm holds the governance operational logic, and proposal statuses that can be migrated to new GovDAO instances.
+[GovDAO V3](https://github.com/gnolang/gno/pull/3389) (TODO: Add Test6 link) consists of several key components that ensure a structured and decentralized governance system to manage gno.land. The GovDAO is fitted with an implemented upgrade mechanism, enabling governance-led upgrades through proposals. The GovDAO Memberstore acts as a registry for GovDAO members to manage member data and tier assignments today and in future GovDAO versions. Lastly, the GovDAO V3 implementation realm holds the governance operational logic, and proposal statuses that can be migrated to new GovDAO instances.
 
 ## Token Transfer Locking Mechanism
 
-During the beta mainnet phase, a token generation event will occur, but direct token transfers will remain disabled. To facilitate this, a token locking mechanism has been implemented, ensuring that tokens can be distributed while disallowing transfers until the network is ready.
+During the beta mainnet phase, the GNOT token distribution will occur, but direct token transfers will remain disabled. To facilitate this, a token locking mechanism has been implemented, ensuring that tokens can be distributed while disallowing transfers until the network is ready. Once tokens are distributed, token holders will be able to use their GNOT on gno.land to interact with the chain, and make realm and package deployments. 
 
 ## Valoper Registry Realm
 
@@ -34,7 +34,7 @@ If validators are interested in participating on the Test6 network, you can regi
 
 You will need to include your Discord handle in the registry in order to receive an invite to the valoper Discord channel. This is where you will signal your interest in joining Test6, and a GovDAO member(s) will be responsible for making and voting on the proposals to add new validators to the Test6 network. This process is a step in testing validator onboarding and the governance system leading up to beta mainnet.
 
-Please note: registering your validator profile and validating on Test6 does not guarantee a validator slot on the beta mainnet. However, active participation and contributions to Test6 will help establish credibility and may improve chances for future validator acceptance. The initial validator amount and valset will ultimately be selected through GovDAO T1 governance proposals and acceptance.
+Please note: registering your validator profile and validating on Test6 does not guarantee a validator slot on the beta mainnet, or any future gno.land networks. However, active participation and contributions to testnets will help establish credibility and may improve chances for future validator acceptance. The initial validator amount and valset will ultimately be selected through GovDAO T1 governance proposals and acceptance.
 
 ## User Registry Realm
 
