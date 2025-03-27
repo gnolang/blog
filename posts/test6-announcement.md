@@ -12,7 +12,7 @@ The newest gno.land testnet, Test6, is now live! This major milestone brings us 
 
 ## GovDAO V3: Advancing gno.land’s Governance Model
 
-The beta mainnet GovDAO will launch with a small group of Tier 1 (T1) members, tasked with governance oversight and advancing the progressive decentralization of governance over the next seven years. The goal is to expand to atleast a 70-member T1 body, with T2 and T3 groups increasing decentralization over time.
+The beta mainnet GovDAO will launch with a small group of Tier 1 (T1) members, tasked with governance oversight and advancing the progressive decentralization of governance over the next seven years. The goal is to expand to at least a 70-member T1 body, with T2 and T3 groups increasing decentralization over time.
 
 GovDAO V3 overhauls gno.land’s previous governance iterations to support the finalized governance [specifications](https://gist.github.com/jaekwon/918ad325c4c8f7fb5d6e022e33cb7eb3) by implementing:
 
