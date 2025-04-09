@@ -7,7 +7,7 @@ authors: [Kouteki]
 
 # The More You Gno 15: Getting Ready for the Mainnet Beta
 
-As we gear up for the launch of the Gno mainnet beta, this edition of The More You Gno takes a look at the progress we’ve made, what’s currently in the works, and what’s coming next. From critical governance updates to improvements in storage and gas mechanisms, we’re laying the groundwork for a stable and feature-rich mainnet. Let’s dive in.
+As we gear up for the launch of the Gno mainnet beta, this edition of _The More You Gno_ takes a look at the progress we’ve made, what’s currently in the works, and what’s coming next. From critical governance updates to improvements in storage and gas mechanisms, we’re laying the groundwork for a stable and feature-rich mainnet. Let’s dive in.
 
 ## Mainnet Beta Progress
 
