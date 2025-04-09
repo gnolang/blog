@@ -7,7 +7,7 @@ authors: [Kouteki]
 
 # The More You Gno 15: Getting Ready for the Mainnet Beta
 
-INTRO
+As we gear up for the launch of the Gno mainnet beta, this edition of The More You Gno takes a look at the progress we’ve made, what’s currently in the works, and what’s coming next. From critical governance updates to improvements in storage and gas mechanisms, we’re laying the groundwork for a stable and feature-rich mainnet. Let’s dive in.
 
 ## Mainnet Beta Progress
 
@@ -38,4 +38,4 @@ We aim to launch Test6 next week, so stay tuned!
 
 ### Introduction to gno.land @ Belgrade
 
-If you're in the Belgradee area, join us for an [in-person workshop](https://lu.ma/gyesps56) on April 10, where we’ll explore Gno, and give you a solid understanding of gno.land and how it differs from other smart contract platforms.
+If you're in the Belgrade area, join us for an [in-person workshop](https://lu.ma/gyesps56) on April 10, where we’ll explore Gno, and give you a solid understanding of gno.land and how it differs from other smart contract platforms.
