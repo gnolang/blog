@@ -29,7 +29,7 @@ GovDAO V3 overhauls gno.land’s previous governance iterations to support the f
 - Voting power assignments based on tier membership.
 - Modular governance logic, ensuring adaptability and structured decentralization.
 
-[GovDAO V3](https://test6.testnets.gno.land/r/gov/dao/) consists of several key components that ensure a structured and decentralized governance system to manage gno.land. The GovDAO is fitted with an implemented upgrade mechanism, enabling governance-led upgrades through proposals. The GovDAO [member store](https://test6.testnets.gno.land/r/gov/dao/v3/memberstore) acts as a registry for GovDAO members to manage member data and tier assignments today and in future GovDAO versions. Lastly, the GovDAO V3 [implementation realm](https://test6.testnets.gno.land/r/gov/dao/v3/impl) holds the governance operational logic, and proposal statuses that can be migrated to new GovDAO instances.
+[GovDAO V3](https://test6.testnets.gno.land/r/gov/dao/) consists of several key components that ensure a structured and decentralized governance system to manage gno.land. The GovDAO is fitted with an implemented upgrade mechanism, enabling governance-led upgrades through proposals. The GovDAO [member store](https://test6.testnets.gno.land/r/gov/dao/v3/memberstore) acts as a registry for GovDAO members to manage member data and tier assignments today and in future GovDAO versions. Lastly, the GovDAO V3 [implementation realm](https://test6.testnets.gno.land/r/gov/dao) holds the governance operational logic, and proposal statuses that can be migrated to new GovDAO instances.
 
 ## Token Transfer Locking Mechanism
 
