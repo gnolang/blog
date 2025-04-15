@@ -2,7 +2,7 @@
 
 The newest gno.land testnet, [Test6](https://test6.testnets.gno.land/), is now live! This major milestone brings us closer to the anticipated beta mainnet launch. Test6 introduces essential features and infrastructure improvements designed to enhance network stability, and introduce critical pieces like governance, a token locking mechanism, the user registry realm, and the new validator operator (valoper) realm ahead of the beta mainnet rollout.
 
-Key Enhancements in Test6
+Key Enhancements in Test6 include: 
 
 - GovDAO V3: The latest iteration of gno.land’s primary decentralized governance model.
 - Token Transfer Locking Mechanism: A controlled approach to token distribution before full transferability at the time of the feature complete mainnet launch.
