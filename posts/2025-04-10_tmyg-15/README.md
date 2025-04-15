@@ -1,5 +1,5 @@
 ---
-publication_date: 2025-04-09T00:00:00Z
+publication_date: 2025-04-10T00:00:00Z
 slug: monthly-dev-15
 tags: [gnoland, ecosystem, updates, gnovm]
 authors: [Kouteki]
