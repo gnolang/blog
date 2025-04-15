@@ -24,7 +24,7 @@ GovDAO V3 overhauls gno.land’s previous governance iterations to support the f
 
 ## Token Transfer Locking Mechanism
 
-During the beta mainnet phase, GNOT token distribution will occur, but direct token transfers will remain disabled. To facilitate this, a token locking mechanism has been implemented, ensuring that tokens can be distributed while disallowing transfers until the Beta Mainnet GovDAO puts up a proposal and votes positively to indicate that the network is ready.
+During the Beta Mainnet phase, GNOT token distribution will occur, but direct token transfers will remain disabled. To facilitate this, a token locking mechanism has been implemented, ensuring that tokens can be distributed while disallowing transfers until the Beta Mainnet GovDAO puts up a proposal and votes positively to indicate that the network is ready.
 
 Once tokens are distributed at beta mainnet, token holders will be able to use their GNOT on gno.land to interact with the chain, and make realm and package deployments.
 
