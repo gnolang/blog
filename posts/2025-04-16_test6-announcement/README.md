@@ -1,4 +1,14 @@
+---
+publication_date: 2025-04-16T00:00:00Z
+slug: test6-announcement
+tags: [gnoland, ecosystem, updates, testnet, test6]
+authors: [michelleellen]
+---
+
 # Announcing Test6: The Latest gno.land Testnet
+
+
+[![banner](https://gnolang.github.io/blog/2025-04-16_test6-announcement/src/thumbs/banner.jpg)](https://gnolang.github.io/blog/2025-04-16_test6-announcement/src/banner.jpg)
 
 The newest gno.land testnet, [Test6](https://test6.testnets.gno.land/), is now live! This major milestone brings us closer to the anticipated beta mainnet launch. Test6 introduces essential features and infrastructure improvements designed to enhance network stability, and introduce critical pieces like governance, a token locking mechanism, and the new validator operator (valoper) realm ahead of the Beta Mainnet rollout.
 
