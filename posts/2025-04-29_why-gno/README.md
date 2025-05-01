@@ -1,16 +1,13 @@
 # Gno.land
 
-Gno.land represents paradigm shift in multi-user programming that no other
-solution offers. It is not just a blockchain; it is the world's first viable
-language-based multi-user operating system. Its ultimate goal is to host the
-world's knowledge base for the new millennium.
-
 Tendermint changed the way blockchain developers think about blockchain
 consensus algorithms. Gno.land will change the way developers think about
-programming; we won't remember a time without it.
+programming.
 
-Cosmos Hub (gaia) was the beginning of the Cosmos Network, a web of
-blockchains.
+Gno.land represents paradigm shift in multi-user programming that no other
+solution offers. It is not just a smart contract platform and blockchain; it is
+the world's first viable language-based multi-user operating system. Its
+ultimate goal is to host the world's knowledge base for the new millennium.
 
 ## Why Gno.land?
 
@@ -87,7 +84,7 @@ Gno, GnoVM, and Gno.land is in contrast:
    deterministic.
  - Auto Persistent - all changes to instantiated Gno objects in the transaction
    are persisted transparently.
- - Self Sustaining - every transaction locks GNOT up for new storage allocated;
+ - Self Sustaining - every transaction locks $GNOT up for new storage allocated;
    CPU gas fees paid in any language.
  - Immortal - every Gno object that is referenced (not GC’d) remains forever.
  - Multi User Realm - all objects are stored in realm packages (namespaces). 
@@ -173,44 +170,103 @@ viral copyleft license terms and strong attribution requirement. The Strong
 Attribution clause of the Gno Network GPL license preserves the spirit of the
 GNU AGPL license for the blockchain world.
 
-GNOT is the storage lock-up token, so Gno.land is to Gno England like GNOT is
-to fungible land rights in Gno England, where total storage is kept finite for
-very-long-term existential purposes, and value is derived from the Gno
-artifacts created by its users, and some new users competing for attention from
-many existing users.
 
 ## Tokenomics
 
-XXX include tokenomics
+$GNOT is the storage lock-up utility token, so Gno.land is to Gno England like
+$GNOT is to presence in Gno England, where total storage is kept finite for
+very-long-term existential purposes, and value is derived from the Gno
+artifacts created by its users, and some new users competing for attention from
+many existing users.
 
 Gno.land may migrate to AtomOne ICS once it is support hard-fork upgrades.
 There Gno.land would be one ICS shard, and many Gno VM shards may also exist,
 each with their own namespace and probably each their own storage token unless
 separate treaties are made between the main Gno.land chain (ICS shard) and
-other Gno VM shards.
+other Gno VM shards. Transaction fees for CPU usage may be paid in either $GNOT
+or $PHOTON.
 
 ## Team
 
-Jae Kwon before and after creating Tendermint and Cosmos always had a passion
-for programming languages and wrote multiple parsers and interpreters, and
-initially also wrote an EVM on top of the framework which became the Cosmos
-SDK. Gno.land is the result of two decades of search for the logoverse.
+### New Tendermint, LLC
 
-Manfred Touron, builder focused on open-source and resilient technologies;
-co-founded scaleway (cloud) and berty (p2p messaging), with contributions to
-900+ open-source projects.
+NewTendermint, LLC is the core maintainer of the GnoVM, Tendermint2, and 
+at present Gno.land.
 
-Morgan Bazalgette - Senior Go engineer; bringing the joy of developing Go to
-Gno.
+#### GnoVM & Gno.land Core Team
 
-Miloš Živković - Sr. distributed systems engineer; passion for solving
-protocol-level problems in the blockchain space.
+ * Jae Kwon before and after creating Tendermint and Cosmos always had a
+   passion for programming languages and wrote multiple parsers and
+   interpreters, and initially also wrote an EVM on top of the framework which
+   became the Cosmos SDK. Gno.land is the result of two decades of search for
+   the logoverse.
 
-Marc Vertes - Sr. VM dev and hardware; more than 3 decades of experience,
-Co-founder of 3 companies (1 acquired by IBM), author of 34 patents, author of
-the Yaegi Go interpreter.
+ * Manfred Touron, builder focused on open-source and resilient technologies;
+   co-founded scaleway (cloud) and berty (p2p messaging), with contributions to
+   900+ open-source projects.
 
-Ìlker Öztürk - Sr. software architect; 17 years in building and designing
-products, distributed p2p systems, leadership and strategic vision.
+ * Miloš Živković - Senior distributed systems engineer; passion for solving
+   protocol-level problems in the blockchain space.
 
-XXX Ask everyone to fill in...
+ * Morgan Bazalgette - Senior Go engineer; bringing the joy of developing Go to
+   Gno.
+
+ * Ray Qin - With over 15 years of experience in software development and
+   building large-scale networks, I have a deep passion for Go programming
+   language and blockchain technology.
+
+ * Marc Vertes - Senior VM and hardware developer; more than 3 decades of
+   experience, Co-founder of 3 companies (1 acquired by IBM), author of 34
+   patents, author of the Yaegi Go interpreter.
+
+ * Alexis Colin - Senior Frontend Engineer
+
+#### Gno Studio Team
+
+ * Ìlker Öztürk - Senior software architect; 17 years in building and designing
+   products, distributed p2p systems, leadership and strategic vision.
+
+ * Jerónimo Albi - Experienced full-stack systems engineer with attention on
+   simplicity and minimalism, focused on Blockchain and Golang development
+
+ * Salvatore Mazzarino - Site Reliability Engineer with over 10 years of
+   experience in building and mantaining high and scalable distribute systems
+   across different range of platforms. "If it is not monitored, it does not
+   exist"
+
+ * Danny Salman - Vast experience in blockchain developer relations, technical
+   writing and education, and product, with a background in full-stack
+   development, engineering, and policy.
+
+ * Alan Soares - A Brazilian lost in middle earth.  Passionate coder with love
+   for open-source and software craftsmanship. Taking the web forward for over
+   16 years.
+
+ * Lucio Caetano - Senior Frontend Engineer with 10+ years of experience
+   building web applications, specializing in web3 and blockchain technologies.
+   With a background in data analysis, providing data-driven decisions and
+   reporting with large datasets.
+
+### All in Bits, Inc 
+
+Members of All in Bits, Inc also build applications and community on top of
+Gno.land.
+
+ * Kristov Atlas - Since 2012, I’ve been a crypto security engineer and
+   researcher focusing on non-custodial wallets, CeFi exchanges, Bitcoin,
+   Ethereum, and the Cosmos ecosystem.
+
+ * Michelle Leech - "Experienced marketing and ecosystem builder skilled at
+   creating and driving strategic initiatives that foster relationship building
+   and boost developer advocacy, engagement, education, and product
+   utilization"
+
+ * Lav Leon Hudak - DevRel Engineer with a strong background in blockchain
+   development, documentation, and education.
+
+ * Sean Casey - CFO
+
+ * Jordan Magazine - General Council
+
+ * Carolyn Pehrson - Paralegal
+
