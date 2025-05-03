@@ -219,7 +219,10 @@ at present Gno.land.
    experience, Co-founder of 3 companies (1 acquired by IBM), author of 34
    patents, author of the Yaegi Go interpreter.
 
- * Alexis Colin - Senior Frontend Engineer
+ * Alexis Colin - Senior Frontend Engineer with 10+ years of experience
+   building user-focused interfaces and exploring modern tech stacks. Driven to
+   push forward efficient UX in the blockchain space through clean code and
+   technical precision. Currently working on gnoweb.
 
 #### Gno Studio Team
 
@@ -264,9 +267,15 @@ Gno.land.
  * Lav Leon Hudak - DevRel Engineer with a strong background in blockchain
    development, documentation, and education.
 
- * Sean Casey - CFO
+ * Sean Casey - CFO (Chief Financial Gnome) - 10+ years’ experience in finance,
+   aircraft leasing, and blockchain. Leads financial strategy, and treasury
+   operations, ensuring capital discipline, regulatory compliance, and
+   long-term value creation.
 
- * Jordan Magazine - General Council
+ * Jordan Magazine - Experienced General Counsel with over a decade of
+   practice, specializing in designing frameworks that enable blockchain
+   ecosystems to operate with clarity and compliance, empowering projects to
+   scale confidently and with integrity.
 
- * Carolyn Pehrson - Paralegal
-
+ * Carolyn Pehrson - Paralegal keeping AIB,Inc and NT,LLC alive. Thinks you
+   should get a pet mini pig.
