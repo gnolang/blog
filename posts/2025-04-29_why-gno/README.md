@@ -44,10 +44,13 @@ func Render(path string) string {
 }
 ```
 
+You can see the Gno source code that rendered this webpage by clicking
+on "\<\/\>Source" on the top right of the webpage.
+
 Q: Why is everything else so complicated?
 
-A: Because our languages, compilers, interpreters, and programming paradigm is
-immature.
+A: Strangely difficult to answer, but ultimately because our languages,
+compilers, interpreters, and programming paradigm is still evolving.
 
 ## Brief Evolution of Language
 
@@ -109,8 +112,8 @@ nature of Gno there are extra semantics for inter-realm interoperability.
  - More and refinements to come in Gno2.
 
 These language innovations/extensions allow for safer multi-user application
-development where many users are collaboratively programming a single immortal
-communal program.
+development where many users are collaboratively programming a single timeless
+(immortal) communal program.
 
 ## The Logoverse
 
