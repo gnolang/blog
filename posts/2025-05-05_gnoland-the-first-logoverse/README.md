@@ -57,7 +57,7 @@ on "\<\/\>Source" on the top right of the webpage.
 Q: Why is everything else so complicated?
 
 A: Strangely difficult to answer, but ultimately because our languages,
-compilers, interpreters, and programming paradigm are still evolving.
+compilers, interpreters, and programming paradigms are still evolving.
 
 ## Brief Evolution of Language
 
