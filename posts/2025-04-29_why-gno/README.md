@@ -152,8 +152,8 @@ popular language for developers, an order of magnitude more than Rust
 developers, on par with Javascript developers but growing faster than
 Javascript.
 
-![TIOBE 2025](./tiobe_2025.png)
-![GitHut2 2024](./githut2_2024.png)
+![TIOBE 2025](./src/tiobe_2025.png)
+![GitHut2 2024](./src/githut2_2024.png)
 
 Gno.land and its associated network of Gno VM chains, and AtomOne if it hosts
 it, will become the nexus of human to human, human to machine, and machine to
@@ -186,7 +186,6 @@ Anyone can make Gno VM powered chains derived from Gno.land according to the
 viral copyleft license terms and strong attribution requirement. The Strong
 Attribution clause of the Gno Network GPL license preserves the spirit of the
 GNU AGPL license for the blockchain world.
-
 
 ## Tokenomics
 
