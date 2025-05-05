@@ -11,7 +11,7 @@ Tendermint changed the way blockchain developers think about blockchain
 consensus algorithms. Gno.land will change the way developers think about
 programming.
 
-Gno.land represents paradigm shift in multi-user programming that no other
+Gno.land represents a paradigm shift in multi-user programming that no other
 solution offers. It is not just a smart contract platform and blockchain; it is
 the world's first viable language-based multi-user operating system. Its
 ultimate goal is to host the world's knowledge base for the new millennium.
@@ -57,20 +57,20 @@ on "\<\/\>Source" on the top right of the webpage.
 Q: Why is everything else so complicated?
 
 A: Strangely difficult to answer, but ultimately because our languages,
-compilers, interpreters, and programming paradigm is still evolving.
+compilers, interpreters, and programming paradigms are still evolving.
 
 ## Brief Evolution of Language
 
 Written human language has only been around for a mere 6000 years, a blip in
-our evolutionary history. Like living species our language and writing have
-evolved along side us and within us. Adam was not the first homo sapiens on
+our evolutionary history. Like living species, our language and writing have
+evolved alongside us and within us. Adam was not the first Homo sapiens on
 earth, but he may have been the first with written language, and thereby a new
 kind of man. 
 
-Programming languages likewise has been evolving rapidly, but only for a
+Programming languages likewise have been evolving rapidly, but only for a
 handful of decades; it was in the 1970s when Alan Kay developed Smalltalk, the
-first object oriented programming language. In the 1990’s Brendan Eich of
-Netscape invented Javascript which forever transformed the World Wide Web; Sun
+first object-oriented programming language. In the 1990’s Brendan Eich of
+Netscape invented JavaScript which forever transformed the World Wide Web; Sun
 Microsystem made Java, and industries prospered greatly by these and similar
 language technologies. 
 
@@ -83,7 +83,7 @@ Our languages, compilers & interpreters, and programs are today:
    NOT native language
  - Dependent - running programs are owned by an owner; dependent on
    individuals, not self-sustaining
- - Ephemeral -  running programs are expected to fail; no guarantee of
+ - Ephemeral - running programs are expected to fail; no guarantee of
    presence.
  - Single User Realm - import of internal libraries are native, but
    interactions with external programs are NOT native; generally no `import
@@ -94,14 +94,14 @@ Gno, GnoVM, and Gno.land is in contrast:
    deterministic.
  - Auto Persistent - all changes to instantiated Gno objects in the transaction
    are persisted transparently.
- - Self Sustaining - every transaction locks $GNOT up for new storage allocated;
+ - Self-Sustaining - every transaction locks $GNOT up for new storage allocated;
    CPU gas fees paid in any language.
  - Timeless - every Gno object that is referenced (not GC’d) remains forever.
  - Multi User Realm - all objects are stored in realm packages (namespaces). 
 
 ## Gno Language Innovation
 
-All modern popular programming langauges are designed for a single programmer
+All modern popular programming languages are designed for a single programmer
 user. Programming languages support the importing of program libraries natively
 for components of the single user's program, but this does not hold true for
 interacting with components of another user's (other) program. Gno is an
@@ -113,7 +113,7 @@ The added dimension of the program domain means the language should be extended
 to best express the complexities of programming in the inter-realm (inter-user)
 domain. In other words, Go is a restricted subset of the Gno language in the
 single-user context. (In this analogy client requests for Go web servers don't
-count as they run outside of the server program).
+count as they run outside the server program).
 
 Gno is Go plus:
  - [`cross(fn)(…)`](https://github.com/gnolang/gno/blob/master/docs/resources/gno-interrealm.md#crossfn-and-crossing-specification)
@@ -156,8 +156,8 @@ With these elements altogether you can derive a new property:
 
 There are over a million Go developers and growing. Go as a language remains a
 popular language for developers, an order of magnitude more than Rust
-developers, on par with Javascript developers but growing faster than
-Javascript.
+developers, on par with JavaScript developers but growing faster than
+JavaScript.
 
 [![TIOBE 2025](https://gnolang.github.io/blog/2025-05-05_gnoland-the-first-logoverse/src/thumbs/tiobe_2025.png)](https://gnolang.github.io/blog/2025-05-05_gnoland-the-first-logoverse/src/tiobe_2025.png)
 [![GitHut2 2024](https://gnolang.github.io/blog/2025-05-05_gnoland-the-first-logoverse/src/thumbs/githut2_2024.png)](https://gnolang.github.io/blog/2025-05-05_gnoland-the-first-logoverse/src/githut2_2024.png)
@@ -169,8 +169,8 @@ cycle.
 
 The best way to ensure success and to accelerate adoption is to seed the
 initial community with the right community. There are many types of
-communities, such as crypto community, ethereum community, student community,
-but since Bitcoin has gone mainstream these communities aren't always in
+communities, such as the crypto community, ethereum community, student community,
+but since Bitcoin has gone mainstream, these communities aren't always in
 agreement about the purpose of blockchain technology; because they aren't aware
 of the history and fabric of the hidden power structures that run the
 narrative--both mainstream AND controlled oppositions. They do not feel that
@@ -179,8 +179,8 @@ they need something, so their habits are not as obvious to change.
 But the "free-thinking" and "conspiracy" and "anti-war" and "anti-Covid19-vax"
 and even the "true Christian" communities feel an urgent need for
 censorship-proof coordination and communication tools. These communities have
-influencers who are kept hidden from the general public; they have suffered
-deplatforming, defamations, and even death.
+influencers who are kept hidden from the broader public; they have suffered
+deplatforming, defamation, and even death.
 
 Build tools, connections, and relations with these particular communities and
 especially those influencers who are nuanced in their research and speech.
@@ -282,10 +282,10 @@ Gno.land.
    researcher focusing on non-custodial wallets, CeFi exchanges, Bitcoin,
    Ethereum, and the Cosmos ecosystem.
 
- * Michelle Leech - "Experienced marketing and ecosystem builder skilled at
+ * Michelle Leech - Experienced marketing and ecosystem builder skilled at
    creating and driving strategic initiatives that foster relationship building
    and boost developer advocacy, engagement, education, and product
-   utilization"
+   utilization.
 
  * Lav Leon Hudak - DevRel Engineer with a strong background in blockchain
    development, documentation, and education.
