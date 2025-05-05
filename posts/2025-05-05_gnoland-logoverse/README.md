@@ -159,8 +159,8 @@ popular language for developers, an order of magnitude more than Rust
 developers, on par with Javascript developers but growing faster than
 Javascript.
 
-[![TIOBE 2025](https://gnolang.github.io/blog/2025-05-05gnoland-logoverse/src/thumbs/tiobe_2025.png)](https://gnolang.github.io/blog/2025-05-05gnoland-logoverse/src/tiobe_2025.png)
-[![GitHut2 2024](https://gnolang.github.io/blog/2025-05-05gnoland-logoverse/src/thumbs/githut2_2024.png)](https://gnolang.github.io/blog/2025-05-05gnoland-logoverse/src/githut2_2024.png)
+[![TIOBE 2025](https://gnolang.github.io/blog/2025-05-05_gnoland-logoverse/src/thumbs/tiobe_2025.png)](https://gnolang.github.io/blog/2025-05-05_gnoland-logoverse/src/tiobe_2025.png)
+[![GitHut2 2024](https://gnolang.github.io/blog/2025-05-05_gnoland-logoverse/src/thumbs/githut2_2024.png)](https://gnolang.github.io/blog/2025-05-05_gnoland-logoverse/src/githut2_2024.png)
 
 Gno.land and its associated network of Gno VM chains, and AtomOne if it hosts
 it, will become the nexus of human to human, human to machine, and machine to
