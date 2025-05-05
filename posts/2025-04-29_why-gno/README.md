@@ -94,19 +94,33 @@ Gno, GnoVM, and Gno.land is in contrast:
 
 ## Gno Language Innovation
 
-Gno the language has the same semantics as Gno, but due to the multi-user
-nature of Gno there are extra semantics for inter-realm interoperability.
- - `cross(fn)(…)` calls `fn(…)` where fn is another realm.
+All modern popular programming langauges are designed for a single programmer
+user. Programming languages support the importing of program libraries natively
+for components of the single user's program, but this does not hold true for
+interacting with components of another user's (other) program. Gno is an
+extension of the Go language for multi-user programming. Gno allows a massive
+number of programmers to iteratively and interactively develop a single shared
+program such as Gno.land.
+
+The added dimension of the program domain means the language should be extended
+to best express the complexities of programming in the inter-realm (inter-user)
+domain. In other words, Go is a restricted subset of the Gno language in the
+single-user context. (In this analogy client requests for Go web servers don't
+count as they run outside of the server program).
+
+Gno is Go plus:
+ - [`cross(fn)(…)`](https://github.com/gnolang/gno/blob/master/docs/resources/gno-interrealm.md#crossfn-and-crossing-specification)
+   calls `fn(…)` where fn is another realm.
  - `std.CurrentRealm()` and `std.PreviousRealm()` changes upon cross-calls.
  - `func fn() { crossing(); … }` signifies that fn is a crossing-function where
    std.CurrentRealm() returns the realm in which the function is declared.
- - Gno2 proposed syntax: `@fn(…)`, `@func @fn() { … }`
- - These are like verb (function) modifiers in honorifics in Korean and
-   Japanese: https://en.wikipedia.org/wiki/Honorifics_(linguistics) 
- - Type checking cross-calls isn’t strictly necessary, but is e.g. for
-   financial systems, aids development.
+   [Gno2 proposed syntax](https://github.com/gnolang/gno/issues/4223):
+   `@fn(…)`, `@func @fn() { … }`. These are like verb (function) modifiers in
+   [honorifics in Korean and Japanese](https://en.wikipedia.org/wiki/Honorifics_%28linguistics%29)
  - While all data is readable by other realms, dot.selector access
-   across realms get tainted with 'readonly' attribute.
+   across realms get [tainted with 'readonly' attribute](https://github.com/gnolang/gno/blob/master/docs/resources/gno-interrealm.md#readonly-taint-specification).
+ - [`revive(fn)`](https://github.com/gnolang/gno/blob/master/docs/resources/gno-interrealm.md#panic-and-revivefn)
+   for Software Transactional Memory (STM). 
  - Function/method return implies access without readonly taint.
  - Inter-realm type conversion limitations to prevent exploits.
  - More and refinements to come in Gno2.
