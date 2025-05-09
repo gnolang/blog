@@ -79,7 +79,7 @@ In essence, Gno provides the "best microservice experience" imaginable: simple, 
 
 While basic interrealm calls provide access to another realm's functions and data (read-only), the optional `cross` keyword and `crossing()` function modifier introduce control over the execution *context*.
 
-*   **Calling without `cross` (Non-crossing call):** When you call a function in another realm *without* using `cross`, you are essentially executing that remote code within your *current* realm's context and memory space (though direct modification of the remote realm's state is restricted). Think of it like borrowing a library from another service but running it locally.
+*   **Calling without `cross` (Non-crossing call):** When you call a function in another realm *without* using `cross`, you are essentially executing that remote code within your *current* realm's context and memory space. Direct modification of the remote realm's state is restricted. Think of it like borrowing a library from another service but running it locally. Trying to modify memory of another realm without `cross` is forbidden and will result in a panic. For example, if Realm A calls a function in Realm B that attempts `realmB.someState = "new value"`, this operation will fail if not done within a `crossing()` call.
 
     ```ascii
      Non-crossing Call (Realm A calls Realm B's function):
@@ -96,7 +96,7 @@ While basic interrealm calls provide access to another realm's functions and dat
                     [Realm B State] (Read-Only Access)
     ```
 
-*   **Calling with `cross` (Crossing call):** When you call a `crossing()` function using the `cross(realmB.Function)(...)` syntax, you explicitly shift the execution context *into* the target realm (Realm B). The function now executes with Realm B's permissions, environment (`std.CurrentRealm()` changes), and can directly modify Realm B's state. This is like truly entering the other microservice's environment to perform an operation.
+*   **Calling with `cross` (Crossing call):** When you call a `crossing()` function using the `cross(realmB.Function)(...)` syntax, you explicitly shift the execution context *into* the target realm (Realm B). The function now executes with Realm B's permissions, environment (`std.CurrentRealm()` changes), and can directly modify Realm B's state. This is like truly entering the other microservice's environment to perform an operation; Realm A is allowed to modify Realm B's memory, but this modification happens within Realm B's context.
 
     ```ascii
      Crossing Call (Realm A calls Realm B's crossing function):
@@ -111,5 +111,11 @@ While basic interrealm calls provide access to another realm's functions and dat
                                     |                          |
                                     +--------------------------+
     ```
+
+### Advanced Scenarios: Circular Crossing and Indirect Invocation
+
+A common question is: What if Realm A crosses into Realm B, and then Realm B attempts to cross back into Realm A within the same transaction? While a direct circular import between realm packages is disallowed at compile time, a circular *call* sequence (A -> B -> A) during a crossing call is more nuanced. When B calls back into A, the context shifts *again*. It's not as if A never crossed; rather, it's a nested context change. The execution is now in Realm A's context, but this is a *new* context initiated by Realm B. `std.CurrentRealm()` would reflect Realm A, and modifications would apply to Realm A's state. However, the overall transaction's atomicity is still managed by the GnoVM. If any part of this A -> B -> A sequence fails, the entire set of operations across all involved realms is rolled back.
+
+Furthermore, while direct two-sided *imports* between realm packages are disallowed at compile time, callback-style interactions are directly achievable. Realm A can pass an object instance (which includes methods) or a function reference to Realm B as part of a `cross` call. Subsequently, Realm B can invoke a method on this passed object or call the function. Such an invocation targeting code originating from Realm A will execute within Realm A's context. This allows Realm B to trigger computations or state modifications back in Realm A, effectively creating a callback. This mechanism supports sophisticated, direct interactions where realms can influence each other's state within a single atomic transaction, without necessarily requiring an intermediary realm.
 
 This distinction allows fine-grained control over permissions, state modifications, and resource usage during interrealm interactions, further enhancing the Gno programming model's capabilities beyond traditional systems.
