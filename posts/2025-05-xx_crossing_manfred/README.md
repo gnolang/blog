@@ -51,8 +51,8 @@ face several inherent complexities:
      |---< Fail? <-----|                  |                 |
      |                 |                  |                 |
      +-----> Call(primitive) -> Marshal -> + -> Unmarshal -> +---> Logic A ---+
-     |                 |                  |                 |               |
-     |<---- Fail? <----|<---- Fail? <-----|                 |<--- Logic OK --+
+     |                 |                  |                 |                 |
+     |<---- Fail? <----|<---- Fail? <-----|                 |<--- Logic OK ---+
      |                 |                  |                 |
      +-----> Call(primitive) -> Marshal -> + -> Unmarshal -> [Service B] ---> Logic B ---+
      |                 |                  |                 |                            |
@@ -158,15 +158,15 @@ modifier introduce control over the execution *context*.
     ```ascii
      Crossing Call (Realm A calls Realm B's crossing function):
 
-     [Realm A Context] --cross()--> [Realm B Context]----------+
-                                    |                          |
-                                    | Executes Realm B's code  |
+     [Realm A Context] --cross()--> [Realm B Context]-----------+
+                                    |                           |
+                                    | Executes Realm B's code   |
                                     | (within Realm B's context)|
-                                    | Can modify Realm B State |
-                                    |                          |
+                                    | Can modify Realm B State  |
+                                    |                           |
      [Realm A State] <----return----+- std.CurrentRealm() is B -+
-                                    |                          |
-                                    +--------------------------+
+                                    |                           |
+                                    +---------------------------+
     ```
 
 A common question is: What if Realm A crosses into Realm B, and then Realm B
