@@ -302,3 +302,27 @@ Gno.land.
 
  * Carolyn Pehrson - Paralegal keeping AIB,Inc and NT,LLC alive. Thinks you
    should get a pet mini pig.
+
+### Onbloc Co., Ltd.
+
+Onbloc Co., Ltd. is a core contributor to Gno, delivering essential tools to 
+the Gno.land ecosystem—including the Adena Wallet, GnoScan Explorer, and GnoSwap 
+AMM DEX—for both developers and everyday users.
+
+ * Dongwon Shin - Blockchain evangelist and product‑driven builder, obsessed with
+   user experience and ecosystem growth. Before founding Onbloc, he worked on several
+   crypto initiatives, including a research firm, a crypto exchange, and a consulting firm.
+
+ * Peter Yoon - Blockchain advocate and strategic specialist. A long-time supporter
+   of Cosmos since its inception, he was an early member of Cosmos Korea and founded
+   Lunamint, the first crypto wallet integrated with Telegram.
+
+ * Jinwoo Choi - Full-stack engineer behind the Adena Wallet and GnoScan, with
+   extensive experience building stable and scalable software systems. Passionate
+   about designing robust architectures that endure scale and complexity.
+
+ * Byeongjun Lee - Core engineer for Gno.land and the GnoSwap project, passionate about
+   compilers and programming languages. He's dedicated to making developers’ lives easier.
+
+ * Andrew Kang - Experienced product manager and researcher, skilled at identifying
+   trends and driving strategic initiatives that advance the crypto ecosystem.
