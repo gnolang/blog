@@ -66,7 +66,7 @@ So non-pure exported functions act exactly like a system call: they provide the
 ability to write outside the calling realm space, by crossing the realm
 boundary. A realm doesn't need to trust a caller realm: only itself can write in
 its own space. A realm doesn`t need to trust an external kernel: it is its own
-the kernel, it decides exactly how its data can be accessed and/or modified by
+kernel, it decides exactly how its data can be accessed and/or modified by
 caller realms.
 
 Gno unifies the concepts of Go package and Unix process in a single simple
