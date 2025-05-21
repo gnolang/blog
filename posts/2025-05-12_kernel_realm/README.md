@@ -49,7 +49,7 @@ which are disgarded at return), or not: some variable outside of the function
 scope is modified. In that case, the modified variable must be defined in the
 same package as the function. Functions can only write global variables
 declared inside their own package space (assuming variables are unexported),
-and it is always inforced, as in Go, by static code analysis.
+and it is always enforced, as in Go, by static code analysis.
 
 But because realms are also stateful processes with their own identity and
 protected space, and that a process can only write in its own space, calling a
