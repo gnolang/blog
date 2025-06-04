@@ -7,7 +7,7 @@ authors: [mvertes]
 
 # Gno realms vs system kernels
 
-Let's explore the analogy between Gno and operating systems.
+Let's explore the analogy between Gno and existing operating systems.
 
 In computers, the role of the operating system is to isolate each process from
 the others, for memory integrity and security, and to control access to
@@ -17,8 +17,8 @@ communicate with others, or externally through the network.
 The operating system provides those capabilities through the kernel, which
 executes system calls.  When invoked by a user process,  the kernel switches the
 CPU into a priviledged mode, to perform the services outside user reach. Each
-resource located outside of the process private user memory must be manipulated
-through system calls, under the strict supervision of the kernel, which acts as
+resource located outside of the process means the private user memory must be manipulated
+through system calls. This is done under the strict supervision of the kernel, which acts as
 a neutral trusted facilitator between untrusted processes. On bare metal
 systems, this is enforced by the hardware itself.
 
@@ -29,8 +29,8 @@ consensus-based verification, all provided by the underlying blockchain storage
 layer, itself distributed.
 
 In Gno, the equivalent of computer processes are *realms*. Each realm is like an
-always-active process, running forever, like for example a web server. In a
-regular system, a live process is defined by its PID, its memory, and the set
+always-active process, running forever, like for example, a web server. In a
+regular system, a live process is defined by its Process Identifier (PID, a number set by the system for the life of the process), its memory, and the set
 of system resources it uses at a given time (files, connections, etc).
 Similarly in Gno, a realm is defined by its identity (a unique crypto address),
 its global memory state (the content of memory when the realm is at rest),
