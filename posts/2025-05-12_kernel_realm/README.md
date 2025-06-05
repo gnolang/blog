@@ -32,11 +32,11 @@ an always-active process, running forever, similar to a web server. In a
 regular system, a live process is defined by its Process Identifier (PID, a
 number set by the system for the life of the process), its memory, and the set
 of system resources it uses at a given time (files, connections, etc).
-Similarly in Gno, a realm is defined by its identity (a unique crypto address),
+Similarly in Gno, a realm is defined by its identity (a unique package path),
 its global memory state (the content of memory when the realm is at rest),
 which may contain for example the amount of coins it retains.
 
-A realm may provide services to other realms through the exported public
+A realm may provide services to other realms through the exported
 functions it declares, and it may use services provided by other realms by
 importing the realm using an `import`  statement, and directly calling its
 functions in code. The way of declaring exported functions and importing them
@@ -51,7 +51,7 @@ same package as the function. Functions can only write to global variables
 declared within their own package space (assuming variables are unexported),
 and static code analysis, as in Go, enforces this rule.
 
-But because realms are also stateful processes with their own identity and
+However, since realms are also stateful processes with their own identity and
 protected space, and because a process can write only in its own space, calling
 a non-pure function imported from another realm means that the caller realm
 would attempt to write in the callee realm space, which is forbidden!
@@ -69,7 +69,7 @@ write in its own space. A realm doesn't need to trust an external kernel: it is
 its own kernel, it decides exactly how its data can be accessed and/or modified
 by caller realms.
 
-Gno unifies the concepts of Go packages and Unix processes in a single simple
+Gno unifies the concepts of Go packages and Unix processes in a single, simple
 concept: the realm. The kernel is decentralized and put back in control of
 package developers. The operating system itself becomes transparent: realm
 processes are both resource users and providers, with full control and
