@@ -1,6 +1,6 @@
 ---
-publication_date: 2025-05-12T13:17:22Z
-slug: kernel and realm
+publication_date: 2025-06-09T13:17:22Z
+slug: kernel-realm
 tags: [kernel, process, realm]
 authors: [mvertes]
 ---
@@ -17,7 +17,7 @@ communicate with others, or externally through the network.
 The operating system provides those capabilities through the kernel, which
 executes system calls.  When invoked by a user process,  the kernel switches
 the CPU into a privileged mode, to perform the services outside user reach.
-Each resource located outside of the process means the private user memory must
+Each resource located outside the process means the private user memory must
 be manipulated through system calls. This is done under the strict supervision
 of the kernel, which acts as a neutral trusted facilitator between untrusted
 processes. On bare metal systems, this is enforced by the hardware itself.
@@ -45,7 +45,7 @@ a Gno process, but is also a package (in the Go sense).
 
 Functions in packages can be pure (in the functional programming sense: the
 function has no side effects and operates only on temporary local variables
-which are discarded at return), or not: some variable outside of the function
+which are discarded at return), or not: some variable outside the function
 scope is modified. In that case, the modified variable must be defined in the
 same package as the function. Functions can only write to global variables
 declared within their own package space (assuming variables are unexported),
