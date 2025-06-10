@@ -43,7 +43,7 @@ For Test6, you can use the [Faucet Hub](https://faucet.gno.land/) to request tok
 
 The Valoper Registry Realm is a public directory of validator profiles, providing transparency and essential information for GovDAO members to evaluate new validator candidates to add to the gno.land valset.
 
-If validators are interested in participating on the Test6 network, you can register your public validator profile to the [registry](https://test6.testnets.gno.land/r/gnoland/valopers). Two informational guides are available to help you started on your way to becoming a [testnet validator](https://gnops.io/articles/guides/become-testnet-validator/) and provide details on the [hardware specifications](https://gnops.io/articles/effective-gnops/validator-specs/) for gno.land.
+If validators are interested in participating on the Test6 network, you can register your public validator profile to the [registry](https://test6.testnets.gno.land/r/gnoland/valopers/v2). Two informational guides are available to help you started on your way to becoming a [testnet validator](https://gnops.io/articles/guides/become-testnet-validator/) and provide details on the [hardware specifications](https://gnops.io/articles/effective-gnops/validator-specs/) for gno.land.
 
 You will need to include your Discord handle in the registry in order to receive an invite to the valoper Discord channel. This is where you will signal your interest in joining Test6, and a GovDAO member(s) will be responsible for making and voting on the proposals to add new validators to the Test6 network. This process is a step in testing validator onboarding and the governance system leading up to beta mainnet.
 
