@@ -85,8 +85,8 @@ deliverables outlined in the Road to Mainnet and Beyond [post](https://gno.land/
 Test6 supports the Interrealm Specification, introducing new builtins like `cross`
 and a way to explicitly specify whether a public realm function is crossing.
 
-Developers will now be able to explicitly specify if a function in their realm is
-crossing, creating a safer execution environment for interrealm execution. Check 
-out [Interrealm Specification Docs](https://docs.gno.land/resources/gno-interrealm),
+By explicitly specifying if a function crosses the realm boundary, developers 
+will be creating a safer execution environment during interrealm execution. Check 
+out the [Interrealm Specification Docs](https://docs.gno.land/resources/gno-interrealm),
 as well as the [example packages](https://github.com/gnolang/gno/tree/master/examples) 
 for more info.
