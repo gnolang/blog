@@ -2,7 +2,7 @@
 publication_date: 2025-04-16T00:00:00Z
 slug: test6-announcement
 tags: [gnoland, ecosystem, updates, testnet, test6]
-authors: [michelleellen]
+authors: [leohhhn]
 ---
 
 # Announcing Test6: The Latest Gno.land Testnet
@@ -78,11 +78,15 @@ improve chances for future validator acceptance. The initial validator amount an
 valset will ultimately be selected through GovDAO T1 governance proposals and acceptance.
 
 The launch of Test6 signals the final groundwork needed to achieve the Beta Mainnet
-deliverables outlined in the Road to Mainnet and Beyond [post](https://gno.land/r/gnoland/blog:p/road-to-mainnet)
+deliverables outlined in the Road to Mainnet and Beyond [post](https://gno.land/r/gnoland/blog:p/road-to-mainnet).
 
 ## Interrealm Specification
 
-The 
+Test6 supports the Interrealm Specification, introducing new builtins like `cross`
+and a way to explicitly specify whether a public realm function is crossing.
 
-
-link to docs/ maybe link to logoverse?
+Developers will now be able to explicitly specify if a function in their realm is
+crossing, creating a safer execution environment for interrealm execution. Check 
+out [Interrealm Specification Docs](https://docs.gno.land/resources/gno-interrealm),
+as well as the [example packages](https://github.com/gnolang/gno/tree/master/examples) 
+for more info.
