@@ -2,7 +2,7 @@
 publication_date: 2025-04-16T00:00:00Z
 slug: test6-announcement
 tags: [gnoland, ecosystem, updates, testnet, test6]
-authors: [leohhhn]
+authors: [leohhhn, michelleellen]
 ---
 
 # Announcing Test6: The Latest Gno.land Testnet
