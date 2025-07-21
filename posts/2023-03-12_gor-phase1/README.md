@@ -1,10 +1,11 @@
 ---
-title: "All You Need to Know About Game of Realms: Phase One"
 publication_date: 2023-03-12T14:02:00Z
 slug: gor-phase1
 tags: [gnoland,game-of-realms,faq]
 author: [christina,manfred]
 ---
+
+# All You Need to Know About Game of Realms: Phase One
 
 Game of Realms, the worldwide competition to find the best contributors to Gno.land, is currently underway. Unlike some contests you may have entered, we're doing things a little differently. We want participants to be instrumental in building the Gno.land platform with meaningful contributions that help shape the direction of the project – either by writing the best Gnolang smart contracts or contributing to the core blockchain. It’s not just about winning prizes but becoming a meaningful contributor. We encourage participants to collaborate on the challenges – your contribution will be rewarded on individual merit.
 

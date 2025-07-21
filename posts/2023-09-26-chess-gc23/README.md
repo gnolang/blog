@@ -1,10 +1,11 @@
 ---
-title: "Play Chess with Us: The Gnolang Way at GopherCon 2023"
 publication_date: 2023-09-25T13:37:00Z
 slug: chess-gc23
 tags: [gnoland, gnovm, gnochess, events]
 authors: [christina]
 ---
+
+# Play Chess with Us: The Gnolang Way at GopherCon 2023
 
 Calling all gnomes and gophers! Come join the Gno.land team at GopherCon 2023, September 25 - 28, in San Diego, US. We’re sponsoring this year’s action-packed event that will gather together some of the world’s brightest minds and smartest programmers under one roof. So drop by our booth, pick up some swag, and say hey! We’ll be on hand every day to meet and greet, answer all your questions, and discuss everything Go, Gno, and beyond! We’ll also be hosting a workshop on Community Day, September 26, called ‘Chess: The Gnolang Way,’ where you can learn how to build a web3 chess server on Gno.land.
 
