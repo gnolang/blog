@@ -1,7 +1,7 @@
 ---
 publication_date: 2025-07-21T17:13:00Z
-slug: ethcc-2025
-tags: [gnoland,event,post]
+slug: ethcc2025
+tags: [gnoland,events,ethcc,conferences]
 authors: michelleellen
 ---
 
