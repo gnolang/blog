@@ -1,8 +1,8 @@
 ---
 publication_date: 2025-07-21T17:13:00Z
 slug: ethcc2025
-tags: [gnoland,events,ethcc,conferences]
-authors: michelleellen
+tags: [gnoland, events, ethcc, conferences]
+authors: [michelleellen]
 ---
 
 # Gnomes at EthCC ‘25
