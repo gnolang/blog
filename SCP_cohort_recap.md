@@ -1,3 +1,10 @@
+---
+publication_date: 2024-12-04T00:00:00Z
+slug: scp-recap
+tags: [gnoland, students, community]
+authors: [michelleellen]
+---
+
 # Student Contributor Program: Cohort 4 Wrap-up
 
 We’ve recently concluded the fourth cohort of our Student Contributor Program with third-year Epitech POC Innovation students. Over the course of five months, six students dove deep into Gno.land, learning, contributing, and building projects.
