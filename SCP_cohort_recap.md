@@ -40,7 +40,7 @@ Applications & Demos
 
 Core Enhancements & Utilities
 
-- Levenshtein Distance Function
+- Levenshtein Distance package - link/pkgpath
 - Profiling Support for GnoVM (70ipprof + Flamegraph)
 - SVG Extension
 - Improvements to the blog realm
