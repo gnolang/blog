@@ -17,7 +17,7 @@ Each student began by creating their home realm and documenting their journey in
 
 ### Student advice to getting started
 
-- Always use gnodev: Develop with the same interface end-users will see to catch issues early and save both gas and time.
+- Always use `gnodev`: Develop with the same interface end-users will see to catch issues early and save both gas and time.
 - Start small: Build a simple home realm, blog, game, or voting app. Shipping something functional teaches more than passive reading.
 - Keep a HackerSpace diary: Write short daily notes about what you build, learn, or fix. It makes progress tracking easy and helps mentors guide you.
 - Read other realms’ code: The monorepo is full of solid, real-world examples that can accelerate your learning.
