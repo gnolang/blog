@@ -17,14 +17,14 @@ Each student began by creating their home realm and documenting their journey in
 
 ### **Student advice to getting started**
 
-- Always use gnodev – Develop with the same interface end-users will see to catch issues early and save both gas and time.
-- Start small – Build a simple blog, game, or voting app. Shipping something functional teaches more than passive reading.
-- Keep a HackerSpace diary – Write short daily notes about what you build, learn, or fix. It makes progress tracking easy and helps mentors guide you.
-- Read other realms’ code – The monorepo is full of solid, real-world examples that can accelerate your learning.
-- Ask questions early and often – Use Office Hours, PR comments, or Signal. Small clarifications now prevent big roadblocks later.
-- Expect rough edges – Gno is still evolving, so some issues may be language-level limitations, not your mistake.
-- Stick to determinism – Avoid relying on time, randomness, or anything non-deterministic; these won’t work on-chain.
-- Experiment safely – Push the VM to its limits, test edge cases, and learn from breakage. Bugs you find can become your first GitHub issues.
+- Always use gnodev: Develop with the same interface end-users will see to catch issues early and save both gas and time.
+- Start small: Build a simple home realm, blog, game, or voting app. Shipping something functional teaches more than passive reading.
+- Keep a HackerSpace diary: Write short daily notes about what you build, learn, or fix. It makes progress tracking easy and helps mentors guide you.
+- Read other realms’ code: The monorepo is full of solid, real-world examples that can accelerate your learning.
+- Ask questions early and often: Use Office Hours, PR comments, or Signal. Small clarifications now prevent big roadblocks later.
+- Expect rough edges: Gno is still evolving, so some issues may be language-level limitations, but a good experience in experimentation.
+- Stick to determinism: Avoid relying on time, randomness, or anything non-deterministic; these won’t work on-chain.
+- Experiment safely: Push the VM to its limits, test edge cases, and learn from breakage. Bugs you find can become your first GitHub issues.
 
 ### **Student Contribution Highlights**
 
