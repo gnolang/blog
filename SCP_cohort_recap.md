@@ -23,7 +23,7 @@ Each student began by creating their home realm and documenting their journey in
 - Read other's Gno code: The monorepo is full of solid, real-world examples that can accelerate your learning.
 - Ask questions early and often: Use Office Hours, PR comments, or Signal. Small clarifications now prevent big roadblocks later.
 - Expect rough edges: Gno is still evolving, so some issues may be language-level limitations, but a good experience in experimentation.
-- Stick to determinism: Avoid relying on time, randomness, or anything non-deterministic; these won’t work on-chain.
+- Stick to determinism: Avoid relying on time, randomness, or anything non-deterministic; these are not practical on-chain.
 - Experiment safely: Push the VM to its limits, test edge cases, and learn from breakage. Bugs you find can become your first GitHub issues.
 
 ### **Student Contribution Highlights**
