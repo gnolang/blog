@@ -1,5 +1,5 @@
 ---
-publication_date: 2024-12-04T00:00:00Z
+publication_date: 2025-08-13T00:00:00Z
 slug: scp-recap
 tags: [gnoland, students, community]
 authors: [michelleellen]
