@@ -26,7 +26,7 @@ Each student began by creating their home realm and documenting their journey in
 - Stick to determinism: Avoid relying on time, randomness, or anything non-deterministic; these are not practical on-chain.
 - Experiment safely: Push the VM to its limits, test edge cases, and learn from breakage. Bugs you find can become your first GitHub issues.
 
-### **Student Contribution Highlights**
+### Student Contribution Highlights
 
 The cohort tackled a wide range of technical and creative projects, including applications, tools, and ecosystem enhancements. Here's a highlight of what they accomplished:
 
