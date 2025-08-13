@@ -15,7 +15,7 @@ As part of their experience, the students participated in hands-on workshops wit
 
 Each student began by creating their home realm and documenting their journey in the Hackerspace repo. At the end of the cohort, each student wrote a report to detail the internship experience, the learnings, engineering projects and takeaways. For the Gno engineering team and DevRels these reports are critical to gaining insights into how documentation is applied, challenges, voids and general areas to improve onboarding.
 
-### **Student advice to getting started**
+### Student advice to getting started
 
 - Always use gnodev: Develop with the same interface end-users will see to catch issues early and save both gas and time.
 - Start small: Build a simple home realm, blog, game, or voting app. Shipping something functional teaches more than passive reading.
