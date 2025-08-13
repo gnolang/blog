@@ -50,7 +50,7 @@ Documentation
 - CommonDAO Tutorial
 - Solidity Famous Patterns
 
-### **Student Reflections**
+### Student Reflections
 
 [@louonezime](https://github.com/louonezime) ‘Over the course of this cohort, I had the opportunity to explore and build within the Gno.land ecosystem. I especially enjoyed working on rebuilding the blog package, which gave me the chance to be creative while learning Gno. The open-source environment made the experience smooth and collaborative. All in all, it was a great way to contribute to something meaningful in the blockchain space, especially since it was my first time getting into it.’
 
