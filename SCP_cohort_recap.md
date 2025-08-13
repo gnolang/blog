@@ -1,6 +1,6 @@
 ---
 publication_date: 2025-08-13T00:00:00Z
-slug: scp-recap
+slug: scp-cohort4
 tags: [gnoland, students, community]
 authors: [michelleellen]
 ---
