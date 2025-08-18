@@ -19,8 +19,8 @@ Each student began by creating their home realm and documenting their journey in
 
 - Always use `gnodev`: Develop with the same interface end-users will see to catch issues early and save both gas and time.
 - Start small: Build a simple home realm, blog, game, or voting app. A hands-on approach teaches more than just documentation reading.
-- Keep a HackerSpace diary: Write short daily notes about what you build, learn, or fix. It makes progress tracking easy and helps mentors guide you.
-- Read other's Gno code: The monorepo is full of solid, real-world examples that can accelerate your learning.
+- Keep a HackerSpace diary: Write short weekly notes about what you build, learn, or fix. It makes progress tracking easy and helps mentors guide you. All are linked with the 'journey' [label](https://github.com/gnolang/hackerspace/issues?q=is%3Aissue%20state%3Aopen%20label%3A%22🌄%20journey%22)
+- Read other's Gno code: The monorepo is full of solid, real-world examples that can accelerate your learning. 
 - Ask questions early and often: Use Office Hours, PR comments, or Signal. Small clarifications now prevent big roadblocks later.
 - Expect rough edges: Gno is still evolving, so some issues may be language-level limitations, but a good experience in experimentation.
 - Stick to determinism: Avoid relying on time, randomness, or anything non-deterministic; these are not practical on-chain.
