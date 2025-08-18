@@ -1,5 +1,5 @@
 ---
-publication_date: 2025-08-13T00:00:00Z
+publication_date: 2025-08-18T00:00:00Z
 slug: scp-cohort4
 tags: [gnoland, students, community, scp, internship]
 authors: [michelleellen]
@@ -15,7 +15,7 @@ As part of their experience, the students participated in hands-on workshops wit
 
 Each student began by creating their home realm and documenting their journey in the Hackerspace repo. At the end of the cohort, each student wrote a report to detail the internship experience, the learnings, engineering projects and takeaways. For the Gno engineering team and DevRels these reports are critical to gaining insights into how documentation is applied, challenges, voids and general areas to improve onboarding.
 
-### Student advice to getting started
+## Student advice to getting started
 
 - Always use `gnodev`: Develop with the same interface end-users will see to catch issues early and save both gas and time.
 - Start small: Build a simple home realm, blog, game, or voting app. A hands-on approach teaches more than just documentation reading.
@@ -26,11 +26,11 @@ Each student began by creating their home realm and documenting their journey in
 - Stick to determinism: Avoid relying on time, randomness, or anything non-deterministic; these are not practical on-chain.
 - Experiment safely: Push the VM to its limits, test edge cases, and learn from breakage. Bugs you find can become your first GitHub issues.
 
-#### Student Contribution Highlights
+## Student Contribution Highlights
 
 The cohort tackled a wide range of technical and creative projects, including applications, tools, and ecosystem enhancements. Here's a highlight of what they accomplished:
 
-Applications & Demos
+#### Applications & Demos
 
 - Reddit-style r/place on Gno.land
 - Pokémon Fight Simulator
@@ -38,19 +38,19 @@ Applications & Demos
 - Change.org-style petition realm
 - Friendly Organizer app using the CommonDAO implementation
 
-Core Enhancements & Utilities
+#### Core Enhancements & Utilities
 
 - Levenshtein Distance package - link/pkgpath
 - Profiling Support for GnoVM (70ipprof + Flamegraph)
 - SVG Extension
 - Improvements to the blog realm
 
-Documentation
+#### Documentation
 
 - CommonDAO Tutorial
 - Solidity Famous Patterns
 
-#### Student Reflections
+## Student Reflections
 
 [@louonezime](https://github.com/louonezime) ‘Over the course of this cohort, I had the opportunity to explore and build within the Gno.land ecosystem. I especially enjoyed working on rebuilding the blog package, which gave me the chance to be creative while learning Gno. The open-source environment made the experience smooth and collaborative. All in all, it was a great way to contribute to something meaningful in the blockchain space, especially since it was my first time getting into it.’
 
@@ -64,7 +64,7 @@ Documentation
 
 [@Chaegnal](https://github.com/Chaegnal) ‘During my time in the Epitech x Gno.land cohort I was able to deepen my understanding and improve my skill on blockchains. Using Gno allowed me to use my previous Go coding experience in a different setting. My work was mainly focused on dApps, I first focused on building an app to help groups organize themselves. This dApp used core blockchain principles like DAO, which I integrated by using a new package that acts as a DAO factory. By using this new package, I gained experience that I was able to share by documenting it. This focused on the open source aspect of the project, as the documentation is aimed to help new Gno builders. Overall, I want to thank every member of the Gno ecosystem, for making this experience fulfilling and a great learning experience for all of us. I enjoyed being part of this amazing project, carried out by passionate people!’
 
-### That’s a wrap
+## That’s a wrap
 
 This cohort brought energy, creativity, and fresh perspectives to Gno.land. Their contributions ranging from dApp experiments to infrastructure-level improvements, and testing demonstrated the potential and ease Gno enables. Thank you for your contributions and becoming part of the Gno.land community.
 
