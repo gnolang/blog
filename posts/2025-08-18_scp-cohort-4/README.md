@@ -1,6 +1,6 @@
 ---
 publication_date: 2025-08-18T00:00:00Z
-slug: scp-cohort4
+slug: scp-cohort-4
 tags: [gnoland, students, community, scp, internship]
 authors: [michelleellen]
 ---
