@@ -1,6 +1,6 @@
 ---
 publication_date: 2025-09-30T00:00:00Z
-slug: tmyg-16
+slug: monthly-dev-16
 tags: [gnoland, ecosystem, updates, TMYG, community]
 authors: [michelleellen]
 ---
