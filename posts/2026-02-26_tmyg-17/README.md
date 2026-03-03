@@ -25,7 +25,7 @@ In parallel, development continues on the Beta Mainnet launch [milestone](https:
 
 For the initial pre-Beta validator set,  we selected a group of interested validators from AtomOne. Selection criteria included alignment with AtomOne, voting participation history, an internal scoring framework, and geographic diversity across multiple countries.
 
-Ultimately, Gno.land’s Beta Mainnet GovDAO is responsible for approving the full Gno.land validator set. The initial target for the Beta launch is approximately 15 to 20 validators. Over time, additional validators may be voted in by the GovDAO, with preference given to those who avoid reliance on cloud infrastructure, make meaningful contributions to the community, and strengthen the geographic distribution of the validator set.
+Ultimately, Gno.land’s Beta Mainnet GovDAO is responsible for approving the full Gno.land validator set. The initial set for the Beta launch is approximately 15 to 20 validators to kick things off, starting with internal validators and expanding the set through GovDAO votes. Over time, additional validators may be voted in by the GovDAO, with preference given to those who avoid reliance on cloud infrastructure, make meaningful contributions to the community, and strengthen the geographic distribution of the validator set.
 
 Gno.land doesn’t operate in the same way as traditional Proof-of-Stake, so being voted in after Beta Mainnet genesis does not carry the same implications as in conventional PoS networks.
 
