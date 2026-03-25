@@ -1,5 +1,5 @@
 ---
-publication_date: 2026-03-26T00:00:00Z
+publication_date: 2026-03-25T00:00:00Z
 slug: beta-mainnet
 tags: [gnoland, ecosystem, community]
 authors: [michelleellen, Ticojohnny]
@@ -44,12 +44,12 @@ The next engineering task following Beta Mainnet, focuses on secure interoperabi
 Of the 1 billion total GNOT token supply, 70% is being distributed to the community in three categories.
 
 - Cosmos recipients: 35% has been allocated to a partial governance snapshot taken on [May 20th, 2022 (block 10,562,840)](https://www.mintscan.io/cosmos/block/10562840)
-- AtomOne recipients: 23.1% has been allocated to ATONE and PHOTON holders from a snapshot dated at [December 25th, 2025 (block 6439117](https://www.mintscan.io/atomone/block/6439117))
+- AtomOne recipients: 23.1% has been allocated to ATONE and PHOTON holders from a snapshot dated at [December 25th, 2025 (block 6439117)](https://www.mintscan.io/atomone/block/6439117)
 - Gno contributors: 11.9% has been allocated for distribution to prior and new Gno.land ecosystem contributors. This category will be managed in the future by a GovDAO subDAO.
 
 *Allocation figures and eligibility are based on snapshots and current records and may be adjusted to correct errors, prevent abuse, or comply with legal requirements.*
 
-From the remaining 30% GNOT supply, 7% has been reserved for current and future private token purchase rounds (if any), subject to applicable law, while the remaining 23% will be managed by NewTendermint, LLC. GovDAO and NewTendermint,LLC together will develop, support and maintain the Gno.land ecosystem.
+From the remaining 30% GNOT supply, 7% has been reserved for current and future private token purchase rounds (if any), subject to applicable law, while the remaining 23% will be managed by NewTendermint, LLC. GovDAO and NewTendermint, LLC together will develop, support and maintain the Gno.land ecosystem.
 
 ## Beta Means Beta
 
@@ -78,11 +78,11 @@ If you didn't receive GNOT, you can still explore Beta Mainnet via the [Faucet H
 
 If you have the skills to go further at this early stage, you can make meaningful code contributions, tooling, smart contract examples, and killer applications. Your contributions are integral to shaping and bootstrapping the network.
 
-Developers can start by deploying a simple realm, exploring the example contracts, or submitting a pull request either directly in the [Gno repository](https://github.com/gnolang), or in [Gnoverse](https://github.com/gnoverse), a collaborative space for experimental and innovative projects inspired by the Gno.land ecosystem. The best way to jump right in is visiting the [Gno.land Documentation](https://docs.gno.land/)**.**
+Developers can start by deploying a simple realm, exploring the example contracts, or submitting a pull request either directly in the [Gno repository](https://github.com/gnolang), or in [Gnoverse](https://github.com/gnoverse), a collaborative space for experimental and innovative projects inspired by the Gno.land ecosystem. The best way to jump right in is visiting the [Gno.land Documentation](https://docs.gno.land/).
 
 Contributors to the ecosystem may eventually deploy GRC-20 smart contracts enabling future on-chain swap functionality with [Gnoswap](https://beta.gnoswap.io/), the first decentralized exchange (DEX) on Gno.land.
 
-### Validators 
+### Validators
 
 Validators can join the set, help test scaling, and prepare for future upgrades. Beta Mainnet validators are added to the valset only through a GovDAO proposal. Unlike other networks where validators stake their funds and earn rewards, Gno.land's validator slots are given to contributors with proven track records. You can register your validator for consideration on the Gno.land [Valoper Registry](https://gno.land/r/gnops/valopers) and learn more [here](https://gnops.io/articles/guides/become-testnet-validator/) on how to get started.
 
