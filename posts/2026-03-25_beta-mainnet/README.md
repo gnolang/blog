@@ -7,7 +7,7 @@ authors: [michelleellen, Ticojohnny]
 
 # Gno.land Beta Mainnet is Live
 
-Gno.land’s Beta Mainnet marks the beginning of a new era in application development. Engineered from the ground up, Gno.land is the world’s first language-based, multi-user operating system. It pushes the limits of existing blockchain infrastructure and programming languages by making shared computation, persistent state, and composability native to the system itself.
+Gno.land's Beta Mainnet marks the beginning of a new era in application development. Engineered from the ground up, Gno.land is the world's first language-based, multi-user operating system. It pushes the limits of existing blockchain infrastructure and programming languages by making shared computation, persistent state, and composability native to the system itself.
 
 Similar to the way Cosmos changed how blockchains intercommunicate, and the Tendermint Byzantine Fault Tolerant Consensus Protocol changed how blockchain developers approach consensus algorithms, Gno.land will change the way developers think about programming.
 
@@ -15,30 +15,29 @@ Similar to the way Cosmos changed how blockchains intercommunicate, and the Tend
 
 Started in 2022 by Jae Kwon, founder of Tendermint and Cosmos, Gno.land set out to bring next-generation smart contract programming to the Cosmos ecosystem. What began as a passion project evolved into a dedicated engineering effort: a novel Layer1 platform, the Gno language (derived from Go), the Gno virtual machine, an application layer, and a universal browser and rendering system to make deployed code human-readable and interactive.
 
-Gno.land is a paradigm shift in both programming languages and operating systems. The goal is to become the world’s open knowledge base for the new millennium, starting with a powerful development environment for building next-level decentralized applications.
+Gno.land is a paradigm shift in both programming languages and operating systems. The goal is to become the world's open knowledge base for the new millennium, starting with a powerful development environment for building next-level decentralized applications.
 
 ## Launch Phases
 
-### **Phase I: The Beta Mainnet (Present)**
+### Phase I: The Beta Mainnet (Present)
 
-The launch of the Beta Mainnet includes the first distribution of the GNOT token, an operational GnoVM-powered smart contract network, and the inaugural release of GovDAO, Gno.land’s on-chain governing system. An initial treasury has been set up, managed by GovDAO members to fund future network development and growth. There will be a period of time where the virtual machine will be hardened and optimized with user provided contracts and automated fuzz tooling (which is currently being developed). Finally, the [Gno.land Constitution](https://github.com/gnolang/gno/blob/master/docs/CONSTITUTION.md) is in a preliminary state, and is expected to be ratified by a Supermajority Decision of GovDAO now that the Beta Mainnet is live.
+The launch of the Beta Mainnet includes the first distribution of the GNOT token, an operational GnoVM-powered smart contract network, and the inaugural release of GovDAO, Gno.land's on-chain governing system. An initial treasury has been set up, managed by GovDAO members to fund future network development and growth. There will be a period of time where the virtual machine will be hardened and optimized with user provided contracts and automated fuzz tooling (which is currently being developed). Finally, the [Gno.land Constitution](https://github.com/gnolang/gno/blob/master/docs/CONSTITUTION.md) is in a preliminary state, and is expected to be ratified by a Supermajority Decision of GovDAO now that the Beta Mainnet is live.
 
 Note: For now, token transfers are disabled during Beta; GNOT is usable within the network for supported on-chain functions.
 
-### **Phase II: Mainnet**
+### Phase II: Mainnet
 
-This phase will enable GNOT transfers. The activation of GNOT transfers will be proposed and voted on by GovDAO. Once transfers are enabled, Gno.land’s economy will begin forming with the community’s help. The priority then becomes growth: expand awareness, attract a core group of new Go developers, prototype dApps at speed, and equip builders with better tools.
+This phase will enable GNOT transfers. The activation of GNOT transfers will be proposed and voted on by GovDAO. Once transfers are enabled, Gno.land's economy will begin forming with the community's help. The priority then becomes growth: expand awareness, attract a core group of new Go developers, prototype dApps at speed, and equip builders with better tools.
 
 We will also see numerous optimizations of the Gno virtual machine both during the Beta Mainnet and Mainnet phases. More to come later!
 
-### **Phase III: Expanding the Network**
+### Phase III: Expanding the Network
 
 The next engineering task following Beta Mainnet, focuses on secure interoperability with a priority on bridging AtomOne and Gno.land. This includes integrating and testing key Cosmos technologies: Inter-Blockchain Communication (IBC) and [Interchain Security (ICS)](https://allinbits.com/blog/rethinking-ics/).
 
 *Timelines for each phase will be communicated as they solidify.*
 
-<img width="1051" height="567" alt="Screenshot 2026-03-24 at 22 00 04" src="https://github.com/user-attachments/assets/f18ba51a-035e-488a-bebc-d15938f490f5" />
-
+![Gno.land Beta Mainnet](https://gnolang.github.io/blog/2026-03-25_beta-mainnet/src/banner.png)
 
 ## GNOT Distribution Details
 
@@ -62,7 +61,7 @@ Every bug found, every realm deployed, and every part of Gno.land tested brings 
 
 ## Join the Beta Mainnet Experience
 
-There are many ways to contribute, whether you are a developer, a validator, or a network enthusiast, there’s a few ways to push the ecosystem forward.
+There are many ways to contribute, whether you are a developer, a validator, or a network enthusiast, there's a few ways to push the ecosystem forward.
 
 **Gnomies**
 
@@ -73,9 +72,9 @@ For Cosmos and AtomOne recipients, you can check your GNOT balance with your Cos
 
 *WARNING: Never enter your mnemonic (secret 12, 18, or 24 words) on any device that is or will ever be connected to the internet, not even on the Adena Wallet or Gnokey CLI. While you can check your GNOT balance, and use the Gno.land network, token transfers are currently not available.*
 
-If you didn’t receive GNOT, you can still explore Beta Mainnet via the [Faucet Hub](https://faucet.gno.land/) by requesting tokens from a drip faucet. The [Staging network](https://staging.gno.land/) is also available for experimentation using a separate test token.
+If you didn't receive GNOT, you can still explore Beta Mainnet via the [Faucet Hub](https://faucet.gno.land/) by requesting tokens from a drip faucet. The [Staging network](https://staging.gno.land/) is also available for experimentation using a separate test token.
 
-### **Developers**
+### Developers
 
 If you have the skills to go further at this early stage, you can make meaningful code contributions, tooling, smart contract examples, and killer applications. Your contributions are integral to shaping and bootstrapping the network.
 
@@ -85,15 +84,15 @@ Contributors to the ecosystem may eventually deploy GRC-20 smart contracts enabl
 
 **Validators**
 
-Validators can join the set, help test scaling, and prepare for future upgrades. Beta Mainnet validators are added to the valset only through a GovDAO proposal. Unlike other networks where validators stake their funds and earn rewards, Gno.land’s validator slots are given to contributors with proven track records. You can register your validator for consideration on the Gno.land [Valoper Registry](https://gno.land/r/gnops/valopers) and learn more [here](https://gnops.io/articles/guides/become-testnet-validator/) on how to get started.
+Validators can join the set, help test scaling, and prepare for future upgrades. Beta Mainnet validators are added to the valset only through a GovDAO proposal. Unlike other networks where validators stake their funds and earn rewards, Gno.land's validator slots are given to contributors with proven track records. You can register your validator for consideration on the Gno.land [Valoper Registry](https://gno.land/r/gnops/valopers) and learn more [here](https://gnops.io/articles/guides/become-testnet-validator/) on how to get started.
 
 **Everyone**
 
-The Gno.land block explorer, [GnoScan](https://gnoscan.io/), gives you an overview of Gno.land networks like Beta Mainnet as well as Staging, or ongoing testnets. It includes important data for an overview of the network’s status as well as a myriad of transactions made including total storage deposits, realm deployments, and fungible tokens (GRC20 token standard).
+The Gno.land block explorer, [GnoScan](https://gnoscan.io/), gives you an overview of Gno.land networks like Beta Mainnet as well as Staging, or ongoing testnets. It includes important data for an overview of the network's status as well as a myriad of transactions made including total storage deposits, realm deployments, and fungible tokens (GRC20 token standard).
 
 ## Recognition and the Road Ahead
 
-Phase II is expected to enable token transfers and expand development and user tooling. Phase III will focus on interoperability and building bridges to the Cosmos ecosystem. Each phase builds toward establishing Gno.land as the go-to operating system and platform for a censorship-free and economically viable alternative to today’s broken internet.
+Phase II is expected to enable token transfers and expand development and user tooling. Phase III will focus on interoperability and building bridges to the Cosmos ecosystem. Each phase builds toward establishing Gno.land as the go-to operating system and platform for a censorship-free and economically viable alternative to today's broken internet.
 
 Early adopters and contributors will always be remembered within the network. Whether your impact comes through core code, or creative realms, we'll spotlight your work and share it with the wider community. Now is the time. The Beta Mainnet is only the beginning.
 
@@ -103,7 +102,7 @@ Join our community:
 - GitHub: https://github.com/gnolang/
 - Docs: https://docs.gno.land/
 - X: https://x.com/_gnoland
-- Discord: [Discord.gg/gnoland](http://discord.gg/gnoland)
+- Discord: [Discord.gg/gnoland](https://discord.gg/gnoland)
 - Telegram: https://t.me/join_gnoland
 - Gno.land Linker: https://gno.land/links
 
