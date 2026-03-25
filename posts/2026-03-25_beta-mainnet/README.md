@@ -37,7 +37,7 @@ The next engineering task following Beta Mainnet, focuses on secure interoperabi
 
 *Timelines for each phase will be communicated as they solidify.*
 
-![Gno.land Beta Mainnet](src/banner.png)
+[![Gno.land Beta Mainnet](https://gnolang.github.io/blog/2026-03-25_beta-mainnet/src/thumbs/banner.png)](https://gnolang.github.io/blog/2026-03-25_beta-mainnet/src/banner.png)
 
 ## GNOT Distribution Details
 
