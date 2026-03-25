@@ -63,14 +63,14 @@ Every bug found, every realm deployed, and every part of Gno.land tested brings 
 
 There are many ways to contribute, whether you are a developer, a validator, or a network enthusiast, there's a few ways to push the ecosystem forward.
 
-**Gnomies**
+### Gnomies
 
 For Cosmos and AtomOne recipients, you can check your GNOT balance with your Cosmos Hub or AtomOne address using the [Coin Balance Checker](https://gno.land/r/gnoland/coins). You have two options for managing your GNOT tokens and interacting with the network:
 
 - Creating or importing your existing wallet through the [Adena Wallet](https://www.adena.app/)
 - Using [Gnokey CLI](https://docs.gno.land/users/interact-with-gnokey), the command-line wallet for Gno.land
 
-*WARNING: Never enter your mnemonic (secret 12, 18, or 24 words) on any device that is or will ever be connected to the internet, not even on the Adena Wallet or Gnokey CLI. While you can check your GNOT balance, and use the Gno.land network, token transfers are currently not available.*
+<span style="color:red">**WARNING: Never enter your mnemonic (secret 12, 18, or 24 words) on any device that is or will ever be connected to the internet, not even on the Adena Wallet or Gnokey CLI. While you can check your GNOT balance, and use the Gno.land network, token transfers are currently not available.**</span>
 
 If you didn't receive GNOT, you can still explore Beta Mainnet via the [Faucet Hub](https://faucet.gno.land/) by requesting tokens from a drip faucet. The [Staging network](https://staging.gno.land/) is also available for experimentation using a separate test token.
 
@@ -82,11 +82,11 @@ Developers can start by deploying a simple realm, exploring the example contract
 
 Contributors to the ecosystem may eventually deploy GRC-20 smart contracts enabling future on-chain swap functionality with [Gnoswap](https://beta.gnoswap.io/), the first decentralized exchange (DEX) on Gno.land.
 
-**Validators**
+### Validators 
 
 Validators can join the set, help test scaling, and prepare for future upgrades. Beta Mainnet validators are added to the valset only through a GovDAO proposal. Unlike other networks where validators stake their funds and earn rewards, Gno.land's validator slots are given to contributors with proven track records. You can register your validator for consideration on the Gno.land [Valoper Registry](https://gno.land/r/gnops/valopers) and learn more [here](https://gnops.io/articles/guides/become-testnet-validator/) on how to get started.
 
-**Everyone**
+### Everyone
 
 The Gno.land block explorer, [GnoScan](https://gnoscan.io/), gives you an overview of Gno.land networks like Beta Mainnet as well as Staging, or ongoing testnets. It includes important data for an overview of the network's status as well as a myriad of transactions made including total storage deposits, realm deployments, and fungible tokens (GRC20 token standard).
 
