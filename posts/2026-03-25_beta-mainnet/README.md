@@ -98,13 +98,13 @@ Early adopters and contributors will always be remembered within the network. Wh
 
 Join our community:
 
-- Webpage: https://gno.land/
-- GitHub: https://github.com/gnolang/
-- Docs: https://docs.gno.land/
-- X: https://x.com/_gnoland
+- Webpage: [https://gno.land/](https://gno.land/)
+- GitHub: [https://github.com/gnolang/](https://github.com/gnolang/)
+- Docs: [https://docs.gno.land/](https://docs.gno.land/)
+- X: [https://x.com/_gnoland](https://x.com/_gnoland)
 - Discord: [Discord.gg/gnoland](https://discord.gg/gnoland)
-- Telegram: https://t.me/join_gnoland
-- Gno.land Linker: https://gno.land/links
+- Telegram: [https://t.me/join_gnoland](https://t.me/join_gnoland)
+- Gno.land Linker: [https://gno.land/links](https://gno.land/links)
 
 *Disclaimer:*
 
