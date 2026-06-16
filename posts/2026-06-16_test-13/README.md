@@ -31,7 +31,7 @@ Test13 is a consensus-breaking release for the Gno testnet line with the followi
 - Gnokey behavior updates
 - Broad VM/RPC/web/security hardening
 
-Read the full [change log here](https://github.com/gnolang/gno/releases/tag/chain%2Ftest13).
+Read the full [change log here](https://github.com/gnolang/gno/releases/tag/chain/test13).
 
 ## What Test13 Means for Our Community
 
