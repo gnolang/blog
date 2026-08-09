@@ -50,5 +50,16 @@ Want to regenerate genesis? See [here](https://github.com/gnolang/gno/blob/chain
 ### Validators
 Please refer to this [link](https://github.com/gnolang/gno/blob/chain/sapphire/misc/deployments/sapphire.gno.land/VALIDATOR.md) to join Sapphire as a Validator. Further announcements will be made in the [testnet-announcements channel](https://discord.gg/4dAT8KbtU) on Discord.
 
+---
+
+#### Links
+
+- Gnoweb: https://sapphire.testnets.gno.land
+- Faucet: https://faucet.gno.land/
+- RPC: https://rpc.sapphire.testnets.gno.land
+- Gnockpit: https://gnockpit.sapphire.testnets.gno.land
+- Status: https://status.sapphire.testnets.gno.land
+- Tx-indexer: https://indexer.sapphire.testnets.gno.land/graphql 
+
 **Disclaimer**
 *Tokens on Sapphire testnet have no real-world value, and participation is for testing purposes only.*
