@@ -56,7 +56,8 @@ Notable fixes from the large batch of gnovm fixes are:
 
 ### Genesis + Binaries
 - [genesis.json](https://github.com/gnolang/gno/releases/download/chain/topaz/genesis.json) (verify with `sha256sum`)
-Prebuilt `gno`, `gnokey`, `gnoland`, `gnoweb` binaries for darwin/linux × amd64/arm64
+- Prebuilt `gno`, `gnokey`, `gnoland`, `gnoweb` binaries for darwin/linux × amd64/arm64
+
 Want to regenerate genesis? See [here](https://github.com/gnolang/gno/blob/chain/topaz/misc/deployments/topaz.gno.land/README.md).
 
 ### Validators
