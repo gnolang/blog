@@ -33,16 +33,16 @@ The headline addition in this release is **genesis vesting accounts**. The genes
 
 ## Breaking / Consensus Relevant Updates
 
-- Inert package flow completed, including a `MsgRun` allowlist and delegated params ([#6088](https://github.com/gnolang/gno/pull/6088), [#6093](https://github.com/gnolang/gno/pull/6093))
+- Inert-package flow completed, including a `MsgRun` allowlist and delegated params ([#6088](https://github.com/gnolang/gno/pull/6088), [#6093](https://github.com/gnolang/gno/pull/6093))
 - `AddPackage` now type checks production files only, while test files are stored and syntax parsed ([#6025](https://github.com/gnolang/gno/pull/6025))
 - Three separate cases where coins could be lost or over-authorized around the send envelope are fixed ([#6062](https://github.com/gnolang/gno/pull/6062))
 - GovDAO allowlist lockdown, proposal page escaping, and executor disclosure ([#6068](https://github.com/gnolang/gno/pull/6068))
-- Per file Go version now pinned in the consensus type-check ([#5978](https://github.com/gnolang/gno/pull/5978))
+- Per-file Go version now pinned in the consensus type-check ([#5978](https://github.com/gnolang/gno/pull/5978))
 
 ## VM Correctness
 
-- Type switch with a sole `case nil:` fixed ([#5766](https://github.com/gnolang/gno/pull/5766))
-- Clause local names on switch fallthrough ([#6056](https://github.com/gnolang/gno/pull/6056))
+- Type-switch with a sole `case nil:` fixed ([#5766](https://github.com/gnolang/gno/pull/5766))
+- Clause-local names on switch fallthrough ([#6056](https://github.com/gnolang/gno/pull/6056))
 - `goto` out of nested loops ([#5963](https://github.com/gnolang/gno/pull/5963))
 - Map composite-literal keys inside for loops ([#6037](https://github.com/gnolang/gno/pull/6037))
 - `ComputeMapKey` now metered on the realm-restore path ([#5710](https://github.com/gnolang/gno/pull/5710))
@@ -78,7 +78,7 @@ Please refer to the [Pearl validator guide](https://github.com/gnolang/gno/blob/
 
 ---
 
-#### Links
+### Links
 - Gnoweb: https://pearl.testnets.gno.land
 - Faucet: https://faucet.gno.land/
 - RPC: https://rpc.pearl.testnets.gno.land
