@@ -25,11 +25,11 @@ As it was with Sapphire, no state carries over from the previous testnet, so bal
 - Full release comparison: [`sapphire...pearl`](https://github.com/gnolang/gno/compare/tags/chain/sapphire...tags/chain/pearl)
 - Release candidate PR: [#6091](https://github.com/gnolang/gno/pull/6091)
 
-At 3 validators weighted 60 power each, one validator going offline sits exactly at the one third halt boundary. This has been accepted for launch and will be addressed as additional validator partners join.
+At 3 validators weighted 60 power each, one validator going offline sits exactly at the one-third halt boundary. This has been accepted for launch and will be addressed as additional validator partners join.
 
 ## What's New in Pearl?
 
-The headline addition in this release is genesis vesting accounts. The genesis builder now supports a configurable list of vested accounts, where continuous schedules unlock linearly and delayed schedules unlock as a cliff. Malformed entries, duplicate accounts, and invalid schedules are all caught and rejected before any node runs, and vesting account creation is now exercised on every build. Pearl ships with ten vested test accounts covering the full schedule matrix, including accounts already fully vested at genesis, several linear unlock windows, cliff schedules, a future start date, and one schedule straddling genesis itself.
+The headline addition in this release is **genesis vesting accounts**. The genesis builder now supports a configurable list of vested accounts, where continuous schedules unlock linearly and delayed schedules unlock as a cliff. Malformed entries, duplicate accounts, and invalid schedules are all caught and rejected before any node runs, and vesting account creation is now exercised on every build. Pearl ships with ten vested test accounts covering the full schedule matrix, including accounts already fully vested at genesis, several linear unlock windows, cliff schedules, a future start date, and one schedule straddling genesis itself.
 
 ## Breaking / Consensus Relevant Updates
 
@@ -37,20 +37,20 @@ The headline addition in this release is genesis vesting accounts. The genesis b
 - `AddPackage` now type checks production files only, while test files are stored and syntax parsed ([#6025](https://github.com/gnolang/gno/pull/6025))
 - Three separate cases where coins could be lost or over-authorized around the send envelope are fixed ([#6062](https://github.com/gnolang/gno/pull/6062))
 - GovDAO allowlist lockdown, proposal page escaping, and executor disclosure ([#6068](https://github.com/gnolang/gno/pull/6068))
-- Per file Go version now pinned in the consensus type check ([#5978](https://github.com/gnolang/gno/pull/5978))
+- Per file Go version now pinned in the consensus type-check ([#5978](https://github.com/gnolang/gno/pull/5978))
 
 ## VM Correctness
 
 - Type switch with a sole `case nil:` fixed ([#5766](https://github.com/gnolang/gno/pull/5766))
 - Clause local names on switch fallthrough ([#6056](https://github.com/gnolang/gno/pull/6056))
 - `goto` out of nested loops ([#5963](https://github.com/gnolang/gno/pull/5963))
-- Map composite literal keys inside `for` loops ([#6037](https://github.com/gnolang/gno/pull/6037))
-- `ComputeMapKey` now metered on the realm restore path ([#5710](https://github.com/gnolang/gno/pull/5710))
+- Map composite-literal keys inside for loops ([#6037](https://github.com/gnolang/gno/pull/6037))
+- `ComputeMapKey` now metered on the realm-restore path ([#5710](https://github.com/gnolang/gno/pull/5710))
 - Unsupported tilde operator now rejected at parse time ([#6057](https://github.com/gnolang/gno/pull/6057))
 
 ## Performance
 
-- Size aware encode, decode, and render paths ([commit `acd01fa29`](https://github.com/gnolang/gno/commit/acd01fa29))
+- Size-aware encode, decode, and render paths ([commit `acd01fa29`](https://github.com/gnolang/gno/commit/acd01fa29))
 - Runtime blocks recycled through a per machine pool ([#5813](https://github.com/gnolang/gno/pull/5813))
 - Vestigial `Defer.Parent` dropped ([#5856](https://github.com/gnolang/gno/pull/5856))
 
@@ -70,12 +70,24 @@ The headline addition in this release is genesis vesting accounts. The genesis b
   ```
 
 - Prebuilt `gno`, `gnokey`, `gnoland`, and `gnoweb` binaries for `darwin`/`linux` × `amd64`/`arm64`, with a `CHECKSUMS.txt` covering every asset
-- Want to regenerate genesis or join as a validator? See the [Pearl deployment docs](https://github.com/gnolang/gno/tree/chain/pearl/misc/deployments/pearl.gno.land)
+- Do you want to regenerate genesis or join as a validator? See the [Pearl deployment docs](https://github.com/gnolang/gno/tree/chain/pearl/misc/deployments/pearl.gno.land)
 
 ## Validators
 
 Please refer to the [Pearl validator guide](https://github.com/gnolang/gno/blob/chain/pearl/misc/deployments/pearl.gno.land/VALIDATOR.md) to join as a validator. Further announcements will be made in the [testnet announcements channel](https://discord.gg/4dAT8KbtU) on Discord.
 
-## Disclaimer
+---
+
+#### Links
+- Gnoweb: https://pearl.testnets.gno.land
+- Faucet: https://faucet.gno.land/
+- RPC: https://rpc.pearl.testnets.gno.land
+- Gnockpit: https://gnockpit.pearl.testnets.gno.land
+- Status: https://status.pearl.testnets.gno.land
+- Tx-indexer: https://indexer.pearl.testnets.gno.land/graphql
+
+---
+
+### Disclaimer
 
 Tokens on Pearl testnet have no real world value, and participation is for testing purposes only.
