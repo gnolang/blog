@@ -14,16 +14,24 @@ import (
 	"github.com/gnolang/gno/gno.land/pkg/gnoclient"
 	"github.com/gnolang/gno/gno.land/pkg/sdk/vm"
 	"github.com/gnolang/gno/gnovm/pkg/gnoenv"
+	"github.com/gnolang/gno/tm2/pkg/amino"
 	"github.com/gnolang/gno/tm2/pkg/commands"
+	"github.com/gnolang/gno/tm2/pkg/crypto"
 )
+
+const txMemo = "Posted from gnoblog-cli"
 
 type cliCfg struct {
 	Publish       bool
 	Edit          bool
 	GasWanted     int64
+	GasAdjustment float64
+	GasPrice      string
 	GasFee        string
 	ChainId       string
 	BlogRealmPath string
+	Target        string
+	DryRun        bool
 
 	KeyName               string
 	GnoHome               string
@@ -75,18 +83,38 @@ func (cfg *cliCfg) RegisterFlags(fs *flag.FlagSet) {
 	)
 	fs.Int64Var(&cfg.GasWanted,
 		"gas-wanted",
-		5000000,
-		"gas requested for tx",
+		0,
+		"gas requested per tx (0 = auto-estimate via simulation)",
+	)
+	fs.Float64Var(&cfg.GasAdjustment,
+		"gas-adjustment",
+		1.3,
+		"multiplier applied to the simulated gas estimate",
+	)
+	fs.StringVar(&cfg.GasPrice,
+		"gas-price",
+		"1ugnot/1000gas",
+		"gas price used to derive the fee when --gas-fee is unset",
 	)
 	fs.StringVar(&cfg.GasFee,
 		"gas-fee",
-		"1000000ugnot",
-		"gas payment fee",
+		"",
+		"flat gas payment fee (overrides --gas-price when set)",
 	)
 	fs.StringVar(&cfg.ChainId,
 		"chainid",
 		"dev",
-		"chain ID",
+		"chain ID (auto-set by --target)",
+	)
+	fs.StringVar(&cfg.Target,
+		"target",
+		"",
+		"gno.land web endpoint to auto-discover --remote and --chainid (e.g. gno.land)",
+	)
+	fs.BoolVar(&cfg.DryRun,
+		"dry-run",
+		false,
+		"simulate and print the tx plan without broadcasting",
 	)
 	fs.StringVar(&cfg.BlogRealmPath,
 		"pkgpath",
@@ -122,6 +150,17 @@ func execPost(io commands.IO, args []string, cfg *cliCfg) error {
 
 	if cfg.KeyName == "" {
 		return ErrEmptyKeyName
+	}
+
+	// Auto-discover remote & chainid from a gno.land web endpoint if requested
+	if cfg.Target != "" {
+		rpc, chainID, err := discoverTarget(cfg.Target)
+		if err != nil {
+			return fmt.Errorf("discovering target %q: %w", cfg.Target, err)
+		}
+		cfg.Remote = rpc
+		cfg.ChainId = chainID
+		fmt.Printf("discovered target %q -> remote=%s chainid=%s\n", cfg.Target, rpc, chainID)
 	}
 
 	// Ask user for confirming the ChainID
@@ -179,8 +218,6 @@ func execPost(io commands.IO, args []string, cfg *cliCfg) error {
 }
 
 func post(c gnoclient.Client, cfg *cliCfg, paths ...string) error {
-	msgs := make([]vm.MsgCall, 0, len(paths))
-
 	// Get account info
 	account, err := c.Signer.Info()
 	if err != nil {
@@ -194,30 +231,131 @@ func post(c gnoclient.Client, cfg *cliCfg, paths ...string) error {
 		return fmt.Errorf("query account %q failed: %w", account, err)
 	}
 
-	nonce := signingAcc.GetSequence()
+	baseNonce := signingAcc.GetSequence()
 	accNumber := signingAcc.GetAccountNumber()
 
-	// Set up base config
-	baseTxCfg := gnoclient.BaseTxCfg{
-		GasFee:         cfg.GasFee,
-		GasWanted:      cfg.GasWanted,
-		AccountNumber:  accNumber,
-		SequenceNumber: nonce,
-		Memo:           "Posted from gnoblog-cli",
+	// Build a message for every new (or, in edit mode, changed) post
+	msgs, err := buildMessages(c, cfg, address, paths)
+	if err != nil {
+		return err
+	}
+	if len(msgs) == 0 {
+		return fmt.Errorf("%w, exiting", ErrNoNewOrChangedPosts)
 	}
 
-	// Save title for printing to cli
-	var postTitle string
-	// Go through Post(s)
-	for _, postPath := range paths {
-		// Open file
-		postFile, err := os.Open(postPath)
-		if err != nil {
-			return fmt.Errorf("cannot open file %q: %w", postPath, err)
+	// Split the messages into transactions that respect the chain's per-tx size
+	// limit, so a growing blog never bounces off the MaxTxBytes wall.
+	limits := queryChainLimits(c)
+	sizeLimit := int(float64(limits.maxTxBytes) * txSizeSafetyRatio)
+	batches := packBatches(msgs, sizeLimit)
+
+	action := "posted"
+	if cfg.Edit {
+		action = "edited"
+	}
+
+	fmt.Printf("Prepared %d post(s) across %d transaction(s) (chain limits: maxTxBytes=%d, maxGas=%d).\n",
+		len(msgs), len(batches), limits.maxTxBytes, limits.maxGas)
+
+	total := 0
+	for i, batch := range batches {
+		nonce := baseNonce + uint64(i)
+
+		// In a real run, each broadcast commits before the next batch, so the
+		// on-chain sequence advances with the batch index. In a dry run nothing
+		// is broadcast, so simulation must keep signing against the base nonce.
+		estNonce := nonce
+		if cfg.DryRun {
+			estNonce = baseNonce
 		}
 
-		// Parse Post
+		// Resolve gas: honor an explicit --gas-wanted, otherwise simulate.
+		gasWanted := cfg.GasWanted
+		if gasWanted <= 0 {
+			estimated, err := estimateBatchGas(c, batch, accNumber, estNonce, limits)
+			if err != nil {
+				return fmt.Errorf("estimating gas for batch %d/%d: %w", i+1, len(batches), err)
+			}
+			gasWanted = int64(float64(estimated) * cfg.GasAdjustment)
+		}
+		if gasWanted > limits.maxGas {
+			return fmt.Errorf("batch %d/%d needs %d gas, above chain max %d; reduce batch size",
+				i+1, len(batches), gasWanted, limits.maxGas)
+		}
+
+		// Resolve fee: honor an explicit --gas-fee, otherwise derive from price.
+		gasFee := cfg.GasFee
+		if gasFee == "" {
+			gasFee, err = deriveGasFee(gasWanted, cfg.GasPrice)
+			if err != nil {
+				return err
+			}
+		}
+
+		txCfg := gnoclient.BaseTxCfg{
+			GasFee:         gasFee,
+			GasWanted:      gasWanted,
+			AccountNumber:  accNumber,
+			SequenceNumber: nonce,
+			Memo:           txMemo,
+		}
+
+		tx, err := gnoclient.NewCallTx(txCfg, batch...)
+		if err != nil {
+			return fmt.Errorf("building tx for batch %d/%d: %w", i+1, len(batches), err)
+		}
+
+		signedTx, err := c.SignTx(*tx, accNumber, nonce)
+		if err != nil {
+			return fmt.Errorf("signing batch %d/%d: %w", i+1, len(batches), err)
+		}
+
+		// Guard against a batch that would exceed the tx-size limit.
+		if encoded := int64(len(amino.MustMarshal(signedTx))); encoded > limits.maxTxBytes {
+			return fmt.Errorf("batch %d/%d encodes to %d bytes, above chain max %d; reduce batch size",
+				i+1, len(batches), encoded, limits.maxTxBytes)
+		}
+
+		if cfg.DryRun {
+			fmt.Printf("[dry-run] batch %d/%d: %d post(s), gas-wanted=%d, gas-fee=%s\n",
+				i+1, len(batches), len(batch), gasWanted, gasFee)
+			total += len(batch)
+			continue
+		}
+
+		if _, err := c.BroadcastTxCommit(signedTx); err != nil {
+			return fmt.Errorf("broadcasting batch %d/%d: %w", i+1, len(batches), err)
+		}
+
+		total += len(batch)
+		fmt.Printf("batch %d/%d: %s %d post(s) (gas-wanted=%d, gas-fee=%s)\n",
+			i+1, len(batches), action, len(batch), gasWanted, gasFee)
+	}
+
+	if cfg.DryRun {
+		fmt.Printf("[dry-run] would have %s %d post(s) across %d transaction(s).\n", action, total, len(batches))
+	} else {
+		fmt.Printf("Successfully %s %d post(s) across %d transaction(s)!\n", action, total, len(batches))
+	}
+
+	return nil
+}
+
+// buildMessages parses each post and returns a MsgCall for every post that needs
+// to be sent: new posts in normal mode, or existing posts in edit mode. Posts
+// already on chain are skipped (in normal mode) so a batch never fails because a
+// single message references an already-published slug.
+func buildMessages(c gnoclient.Client, cfg *cliCfg, address crypto.Address, paths []string) ([]vm.MsgCall, error) {
+	msgs := make([]vm.MsgCall, 0, len(paths))
+
+	for _, postPath := range paths {
+		postFile, err := os.Open(postPath)
+		if err != nil {
+			return nil, fmt.Errorf("cannot open file %q: %w", postPath, err)
+		}
+
 		post, err := parsePost(postFile)
+		postFile.Close()
 		if err != nil {
 			fmt.Printf("skipping post at %q, cannot parse: %v\n", postPath, err)
 			continue
@@ -236,17 +374,16 @@ func post(c gnoclient.Client, cfg *cliCfg, paths ...string) error {
 		bExists := strings.Contains(exists, "true")
 		if cfg.Edit {
 			if !bExists {
-				return fmt.Errorf("%s is not on chain yet - disable the edit flag\n", post.Title)
+				return nil, fmt.Errorf("%s is not on chain yet - disable the edit flag", post.Title)
 			}
 			// If Post exists, and user wants to edit it, use ModEditPost
 			verb = "ModEditPost"
 		} else if bExists {
 			// if a post is already on chain, and we are not editing it, just skip it
-			// otherwise, batch transactions will fail if a single MsgCall fails
 			continue
 		}
 
-		callMsg := vm.MsgCall{
+		msgs = append(msgs, vm.MsgCall{
 			Caller:  address,
 			Send:    nil,
 			PkgPath: cfg.BlogRealmPath,
@@ -259,34 +396,10 @@ func post(c gnoclient.Client, cfg *cliCfg, paths ...string) error {
 				strings.Join(post.Authors, ","),
 				strings.Join(post.Tags, ","),
 			},
-		}
-
-		msgs = append(msgs, callMsg)
-		postTitle = post.Title
+		})
 	}
 
-	if len(msgs) == 0 {
-		return fmt.Errorf("%w, exiting", ErrNoNewOrChangedPosts)
-	}
-
-	_, err = c.Call(baseTxCfg, msgs...)
-	if err != nil {
-		return err
-	}
-
-	// Print success messages
-	action := "posted"
-	if cfg.Edit {
-		action = "edited"
-	}
-
-	if len(msgs) == 1 {
-		fmt.Printf("Successfully %s \"%s\"!\n", action, postTitle)
-	} else {
-		fmt.Printf("Successfully %s %d posts!\n", action, len(msgs))
-	}
-
-	return nil
+	return msgs, nil
 }
 
 func parsePost(reader io.Reader) (*Post, error) {
