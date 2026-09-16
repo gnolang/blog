@@ -48,7 +48,6 @@ The full changelog is in the [GitHub release notes](https://github.com/gnolang/g
 
 - GitHub release: [https://github.com/gnolang/gno/releases/tag/chain/mainnet](https://github.com/gnolang/gno/releases/tag/chain/mainnet)
 - Gnoweb: https://gno.land
-- Faucet: https://faucet.gno.land
 - RPC: https://rpc.gno.land
 - Gnockpit: https://gnockpit.gno.land
 - Status: https://status.gno.land
