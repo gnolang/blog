@@ -42,6 +42,8 @@ The full changelog is in the [GitHub release notes](https://github.com/gnolang/g
 
 `genesis.json` and prebuilt `gno`, `gnokey`, `gnoland`, and `gnoweb` binaries for darwin and linux (amd64/arm64) are attached to the release, along with a `CHECKSUMS.txt` covering every asset. Container images are tagged `chain-mainnet`. To regenerate genesis or join as a validator, see [misc/deployments/mainnet.gno.land/](https://github.com/gnolang/gno/tree/chain/mainnet/misc/deployments/mainnet.gno.land) in the repo.
 
+---
+
 ### Links
 
 - GitHub release: [https://github.com/gnolang/gno/releases/tag/chain/mainnet](https://github.com/gnolang/gno/releases/tag/chain/mainnet)
