@@ -7,7 +7,7 @@ authors: [ryanlee19]
 
 # The Beginning of a Decentralized Future: Gno.land Mainnet is Here
 
-After years of development, we are pleased to announce that Gno.land's mainnet is live. This marks the beginning of a new decentralized future, and we are excited to have you join us.
+We are pleased to announce that Gno.land's mainnet is live. This marks the beginning of a new decentralized future, and we are excited to have you join us.
 
 ## Chain Details
 
