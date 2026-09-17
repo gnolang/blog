@@ -12,19 +12,20 @@ We are pleased to announce that Gno.land's mainnet is live. This marks the begin
 ## Chain Details
 
 - Chain ID: `gnoland-1`
+- Launch: 2026-09-12T15:00:00Z
 - 89 curated packages at genesis, on the `/v0` layout
 - Release tag: [chain/mainnet](https://github.com/gnolang/gno/releases/tag/chain/mainnet)
-- Endpoints: `gno.land` / `rpc.gno.land` / `seed-1.gno.land` and `seed-2.gno.land`
+- Endpoints: `gno.land`, `rpc.gno.land`, `seed-1.gno.land`, and `seed-2.gno.land`
 
 ## Balances and Vesting
 
 GNOT balances come from the independence-day allocation: 3,262,481 accounts totalling 1.333 billion GNOT, covering airdrops, investor buckets, treasuries, the public sale, and settled partner distributions. The allocation is sha256-pinned and reconciled against genesis at build time.
 
-Transfers are locked at genesis under Constitution section 126, with a short exemption list for specific addresses. Nearly every account also carries a section 132 vesting schedule, with 96% vesting continuously over 24 months from launch.
+Transfers were locked at genesis under Constitution section 126, with a 91-address exemption list. GovDAO proposal #4 has since lifted the lock, and ugnot is transferable chain-wide. Nearly every account still carries a section 132 vesting schedule: 3,262,417 of the 3,262,481 rows vest 96% continuously from 2026-09-11 to 2028-09-11.
 
 ## Governance
 
-Governance starts with a sole GovDAO T1 member (aeddi), with the remaining six confirmed members joining post-genesis through regular proposals. Code submission is inert from block 1: any package added after genesis is parked until the funded gpao (package-approvals oracle) clears it.
+Governance started with a sole GovDAO T1 member (aeddi); the remaining six confirmed members join post-genesis through regular proposals — two have already been seated, bringing T1 to three. Code submission is inert from block 1: any package added after genesis is parked until the gpao (package-approvals oracle) clears it.
 
 ## Validators and Namespaces
 
