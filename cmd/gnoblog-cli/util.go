@@ -45,6 +45,9 @@ func removeWhitespace(tags []string) []string {
 	return t
 }
 
+// postFileName is the exact filename every blog post must use.
+const postFileName = "README.md"
+
 // findFilePaths gathers the file paths for specific file types
 func findFilePaths(startPath string) ([]string, error) {
 	filePaths := make([]string, 0)
@@ -59,7 +62,21 @@ func findFilePaths(startPath string) ([]string, error) {
 			return nil
 		}
 
-		if info.Name() == "README.md" {
+		// The post filename is part of the contract (see CONTRIBUTING.md), but a
+		// miscased one used to be dropped in silence -- on a case-insensitive
+		// filesystem nobody notices locally, and the post simply never reaches the
+		// chain. Match case-insensitively and say so, so the deploy is never quietly
+		// short by a post.
+		if info.Name() == postFileName {
+			filePaths = append(filePaths, path)
+		} else if strings.EqualFold(info.Name(), postFileName) {
+			fmt.Fprintf(
+				os.Stderr,
+				"warning: %s is not named exactly %q; including it anyway, please rename it\n",
+				path,
+				postFileName,
+			)
+
 			filePaths = append(filePaths, path)
 		}
 		return nil
