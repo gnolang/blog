@@ -94,7 +94,7 @@ We value your input as we continue developing Gno Studio. Please contribute to
 our improvement efforts by interacting with our feedback form created as a realm.
 Use the ‘[SubmitFeedback](https://gno.studio/connect/view/gno.land/r/gnostudio/feedback_v1?network=test3&tab=functions#SubmitFeedback)’ function to share your feedback with us.
 
-If you have questions or comments, hop over to the [Gno.land Discord](https://discord.gg/FpKNhW5GK6) and 
+If you have questions or comments, hop over to the [Gno.land Discord](https://discord.com/invite/gnoland) and 
 follow us on [X](https://twitter.com/_gnostudio) for updates and discussions.
 
 ## The Gno Studio Outlook

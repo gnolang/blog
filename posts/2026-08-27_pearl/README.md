@@ -74,7 +74,7 @@ The headline addition in this release is **genesis vesting accounts**. The genes
 
 ## Validators
 
-Please refer to the [Pearl validator guide](https://github.com/gnolang/gno/blob/chain/pearl/misc/deployments/pearl.gno.land/VALIDATOR.md) to join as a validator. Further announcements will be made in the [testnet announcements channel](https://discord.gg/4dAT8KbtU) on Discord.
+Please refer to the [Pearl validator guide](https://github.com/gnolang/gno/blob/chain/pearl/misc/deployments/pearl.gno.land/VALIDATOR.md) to join as a validator. Further announcements will be made in the [testnet announcements channel](https://discord.com/invite/gnoland) on Discord.
 
 ---
 

@@ -91,7 +91,7 @@ up in more cities around the globe to connect with gnomes, and spread the word
 about Gno.land. With a few gnomes based in Belgrade, it’s important to keep 
 cultivating and building the Gno.land community locally. If you’re based in 
 Serbia, you can find our regional based channel on the Official Gno.land [Discord 
-Server](https://discord.gg/4XXyy5wS36).
+Server](https://discord.com/invite/gnoland).
 
 ### The Feedback Loop
 After the presentation, we gathered feedback from the attendees to assess the 

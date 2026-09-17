@@ -38,7 +38,7 @@ As this is primarily a developer-oriented competition, most of the organization 
 
 All participants must keep in mind a strict code of conduct and specific rules and criteria to ensure fair play. Throughout the Game of Realms competition, no plagiarism will be tolerated at any time. Participants may submit what they wish, however, any project that has already been allocated rewards or received compensation in any other hackathon or similar contest will not receive double pay.
 
-That’s all for now. If you have more questions about Game of Realms or Gno.land you can join us in our next Office Hours session on Tuesday, March 14, 2023, at 4 pm UTC. You can also connect with other participants in the [Gnoland Discord](https://discord.com/invite/S8nKUqwkPn).
+That’s all for now. If you have more questions about Game of Realms or Gno.land you can join us in our next Office Hours session on Tuesday, March 14, 2023, at 4 pm UTC. You can also connect with other participants in the [Gnoland Discord](https://discord.com/invite/gnoland).
 
 ## Game of Realms Phase 1: FAQ
 

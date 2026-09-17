@@ -48,7 +48,7 @@ A balance-measurement bug caught during [Topaz's PR review](https://github.com/g
 Want to regenerate genesis? See [here](https://github.com/gnolang/gno/blob/chain/sapphire/misc/deployments/sapphire.gno.land/README.md).
 
 ### Validators
-Please refer to this [link](https://github.com/gnolang/gno/blob/chain/sapphire/misc/deployments/sapphire.gno.land/VALIDATOR.md) to join Sapphire as a Validator. Further announcements will be made in the [testnet-announcements channel](https://discord.gg/4dAT8KbtU) on Discord.
+Please refer to this [link](https://github.com/gnolang/gno/blob/chain/sapphire/misc/deployments/sapphire.gno.land/VALIDATOR.md) to join Sapphire as a Validator. Further announcements will be made in the [testnet-announcements channel](https://discord.com/invite/gnoland) on Discord.
 
 ---
 

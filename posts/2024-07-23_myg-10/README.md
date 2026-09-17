@@ -47,4 +47,4 @@ We had a great time in Brussels at the Nebular Summit. Manfred was on the agenda
 
 ## Discord Developer Office Hours
 
-Every Thursday at 2:30 pm CEST, we host office hours on [Discord](https://discord.com/invite/d24CT5b9cd?event=1252310282450112595). Join us to get your questions answered, discuss updates, and catch up with the community. We'd love to see you there!
+Every Thursday at 2:30 pm CEST, we host office hours on [Discord](https://discord.com/invite/gnoland). Join us to get your questions answered, discuss updates, and catch up with the community. We'd love to see you there!

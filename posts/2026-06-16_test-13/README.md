@@ -59,4 +59,4 @@ We've put Test13 through rigorous internal testing, and now it's time to open it
 
 And what comes next is important. The core team is actively preparing for mainnet, which includes the Token Generation Event (TGE), live GNOT transfers, on-chain governance through GovDAO, Inter-Blockchain Communication (IBC) and Interchain Security (ICS) integrations with AtomOne, continued optimization of the GnoVM, improved developer tooling, and the broader growth of the Gno.land ecosystem.
 
-Welcome to Test13. Join the conversation on [Discord](https://discord.gg/gnoland) and [Telegram](https://t.me/join_gnoland).
+Welcome to Test13. Join the conversation on [Discord](https://discord.com/invite/gnoland) and [Telegram](https://t.me/join_gnoland).

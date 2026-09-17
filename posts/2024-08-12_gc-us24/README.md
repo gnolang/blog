@@ -89,7 +89,7 @@ developers. We extend our heartfelt thanks to everyone who visited our booth,
 participated in the raffle, attended Jae Kwon's presentation on Gno, and joined 
 our workshop.
 
-We invite you to stay connected with us on our [Discord](https://discord.gg/43HC5NZzHe),
+We invite you to stay connected with us on our [Discord](https://discord.com/invite/gnoland),
 and our [blog](https://gno.land/r/gnoland/blog) where we 
 will be sharing more insights and updates on 
 [Test4](https://gno.land/r/gnoland/blog:p/test4-live), our current testnet, as

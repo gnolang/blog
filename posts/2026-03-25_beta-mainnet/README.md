@@ -102,7 +102,7 @@ Join our community:
 - GitHub: [https://github.com/gnolang/](https://github.com/gnolang/)
 - Docs: [https://docs.gno.land/](https://docs.gno.land/)
 - X: [https://x.com/_gnoland](https://x.com/_gnoland)
-- Discord: [Discord.gg/gnoland](https://discord.gg/gnoland)
+- Discord: [Discord.gg/gnoland](https://discord.com/invite/gnoland)
 - Telegram: [https://t.me/join_gnoland](https://t.me/join_gnoland)
 - Gno.land Linker: [https://gno.land/links](https://gno.land/links)
 

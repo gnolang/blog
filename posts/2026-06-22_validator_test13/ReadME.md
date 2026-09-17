@@ -38,7 +38,7 @@ Mistakes here are the most common reason approval gets declined or held up, and 
 
 ## **Step 3: Take Action in Discord & Complete the Validator Verification**
 
-Once your valoper registration is complete, head to the Gno.land Discord [#general-chat](https://discord.gg/WDsjtPHCG).
+Once your valoper registration is complete, head to the Gno.land Discord [#general-chat](https://discord.com/invite/gnoland).
 
 - Follow the pinned instructions; you should run /candidate-testnet.
 - The bot will assign you ‘Testnet Validator Candidate’ role, and grant access to #testnet-onboarding.

@@ -252,4 +252,4 @@ Status: Merged
 
 ## Discord Developer Office Hours
 
-Every week on Thursday at 2:30 pm CEST, we host office hours on [Discord](https://discord.com/invite/d24CT5b9cd?event=1252310282450112595) to answer questions, discuss updates, and catch up with the community. We'd love to see you there!
+Every week on Thursday at 2:30 pm CEST, we host office hours on [Discord](https://discord.com/invite/gnoland) to answer questions, discuss updates, and catch up with the community. We'd love to see you there!
