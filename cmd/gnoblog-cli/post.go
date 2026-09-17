@@ -175,6 +175,36 @@ func execPost(io commands.IO, args []string, cfg *cliCfg) error {
 		return fmt.Errorf("unable to stat %q: %w", args[0], err)
 	}
 
+	// Gather candidate post paths (a directory is searched for README.md files)
+	var paths []string
+	if fileInfo.IsDir() {
+		paths, err = findFilePaths(args[0])
+		if err != nil {
+			return err
+		}
+	} else {
+		paths = []string{args[0]}
+	}
+
+	// Initialize the RPC client first (no password needed) so we can resolve
+	// which posts are new and show them before the user unlocks their key.
+	rpc, err := initRPCClient(cfg)
+	if err != nil {
+		return err
+	}
+	queryClient := gnoclient.Client{RPCClient: rpc}
+
+	// Plan which posts will be added/edited, and show them before the password
+	plans, err := planPosts(queryClient, cfg, paths)
+	if err != nil {
+		return err
+	}
+	if len(plans) == 0 {
+		return fmt.Errorf("%w, exiting", ErrNoNewOrChangedPosts)
+	}
+	printPlan(cfg, plans)
+
+	// Now unlock the key and sign
 	var pass string
 	if cfg.Quiet {
 		pass, err = io.GetPassword("", cfg.InsecurePasswordStdIn)
@@ -185,14 +215,7 @@ func execPost(io commands.IO, args []string, cfg *cliCfg) error {
 		return err
 	}
 
-	// Initialize signer
 	signer, err := initSigner(cfg, pass)
-	if err != nil {
-		return err
-	}
-
-	// Initialize Gnoclient
-	rpc, err := initRPCClient(cfg)
 	if err != nil {
 		return err
 	}
@@ -202,22 +225,10 @@ func execPost(io commands.IO, args []string, cfg *cliCfg) error {
 		RPCClient: rpc,
 	}
 
-	// Batch Post request passed in with root argument
-	if fileInfo.IsDir() {
-		// Find file paths
-		files, err := findFilePaths(args[0])
-		if err != nil {
-			return err
-		}
-
-		return post(client, cfg, files...)
-	}
-
-	// Single Post request passed in an argument
-	return post(client, cfg, args[0])
+	return post(client, cfg, plans)
 }
 
-func post(c gnoclient.Client, cfg *cliCfg, paths ...string) error {
+func post(c gnoclient.Client, cfg *cliCfg, plans []postPlan) error {
 	// Get account info
 	account, err := c.Signer.Info()
 	if err != nil {
@@ -234,13 +245,11 @@ func post(c gnoclient.Client, cfg *cliCfg, paths ...string) error {
 	baseNonce := signingAcc.GetSequence()
 	accNumber := signingAcc.GetAccountNumber()
 
-	// Build a message for every new (or, in edit mode, changed) post
-	msgs, err := buildMessages(c, cfg, address, paths)
-	if err != nil {
-		return err
-	}
-	if len(msgs) == 0 {
-		return fmt.Errorf("%w, exiting", ErrNoNewOrChangedPosts)
+	// Build a message for every planned post (the caller is only known now that
+	// the key is unlocked)
+	msgs := make([]vm.MsgCall, len(plans))
+	for i, pl := range plans {
+		msgs[i] = pl.toMsgCall(address, cfg.BlogRealmPath)
 	}
 
 	// Split the messages into transactions that respect the chain's per-tx size
@@ -341,12 +350,37 @@ func post(c gnoclient.Client, cfg *cliCfg, paths ...string) error {
 	return nil
 }
 
-// buildMessages parses each post and returns a MsgCall for every post that needs
-// to be sent: new posts in normal mode, or existing posts in edit mode. Posts
-// already on chain are skipped (in normal mode) so a batch never fails because a
-// single message references an already-published slug.
-func buildMessages(c gnoclient.Client, cfg *cliCfg, address crypto.Address, paths []string) ([]vm.MsgCall, error) {
-	msgs := make([]vm.MsgCall, 0, len(paths))
+// postPlan is a parsed post together with the realm function that will be called
+// for it: ModAddPost for a new post, ModEditPost in edit mode.
+type postPlan struct {
+	post *Post
+	verb string
+}
+
+func (p postPlan) toMsgCall(caller crypto.Address, pkgPath string) vm.MsgCall {
+	return vm.MsgCall{
+		Caller:  caller,
+		Send:    nil,
+		PkgPath: pkgPath,
+		Func:    p.verb,
+		Args: []string{
+			p.post.Slug,
+			p.post.Title,
+			p.post.Body,
+			p.post.PublicationDate.Format(time.RFC3339),
+			strings.Join(p.post.Authors, ","),
+			strings.Join(p.post.Tags, ","),
+		},
+	}
+}
+
+// planPosts parses each candidate file and, using read-only chain queries,
+// decides which posts need to be sent: new posts in normal mode, or existing
+// posts in edit mode. It needs no signer, so the plan can be shown before the
+// user unlocks their key. Posts already on chain are skipped in normal mode, so
+// a batch never fails because a single message references a published slug.
+func planPosts(c gnoclient.Client, cfg *cliCfg, paths []string) ([]postPlan, error) {
+	plans := make([]postPlan, 0, len(paths))
 
 	for _, postPath := range paths {
 		postFile, err := os.Open(postPath)
@@ -354,7 +388,7 @@ func buildMessages(c gnoclient.Client, cfg *cliCfg, address crypto.Address, path
 			return nil, fmt.Errorf("cannot open file %q: %w", postPath, err)
 		}
 
-		post, err := parsePost(postFile)
+		p, err := parsePost(postFile)
 		postFile.Close()
 		if err != nil {
 			fmt.Printf("skipping post at %q, cannot parse: %v\n", postPath, err)
@@ -365,16 +399,16 @@ func buildMessages(c gnoclient.Client, cfg *cliCfg, address crypto.Address, path
 		verb := "ModAddPost"
 
 		// Check if Post already exists on chain
-		existsExpr := "PostExists(\"" + post.Slug + "\")"
+		existsExpr := "PostExists(\"" + p.Slug + "\")"
 		exists, _, err := c.QEval(cfg.BlogRealmPath, existsExpr)
 		if err != nil {
-			slog.Error("error while checking if Post exists", "error", err, "slug", post.Slug)
+			slog.Error("error while checking if Post exists", "error", err, "slug", p.Slug)
 		}
 
 		bExists := strings.Contains(exists, "true")
 		if cfg.Edit {
 			if !bExists {
-				return nil, fmt.Errorf("%s is not on chain yet - disable the edit flag", post.Title)
+				return nil, fmt.Errorf("%s is not on chain yet - disable the edit flag", p.Title)
 			}
 			// If Post exists, and user wants to edit it, use ModEditPost
 			verb = "ModEditPost"
@@ -383,23 +417,24 @@ func buildMessages(c gnoclient.Client, cfg *cliCfg, address crypto.Address, path
 			continue
 		}
 
-		msgs = append(msgs, vm.MsgCall{
-			Caller:  address,
-			Send:    nil,
-			PkgPath: cfg.BlogRealmPath,
-			Func:    verb,
-			Args: []string{
-				post.Slug,
-				post.Title,
-				post.Body,
-				post.PublicationDate.Format(time.RFC3339),
-				strings.Join(post.Authors, ","),
-				strings.Join(post.Tags, ","),
-			},
-		})
+		plans = append(plans, postPlan{post: p, verb: verb})
 	}
 
-	return msgs, nil
+	return plans, nil
+}
+
+// printPlan lists the posts that will be added or edited, before the password
+// prompt, so the user can review them before unlocking their key.
+func printPlan(cfg *cliCfg, plans []postPlan) {
+	action := "add"
+	if cfg.Edit {
+		action = "edit"
+	}
+
+	fmt.Printf("%d post(s) to %s on %s (chainid=%s):\n", len(plans), action, cfg.BlogRealmPath, cfg.ChainId)
+	for _, pl := range plans {
+		fmt.Printf("  - %s [%s]\n", pl.post.Title, pl.post.Slug)
+	}
 }
 
 func parsePost(reader io.Reader) (*Post, error) {
