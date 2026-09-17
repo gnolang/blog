@@ -3,7 +3,7 @@
 _Disclaimer: This repo is highly experimental and subject to breaking changes._
 
 Tools and content to manage blogposts on the [`r/gnoland/blog` realm](https://github.com/gnolang/gno/tree/master/examples/gno.land/r/gnoland/blog),
-powered by the [`p/demo/blog` library](https://github.com/gnolang/gno/tree/master/examples/gno.land/p/demo/blog).
+powered by the [`p/gnoland/blog/v0` library](https://github.com/gnolang/gno/tree/master/examples/gno.land/p/gnoland/blog/v0).
 
 (Current) live version: [https://gno.land/r/gnoland/blog](https://gno.land/r/gnoland/blog).
 
