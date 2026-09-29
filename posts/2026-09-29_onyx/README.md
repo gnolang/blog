@@ -32,7 +32,7 @@ Onyx keeps mainnet's rules but uses testnet GNOT. In place of the independence-d
 
 ## Pearl Sunsetting
 
-With Onyx live, Pearl will be sunset within 24 hours. Onyx is a fresh chain, not a hardfork of Pearl, so packages and balances on Pearl do not carry over. Developers currently building on Pearl will need to redeploy on Onyx.
+With Onyx live, Pearl has been sunset and its endpoints no longer resolve. Onyx is a fresh chain, not a hardfork of Pearl, so packages and balances on Pearl do not carry over. Developers who were building on Pearl need to redeploy on Onyx.
 
 ## Genesis and Binaries
 
@@ -44,10 +44,10 @@ Validator operators should use the version listed in the Onyx upgrade ledger ([`
 
 ### Links
 
-- GitHub release: https://github.com/gnolang/gno/releases/tag/chain/onyx
-- Web: https://onyx.testnets.gno.land
-- RPC: https://rpc.onyx.testnets.gno.land
-- Faucet: https://onyx.testnets.gno.land/faucet
-- Status: https://status.onyx.testnets.gno.land
-- Gnockpit: https://gnockpit.onyx.testnets.gno.land
-- Docs: https://docs.gno.land
+- GitHub release: [chain/onyx](https://github.com/gnolang/gno/releases/tag/chain/onyx)
+- Web: [onyx.testnets.gno.land](https://onyx.testnets.gno.land)
+- RPC: [rpc.onyx.testnets.gno.land](https://rpc.onyx.testnets.gno.land)
+- Faucet: [onyx.testnets.gno.land/faucet](https://onyx.testnets.gno.land/faucet)
+- Status: [status.onyx.testnets.gno.land](https://status.onyx.testnets.gno.land)
+- Gnockpit: [gnockpit.onyx.testnets.gno.land](https://gnockpit.onyx.testnets.gno.land)
+- Docs: [docs.gno.land](https://docs.gno.land)
