@@ -1,7 +1,7 @@
 {
-  "ignorePatterns": [
-    {
-      "pattern": "^https://gnolang\\.github\\.io/blog/"
-    }
-  ]
+  "ignorePatterns": [],
+  "aliveStatusCodes": [200, 206],
+  "retryOn429": true,
+  "retryCount": 3,
+  "fallbackRetryDelay": "30s"
 }

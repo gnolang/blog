@@ -1,4 +1,9 @@
-# Simple workflow for deploying static content to GitHub Pages
+# Deploys the blog sources and their assets to GitHub Pages.
+#
+# This is not a mirror of the blog -- the blog lives on chain at
+# gno.land/r/gnoland/blog. It is asset hosting: 42 image references inside
+# published posts point at https://gnolang.github.io/blog/<post-dir>/src/...,
+# so every path under posts/ must keep resolving exactly as it does today.
 name: Deploy static content to Pages
 
 on:
@@ -23,15 +28,16 @@ concurrency:
 jobs:
   # Build job
   build:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v5
       - name: Setup Pages
-        uses: actions/configure-pages@v3
+        uses: actions/configure-pages@v5
+      # Without this the site root returns 404 -- assets underneath serve fine,
+      # but there is nothing to land on. Generated here, never committed.
+      - name: Generate index
+        run: python3 .github/scripts/build-pages-index.py posts
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
