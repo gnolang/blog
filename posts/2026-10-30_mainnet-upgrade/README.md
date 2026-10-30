@@ -1,5 +1,5 @@
 ---
-publication_date: 2026-13-20T12:00:00Z
+publication_date: 2026-10-30T12:00:00Z
 slug: mainnet-upgrade
 tags: [gnoland, ecosystem, updates, mainnet, community, blog]
 authors: [ryanlee19]
