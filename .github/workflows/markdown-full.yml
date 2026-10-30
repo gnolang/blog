@@ -1,0 +1,29 @@
+# The PR-time check in markdown.yml runs with check-modified-files-only, so a link
+# only ever gets verified when someone happens to edit the file it lives in. Posts
+# are never edited after publication, which means rot in the archive is invisible by
+# construction -- that is how 24 dead links accumulated (see #159).
+#
+# This job checks every markdown file in the repo on a schedule. It is deliberately
+# NOT wired to push or pull_request: it must never block a PR on a link that went
+# dead somewhere else in the archive.
+name: Markdown (full archive)
+
+on:
+  schedule:
+    # Mondays, 06:00 UTC
+    - cron: '0 6 * * 1'
+  workflow_dispatch:
+
+jobs:
+  link-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Check every link in the repo
+        uses: gaurav-nelson/github-action-markdown-link-check@v1
+        with:
+          use-quiet-mode: 'yes'
+          use-verbose-mode: 'yes'
+          check-modified-files-only: 'no'
+          config-file: 'mlc_config.json'
