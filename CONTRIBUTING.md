@@ -37,8 +37,9 @@ Below are some rules to follow when writing a blog post.
 4. Make sure the target reader is addressed consistently.
 5. Make sure the product, company, tech, and other names are accurate.
 6. Fact-check your content.
-7. If your post contains images, please add a `src` folder to contain them, and link to them in Markdown.
-8. Include front-matter in your blog post, detailing the following:
+7. Name the post file exactly `README.md`. `gnoblog-cli` looks for that name, so a `ReadMe.md` or `ReadME.md` will not be deployed — and on macOS, which ignores filename case, you will not notice locally.
+8. If your post contains images, please add a `src` folder to contain them, and link to them in Markdown.
+9. Include front-matter in your blog post, detailing the following:
     1. Title
     2. Publication date
     3. Slug
